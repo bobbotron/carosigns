@@ -2,28 +2,21 @@ import { useState } from "react";
 import { Appbar } from "react-native-paper";
 import SignsDB from "../data/SignDb";
 import {
-  StyleSheet,
   Text,
   View,
   TouchableOpacity,
   Image,
-  useWindowDimensions,
 } from "react-native";
 import { FlatGrid } from "react-native-super-grid";
+import SignDetail from "./SignDetail";
 
 export default function Level(props) {
-  const window = useWindowDimensions();
-  const styles = StyleSheet.create({
-    logo: {
-      width: window.width * 0.7 * 1.3,
-      height: window.width * 0.7,
-      textAlign: "center",
-    },
-    selectedSign: {
-      justifyContent: "center",
-      alignItems: "center",
-    },
-  });
+  // const styles = StyleSheet.create({
+  //   selectedSign: {
+  //     justifyContent: "center",
+  //     alignItems: "center",
+  //   },
+  // });
   const [selectedSign, setSelectedSign] = useState(undefined);
   const backButtonListener =
     selectedSign === undefined
@@ -45,7 +38,7 @@ export default function Level(props) {
             <FlatGrid
               itemDimension={135}
               data={SignsDB.CategoryMap[props.level.name]}
-              style={styles.gridView}
+              // style={styles.gridView}
               // staticDimension={300}
               // fixed
               // horizontal
@@ -67,17 +60,7 @@ export default function Level(props) {
             />
           </>
         ))}
-      {selectedSign !== undefined && (
-        <View style={styles.selectedSign}>
-          <Image source={selectedSign.icon} style={styles.logo} />
-          {selectedSign.description !== undefined && selectedSign.description()}
-          {selectedSign.description === undefined && (
-            <>
-              <Text>Description not set.</Text>
-            </>
-          )}
-        </View>
-      )}
+      {selectedSign !== undefined && <SignDetail sign={selectedSign} />}
     </>
   );
 }
