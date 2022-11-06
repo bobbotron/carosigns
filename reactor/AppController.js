@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { Searchbar } from "react-native-paper";
 import { useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import MainList from "./components/MainList";
 import Level from "./components/Level";
 import SignsDB from "./data/SignDb";
@@ -9,14 +9,20 @@ import SignsDB from "./data/SignDb";
 export default function AppController() {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const onChangeSearch = (query) => setSearchQuery(query);
+  const onChangeSearch = (query) => {
+    setSearchQuery(query);
+    console.log("search ", query);
+  };
+
   const [selectedLevel, setSelectedLevel] = useState(undefined);
   const [levels, setLevels] = useState([]);
 
-  const [signs, setSigns] = useState(undefined);
+  const searchActive = !(searchQuery === undefined || searchQuery === "");
+  const selectedSigns = !searchActive
+    ? undefined
+    : SignsDB.Signs.filter((x) => x.name.includes(searchQuery));
 
   const levelListener = (l) => {
-    console.log(l.name, "was selected");
     setSelectedLevel(l);
   };
   const backToMainList = () => {
@@ -37,10 +43,20 @@ export default function AppController() {
         />
       )}
 
-      {selectedLevel === undefined ? (
+      {selectedLevel === undefined && !searchActive && (
         <MainList levels={levels} levelListener={levelListener} />
-      ) : (
+      )}
+      {selectedLevel !== undefined && !searchActive && (
         <Level level={selectedLevel} backListener={backToMainList} />
+      )}
+
+      {searchActive && (
+        <>
+          <Text>
+            Hey there's a search happening! {selectedSigns.length} results
+            found.
+          </Text>
+        </>
       )}
 
       <StatusBar style="auto" />
