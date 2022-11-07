@@ -11,13 +11,6 @@ const Novice =
     name: "Finish",
     icon: require("../assets/slides/finish.jpg"),
     category: "Novice",
-    // description: () => {
-    //   return (
-    //     <>
-    //       <Text>Finish</Text>
-    //     </>
-    //   );
-    //,
   },
   {
     name: "100",
