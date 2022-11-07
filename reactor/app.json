@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "reactor",
-    "slug": "reactor",
+    "name": "caro-signs",
+    "slug": "caro-signs",
     "version": "1.0.0",
+    "owner": "bobbotron",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",

@@ -1,5 +1,6 @@
-const Novice =
+import { Text } from "react-native";
 
+const Novice =
 [{
   name: "Start",
   icon: require("../assets/slides/start.jpg"),
