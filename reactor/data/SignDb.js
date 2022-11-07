@@ -1,9 +1,12 @@
 import { Text } from "react-native";
 import Novice from './Novice';
 import Advanced from './Advanced';
+import Excellent from "./Excellent";
+import Versatility from "./Versatility";
+import VersatilityExcellent from "./VersatilityExcellent";
 
 const Categories = ["Novice", "Advanced", "Excellent", "Versatility", "Versatility Excellent"];
-const Signs = [... Novice, ... Advanced ];
+const Signs = [...Novice, ...Advanced, ...Excellent, ...Versatility, ...VersatilityExcellent];
 
 const createLevel = (lName) => {
   return { name: lName };
