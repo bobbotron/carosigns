@@ -6,6 +6,7 @@ export default function AssetExample(props) {
     <Button
     key={n.name}
           style={styles.button}
+          labelStyle={styles.buttonLabel}
           mode="contained"
           onPress={() => props.levelListener(n)}
         >{n.name}</Button>
@@ -24,7 +25,11 @@ const styles = StyleSheet.create({
   container: {},
   button: {
     marginTop: 10,
-    marginBottom: 10,
+    marginBottom: 0,
+    fontSize: 20
+  },
+  buttonLabel: {
+    fontSize: 18
   },
   paragraph: {
     // margin: 24,

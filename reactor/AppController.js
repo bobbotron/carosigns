@@ -1,22 +1,29 @@
 import { StatusBar } from "expo-status-bar";
 import { Button, Searchbar } from "react-native-paper";
 import { useEffect, useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, useWindowDimensions, Image } from "react-native";
 import MainList from "./components/MainList";
 import Level from "./components/Level";
 import SignsDB from "./data/SignDb";
 import SignDetail from "./components/SignDetail";
 
 export default function AppController() {
+  const window = useWindowDimensions();
+
   const styles = StyleSheet.create({
     searchbar: {},
     container: {
-      marginTop: 15,
+      marginTop: 35,
       marginLeft: 10,
       marginRight: 10,
     },
+    caroLogo: {
+      // 800x138
+      width: window.width * 0.9,
+      height: (window.width/1061) * 215 * 0.9,
+      marginBottom: 10,
+    }
   });
-
   const [searchQuery, setSearchQuery] = useState("");
 
   const onChangeSearch = (query) => {
@@ -38,11 +45,15 @@ export default function AppController() {
     setSelectedLevel(undefined);
     setSearchQuery("");
   };
+
   useEffect(() => {
     setLevels(SignsDB.Categories);
   }, []);
   return (
     <View style={styles.container}>
+    <Image source={require("./assets/caro-logo-2.png")}
+    style={styles.caroLogo}/>
+
       {selectedLevel === undefined && (
         <Searchbar
           style={styles.searchbar}

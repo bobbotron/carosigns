@@ -23,6 +23,7 @@ export default function SignDetail(props) {
   return (
     <View style={styles.selectedSign}>
       <Image source={props.sign.icon} style={styles.logo} />
+
       {props.sign.description !== undefined && typeof props.sign.description ==='function' && props.sign.description()}
       {props.sign.description !== undefined && typeof props.sign.description !=='function' && (<Text>{props.sign.description}</Text>)}
       {props.sign.description === undefined && (
@@ -30,6 +31,7 @@ export default function SignDetail(props) {
           <Text>Description not set.</Text>
         </>
       )}
+
     </View>
   );
 }

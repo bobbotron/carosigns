@@ -11,12 +11,7 @@ import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
 
 export default function Level(props) {
-  // const styles = StyleSheet.create({
-  //   selectedSign: {
-  //     justifyContent: "center",
-  //     alignItems: "center",
-  //   },
-  // });
+
   const [selectedSign, setSelectedSign] = useState(undefined);
   const backButtonListener =
     selectedSign === undefined
