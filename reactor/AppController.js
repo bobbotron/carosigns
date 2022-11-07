@@ -8,11 +8,19 @@ import SignsDB from "./data/SignDb";
 import SignDetail from "./components/SignDetail";
 
 export default function AppController() {
+  const styles = StyleSheet.create({
+    searchbar: {},
+    container: {
+      marginTop: 15,
+      marginLeft: 10,
+      marginRight: 10,
+    },
+  });
+
   const [searchQuery, setSearchQuery] = useState("");
 
   const onChangeSearch = (query) => {
     setSearchQuery(query);
-    console.log("search ", query);
   };
 
   const [selectedLevel, setSelectedLevel] = useState(undefined);
@@ -81,15 +89,3 @@ export default function AppController() {
     </View>
   );
 }
-const styles = StyleSheet.create({
-  searchbar: {},
-  container: {
-    marginTop: 15,
-    marginLeft: 10,
-    marginRight: 10,
-    // flex: 1,
-    // backgroundColor: '#fff',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
-});
