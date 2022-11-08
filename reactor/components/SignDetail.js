@@ -101,11 +101,11 @@ export default function SignDetail(props) {
               html: generateDeductions(props.sign.deductions),
             }}
           />
-          <Text>
-            See the Master General Handbook for a complete list of deductions.
-          </Text>
         </>
       )}
+      <Text>
+        See the Master General Handbook for a complete list of deductions.
+      </Text>
     </View>
   );
   const VideoRoute = () => (
