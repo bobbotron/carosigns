@@ -1,11 +1,12 @@
 import { Text } from "react-native";
 
-const Novice =
-  [{
+const Novice = [
+  {
     name: "Start",
     icon: require("../assets/slides/start.jpg"),
     category: "Novice",
-    description: 'Start<br/> • While heeling, the <b>team heels past the Start station.</b><br/> • Timing begins.<br/> • There are no other commands from the Judge throughout the course.'
+    description:
+      "Start<br/> • While heeling, the <b>team heels past the Start station.</b><br/> • Timing begins.<br/> • There are no other commands from the Judge throughout the course.",
   },
   {
     name: "Finish",
@@ -16,18 +17,25 @@ const Novice =
     name: "100",
     icon: require("../assets/slides/100.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>100. HALT – Stand</Text>
-        </>
-      );
+    title: "100. HALT – Stand",
+    description: "100. HALT – Stand",
+    reward: true,
+    deductions: {
+      minor: [
+        "Too cute, distracts judges and makes everyone jealous. Not cool.",
+        "Insane aussie",
+        "Drooly",
+      ],
+      substantial: ["Newf Drool"],
+      nq: ["Pees in ring"],
     },
+    video: undefined,
   },
   {
     name: "101",
     icon: require("../assets/slides/101.jpg"),
     category: "Novice",
+    title: "101. HALT – Down",
     description: () => {
       return (
         <>
@@ -179,7 +187,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "114",
     icon: require("../assets/slides/114.jpg"),
     category: "Novice",
@@ -190,7 +199,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "115",
     icon: require("../assets/slides/115.jpg"),
     category: "Novice",
@@ -201,7 +211,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "116",
     icon: require("../assets/slides/116.jpg"),
     category: "Novice",
@@ -212,7 +223,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "117",
     icon: require("../assets/slides/117.jpg"),
     category: "Novice",
@@ -223,7 +235,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "118",
     icon: require("../assets/slides/118.jpg"),
     category: "Novice",
@@ -234,7 +247,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "119",
     icon: require("../assets/slides/119.jpg"),
     category: "Novice",
@@ -245,7 +259,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "120",
     icon: require("../assets/slides/120.jpg"),
     category: "Novice",
@@ -256,7 +271,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "121",
     icon: require("../assets/slides/121.jpg"),
     category: "Novice",
@@ -267,7 +283,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "122",
     icon: require("../assets/slides/122.jpg"),
     category: "Novice",
@@ -278,7 +295,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "123",
     icon: require("../assets/slides/123.jpg"),
     category: "Novice",
@@ -289,7 +307,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "124",
     icon: require("../assets/slides/124.jpg"),
     category: "Novice",
@@ -300,7 +319,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "125",
     icon: require("../assets/slides/125.jpg"),
     category: "Novice",
@@ -311,7 +331,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "126",
     icon: require("../assets/slides/126.jpg"),
     category: "Novice",
@@ -322,7 +343,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "127",
     icon: require("../assets/slides/127.jpg"),
     category: "Novice",
@@ -333,7 +355,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "128",
     icon: require("../assets/slides/128.jpg"),
     category: "Novice",
@@ -344,7 +367,8 @@ const Novice =
         </>
       );
     },
-  }, {
+  },
+  {
     name: "129",
     icon: require("../assets/slides/129.jpg"),
     category: "Novice",
@@ -356,6 +380,6 @@ const Novice =
       );
     },
   },
-  ];
+];
 
 export default Novice;
