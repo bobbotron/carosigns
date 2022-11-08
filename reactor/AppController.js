@@ -1,7 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { Button, Searchbar } from "react-native-paper";
 import { useEffect, useState } from "react";
-import { StyleSheet, View, Text, useWindowDimensions, Image } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  useWindowDimensions,
+  Image,
+} from "react-native";
 import MainList from "./components/MainList";
 import Level from "./components/Level";
 import SignsDB from "./data/SignDb";
@@ -20,9 +26,9 @@ export default function AppController() {
     caroLogo: {
       // 800x138
       width: window.width * 0.9,
-      height: (window.width/1061) * 215 * 0.9,
+      height: (window.width / 1061) * 215 * 0.9,
       marginBottom: 10,
-    }
+    },
   });
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -34,9 +40,14 @@ export default function AppController() {
   const [levels, setLevels] = useState([]);
 
   const searchActive = !(searchQuery === undefined || searchQuery === "");
+  const queryLower = searchQuery.toLowerCase();
   const selectedSigns = !searchActive
     ? undefined
-    : SignsDB.Signs.filter((x) => x.name.toLowerCase().includes(searchQuery));
+    : SignsDB.Signs.filter(
+        (x) =>
+          x.name.toLowerCase().includes(queryLower) ||
+          (x.title !== undefined && x.title.toLowerCase().includes(queryLower))
+      );
 
   const levelListener = (l) => {
     setSelectedLevel(l);
@@ -51,8 +62,10 @@ export default function AppController() {
   }, []);
   return (
     <View style={styles.container}>
-    <Image source={require("./assets/caro-logo-2.png")}
-    style={styles.caroLogo}/>
+      <Image
+        source={require("./assets/caro-logo-2.png")}
+        style={styles.caroLogo}
+      />
 
       {selectedLevel === undefined && (
         <Searchbar
@@ -86,9 +99,12 @@ export default function AppController() {
                   key={x.name}
                   mode="contained"
                   style={{ marginTop: 10 }}
-                  onPress={() => setSearchQuery(x.name)}
+                  onPress={() =>
+                    setSearchQuery(x.title === undefined ? x.name : x.title)
+                  }
                 >
-                  {x.name}
+                  {x.title === undefined && <> {x.name}</>}{" "}
+                  {x.title !== undefined && <>{x.title}</>}
                 </Button>
               ))}
             </>

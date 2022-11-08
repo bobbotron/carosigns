@@ -1,17 +1,11 @@
 import { useState } from "react";
 import { Appbar } from "react-native-paper";
 import SignsDB from "../data/SignDb";
-import {
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-} from "react-native";
+import { Text, View, TouchableOpacity, Image } from "react-native";
 import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
 
 export default function Level(props) {
-
   const [selectedSign, setSelectedSign] = useState(undefined);
   const backButtonListener =
     selectedSign === undefined
@@ -19,11 +13,15 @@ export default function Level(props) {
       : () => {
           setSelectedSign(undefined);
         };
+  const appBarTitle =
+    selectedSign === undefined || selectedSign.title === undefined
+      ? props.level.name
+      : selectedSign.title;
   return (
     <>
       <Appbar.Header>
         <Appbar.BackAction onPress={backButtonListener} />
-        <Appbar.Content title={props.level.name} />
+        <Appbar.Content title={appBarTitle} />
       </Appbar.Header>
       {selectedSign === undefined &&
         (SignsDB.CategoryMap[props.level.name].length === 0 ? (
