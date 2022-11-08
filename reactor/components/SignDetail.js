@@ -9,19 +9,20 @@ import {
 } from "react-native";
 
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
-
+import { WebView } from "react-native-webview";
 export default function SignDetail(props) {
   const window = useWindowDimensions();
   const [index, setIndex] = useState(0);
-
+const toHtml = (h) => "<div style=\"font-family: Arial, Helvetica, sans-serif; font-size: 30px;\">"+ h + "</div>";
   const FirstRoute = () => (
-    <View style={{ backgroundColor: "#ffffff", paddingTop: 10 }}>
+    <View style={{ backgroundColor: "#ffffff", paddingTop: 10, flex: 1 }}>
       {props.sign.description !== undefined &&
         typeof props.sign.description === "function" &&
         props.sign.description()}
       {props.sign.description !== undefined &&
         typeof props.sign.description !== "function" && (
-          <Text>{props.sign.description}</Text>
+          <WebView source={{ html: toHtml(props.sign.description) }}  />
+
         )}
       {props.sign.description === undefined && (
         <>
@@ -31,12 +32,12 @@ export default function SignDetail(props) {
     </View>
   );
   const FaultRoute = () => (
-    <View style={{ backgroundColor: "#ffffff", paddingTop: 10 }}>
-      <Text>No Video Available</Text>
+    <View style={{ backgroundColor: "#ffffff", paddingTop: 10, flex: 1 }}>
+      <Text>Faults not set.</Text>
     </View>
   );
   const VideoRoute = () => (
-    <View style={{ backgroundColor: "#ffffff", paddingTop: 10 }}>
+    <View style={{ backgroundColor: "#ffffff", paddingTop: 10, flex: 1 }}>
       <Text>No Video Available</Text>
     </View>
   );
@@ -74,28 +75,28 @@ export default function SignDetail(props) {
   const renderTabBar = (props) => (
     <TabBar
       {...props}
-      labelStyle={{fontSize: 13}}
+      labelStyle={{ fontSize: 13 }}
       activeColor={"black"}
       inactiveColor={"grey"}
-      indicatorStyle={{backgroundColor: "#aaaaaa"}}
-      style={{ marginTop: 25, backgroundColor: "#ffffff",  }}
+      indicatorStyle={{ backgroundColor: "#aaaaaa" }}
+      style={{ marginTop: 25, backgroundColor: "#ffffff" }}
     />
   );
   return (
     <View style={styles.selectedSign}>
       <ScrollView>
-      <Image source={props.sign.icon} style={styles.logo} />
+        <Image source={props.sign.icon} style={styles.logo} />
 
-      <View style={{ height: 400 }}>
-        <TabView
-          navigationState={state}
-          renderScene={s}
-          onIndexChange={setIndex}
-          // initialLayout={{ width: window.width - 10 }}
-          renderTabBar={renderTabBar}
-          style={{ height: 200, width: window.width - 20 }}
-        />
-      </View>
+        <View style={{ height: 400 }}>
+          <TabView
+            navigationState={state}
+            renderScene={s}
+            onIndexChange={setIndex}
+            // initialLayout={{ width: window.width - 10 }}
+            renderTabBar={renderTabBar}
+            style={{ height: 200, width: window.width - 20 }}
+          />
+        </View>
       </ScrollView>
     </View>
   );

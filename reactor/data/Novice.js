@@ -5,7 +5,7 @@ const Novice =
     name: "Start",
     icon: require("../assets/slides/start.jpg"),
     category: "Novice",
-    description: 'Start\n • While heeling, the team heels past the Start station.\n • Timing begins.\n • There are no other commands from the Judge throughout the course.'
+    description: 'Start<br/> • While heeling, the <b>team heels past the Start station.</b><br/> • Timing begins.<br/> • There are no other commands from the Judge throughout the course.'
   },
   {
     name: "Finish",
