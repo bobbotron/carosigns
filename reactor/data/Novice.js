@@ -5,6 +5,7 @@ const Novice = [
     name: "Start",
     icon: require("../assets/slides/start.jpg"),
     category: "Novice",
+    title: "Start",
     description:
       "Start<br/> • While heeling, the <b>team heels past the Start station.</b><br/> • Timing begins.<br/> • There are no other commands from the Judge throughout the course.",
   },
@@ -12,22 +13,24 @@ const Novice = [
     name: "Finish",
     icon: require("../assets/slides/finish.jpg"),
     category: "Novice",
-  },
+    title: "Finish",
+    description:
+    "Finish<br/> • While heeling, the <b>team heels past the Finish station.</b><br/> • Timing ends.<br/>"
+   },
   {
     name: "100",
     icon: require("../assets/slides/100.jpg"),
     category: "Novice",
     title: "100. HALT – Stand",
-    description: "100. HALT – Stand",
+    description: "100. HALT – Stand<br/> • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>stand</b>.<br/> • The handler cues the dog to <b>heel forward from the stand position</b>.<br/>",
     reward: true,
     deductions: {
       minor: [
-        "Too cute, distracts judges and makes everyone jealous. Not cool.",
-        "Insane aussie",
-        "Drooly",
+        "Too cute",
+        "Too fluffy",
       ],
       substantial: ["Newf Drool"],
-      nq: ["Pees in ring"],
+      nq: ["Peed."],
     },
     video: undefined,
   },
@@ -36,350 +39,216 @@ const Novice = [
     icon: require("../assets/slides/101.jpg"),
     category: "Novice",
     title: "101. HALT – Down",
-    description: () => {
-      return (
-        <>
-          <Text>101. HALT – Down</Text>
-        </>
-      );
-    },
+    description: "101. HALT – Down<br/> • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/>",
+    reward: true,
   },
   {
     name: "102",
     icon: require("../assets/slides/102.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>102. HALT – Down - Sit</Text>
-        </>
-      );
-    },
+    title: "102. HALT – Down - Sit",
+    description: "102. HALT – Down - Sit<br/> • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>sit</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/>",
+    reward: true,
   },
   {
     name: "103",
     icon: require("../assets/slides/103.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>103. HALT – Walk Around</Text>
-        </>
-      );
-    },
+    title: "103. HALT – Walk Around",
+    description: "103. HALT – Walk Around<br/> • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/>",
+    reward: true,
   },
   {
     name: "104",
     icon: require("../assets/slides/104.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>104. HALT – Down - Walk Around</Text>
-        </>
-      );
-    },
+    title: "104. HALT – Down - Walk Around",
+    description: "104. HALT – Down - Walk Around<br/> • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to down</b>.<br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/>",
+    reward: true,
   },
   {
     name: "105",
     icon: require("../assets/slides/105.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>105. HALT – 1,2,3 Steps Forward</Text>
-        </>
-      );
-    },
+    title: "105. HALT – 1,2,3 Steps Forward",
+    description: "105. HALT – 1,2,3 Steps Forward<br/> • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to heel and takes one step forward, then halts; two steps and halts; then three steps and halts. <b>The team must meet the minimum required steps</b>.<br/> • Steps should be equal in length, in a natural stride for the team and finishing the exercise before the next station sign.<br/> • <b>The dog moves with the handler</b>, maintaining heel position, and <b>must sit each time the handler halts</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/>",
+    reward: true,
   },
   {
     name: "106",
     icon: require("../assets/slides/106.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>106. HALT – Sidestep Right - HALT</Text>
-        </>
-      );
+    title: "106. HALT – Sidestep Right - HALT",
+    description: "106. HALT – 1,2,3 Steps Forward<br/> • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position</b>.<br/> • The handler takes <b>one side step directly to their right</b> while cueing the dog to heel.</br> • The dog <b>must move to the right simultaneously with the handler</b> remaining in heel position parallel to the handler and <b>sit</b> when the handler stops.<br/>• The handler cues the dog to <b>heel forward from the sit position.<br/>",
+    reward: true,
     },
-  },
   {
     name: "107",
     icon: require("../assets/slides/107.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>107. HALT – 90 Pivot Right - HALT</Text>
-        </>
-      );
+    title: "107. HALT – 90 Pivot Right - HALT",
+    description: "107. HALT – 90 Pivot Right - HALT<br/>• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90 degrees to their right in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the right.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/>",
+    reward: true,
     },
-  },
   {
     name: "108",
     icon: require("../assets/slides/108.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>108. HALT – 90 Pivot Left - HALT</Text>
-        </>
-      );
+    title: "108. HALT – 90 Pivot Left - HALT",
+    description: "108. HALT – 90 Pivot Left - HALT<br/>• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90 degrees to their left in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the left.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/>",
+    reward: true,
     },
-  },
   {
     name: "109",
     icon: require("../assets/slides/109.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>109. HALT – Turn Right 1 Step - HALT</Text>
-        </>
-      );
+    title: "109. HALT – Turn Right 1 Step - HALT",
+    description: "109. HALT – Turn Right 1 Step - HALT<br/>• The team comes to a <b>halt</b> and the handler cues the <b>dog to sit in heel position.</b><br/>• The handler cues the dog to heel, <b>turns to the right, takes one step in that direction and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/>",
+    reward: true,
     },
-  },
   {
     name: "110",
     icon: require("../assets/slides/110.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>111. Right Turn</Text>
-        </>
-      );
-    },
+    title: "110. Right Turn",
+    description: "110. Right Turn<br/>• While heeling, the team <b>makes a 90-degree turn to the right.</b><br/>• This station results in a 90-degree change of direction to the right.<br/>",
   },
   {
     name: "111",
     icon: require("../assets/slides/111.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>111. Left Turn</Text>
-        </>
-      );
-    },
+    title: "111. Left Turn",
+    description: "111. Left Turn<br/>• While heeling, the team <b>makes a 90-degree turn to the left.</b><br/>• This station results in a 90-degree change of direction to the left.<br/>",
   },
   {
     name: "112",
     icon: require("../assets/slides/112.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>112. 180 Right</Text>
-        </>
-      );
-    },
+    title: "112. 180 Right",
+    description: "112. 180-Degree Right<br/>• While heeling, the team <b>makes a 180-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet and should be in a straight line to and from the station sign for a minimum of one stride before and after turning.<br/>• This station results in a 180-degree change of direction.<br/>",
   },
   {
     name: "113",
     icon: require("../assets/slides/113.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>113. 180 Left</Text>
-        </>
-      );
-    },
+    title: "113. 180 Left",
+    description: "113. 180-Degree Left<br/>• While heeling, the team <b>makes a 180-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet and should be in a straight line to and from the station sign for a minimum of one stride before and after turning.<br/>• This station results in a 180-degree change of direction.<br/>",
   },
   {
     name: "114",
     icon: require("../assets/slides/114.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>114. 270 Right</Text>
-        </>
-      );
-    },
+    title: "114. 270 Right",
+    description: "114. 270-Degree Right<br/>• While heeling, the team <b>makes a 270-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>• This station results in a 90-degree change of direction to the left.<br/>",
   },
   {
     name: "115",
     icon: require("../assets/slides/115.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>115. 270 Left</Text>
-        </>
-      );
-    },
+    title: "115. 270 Left",
+    description: "115. 270-Degree Left<br/>• While heeling, the team <b>makes a 270-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>• This station results in a 90-degree change of direction to the right.<br/>",
   },
   {
     name: "116",
     icon: require("../assets/slides/116.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>116. 360 Right</Text>
-        </>
-      );
-    },
+    title: "116. 360 Right",
+    description: "116. 360-Degree Right<br/>• While heeling, the team <b>makes a 360-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>",
   },
   {
     name: "117",
     icon: require("../assets/slides/117.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>117. 360 Left</Text>
-        </>
-      );
-    },
+    title: "117. 360 Left",
+    description: "117. 360-Degree Left<br/>• While heeling, the team <b>makes a 360-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>",
   },
   {
     name: "118",
     icon: require("../assets/slides/118.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>118. Slow</Text>
-        </>
-      );
-    },
+    title: "118. Slow Pace",
+    description: "118. Slow Pace<br/>• While heeling, the team decreases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace.<br/>• The slow pace is maintained continuously until the next station.</b><br/>• This station is followed by either Fast, Normal or the Finish station.</br>",
   },
   {
     name: "119",
     icon: require("../assets/slides/119.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>119. Fast</Text>
-        </>
-      );
-    },
+    title: "119. Fast Pace",
+    description: "119. Fast Pace<br/>• While heeling, the team increases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace</b>. The pace should be fast enough that the dog at least breaks into a trot.<br/>• <br>The slow pace is maintained continuously until the next station.</b><br/>• This station is followed by either Slow, Normal or the Finish station.</br>",
   },
   {
     name: "120",
     icon: require("../assets/slides/120.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>120. Normal</Text>
-        </>
-      );
-    },
+    title: "120. Normal Pace",
+    description: "120. Normal Pace<br/>• While heeling, the team moves forward at a <b>normal pace</b> that is comfortable for the dog and handler.<br/>• There must be a <b>noticeable difference in the dogs’ speed from the slow or fast to normal pace.</b><br/>",
   },
   {
     name: "121",
     icon: require("../assets/slides/121.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>121. Call Front Finish Right</Text>
-        </>
-      );
+    title: "121. Call Front - Finish Right",
+    description: "121. Call Front - Finish Right<br/>• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s right and around their body to sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/>",
+    reward: true,
     },
-  },
   {
     name: "122",
     icon: require("../assets/slides/122.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>122. Call Front Finish Left</Text>
-        </>
-      );
+    title: "122. Call Front - Finish Left",
+    description: "121. Call Front - Finish Left<br/>• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s left directly to sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/>",
+    reward: true,
     },
-  },
   {
     name: "123",
     icon: require("../assets/slides/123.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>123. Call Front Forward Right</Text>
-        </>
-      );
+    title: "123. Call Front - Forward Right",
+    description: "123. Call Front - Forward Right<br/>• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s right, around and behind them, moving towards heel position</b>.<br/>• As the dog is returning to heel position, the handler cues the dog to heel and moves forward. <b>The dog does not sit in heel position.</b><br/>",
     },
-  },
   {
     name: "124",
     icon: require("../assets/slides/124.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>124. Call Front Forward Left</Text>
-        </>
-      );
+    title: "124. Call Front - Forward Left",
+    description: "124. Call Front - Forward Left<br/>• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s left directly towards heel position</b>.<br/>• As the dog is returning to heel position, the handler cues the dog to heel and moves forward. <b>The dog does not sit in heel position.</b><br/>",   
     },
-  },
   {
     name: "125",
     icon: require("../assets/slides/125.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>125. Call Front Handler Returns to Heel</Text>
-        </>
-      );
-    },
+    title: "125. Call Front Handler Returns to Heel",
+    description: "125. Call Front Handler Returns to Heel<br/>• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The <b>dog must remain in a sit</b> while the <b>handler walks around behind the dog in a counterclockwise direction to return to heel position</b>.<br/>• The handler may pause upon return to heel position.<br/>• This station will result in a 180-degree change of direction.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/>",  
+    reward: true,  
   },
   {
     name: "126",
     icon: require("../assets/slides/126.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>126. Spiral Right</Text>
-        </>
-      );
+    title: "126. Spiral Right - Dog Outside",
+    description: "126. Spiral Right - Dog Outside<br/>• While heeling, <b>the team moves around the cones in a clockwise direction</b>, turning to their right when moving around each of the cones.<br/>• The team <b>pass the first and second cones and proceeds to and around the third one</b>, then <b>return to loop the first cone</b>.<br/>• The team then <b>proceeds to and around the second cone</b> and returns to <b>loop the first cone</b> a second time.<br/>• The team finally <b>circles the first cone by passing between the first and second cones</b> to exit the station.<br/>",   
     },
-  },
   {
     name: "127",
     icon: require("../assets/slides/127.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>127. Spiral Left</Text>
-        </>
-      );
+    title: "127. Spiral Left - Dog Inside",
+    description: "127. Spiral Right - Dog Outside<br/>• While heeling, <b>the team moves around the cones in a counter-clockwise direction</b>, turning to their left when moving around each of the cones.<br/>• The team <b>pass the first and second cones and proceeds to and around the third one</b>, then <b>return to loop the first cone</b>.<br/>• The team then <b>proceeds to and around the second cone</b> and returns to <b>loop the first cone</b> a second time.<br/>• The team finally <b>circles the first cone by passing between the first and second cones</b> to exit the station.<br/>",   
     },
-  },
   {
     name: "128",
     icon: require("../assets/slides/128.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>Weave Once</Text>
-        </>
-      );
+    title: "128. Weave Once",
+    description: "128. Weave Once<br/>• While heeling, <b>the team enters the pattern with the first cone on the team’s left</b>.<br/>• The team <b>weaves through the cones</b> and exits the station<br/>",   
     },
-  },
   {
     name: "129",
     icon: require("../assets/slides/129.jpg"),
     category: "Novice",
-    description: () => {
-      return (
-        <>
-          <Text>Weave Twice</Text>
-        </>
-      );
+    title: "129. Weave Twice",
+    description: "129. Weave Twice<br/>• While heeling, <b>the team enters the pattern with the first cone on the team’s left</b>.<br/>• The team <b>weaves continuously through the cones, loops around the end cone and weaves back to the beginning of the pattern</b>.<br/>",   
     },
-  },
 ];
 
 export default Novice;
