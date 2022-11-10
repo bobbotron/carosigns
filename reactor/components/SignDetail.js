@@ -9,10 +9,10 @@ import {
 } from "react-native";
 import RenderHtml from "react-native-render-html";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
+import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
 export default function SignDetail(props) {
   const window = useWindowDimensions();
   const [index, setIndex] = useState(0);
-
   const styles = StyleSheet.create({
     logo: {
       width: window.width * 0.7 * 1.3,
@@ -30,16 +30,15 @@ export default function SignDetail(props) {
     },
     html: {},
     a: {},
+    routes: {
+      backgroundColor: "#ffffff",
+      paddingTop: 10,
+      flex: 1,
+      paddingLeft: 10,
+    },
   });
   const FirstRoute = () => (
-    <View
-      style={{
-        backgroundColor: "#ffffff",
-        paddingTop: 10,
-        paddingLeft: 10,
-        flex: 1,
-      }}
-    >
+    <View style={styles.routes}>
       {props.sign.description !== undefined &&
         typeof props.sign.description === "function" &&
         props.sign.description()}
@@ -62,11 +61,8 @@ export default function SignDetail(props) {
     if (d === undefined) {
       return "";
     }
-
     const toBullets = (x) => "<li>" + x + "</li>\n";
-
     let r = "";
-
     if (d.minor !== undefined && d.minor.length > 0) {
       r +=
         "<b>Minor (1 to 3 points)</b><ul>" +
@@ -85,14 +81,7 @@ export default function SignDetail(props) {
     return r;
   };
   const FaultRoute = () => (
-    <View
-      style={{
-        backgroundColor: "#ffffff",
-        paddingTop: 10,
-        flex: 1,
-        paddingLeft: 10,
-      }}
-    >
+    <View style={styles.routes}>
       {props.sign.deductions && (
         <>
           <RenderHtml
@@ -109,24 +98,16 @@ export default function SignDetail(props) {
     </View>
   );
   const VideoRoute = () => (
-    <View
-      style={{
-        backgroundColor: "#ffffff",
-        paddingTop: 10,
-        flex: 1,
-        paddingLeft: 10,
-      }}
-    >
+    <View style={styles.routes}>
       <Text>Coming soon.</Text>
     </View>
   );
-
   const state = {
     index: index,
     routes: [
-      { key: "first", title: "Description" },
-      { key: "deductions", title: "Deductions" },
-      { key: "video", title: "Video" },
+      { key: "first", title: "Description", icon: "calendar" },
+      { key: "deductions", title: "Deductions", icon: "alert-minus-outline" },
+      { key: "video", title: "Video", icon: "play-circle-outline" },
     ],
   };
   const s = SceneMap({
@@ -134,46 +115,60 @@ export default function SignDetail(props) {
     deductions: FaultRoute,
     video: VideoRoute,
   });
-
   const renderTabBar = (props) => (
     <TabBar
       {...props}
       labelStyle={{ fontSize: 13 }}
       activeColor={"black"}
       inactiveColor={"grey"}
+      renderIcon={({ route, focused, color }) => (
+        <>
+          {route.icon !== undefined && (
+            <>
+              <MaterialIcons
+                name={route.icon}
+                size={24}
+                color={focused ? "black" : "grey"}
+              />
+            </>
+          )}
+        </>
+      )}
       indicatorStyle={{ backgroundColor: "#aaaaaa" }}
       style={{ marginTop: 25, backgroundColor: "#ffffff" }}
     />
   );
   return (
-    <View style={styles.selectedSign}>
-      <ScrollView>
+    <ScrollView>
+    <View 
+    // style={styles.selectedSign}
+    >
         <Image source={props.sign.icon} style={styles.logo} />
-
         {props.sign.reward && (
           <>
+            <MaterialIcons name="bone" size={32} color="black" />
             <Text style={{ paddingLeft: 10, paddingTop: 10 }}>
               This is a reinforcement station.
             </Text>
           </>
         )}
-        <View style={{ height: 400 }}>
+        <View style={{ height: 500 }}>
           <TabView
             navigationState={state}
             renderScene={s}
             onIndexChange={setIndex}
-            // initialLayout={{ width: window.width - 10 }}
             renderTabBar={renderTabBar}
             style={{ height: 200, width: window.width - 20 }}
           />
         </View>
-      </ScrollView>
+        
     </View>
+      </ScrollView>
   );
 }
 const htmlStyle = StyleSheet.create({
   a: {
     fontWeight: "300",
-    color: "#FF3366", // make links coloured pink
+    color: "#33ff33",
   },
 });
