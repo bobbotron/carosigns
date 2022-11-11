@@ -28,6 +28,16 @@ export default function SignDetail(props) {
       marginTop: 30,
       height: 200,
     },
+    rewardContainer: {
+      flex:1 ,
+      alignContent: "center",
+      justifyContent: "center"
+    },
+    rewardText: {
+textAlign:"center",
+paddingLeft: 10,
+paddingRight: 10
+    },
     html: {},
     a: {},
     routes: {
@@ -36,9 +46,22 @@ export default function SignDetail(props) {
       flex: 1,
       paddingLeft: 10,
     },
+    descriptionName: {
+      fontSize: 20,
+      color: "green",
+      fontWeight: "bold", 
+      paddingBottom: 5
+    },
+    deductionHeader : {
+      fontWeight: "bold",
+      color: "green",
+      paddingBottom: 10
+    }
   });
   const FirstRoute = () => (
     <View style={styles.routes}>
+      <Text style={styles.descriptionName}>{props.sign.title}</Text>
+      
       {props.sign.description !== undefined &&
         typeof props.sign.description === "function" &&
         props.sign.description()}
@@ -82,6 +105,7 @@ export default function SignDetail(props) {
   };
   const FaultRoute = () => (
     <View style={styles.routes}>
+      <Text style={styles.deductionHeader}>Common deductions for this sign include:</Text>
       {props.sign.deductions && (
         <>
           <RenderHtml
@@ -105,7 +129,7 @@ export default function SignDetail(props) {
   const state = {
     index: index,
     routes: [
-      { key: "first", title: "Description", icon: "calendar" },
+      { key: "first", title: "Description", icon: "text-box-check-outline" },
       { key: "deductions", title: "Deductions", icon: "alert-minus-outline" },
       { key: "video", title: "Video", icon: "play-circle-outline" },
     ],
@@ -145,14 +169,14 @@ export default function SignDetail(props) {
     >
         <Image source={props.sign.icon} style={styles.logo} />
         {props.sign.reward && (
-          <>
-            <MaterialIcons name="bone" size={32} color="black" />
-            <Text style={{ paddingLeft: 10, paddingTop: 10 }}>
-              This is a reinforcement station.
+          <View style={styles.rewardContainer}>
+            <MaterialIcons name="bone" size={32} color="black"  style={styles.rewardText}/>
+            <Text style={styles.rewardText}>
+              This is a reinforcement station in Novice and Advanced A/B Streams
             </Text>
-          </>
+          </View>
         )}
-        <View style={{ height: 500 }}>
+        <View style={{ height: 700 }}>
           <TabView
             navigationState={state}
             renderScene={s}
