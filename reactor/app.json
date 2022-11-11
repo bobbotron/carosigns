@@ -4,7 +4,7 @@
     "slug": "caro-signs",
     "version": "1.0.0",
     "owner": "bobbotron",
-    "orientation": "portrait",
+    "orientation": "all",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
