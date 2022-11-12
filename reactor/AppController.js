@@ -101,7 +101,11 @@ export default function AppController() {
         </>
       )}
       {selectedLevel !== undefined && !searchActive && (
-        <Level level={selectedLevel} backListener={backToMainList} />
+        <Level
+          level={selectedLevel}
+          backListener={backToMainList}
+          signs={selectedLevel.signs}
+        />
       )}
 
       {searchActive && (
