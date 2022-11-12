@@ -4,19 +4,19 @@ import { Button } from "react-native-paper";
 export default function AssetExample(props) {
   const t = props.levels.map((n) => (
     <Button
-    key={n.name}
-          style={styles.button}
-          labelStyle={styles.buttonLabel}
-          mode="contained"
-          onPress={() => props.levelListener(n)}
-        >{n.name}</Button>
+      key={n.name}
+      style={styles.button}
+      labelStyle={styles.buttonLabel}
+      mode="contained"
+      onPress={() => props.levelListener(n)}
+    >
+      {n.name}
+    </Button>
   ));
 
   return (
     <View style={styles.container}>
-      <>
-        {t}
-      </>
+      <>{t}</>
     </View>
   );
 }
@@ -26,10 +26,10 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 10,
     marginBottom: 0,
-    fontSize: 20
+    fontSize: 20,
   },
   buttonLabel: {
-    fontSize: 18
+    fontSize: 18,
   },
   paragraph: {
     // margin: 24,
