@@ -10,6 +10,8 @@ import {
 import RenderHtml from "react-native-render-html";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import HandbookTextLink from "./HandbookTextLink";
+
 export default function SignDetail(props) {
   const window = useWindowDimensions();
   const [index, setIndex] = useState(0);
@@ -29,14 +31,14 @@ export default function SignDetail(props) {
       height: 200,
     },
     rewardContainer: {
-      flex:1 ,
+      flex: 1,
       alignContent: "center",
-      justifyContent: "center"
+      justifyContent: "center",
     },
     rewardText: {
-textAlign:"center",
-paddingLeft: 10,
-paddingRight: 10
+      textAlign: "center",
+      paddingLeft: 10,
+      paddingRight: 10,
     },
     html: {},
     a: {},
@@ -49,19 +51,25 @@ paddingRight: 10
     descriptionName: {
       fontSize: 20,
       color: "green",
-      fontWeight: "bold", 
-      paddingBottom: 5
+      fontWeight: "bold",
+      paddingBottom: 5,
     },
-    deductionHeader : {
+    deductionHeader: {
       fontWeight: "bold",
       color: "green",
-      paddingBottom: 10
-    }
+      paddingBottom: 10,
+    },
+    deductionNotice: {
+      fontWeight: "bold",
+    },
+    deductionLink: {
+      textDecorationLine: "underline",
+    },
   });
   const FirstRoute = () => (
     <View style={styles.routes}>
       <Text style={styles.descriptionName}>{props.sign.title}</Text>
-      
+
       {props.sign.description !== undefined &&
         typeof props.sign.description === "function" &&
         props.sign.description()}
@@ -105,7 +113,9 @@ paddingRight: 10
   };
   const FaultRoute = () => (
     <View style={styles.routes}>
-      <Text style={styles.deductionHeader}>Common deductions for this sign include:</Text>
+      <Text style={styles.deductionHeader}>
+        Common deductions for this sign include:
+      </Text>
       {props.sign.deductions && (
         <>
           <RenderHtml
@@ -116,8 +126,8 @@ paddingRight: 10
           />
         </>
       )}
-      <Text>
-        See the Master General Handbook for a complete list of deductions.
+      <Text style={styles.deductionNotice}>
+        See the <HandbookTextLink/> for a complete list of deductions.
       </Text>
     </View>
   );
@@ -164,15 +174,20 @@ paddingRight: 10
   );
   return (
     <ScrollView>
-    <View 
-    // style={styles.selectedSign}
-    >
+      <View
+      // style={styles.selectedSign}
+      >
         <Image source={props.sign.icon} style={styles.logo} />
         {props.sign.reward && (
           <View style={styles.rewardContainer}>
-            <MaterialIcons name="bone" size={32} color="black"  style={styles.rewardText}/>
+            <MaterialIcons
+              name="bone"
+              size={32}
+              color="black"
+              style={styles.rewardText}
+            />
             <Text style={styles.rewardText}>
-              This is a reinforcement station in Novice and Advanced A/B Streams
+              Reinforcement station in Novice &amp; Advanced A/B
             </Text>
           </View>
         )}
@@ -185,9 +200,8 @@ paddingRight: 10
             style={{ height: 200, width: window.width - 20 }}
           />
         </View>
-        
-    </View>
-      </ScrollView>
+      </View>
+    </ScrollView>
   );
 }
 const htmlStyle = StyleSheet.create({
