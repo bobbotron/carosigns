@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo/webpack-config": "^0.17.0",
+    "@react-native-async-storage/async-storage": "~1.17.3",
     "expo": "~46.0.16",
     "expo-status-bar": "~1.4.0",
     "prop-types": "^15.8.1",
@@ -23,11 +24,16 @@
     "react-native-tab-view": "^3.3.0",
     "react-native-vector-icons": "^9.2.0",
     "react-native-web": "~0.18.7",
-    "react-native-webview": "11.23.0"
+    "react-native-webview": "11.23.0",
+    "react-redux": "^8.0.5",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "@types/react-native": "^0.69.15"
   },
   "private": true
 }

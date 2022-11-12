@@ -12,9 +12,11 @@ import RenderHtml from "react-native-render-html";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import HandbookTextLink from "./HandbookTextLink";
+import { addFavorite } from "../redux/actions";
 
 export default function SignDetail(props) {
   const window = useWindowDimensions();
+
   const [index, setIndex] = useState(0);
   const styles = StyleSheet.create({
     logo: {
@@ -200,6 +202,7 @@ export default function SignDetail(props) {
       style={{ marginTop: 25, backgroundColor: "#ffffff" }}
     />
   );
+
   return (
     <ScrollView>
       <View

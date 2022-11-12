@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Appbar } from "react-native-paper";
-import SignsDB from "../data/SignDb";
+
 import { Text, View, TouchableOpacity, Image } from "react-native";
 import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
+import FavAction from "./FavAction";
 
 export default function Level(props) {
   const [selectedSign, setSelectedSign] = useState(undefined);
@@ -22,18 +23,17 @@ export default function Level(props) {
       <Appbar.Header>
         <Appbar.BackAction onPress={backButtonListener} />
 
-        {/* <Appbar.Action icon="arrow-up-thick" onPress={() => {}} />
-    <Appbar.Action icon="magnify" onPress={() => {}} /> */}
         <Appbar.Content title={appBarTitle} />
+        <FavAction sign={selectedSign} />
       </Appbar.Header>
       {selectedSign === undefined &&
-        (SignsDB.CategoryMap[props.level.name].length === 0 ? (
+        (props.signs.length === 0 ? (
           <Text>There's no signs set up for "{props.level.name}" yet!</Text>
         ) : (
           <>
             <FlatGrid
               itemDimension={135}
-              data={SignsDB.CategoryMap[props.level.name]}
+              data={props.signs}
               // style={styles.gridView}
               // staticDimension={300}
               // fixed
