@@ -85,7 +85,20 @@ export default function AppController() {
       )}
 
       {selectedLevel === undefined && !searchActive && (
-        <MainList levels={levels} levelListener={levelListener} />
+        <>
+          <MainList levels={levels} levelListener={levelListener} />
+          <Card style={styles.disclaimerCard}>
+            <Card.Content>
+              <Text>
+                <Text style={styles.disclaimerBold}>Disclaimer:</Text> The
+                information contained here is not comprehensive. Refer to the{" "}
+                <HandbookTextLink /> for complete information. In the case of a
+                discrepancy, the handbook is final. If you spot an error here,
+                help us fix it by emailing:
+              </Text>
+            </Card.Content>
+          </Card>
+        </>
       )}
       {selectedLevel !== undefined && !searchActive && (
         <Level level={selectedLevel} backListener={backToMainList} />
@@ -120,17 +133,6 @@ export default function AppController() {
         </>
       )}
 
-      <Card style={styles.disclaimerCard}>
-        <Card.Content>
-          <Text>
-            <Text style={styles.disclaimerBold}>Disclaimer:</Text> The
-            information contained here is not comprehensive. Refer to the{" "}
-            <HandbookTextLink /> for complete information. In the case of a
-            discrepancy, the handbook is final. If you spot an error here, help
-            us fix it by emailing:
-          </Text>
-        </Card.Content>
-      </Card>
       <StatusBar style="auto" />
     </View>
   );
