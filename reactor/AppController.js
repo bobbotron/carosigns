@@ -32,11 +32,11 @@ export default function AppController() {
     },
     disclaimerCard: {
       marginTop: 20,
-      marginBottom: 20
-    }, 
+      marginBottom: 20,
+    },
     disclaimerBold: {
-      fontWeight: "bold"
-    }
+      fontWeight: "bold",
+    },
   });
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -123,11 +123,11 @@ export default function AppController() {
       <Card style={styles.disclaimerCard}>
         <Card.Content>
           <Text>
-          <Text style={styles.disclaimerBold}>Disclaimer:</Text>  The information 
-            contained here is not comprehensive. Refer to
-            the <HandbookTextLink/> for complete information. In the case of
-            a discrepancy, the handbook is final. If you spot an error here,
-            help us fix it by emailing:
+            <Text style={styles.disclaimerBold}>Disclaimer:</Text> The
+            information contained here is not comprehensive. Refer to the{" "}
+            <HandbookTextLink /> for complete information. In the case of a
+            discrepancy, the handbook is final. If you spot an error here, help
+            us fix it by emailing:
           </Text>
         </Card.Content>
       </Card>

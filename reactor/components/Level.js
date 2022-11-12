@@ -21,8 +21,8 @@ export default function Level(props) {
     <>
       <Appbar.Header>
         <Appbar.BackAction onPress={backButtonListener} />
-        
-    {/* <Appbar.Action icon="arrow-up-thick" onPress={() => {}} />
+
+        {/* <Appbar.Action icon="arrow-up-thick" onPress={() => {}} />
     <Appbar.Action icon="magnify" onPress={() => {}} /> */}
         <Appbar.Content title={appBarTitle} />
       </Appbar.Header>
