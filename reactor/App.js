@@ -5,6 +5,9 @@ import {
   Provider as PaperProvider,
 } from "react-native-paper";
 
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
+
 export default function App() {
   // #189, 231, 189
 
@@ -57,8 +60,10 @@ export default function App() {
     },
   };
   return (
-    <PaperProvider theme={theme}>
-      <AppController />
-    </PaperProvider>
+    <Provider store={store}>
+      <PaperProvider theme={theme}>
+        <AppController />
+      </PaperProvider>
+    </Provider>
   );
 }

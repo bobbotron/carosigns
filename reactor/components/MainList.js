@@ -1,7 +1,11 @@
 import { View, StyleSheet, Image, Alert } from "react-native";
-import { Button } from "react-native-paper";
+import { Button, Text } from "react-native-paper";
+import { useSelector } from "react-redux";
+import SignsDB from "../data/SignDb";
 
-export default function AssetExample(props) {
+export default function MainList(props) {
+  const { favorites } = useSelector((state) => state.signsReducer);
+
   const t = props.levels.map((n) => (
     <Button
       key={n.name}
@@ -14,9 +18,31 @@ export default function AssetExample(props) {
     </Button>
   ));
 
+  const favLevel = {
+    name: "My Saved Signs",
+    isFavorites: true,
+    signs: SignsDB.Signs.filter((s) => favorites.includes(s.name)),
+  };
+  const favListener = () => props.levelListener(favLevel);
+
   return (
     <View style={styles.container}>
-      <>{t}</>
+      <>
+        {t}
+        {favorites.length === 0 ? (
+          <></>
+        ) : (
+          <Button
+            style={styles.button}
+            buttonColor="#da5711"
+            labelStyle={styles.buttonLabel}
+            mode="contained"
+            onPress={favListener}
+          >
+            {favLevel.name}
+          </Button>
+        )}
+      </>
     </View>
   );
 }
