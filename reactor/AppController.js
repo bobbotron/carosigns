@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Button, Searchbar } from "react-native-paper";
+import { Button, Card, Searchbar } from "react-native-paper";
 import { useEffect, useState } from "react";
 import {
   StyleSheet,
@@ -12,6 +12,7 @@ import MainList from "./components/MainList";
 import Level from "./components/Level";
 import SignsDB from "./data/SignDb";
 import SignDetail from "./components/SignDetail";
+import HandbookTextLink from "./components/HandbookTextLink";
 
 export default function AppController() {
   const window = useWindowDimensions();
@@ -29,6 +30,13 @@ export default function AppController() {
       height: (window.width / 1061) * 215 * 0.9,
       marginBottom: 10,
     },
+    disclaimerCard: {
+      marginTop: 20,
+      marginBottom: 20
+    }, 
+    disclaimerBold: {
+      fontWeight: "bold"
+    }
   });
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -112,6 +120,17 @@ export default function AppController() {
         </>
       )}
 
+      <Card style={styles.disclaimerCard}>
+        <Card.Content>
+          <Text>
+          <Text style={styles.disclaimerBold}>Disclaimer:</Text>  The information 
+            contained here is not comprehensive. Refer to
+            the <HandbookTextLink/> for complete information. In the case of
+            a discrepancy, the handbook is final. If you spot an error here,
+            help us fix it by emailing:
+          </Text>
+        </Card.Content>
+      </Card>
       <StatusBar style="auto" />
     </View>
   );
