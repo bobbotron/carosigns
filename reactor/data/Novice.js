@@ -33,7 +33,7 @@ const Novice = [
     category: "Novice",
     title: "100. HALT – Stand",
     description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>stand</b>.<br/> • The handler cues the dog to <b>heel forward from the stand position</b>.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• Pause after the dog stands and before heeling forward (or reaching for food reinforcement) so that the Judge can clearly see that the stand has been performed.",
+    +"<b>Top Tips!</b><br/>• Pause briefly after each position change so that the Judge can clearly see all required positions. Do not heel forward or reach for reinforcement until the stand has been completed.",
     reward: true,
     deductions: {
       minor: [
@@ -44,7 +44,7 @@ const Novice = [
       nq: [
         "Dog sits or stands 90 degrees or more out of heel position",
         "Failure of the dog to assume a cued position",
-        "Dog assumes a position not required by the exercise (eg. a down)",
+        "Dog assumes a position not required by the exercise",
         "Handler touches the dog to put them into a position",
         "Reinforcement: handler puts their hand into the pocket where the food is located before the dog has completed the station, uses the food as a lure, or stores the food in their left pocket"
       ],
