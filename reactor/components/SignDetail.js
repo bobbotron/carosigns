@@ -7,6 +7,7 @@ import {
   Text,
   ScrollView,
 } from "react-native";
+import { Avatar, Card } from "react-native-paper";
 import RenderHtml from "react-native-render-html";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
@@ -84,6 +85,33 @@ export default function SignDetail(props) {
       {props.sign.description === undefined && (
         <>
           <Text>Description not set.</Text>
+        </>
+      )}
+      {props.sign.tips !== undefined && (
+        <>
+          <Card>
+            <Card.Title
+              title="Tips"
+              titleStyle={{ ...styles.descriptionName, maxHeight: 22 }}
+              subtitle="for successful trialing"
+              left={(props) => (
+                <Avatar.Icon
+                  {...props}
+                  size={30}
+                  backgroundColor="grey"
+                  icon="lightbulb-on-outline"
+                />
+              )}
+              leftStyle={{ width: 28 }}
+            ></Card.Title>
+            <Card.Content>
+              <RenderHtml
+                key="tips"
+                contentWidth={window.width}
+                source={{ html: props.sign.tips }}
+              />
+            </Card.Content>
+          </Card>
         </>
       )}
     </View>

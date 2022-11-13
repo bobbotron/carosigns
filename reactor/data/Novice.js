@@ -7,9 +7,9 @@ const Novice = [
     category: "Novice",
     title: "Start",
     description:
-      "• While heeling, the <b>team heels past the Start station.</b><br/> • Timing begins.<br/> • There are no other commands from the Judge throughout the course.<br/><br/>"
-      +"<b>Top Tips!</b><br/>• The Judge will let you know when you may begin.<br>• Handlers may choose to either have the dog sit before the Start sign or use a moving start.<br/> • If in a class that allows food reinforcement, food may be delivered before crossing the Start sign.",
-    
+      "• While heeling, the <b>team heels past the Start station.</b><br/> • Timing begins.<br/> • There are no other commands from the Judge throughout the course.<br/><br/>",
+    tips: "• The Judge will let you know when you may begin.<br>• Handlers may choose to either have the dog sit before the Start sign or use a moving start.<br/> • If in a class that allows food reinforcement, food may be delivered before crossing the Start sign.",
+
       deductions: {
         minor: ["Initiation of the sign outside of a radius of two feet from the station sign"],
         
