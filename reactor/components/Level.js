@@ -50,6 +50,19 @@ export default function Level(props) {
                       source={item.icon}
                       style={{ width: 140, height: 100 }}
                     />
+                    {(item.hideNameOnGrid == undefined ||
+                      !item.hideNameOnGrid) && (
+                      <View
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          right: 20,
+                          backgroundColor: "#ffffff",
+                        }}
+                      >
+                        <Text style={{ fontWeight: "bold", fontSize:18 }}>{item.name}</Text>
+                      </View>
+                    )}
                   </TouchableOpacity>
                 </View>
               )}
