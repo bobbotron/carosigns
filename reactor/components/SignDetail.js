@@ -12,7 +12,6 @@ import RenderHtml from "react-native-render-html";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import HandbookTextLink from "./HandbookTextLink";
-import { addFavorite } from "../redux/actions";
 
 export default function SignDetail(props) {
   const window = useWindowDimensions();
@@ -93,9 +92,8 @@ export default function SignDetail(props) {
         <>
           <Card>
             <Card.Title
-              title="Tips"
+              title="Helpful Hints"
               titleStyle={{ ...styles.descriptionName, maxHeight: 22 }}
-              subtitle="for successful trialing"
               left={(props) => (
                 <Avatar.Icon
                   {...props}
