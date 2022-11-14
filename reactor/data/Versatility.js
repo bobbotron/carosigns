@@ -4,10 +4,12 @@ const Versatility =
         name: "StartonRight",
         icon: require("../assets/slides/StartonRight.jpg"),
         category: "Versatility",
+        hideNameOnGrid: true,
         description: undefined
       },{
         name: "FinishonRight",
         icon: require("../assets/slides/FinishonRight.jpg"),
+        hideNameOnGrid: true,
         category: "Versatility",
         description: undefined
       },{

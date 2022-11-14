@@ -6,6 +6,7 @@ const Novice = [
     icon: require("../assets/slides/start.jpg"),
     category: "Novice",
     title: "Start",
+    hideNameOnGrid: true,
     description:
       "• While heeling, the <b>team heels past the Start station.</b><br/> • Timing begins.<br/> • There are no other commands from the Judge throughout the course.<br/><br/>",
     tips: "• The Judge will let you know when you may begin.<br>• Handlers may choose to either have the dog sit before the Start sign or use a moving start.<br/> • If in a class that allows food reinforcement, food may be delivered before crossing the Start sign.",
@@ -20,6 +21,7 @@ const Novice = [
     icon: require("../assets/slides/finish.jpg"),
     category: "Novice",
     title: "Finish",
+    hideNameOnGrid: true,
     description:
     "• While heeling, the <b>team heels past the Finish station.</b><br/> • Timing ends.<br/><br/>"
     +"<b>Top Tips!</b><br/>• There is no penalty for crossing the Finish station with the sign on the handler's left side.<br/> • If in a class that allows food reinforcement, food may be delivered after crossing the Finish sign.",

@@ -20,7 +20,7 @@ export default function FavAction(props) {
   };
   const favAddListener = () => handleAddFav(props.sign);
   const favRemoveListener = () => handleRemoveFav(props.sign);
-
+  const size = 36;
   const isStared =
     signDefined && favorites.filter((s) => s === props.sign.name).length !== 0;
   return (
@@ -28,11 +28,19 @@ export default function FavAction(props) {
       {signDefined ? (
         isStared ? (
           <>
-            <Appbar.Action icon="star" onPress={favRemoveListener} />
+            <Appbar.Action
+              icon="star"
+              size={size}
+              onPress={favRemoveListener}
+            />
           </>
         ) : (
           <>
-            <Appbar.Action icon="star-outline" onPress={favAddListener} />
+            <Appbar.Action
+              icon="star-outline"
+              size={size}
+              onPress={favAddListener}
+            />
           </>
         )
       ) : (
