@@ -12,7 +12,12 @@ const Novice = [
     tips: "• The Judge will let you know when you may begin.<br>• Handlers may choose to either have the dog sit before the Start sign or use a moving start.<br/> • If in a class that allows food reinforcement, food may be delivered before crossing the Start sign.",
 
       deductions: {
-        minor: ["Initiation of the sign outside of a radius of two feet from the station sign"],
+        minor: [
+        "Initiation of the sign outside of a radius of two feet from the station sign",
+        "Tight leash (Novice)",
+        "Out of heel position",
+        "Dog interfering with handler (bumping, crowding, jumping up on handler)",
+      ],
         
       },
   },
@@ -23,10 +28,16 @@ const Novice = [
     title: "Finish",
     hideNameOnGrid: true,
     description:
-    "• While heeling, the <b>team heels past the Finish station.</b><br/> • Timing ends.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• There is no penalty for crossing the Finish station with the sign on the handler's left side.<br/> • If in a class that allows food reinforcement, food may be delivered after crossing the Finish sign.",
+    "• While heeling, the <b>team heels past the Finish station.</b><br/> • Timing ends.<br/><br/>",
+    tips: "• There is no penalty for crossing the Finish station with the sign on the handler's left side.<br/> • If in a class that allows food reinforcement, food may be delivered after crossing the Finish station.",
     deductions: {
-      minor: ["Initiation of the sign outside of a radius of two feet from the station sign"],      
+      minor: [
+        "Initiation of the sign outside of a radius of two feet from the station sign",
+        "Tight leash (Novice)",
+        "Out of heel position",
+        "Dog interfering with handler (bumping, crowding, jumping up on handler)",
+        "Loss of forward motion (dog stops)"
+      ],      
     },
    },
   {
@@ -34,8 +45,8 @@ const Novice = [
     icon: require("../assets/slides/100.jpg"),
     category: "Novice",
     title: "100. HALT – Stand",
-    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>stand</b>.<br/> • The handler cues the dog to <b>heel forward from the stand position</b>.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• Pause briefly after each position change so that the Judge can clearly see all required positions. Do not heel forward or reach for reinforcement until the stand has been completed.",
+    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>stand</b>.<br/> • The handler cues the dog to <b>heel forward from the stand position</b>.<br/><br/>",
+    tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.<br/> • Do not heel forward or reach for reinforcement until the stand has been completed.",
     reward: true,
     deductions: {
       minor: [
@@ -58,8 +69,8 @@ const Novice = [
     icon: require("../assets/slides/101.jpg"),
     category: "Novice",
     title: "101. HALT – Down",
-    description: " • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• Pause briefly after each position change so that the Judge can clearly see all required positions.",
+    description: " • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
+    tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.",
     reward: true,
     deductions: {
       minor: [
@@ -82,8 +93,8 @@ const Novice = [
     icon: require("../assets/slides/102.jpg"),
     category: "Novice",
     title: "102. HALT – Down - Sit",
-    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>sit</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• Pause briefly after each position change so that the Judge can clearly see all required positions.",
+    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>sit</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
+    tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.",
     reward: true,
     deductions: {
       minor: [
@@ -105,8 +116,8 @@ const Novice = [
     icon: require("../assets/slides/103.jpg"),
     category: "Novice",
     title: "103. HALT – Walk Around",
-    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• There is no deduction for the handler's distance from the dog during the walk around. If the dog sits close to a station sign, making it difficult to walk between the dog and the sign, you may choose to walk around both the sign and the dog while returning to heel position.",
+    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
+    tips: "• There is no deduction for the handler's distance from the dog during the walk around. If the dog sits close to a station sign, making it difficult to walk between the dog and the sign, you may choose to walk around both the sign and the dog while returning to heel position.",
     reward: true,
     deductions: {
       minor: [
@@ -129,8 +140,8 @@ const Novice = [
     icon: require("../assets/slides/104.jpg"),
     category: "Novice",
     title: "104. HALT – Down - Walk Around",
-    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to down</b>.<br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• There is no deduction for the handler's distance from the dog during the walk around. If the dog sits close to a station sign, making it difficult to walk between the dog and the sign, you may choose to walk around both the sign and the dog while returning to heel position.",
+    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to down</b>.<br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
+    tips: "• There is no deduction for the handler's distance from the dog during the walk around. If the dog sits close to a station sign, making it difficult to walk between the dog and the sign, you may choose to walk around both the sign and the dog while returning to heel position.",
     reward: true,
     deductions: {
       minor: [
@@ -153,8 +164,8 @@ const Novice = [
     icon: require("../assets/slides/105.jpg"),
     category: "Novice",
     title: "105. HALT – 1,2,3 Steps Forward",
-    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to heel and takes one step forward, then halts; two steps and halts; then three steps and halts. <b>The team must meet the minimum required steps</b>.<br/> • Steps should be equal in length, in a natural stride for the team and finishing the exercise before the next station sign.<br/> • <b>The dog moves with the handler</b>, maintaining heel position, and <b>must sit each time the handler halts</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• During the walkthrough, practice your length of stride to be sure that you can complete the required number of steps before reaching the next station sign.",
+    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to heel and takes one step forward, then halts; two steps and halts; then three steps and halts. <b>The team must meet the minimum required steps</b>.<br/> • Steps should be equal in length, in a natural stride for the team and finishing the exercise before the next station sign.<br/> • <b>The dog moves with the handler</b>, maintaining heel position, and <b>must sit each time the handler halts</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
+    tips: "• During the walkthrough, practice the length of your steps to be sure that you can complete the exercise before reaching the next station sign.",
     reward: true,
     deductions: {
       minor: [
@@ -181,8 +192,8 @@ const Novice = [
     icon: require("../assets/slides/106.jpg"),
     category: "Novice",
     title: "106. HALT – Sidestep Right - HALT",
-    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position</b>.<br/> • The handler takes <b>one side step directly to their right</b> while cueing the dog to heel.</br> • The dog <b>must move to the right simultaneously with the handler</b> remaining in heel position parallel to the handler and <b>sit</b> when the handler stops.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>"
-    +"<b>Top Tips!</b><br/>• The team will heel directly up to the station sign and perform the side step in front of the sign, then proceed along the new path beside the sign.",
+    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position</b>.<br/> • The handler takes <b>one side step directly to their right</b> while cueing the dog to heel.</br> • The dog <b>must move to the right simultaneously with the handler</b> remaining in heel position parallel to the handler and <b>sit</b> when the handler stops.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
+    tips: "• The team will heel directly up to the station sign and perform the side step in front of the sign, then proceed along the new path beside the sign.",
     reward: true,
     deductions: {
       minor: [
@@ -208,8 +219,8 @@ const Novice = [
     icon: require("../assets/slides/107.jpg"),
     category: "Novice",
     title: "107. HALT – 90 Pivot Right - HALT",
-    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90 degrees to their right in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the right.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>"
-+"<b>Top Tips!</b><br/>• Ensure you are clearly performing a pivot rather than a step: either the ball one foot or the heel of one foot must stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
+    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90-degrees to their right in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the right.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
+    tips: "• Ensure you are clearly performing a pivot rather than a step: either the ball one foot or the heel of one foot must stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
     reward: true,
     deductions: {
       minor: [
@@ -234,8 +245,8 @@ const Novice = [
     icon: require("../assets/slides/108.jpg"),
     category: "Novice",
     title: "108. HALT – 90 Pivot Left - HALT",
-    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90 degrees to their left in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the left.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>"
-+"<b>Top Tips!</b><br/>• Ensure you are clearly performing a pivot rather than a step: either the ball one foot or the heel of one foot must stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
+    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90 degrees to their left in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the left.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
+    tips: "• Ensure you are clearly performing a pivot rather than a step: either the ball one foot or the heel of one foot must stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
     reward: true,
     deductions: {
       minor: [
@@ -260,8 +271,8 @@ const Novice = [
     icon: require("../assets/slides/109.jpg"),
     category: "Novice",
     title: "109. HALT – Turn Right 1 Step - HALT",
-    description: "• The team comes to a <b>halt</b> and the handler cues the <b>dog to sit in heel position.</b><br/>• The handler cues the dog to heel, <b>turns to the right, takes one step in that direction and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>"
-+"<b>Top Tips!</b><br>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br>• A sit cue can be used each time the dog is required to sit.",
+    description: "• The team comes to a <b>halt</b> and the handler cues the <b>dog to sit in heel position.</b><br/>• The handler cues the dog to heel, <b>turns to the right, takes one step in that direction and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
+    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br>• A sit cue can be used each time the dog is required to sit.",
     reward: true,
     deductions: {
       minor: [
@@ -286,8 +297,8 @@ const Novice = [
     icon: require("../assets/slides/110.jpg"),
     category: "Novice",
     title: "110. Right Turn",
-    description: "• While heeling, the team <b>makes a 90-degree turn to the right.</b><br/>• This station results in a 90-degree change of direction to the right.<br/><br/>"
-+"<b>Top Tips!</b><br>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
+    description: "• While heeling, the team <b>makes a 90-degree turn to the right.</b><br/>• This station results in a 90-degree change of direction to the right.<br/><br/>",
+    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
@@ -302,8 +313,8 @@ const Novice = [
     icon: require("../assets/slides/111.jpg"),
     category: "Novice",
     title: "111. Left Turn",
-    description: "• While heeling, the team <b>makes a 90-degree turn to the left.</b><br/>• This station results in a 90-degree change of direction to the left.<br/><br/>"
-+"<b>Top Tips!</b><br>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
+    description: "• While heeling, the team <b>makes a 90-degree turn to the left.</b><br/>• This station results in a 90-degree change of direction to the left.<br/><br/>",
+    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
@@ -318,15 +329,15 @@ const Novice = [
     icon: require("../assets/slides/112.jpg"),
     category: "Novice",
     title: "112. 180 Right",
-    description: "• While heeling, the team <b>makes a 180-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet and should be in a straight line to and from the station sign for a minimum of one stride before and after turning.<br/>• This station results in a 180-degree change of direction.<br/><br/>"
-+"<b>Top Tips!</b><br/>• The natural path of the course may result in the team approaching the turn from an angle; be sure that the final strides towards the sign are in a straight line, perform the exercise in front of the sign then heel away from the sign in a straight line for several strides. Then, you may proceed at an angle if required for the course.<br/>• 180-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.",
+    description: "• While heeling, the team <b>makes a 180-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet and should be in a straight line to and from the station sign for a minimum of one stride before and after turning.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
+    tips: "• The natural path of the course may result in the team approaching the turn from an angle; be sure that the final strides towards the sign are in a straight line, perform the exercise in front of the sign then heel away from the sign in a straight line for several strides. Then, you may proceed at an angle if required for the course.<br/>• 180-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
         "Handler or dog stop forward motion", 
         "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
-        "Handler's path while turning not within a diameter of 2 feet (deduction not specified in the handbook)", 
-        "Handler's path not in a straight line to and from the station sign for at least one stride before and after turning (deduction not specified in the handbook)"
+        "Handler's path while turning not within a diameter of 2 feet", 
+        "Handler's path not in a straight line to and from the station sign for at least one stride before and after turning"
       ],
       nq: [
         "The team does not make a 180-degree turn in the correct direction",
@@ -339,15 +350,15 @@ const Novice = [
     icon: require("../assets/slides/113.jpg"),
     category: "Novice",
     title: "113. 180 Left",
-    description: "• While heeling, the team <b>makes a 180-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet and should be in a straight line to and from the station sign for a minimum of one stride before and after turning.<br/>• This station results in a 180-degree change of direction.<br/><br/>"
-+"<b>Top Tips!</b><br/>• The natural path of the course may result in the team approaching the turn from an angle; be sure that the final strides towards the sign are in a straight line, perform the turn in front of the sign, then heel away from the sign in a straight line for several strides. Then, you may proceed at an angle if required for the course.<br/>• 180-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.",
+    description: "• While heeling, the team <b>makes a 180-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet and should be in a straight line to and from the station sign for a minimum of one stride before and after turning.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
+    tips: "• The natural path of the course may result in the team approaching the turn from an angle; be sure that the final strides towards the sign are in a straight line, perform the turn in front of the sign, then heel away from the sign in a straight line for several strides. Then, you may proceed at an angle if required for the course.<br/>• 180-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
         "Handler or dog stop forward motion", 
         "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
-        "Handler's path while turning not within a diameter of 2 feet (deduction not specified in the handbook)", 
-        "Handler's path not in a straight line to and from the station sign for at least one stride before and after turning (deduction not specified in the handbook)"
+        "Handler's path while turning not within a diameter of 2 feet", 
+        "Handler's path not in a straight line to and from the station sign for at least one stride before and after turning"
       ],
       nq: [
         "The team does not make a 180-degree turn in the correct direction",
@@ -360,14 +371,14 @@ const Novice = [
     icon: require("../assets/slides/114.jpg"),
     category: "Novice",
     title: "114. 270 Right",
-    description: "• While heeling, the team <b>makes a 270-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>• This station results in a 90-degree change of direction to the left.<br/><br/>"
-+"<b>Top Tips!</b><br>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br/>• 270-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.",
+    description: "• While heeling, the team <b>makes a 270-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>• This station results in a 90-degree change of direction to the left.<br/><br/>",
+    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br/>• 270-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
         "Handler or dog stop forward motion", 
         "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
-        "Handler's path while turning not within a diameter of 2 feet (deduction not specified in the handbook)"
+        "Handler's path while turning not within a diameter of 2 feet"
       ],
       nq: [
         "The team does not make a 270-degree turn in the correct direction",
@@ -380,14 +391,14 @@ const Novice = [
     icon: require("../assets/slides/115.jpg"),
     category: "Novice",
     title: "115. 270 Left",
-    description: "• While heeling, the team <b>makes a 270-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>• This station results in a 90-degree change of direction to the right.<br/><br/>"
-+"<b>Top Tips!</b><br>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br/>• 270-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.",
+    description: "• While heeling, the team <b>makes a 270-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>• This station results in a 90-degree change of direction to the right.<br/><br/>",
+    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br/>• 270-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
         "Handler or dog stop forward motion", 
         "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
-        "Handler's path while turning not within a diameter of 2 feet (deduction not specified in the handbook)"
+        "Handler's path while turning not within a diameter of 2 feet"
       ],
       nq: [
         "The team does not make a 270-degree turn in the correct direction",
@@ -400,13 +411,14 @@ const Novice = [
     icon: require("../assets/slides/116.jpg"),
     category: "Novice",
     title: "116. 360 Right",
-    description: "• While heeling, the team <b>makes a 360-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>",
+    description: "• While heeling, the team <b>makes a 360-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/><br/>",
+    tips: "• 360-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.<br/>• Perform the turn beside the sign, then continue in the same direction and on the same path of travel",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
         "Handler or dog stop forward motion", 
         "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
-        "Handler's path while turning not within a diameter of 2 feet (deduction not specified in the handbook)"
+        "Handler's path while turning not within a diameter of 2 feet"
       ],
       nq: [
         "The team does not make a 360-degree turn in the correct direction",
@@ -419,13 +431,14 @@ const Novice = [
     icon: require("../assets/slides/117.jpg"),
     category: "Novice",
     title: "117. 360 Left",
-    description: "• While heeling, the team <b>makes a 360-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>",
+    description: "• While heeling, the team <b>makes a 360-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/><br/>",
+    tips: "• 360-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.<br/>• Perform the turn beside the sign, then continue in the same direction and on the same path of travel",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
         "Handler or dog stop forward motion", 
         "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
-        "Handler's path while turning not within a diameter of 2 feet (deduction not specified in the handbook)"
+        "Handler's path while turning not within a diameter of 2 feet"
       ],
       nq: [
         "The team does not make a 360-degree turn in the correct direction",
@@ -438,8 +451,8 @@ const Novice = [
     icon: require("../assets/slides/118.jpg"),
     category: "Novice",
     title: "118. Slow Pace",
-    description: "• While heeling, the team decreases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace.<br/>• The slow pace is maintained continuously until the next station.</b><br/>• This station is followed by either Fast, Normal or the Finish station.</br><br/>"
-+"<b>Top Tips!</b><br>• The Judge is looking for the <i>dog</i> to noticeably change their pace. Be sure to change your pace sufficiently (not just your stride length) so that your dog's pace changes noticeably.<br/>• This sign must be followed by a Fast Pace, Normal Pace or Finish sign.",
+    description: "• While heeling, the team decreases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace.<br/>• The slow pace is maintained continuously until the next station.</b><br/>• This station is followed by either Fast, Normal or the Finish station.</br><br/>",
+    tips: "• The Judge is looking for the <i>dog</i> to noticeably change their pace. Be sure to slow your pace significantly (not just your stride length) so that your dog's pace change is noticeable.<br/>• This sign must be followed by a Fast Pace, Normal Pace or Finish sign.",
     deductions: {
       minor: ["Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
       ],
@@ -454,8 +467,8 @@ const Novice = [
     icon: require("../assets/slides/119.jpg"),
     category: "Novice",
     title: "119. Fast Pace",
-    description: "• While heeling, the team increases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace</b>. The pace should be fast enough that the dog at least breaks into a trot.<br/>• <br>The slow pace is maintained continuously until the next station.</b><br/>• This station is followed by either Slow, Normal or the Finish station.</br><br/>"
-+"<b>Top Tips!</b><br>• The Judge is looking for the <i>dog</i> to noticeably change their pace. Be sure to change your pace sufficiently (not just your stride length) so that your dog's pace changes noticeably.<br/>• This sign must be followed by a Slow Pace, Normal Pace or Finish sign.",
+    description: "• While heeling, the team increases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace</b>. The pace should be fast enough that the dog at least breaks into a trot.<br/>• <br>The slow pace is maintained continuously until the next station.</b><br/>• This station is followed by either Slow, Normal or the Finish station.</br><br/>",
+    tips: "• The Judge is looking for the <i>dog</i> to noticeably change their pace. Be sure to change your pace significantly (jogging speed) so that your dog's pace change is noticeable.<br/>• This sign must be followed by a Slow Pace, Normal Pace or Finish sign.",
     deductions: {
       minor: ["Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
       ],
@@ -469,8 +482,8 @@ const Novice = [
     icon: require("../assets/slides/120.jpg"),
     category: "Novice",
     title: "120. Normal Pace",
-    description: "• While heeling, the team moves forward at a <b>normal pace</b> that is comfortable for the dog and handler.<br/>• There must be a <b>noticeable difference in the dogs’ speed from the slow or fast to normal pace.</b><br/><br/>"
-    +"<b>Top Tips!</b><br/>• The Normal Pace sign follows the Fast Pace, Slow Pace or Halt - Fast from Sit signs.<br/>• Ensure the <i>dog's</i> pace changes noticeably.",
+    description: "• While heeling, the team moves forward at a <b>normal pace</b> that is comfortable for the dog and handler.<br/>• There must be a <b>noticeable difference in the dogs’ speed from the slow or fast to normal pace.</b><br/><br/>",
+    tips: "• The Normal Pace sign follows the Fast Pace, Slow Pace or Halt - Fast from Sit signs.<br/>• Ensure the <i>dog's</i> pace changes noticeably.",
     deductions: {
       minor: ["Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)"],
       nq: ["No noticeable change in the dog's pace from the slow or fast pace to normal pace"],
@@ -481,8 +494,8 @@ const Novice = [
     icon: require("../assets/slides/121.jpg"),
     category: "Novice",
     title: "121. Call Front - Finish Right",
-    description: "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s right and around their body to sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>"
-+"<b>Top Tips!</b><br/>• Keep your feet still during the finish.<br/>• You may wish to pause after the dog has returned to heel position so that the Judge can clearly see that the dog has completed the sit, before heeling forward",
+    description: "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s right and around their body to sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
+    tips: "• Keep your feet still during the finish.<br/>• You may wish to pause after the dog has returned to heel position so that the Judge can clearly see that the dog has completed the sit, before heeling forward or reaching for food reinforcement",
     reward: true,
     deductions: {
       minor: [
@@ -494,7 +507,7 @@ const Novice = [
       substantial: ["Handler moves left or right to position themselves in front of the dog to create a straight front"],
 
       nq: [
-        "Dog sits 90 degrees or more out of heel position or out of front position",
+        "Dog sits 90-degrees or more out of heel position or out of front position",
         "Dog does not sit in front position",
         "Dog not in a sit before heeling forward",
         "Dog does not move around the handler to the right to sit in heel position",
@@ -510,8 +523,8 @@ const Novice = [
     icon: require("../assets/slides/122.jpg"),
     category: "Novice",
     title: "122. Call Front - Finish Left",
-    description: "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s left directly to sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>"
-+"<b>Top Tips!</b><br/>• Keep your feet still during the finish.<br/>• You may wish to pause after the dog has returned to heel position so that the Judge can clearly see that the dog has completed the sit, before heeling forward.",
+    description: "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s left directly to sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
+    tips: "• Keep your feet still during the finish.<br/>• You may wish to pause after the dog has returned to heel position so that the Judge can clearly see that the dog has completed the sit, before heeling forward or reaching for food reinforcement.",
     reward: true,
     deductions: {
       minor: [
@@ -540,6 +553,7 @@ const Novice = [
     category: "Novice",
     title: "123. Call Front - Forward Right",
     description: "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s right, around and behind them, moving towards heel position</b>.<br/>• As the dog is returning to heel position, the handler cues the dog to heel and moves forward. <b>The dog does not sit in heel position.</b><br/>",
+    tips: "• You may begin to walk forward as soon as the dog has started to circle behind you and is on their way to heel position",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of front position (no deductions for less than a 45-degree angle)",
@@ -564,7 +578,8 @@ const Novice = [
     category: "Novice",
     title: "124. Call Front - Forward Left",
     description: "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s left directly towards heel position</b>.<br/>• As the dog is returning to heel position, the handler cues the dog to heel and moves forward. <b>The dog does not sit in heel position.</b><br/>",
-    deductions: {
+    tips: "• You may begin to walk forward as soon as the dog has started to return to heel position and is no longer in your path",
+        deductions: {
       minor: [
         "Dog sits more than 45-degrees out of front position (no deductions for less than a 45-degree angle)",
         "Handler moves their feet to perform the forward",        
@@ -587,8 +602,8 @@ const Novice = [
     icon: require("../assets/slides/125.jpg"),
     category: "Novice",
     title: "125. Call Front Handler Returns to Heel",
-    description: "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The <b>dog must remain in a sit</b> while the <b>handler walks around behind the dog in a counterclockwise direction to return to heel position</b>.<br/>• The handler may pause upon return to heel position.<br/>• This station will result in a 180-degree change of direction.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>"
-+"<b>Top Tips!</b><br/>• There is no deduction for the handler's distance from the dog during the walk around. If the dog is sitting too close to a sign, making it difficult to walk between the dog and the sign, you may wish to walk around both the sign and the dog while returning to heel position.",  
+    description: "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The <b>dog must remain in a sit</b> while the <b>handler walks around behind the dog in a counterclockwise direction to return to heel position</b>.<br/>• The handler may pause upon return to heel position.<br/>• This station will result in a 180-degree change of direction.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
+    tips: "• There is no deduction for the handler's distance from the dog during the walk around. If the dog is sitting too close to a sign, making it difficult to walk between the dog and the sign, you may wish to walk around both the dog and the sign while returning to heel position.",  
     reward: true,  
     deductions: {
       minor: [
@@ -613,8 +628,8 @@ const Novice = [
     icon: require("../assets/slides/126.jpg"),
     category: "Novice",
     title: "126. Spiral Right - Dog Outside",
-    description: "• While heeling, <b>the team moves around the cones in a clockwise direction</b>, turning to their right when moving around each of the cones.<br/>• The team <b>pass the first and second cones and proceeds to and around the third one</b>, then <b>return to loop the first cone</b>.<br/>• The team then <b>proceeds to and around the second cone</b> and returns to <b>loop the first cone</b> a second time.<br/>• The team finally <b>circles the first cone by passing between the first and second cones</b> to exit the station.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• There are no deductions for a cone that is moved by a wagging tail!",
+    description: "• While heeling, <b>the team moves around the cones in a clockwise direction</b>, turning to their right when moving around each of the cones.<br/>• The team <b>pass the first and second cones and proceeds to and around the third one</b>, then <b>return to loop the first cone</b>.<br/>• The team then <b>proceeds to and around the second cone</b> and returns to <b>loop the first cone</b> a second time.<br/>• The team finally <b>circles the first cone by passing between the first and second cones</b> to exit the station.<br/><br/>",
+    tips: "• There are no deductions for a cone that is moved by a wagging tail!",
     deductions: {
       minor: [        
         "Handler or dog stop forward motion", 
@@ -634,8 +649,8 @@ const Novice = [
     icon: require("../assets/slides/127.jpg"),
     category: "Novice",
     title: "127. Spiral Left - Dog Inside",
-    description: "• While heeling, <b>the team moves around the cones in a counterclockwise direction</b>, turning to their left when moving around each of the cones.<br/>• The team <b>pass the first and second cones and proceeds to and around the third one</b>, then <b>return to loop the first cone</b>.<br/>• The team then <b>proceeds to and around the second cone</b> and returns to <b>loop the first cone</b> a second time.<br/>• The team finally <b>circles the first cone by passing between the first and second cones</b> to exit the station.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• There are no deductions for a cone that is moved by a wagging tail!",
+    description: "• While heeling, <b>the team moves around the cones in a counterclockwise direction</b>, turning to their left when moving around each of the cones.<br/>• The team <b>pass the first and second cones and proceeds to and around the third one</b>, then <b>return to loop the first cone</b>.<br/>• The team then <b>proceeds to and around the second cone</b> and returns to <b>loop the first cone</b> a second time.<br/>• The team finally <b>circles the first cone by passing between the first and second cones</b> to exit the station.<br/><br/>",
+    tips: "• Be sure to give your dog enough space from the cones that they are not knocked over. You do not have to do tight turns around them<br/> • There are no deductions for a cone that is moved by a wagging tail!",
     deductions: {
       minor: [        
         "Handler or dog stop forward motion", 
@@ -655,8 +670,8 @@ const Novice = [
     icon: require("../assets/slides/128.jpg"),
     category: "Novice",
     title: "128. Weave Once",
-    description: "• While heeling, <b>the team enters the pattern with the first cone on the team’s left</b>.<br/>• The team <b>weaves through the cones</b> and exits the station.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• There are no deductions for a cone that is moved by a wagging tail!",
+    description: "• While heeling, <b>the team enters the pattern with the first cone on the team’s left</b>.<br/>• The team <b>weaves through the cones</b> and exits the station.<br/><br/>",
+    tips: "• You do not need to pass at the mid-point between two cones - instead, you can give your dog more space from the cone that is on their side, so that they are less likely to bump into it<br/>• There are no deductions for a cone that is moved by a wagging tail!",
     deductions: {
       minor: [        
         "Handler or dog stop forward motion.", 
@@ -677,8 +692,8 @@ const Novice = [
     icon: require("../assets/slides/129.jpg"),
     category: "Novice",
     title: "129. Weave Twice",
-    description: "• While heeling, <b>the team enters the pattern with the first cone on the team’s left</b>.<br/>• The team <b>weaves continuously through the cones, loops around the end cone and weaves back to the beginning of the pattern</b>.<br/><br/>"
-    +"<b>Top Tips!</b><br/>• There are no deductions for a cone that is moved by a wagging tail!",
+    description: "• While heeling, <b>the team enters the pattern with the first cone on the team’s left</b>.<br/>• The team <b>weaves continuously through the cones, loops around the end cone and weaves back to the beginning of the pattern</b>.<br/><br/>",
+    tips: "• You do not need to pass at the mid-point between two cones or do a tight turn around the last cone - instead, you can give your dog more space from the cone that is on their side, so that they are less likely to bump into it<br/>• There are no deductions for a cone that is moved by a wagging tail!",
     deductions: {
       minor: [        
         "Handler or dog stop forward motion.", 
