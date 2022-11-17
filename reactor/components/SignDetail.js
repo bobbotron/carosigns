@@ -124,7 +124,7 @@ export default function SignDetail(props) {
     let r = "";
     if (d.minor !== undefined && d.minor.length > 0) {
       r +=
-        "<b>Minor (1 to 3 points)</b><ul>" +
+        "<b>Minor (1 to 2 points)</b><ul>" +
         d.minor.map(toBullets).join("") +
         "</ul>";
     }
