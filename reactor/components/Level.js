@@ -11,6 +11,8 @@ import {
 import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
 import FavAction from "./FavAction";
+import { setSelectedSign } from "../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 const styles = StyleSheet.create({
   gridImage: { width: 140, height: 100 },
@@ -24,25 +26,22 @@ const styles = StyleSheet.create({
 });
 
 export default function Level(props) {
-  const [selectedSign, setSelectedSign] = useState(undefined);
-  const backButtonListener =
-    selectedSign === undefined
-      ? props.backListener
-      : () => {
-          setSelectedSign(undefined);
-        };
+  const {selectedSign, } = useSelector(
+    (state) => state.signsReducer
+  );
+  const dispatch = useDispatch();
+
   const appBarTitle =
     selectedSign === undefined || selectedSign.title === undefined
       ? props.level.name
       : selectedSign.title;
   return (
     <>
-      <Appbar.Header>
-        <Appbar.BackAction onPress={backButtonListener} />
+      {/* <Appbar.Header>
 
         <Appbar.Content title={appBarTitle} />
         <FavAction sign={selectedSign} />
-      </Appbar.Header>
+      </Appbar.Header> */}
       {selectedSign === undefined &&
         (props.signs.length === 0 ? (
           <Text>There's no signs set up for "{props.level.name}" yet!</Text>
@@ -60,7 +59,7 @@ export default function Level(props) {
                 <View key={item.name}>
                   <TouchableOpacity
                     onPress={() => {
-                      setSelectedSign(item);
+                      dispatch(setSelectedSign(item))
                     }}
                   >
                     <ImageBackground

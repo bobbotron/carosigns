@@ -1,4 +1,4 @@
-import { View, StyleSheet, Image, Alert } from "react-native";
+import { View, StyleSheet, } from "react-native";
 import { Button, Text } from "react-native-paper";
 import { useSelector } from "react-redux";
 import SignsDB from "../data/SignDb";
