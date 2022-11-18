@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { Appbar } from "react-native-paper";
-
 import {
   Text,
   View,
@@ -10,7 +7,6 @@ import {
 } from "react-native";
 import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
-import FavAction from "./FavAction";
 import { setSelectedSign } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -26,9 +22,7 @@ const styles = StyleSheet.create({
 });
 
 export default function Level(props) {
-  const {selectedSign, } = useSelector(
-    (state) => state.signsReducer
-  );
+  const { selectedSign } = useSelector((state) => state.signsReducer);
   const dispatch = useDispatch();
 
   const appBarTitle =
@@ -37,11 +31,6 @@ export default function Level(props) {
       : selectedSign.title;
   return (
     <>
-      {/* <Appbar.Header>
-
-        <Appbar.Content title={appBarTitle} />
-        <FavAction sign={selectedSign} />
-      </Appbar.Header> */}
       {selectedSign === undefined &&
         (props.signs.length === 0 ? (
           <Text>There's no signs set up for "{props.level.name}" yet!</Text>
@@ -59,7 +48,7 @@ export default function Level(props) {
                 <View key={item.name}>
                   <TouchableOpacity
                     onPress={() => {
-                      dispatch(setSelectedSign(item))
+                      dispatch(setSelectedSign(item));
                     }}
                   >
                     <ImageBackground
