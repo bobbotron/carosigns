@@ -1,4 +1,4 @@
-import { Appbar, Text } from "react-native-paper";
+import { Appbar } from "react-native-paper";
 import { useSelector, useDispatch } from "react-redux";
 import { addFavorite, removeFavorite } from "../redux/actions";
 

@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Button, Card, Searchbar } from "react-native-paper";
+import { Appbar, Button, Card, Searchbar } from "react-native-paper";
 import { useEffect, useState } from "react";
 import {
   StyleSheet,
@@ -14,13 +14,26 @@ import SignsDB from "./data/SignDb";
 import SignDetail from "./components/SignDetail";
 import HandbookTextLink from "./components/HandbookTextLink";
 
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setSearchText,
+  setSelectedLevel,
+  setSelectedSign,
+} from "./redux/actions";
+import FavAction from "./components/FavAction";
+
 export default function AppController() {
   const window = useWindowDimensions();
+
+  const { selectedLevel, searchText, selectedSign, favorites } = useSelector(
+    (state) => state.signsReducer
+  );
+  const dispatch = useDispatch();
 
   const styles = StyleSheet.create({
     searchbar: {},
     container: {
-      marginTop: 35,
+      marginTop: 15,
       marginLeft: 10,
       marginRight: 10,
     },
@@ -38,17 +51,15 @@ export default function AppController() {
       fontWeight: "bold",
     },
   });
-  const [searchQuery, setSearchQuery] = useState("");
 
   const onChangeSearch = (query) => {
-    setSearchQuery(query);
+    dispatch(setSearchText(query));
   };
 
-  const [selectedLevel, setSelectedLevel] = useState(undefined);
   const [levels, setLevels] = useState([]);
 
-  const searchActive = !(searchQuery === undefined || searchQuery === "");
-  const queryLower = searchQuery.toLowerCase();
+  const searchActive = !(searchText === undefined || searchText === "");
+  const queryLower = searchActive ? searchText.toLowerCase() : "";
   const selectedSigns = !searchActive
     ? undefined
     : SignsDB.Signs.filter(
@@ -58,29 +69,72 @@ export default function AppController() {
       );
 
   const levelListener = (l) => {
-    setSelectedLevel(l);
+    dispatch(setSelectedLevel(l));
   };
   const backToMainList = () => {
-    setSelectedLevel(undefined);
-    setSearchQuery("");
+    dispatch(setSelectedLevel(undefined));
+    dispatch(setSearchText(""));
   };
 
   useEffect(() => {
     setLevels(SignsDB.Categories);
   }, []);
+  const backButtonListener = () => {
+    if (selectedSign !== undefined) {
+      dispatch(setSelectedSign(undefined));
+    } else if (selectedLevel !== undefined) {
+      dispatch(setSelectedLevel(undefined));
+    }
+  };
+  const appBarTitle =
+    selectedLevel === undefined
+      ? "My Saved Signs"
+      : selectedSign === undefined || selectedSign.title === undefined
+      ? selectedLevel.name
+      : selectedSign.title;
   return (
     <View style={styles.container}>
-      <Image
-        source={require("./assets/caro-logo-2.png")}
-        style={styles.caroLogo}
-      />
+      <Appbar.Header>
+        {selectedLevel !== undefined && (
+          <Appbar.BackAction onPress={backButtonListener} />
+        )}
+        <Appbar.Content
+          titleStyle={{
+            textAlign: selectedLevel === undefined ? "right" : "left",
+          }}
+          title={appBarTitle}
+        />
+        {selectedLevel === undefined && (
+          <Appbar.Action
+            icon="star"
+            disabled={favorites === undefined || favorites.length === 0}
+            onPress={() => {
+              const favLevel = {
+                name: "My Saved Signs",
+                isFavorites: true,
+                signs: SignsDB.Signs.filter((s) => favorites.includes(s.name)),
+              };
+              dispatch(setSelectedLevel(favLevel));
+            }}
+          />
+        )}
+
+        {selectedSign !== undefined && <FavAction sign={selectedSign} />}
+      </Appbar.Header>
+
+      {selectedLevel === undefined && (
+        <Image
+          source={require("./assets/caro-logo-2.png")}
+          style={styles.caroLogo}
+        />
+      )}
 
       {selectedLevel === undefined && (
         <Searchbar
           style={styles.searchbar}
           placeholder="Search"
           onChangeText={onChangeSearch}
-          value={searchQuery}
+          value={searchText}
         />
       )}
 
@@ -125,10 +179,12 @@ export default function AppController() {
                   mode="contained"
                   style={{ marginTop: 10 }}
                   onPress={() =>
-                    setSearchQuery(x.title === undefined ? x.name : x.title)
+                    dispatch(
+                      setSearchText(x.title === undefined ? x.name : x.title)
+                    )
                   }
                 >
-                  {x.title === undefined && <> {x.name}</>}{" "}
+                  {x.title === undefined && <>{x.name} </>}
                   {x.title !== undefined && <>{x.title}</>}
                 </Button>
               ))}
