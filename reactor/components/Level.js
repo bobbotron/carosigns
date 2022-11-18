@@ -1,10 +1,27 @@
 import { useState } from "react";
 import { Appbar } from "react-native-paper";
 
-import { Text, View, TouchableOpacity, Image } from "react-native";
+import {
+  Text,
+  View,
+  TouchableOpacity,
+  ImageBackground,
+  StyleSheet,
+} from "react-native";
 import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
 import FavAction from "./FavAction";
+
+const styles = StyleSheet.create({
+  gridImage: { width: 140, height: 100 },
+  overlayView: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    backgroundColor: "#ffffff",
+  },
+  overlayText: { fontWeight: "bold", fontSize: 14 },
+});
 
 export default function Level(props) {
   const [selectedSign, setSelectedSign] = useState(undefined);
@@ -40,29 +57,23 @@ export default function Level(props) {
               // horizontal
               spacing={10}
               renderItem={({ item }) => (
-                <View>
+                <View key={item.name}>
                   <TouchableOpacity
                     onPress={() => {
                       setSelectedSign(item);
                     }}
                   >
-                    <Image
+                    <ImageBackground
                       source={item.icon}
-                      style={{ width: 140, height: 100 }}
-                    />
-                    {(item.hideNameOnGrid == undefined ||
-                      !item.hideNameOnGrid) && (
-                      <View
-                        style={{
-                          position: "absolute",
-                          top: 0,
-                          right: 20,
-                          backgroundColor: "#ffffff",
-                        }}
-                      >
-                        <Text style={{ fontWeight: "bold", fontSize:18 }}>{item.name}</Text>
-                      </View>
-                    )}
+                      style={styles.gridImage}
+                    >
+                      {(item.hideNameOnGrid == undefined ||
+                        !item.hideNameOnGrid) && (
+                        <View style={styles.overlayView}>
+                          <Text style={styles.overlayText}>{item.name}</Text>
+                        </View>
+                      )}
+                    </ImageBackground>
                   </TouchableOpacity>
                 </View>
               )}
