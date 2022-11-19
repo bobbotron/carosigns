@@ -7,13 +7,14 @@ import {
   Text,
   useWindowDimensions,
   Image,
+  TouchableOpacity,
 } from "react-native";
 import MainList from "./components/MainList";
 import Level from "./components/Level";
 import SignsDB from "./data/SignDb";
 import SignDetail from "./components/SignDetail";
 import HandbookTextLink from "./components/HandbookTextLink";
-
+import Theme from "./Theme";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setSearchText,
@@ -86,6 +87,19 @@ export default function AppController() {
       dispatch(setSelectedLevel(undefined));
     }
   };
+  const showFavSigns = () => {
+    const favLevel = {
+      name: "My Saved Signs",
+      isFavorites: true,
+      signs: SignsDB.Signs.filter((s) => favorites.includes(s.name)),
+    };
+    dispatch(setSelectedLevel(favLevel));
+  };
+  const titleListener = () => {
+    if (selectedLevel === undefined) {
+      showFavSigns();
+    }
+  };
   const appBarTitle =
     selectedLevel === undefined
       ? "My Saved Signs"
@@ -94,28 +108,36 @@ export default function AppController() {
       : selectedSign.title;
   return (
     <View style={styles.container}>
-      <Appbar.Header>
+      <Appbar.Header
+        style={{
+          backgroundColor:
+            selectedLevel === undefined ? "#ffffff" : Theme.colors.background,
+        }}
+      >
         {selectedLevel !== undefined && (
           <Appbar.BackAction onPress={backButtonListener} />
         )}
+
         <Appbar.Content
+          onPress={titleListener}
           titleStyle={{
             textAlign: selectedLevel === undefined ? "right" : "left",
           }}
-          title={appBarTitle}
+          title={
+            selectedLevel === undefined ? (
+              <TouchableOpacity onPress={titleListener}>
+                <Text>{appBarTitle}</Text>
+              </TouchableOpacity>
+            ) : (
+              <Text>{appBarTitle}</Text>
+            )
+          }
         />
         {selectedLevel === undefined && (
           <Appbar.Action
             icon="star"
             disabled={favorites === undefined || favorites.length === 0}
-            onPress={() => {
-              const favLevel = {
-                name: "My Saved Signs",
-                isFavorites: true,
-                signs: SignsDB.Signs.filter((s) => favorites.includes(s.name)),
-              };
-              dispatch(setSelectedLevel(favLevel));
-            }}
+            onPress={showFavSigns}
           />
         )}
 
