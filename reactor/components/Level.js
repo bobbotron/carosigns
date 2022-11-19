@@ -25,10 +25,6 @@ export default function Level(props) {
   const { selectedSign } = useSelector((state) => state.signsReducer);
   const dispatch = useDispatch();
 
-  const appBarTitle =
-    selectedSign === undefined || selectedSign.title === undefined
-      ? props.level.name
-      : selectedSign.title;
   return (
     <>
       {selectedSign === undefined &&

@@ -37,13 +37,28 @@ export default function AppHeader(props) {
   const appBarTitle =
     selectedLevel === undefined
       ? ""
-      : selectedSign === undefined || selectedSign.title === undefined
+      : selectedSign === undefined || selectedSign.name === undefined
       ? selectedLevel.name
-      : selectedSign.title;
+      : selectedSign.name;
   const [visible, setVisible] = useState(false);
 
   const openMenu = () => setVisible(true);
   const closeMenu = () => setVisible(false);
+  const signLeft = () => {
+    const fc = (f) => f.name === selectedSign.name;
+    const i = selectedLevel.signs.findIndex(fc);
+    const si = i === 0 ? selectedLevel.signs.length - 1 : i - 1;
+
+    dispatch(setSelectedSign(selectedLevel.signs[si]));
+  };
+
+  const signRight = () => {
+    const fc = (f) => f.name === selectedSign.name;
+    const i = selectedLevel.signs.findIndex(fc);
+    const si = i === selectedLevel.signs.length - 1 ? 0 : i + 1;
+
+    dispatch(setSelectedSign(selectedLevel.signs[si]));
+  };
 
   return (
     <Appbar.Header
@@ -55,7 +70,11 @@ export default function AppHeader(props) {
       {selectedLevel !== undefined && (
         <Appbar.BackAction onPress={backButtonListener} />
       )}
-
+      {selectedSign !== undefined && (
+        <>
+          <Appbar.Action icon="less-than" onPress={signLeft} />
+        </>
+      )}
       <Appbar.Content
         onPress={titleListener}
         titleStyle={{
@@ -72,6 +91,11 @@ export default function AppHeader(props) {
         }
       />
 
+      {selectedSign !== undefined && (
+        <>
+          <Appbar.Action icon="greater-than" onPress={signRight} />
+        </>
+      )}
       {selectedSign !== undefined && <FavAction sign={selectedSign} />}
       <Menu
         visible={visible}
