@@ -4,14 +4,15 @@ import {
   StyleSheet,
   useWindowDimensions,
   View,
-  Text,
   ScrollView,
+  Platform,
 } from "react-native";
-import { Avatar, Card } from "react-native-paper";
+import { Avatar, Card, Text } from "react-native-paper";
 import RenderHtml from "react-native-render-html";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import HandbookTextLink from "./HandbookTextLink";
+import theme from "../Theme";
 
 export default function SignDetail(props) {
   const window = useWindowDimensions();
@@ -46,19 +47,19 @@ export default function SignDetail(props) {
     a: {},
     routes: {
       backgroundColor: "#ffffff",
-      paddingTop: 10,
+      paddingTop: 20,
       flex: 1,
       paddingLeft: 10,
     },
     descriptionName: {
       fontSize: 20,
-      color: "green",
+      color: theme.colors.primary,
       fontWeight: "bold",
       paddingBottom: 5,
     },
     deductionHeader: {
       fontWeight: "bold",
-      color: "green",
+      color: theme.colors.primary,
       paddingBottom: 10,
     },
     deductionNotice: {
@@ -91,25 +92,41 @@ export default function SignDetail(props) {
       {props.sign.tips !== undefined && (
         <>
           <Card>
-            <Card.Title
-              title="Helpful Hints"
-              titleStyle={{ ...styles.descriptionName, maxHeight: 22 }}
-              left={(props) => (
-                <Avatar.Icon
-                  {...props}
-                  size={30}
-                  backgroundColor="grey"
-                  icon="lightbulb-on-outline"
-                />
-              )}
-              leftStyle={{ width: 28 }}
-            ></Card.Title>
             <Card.Content>
-              <RenderHtml
-                key="tips"
-                contentWidth={window.width}
-                source={{ html: props.sign.tips }}
-              />
+              <>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: Platform.OS === "ios" ? "center" : "baseline",
+                  }}
+                >
+                  <Avatar.Icon
+                    size={34}
+                    backgroundColor={theme.colors.backgroundColor}
+                    color="black"
+                    icon="lightbulb-on-outline"
+                  />
+                  <View style={{ flex: 1 }}>
+                    <Text
+                      style={{
+                        color: theme.colors.primary,
+                        fontWeight: "bold",
+                        fontSize: 20,
+                        marginBottom: 10,
+                        marginLeft: 10,
+                      }}
+                    >
+                      Helpful Hints
+                    </Text>
+                  </View>
+                </View>
+
+                <RenderHtml
+                  key="tips"
+                  contentWidth={window.width}
+                  source={{ html: props.sign.tips }}
+                />
+              </>
             </Card.Content>
           </Card>
         </>
