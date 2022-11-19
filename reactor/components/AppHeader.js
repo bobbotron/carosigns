@@ -95,7 +95,7 @@ export default function AppHeader(props) {
         <Appbar.Content
           onLayout={titleLayout}
           titleStyle={{
-            textAlign: "left",
+            textAlign: "center",
           }}
           title={
             selectedLevel === undefined ? (
