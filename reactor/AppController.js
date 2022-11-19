@@ -1,10 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import {
-  Appbar,
   Button,
   Card,
-  Divider,
-  Menu,
   Searchbar,
 } from "react-native-paper";
 import { useEffect, useState } from "react";
@@ -14,25 +11,22 @@ import {
   Text,
   useWindowDimensions,
   Image,
-  TouchableOpacity,
 } from "react-native";
 import MainList from "./components/MainList";
 import Level from "./components/Level";
 import SignsDB from "./data/SignDb";
 import SignDetail from "./components/SignDetail";
 import HandbookTextLink from "./components/HandbookTextLink";
-import Theme from "./Theme";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setSearchText,
   setSelectedLevel,
-  setSelectedSign,
 } from "./redux/actions";
-import FavAction from "./components/FavAction";
+import AppHeader from "./components/AppHeader";
 export default function AppController() {
   const window = useWindowDimensions();
 
-  const { selectedLevel, searchText, selectedSign, favorites } = useSelector(
+  const { selectedLevel, searchText,  } = useSelector(
     (state) => state.signsReducer
   );
   const dispatch = useDispatch();
@@ -86,80 +80,10 @@ export default function AppController() {
   useEffect(() => {
     setLevels(SignsDB.Categories);
   }, []);
-  const backButtonListener = () => {
-    if (selectedSign !== undefined) {
-      dispatch(setSelectedSign(undefined));
-    } else if (selectedLevel !== undefined) {
-      dispatch(setSelectedLevel(undefined));
-    }
-  };
-  const showFavSigns = () => {
-    const favLevel = {
-      name: "My Saved Signs",
-      isFavorites: true,
-      signs: SignsDB.Signs.filter((s) => favorites.includes(s.name)),
-    };
-    dispatch(setSelectedLevel(favLevel));
-    dispatch(setSelectedSign(undefined));
-    setVisible(false);
-  };
-  const titleListener = () => {
-    if (selectedLevel === undefined) {
-      showFavSigns();
-    }
-  };
-  const appBarTitle =
-    selectedLevel === undefined
-      ? ""
-      : selectedSign === undefined || selectedSign.title === undefined
-      ? selectedLevel.name
-      : selectedSign.title;
-  const [visible, setVisible] = useState(false);
-
-  const openMenu = () => setVisible(true);
-
-  const closeMenu = () => setVisible(false);
+  
   return (
     <View style={styles.container}>
-      <Appbar.Header
-        style={{
-          backgroundColor:
-            selectedLevel === undefined ? "#ffffff" : Theme.colors.background,
-        }}
-      >
-        {selectedLevel !== undefined && (
-          <Appbar.BackAction onPress={backButtonListener} />
-        )}
-
-        <Appbar.Content
-          onPress={titleListener}
-          titleStyle={{
-            textAlign: selectedLevel === undefined ? "right" : "left",
-          }}
-          title={
-            selectedLevel === undefined ? (
-              <TouchableOpacity onPress={titleListener}>
-                <Text>{appBarTitle}</Text>
-              </TouchableOpacity>
-            ) : (
-              <Text>{appBarTitle}</Text>
-            )
-          }
-        />
-
-        {selectedSign !== undefined && <FavAction sign={selectedSign} />}
-        <Menu
-          visible={visible}
-          onDismiss={closeMenu}
-          anchor={<Appbar.Action icon="dots-vertical" onPress={openMenu} />}
-        >
-          <Menu.Item
-            onPress={showFavSigns}
-            title="My Saved Signs"
-            leadingIcon="star"
-          />
-        </Menu>
-      </Appbar.Header>
+      <AppHeader/>
 
       {selectedLevel === undefined && (
         <Image
