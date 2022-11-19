@@ -1,5 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { Appbar, Button, Card, Searchbar } from "react-native-paper";
+import {
+  Appbar,
+  Button,
+  Card,
+  Divider,
+  Menu,
+  Searchbar,
+} from "react-native-paper";
 import { useEffect, useState } from "react";
 import {
   StyleSheet,
@@ -22,7 +29,6 @@ import {
   setSelectedSign,
 } from "./redux/actions";
 import FavAction from "./components/FavAction";
-
 export default function AppController() {
   const window = useWindowDimensions();
 
@@ -94,6 +100,8 @@ export default function AppController() {
       signs: SignsDB.Signs.filter((s) => favorites.includes(s.name)),
     };
     dispatch(setSelectedLevel(favLevel));
+    dispatch(setSelectedSign(undefined));
+    setVisible(false);
   };
   const titleListener = () => {
     if (selectedLevel === undefined) {
@@ -102,10 +110,15 @@ export default function AppController() {
   };
   const appBarTitle =
     selectedLevel === undefined
-      ? "My Saved Signs"
+      ? ""
       : selectedSign === undefined || selectedSign.title === undefined
       ? selectedLevel.name
       : selectedSign.title;
+  const [visible, setVisible] = useState(false);
+
+  const openMenu = () => setVisible(true);
+
+  const closeMenu = () => setVisible(false);
   return (
     <View style={styles.container}>
       <Appbar.Header
@@ -133,15 +146,19 @@ export default function AppController() {
             )
           }
         />
-        {selectedLevel === undefined && (
-          <Appbar.Action
-            icon="star"
-            disabled={favorites === undefined || favorites.length === 0}
-            onPress={showFavSigns}
-          />
-        )}
 
         {selectedSign !== undefined && <FavAction sign={selectedSign} />}
+        <Menu
+          visible={visible}
+          onDismiss={closeMenu}
+          anchor={<Appbar.Action icon="dots-vertical" onPress={openMenu} />}
+        >
+          <Menu.Item
+            onPress={showFavSigns}
+            title="My Saved Signs"
+            leadingIcon="star"
+          />
+        </Menu>
       </Appbar.Header>
 
       {selectedLevel === undefined && (
@@ -154,7 +171,7 @@ export default function AppController() {
       {selectedLevel === undefined && (
         <Searchbar
           style={styles.searchbar}
-          placeholder="Search"
+          placeholder="Search Signs"
           onChangeText={onChangeSearch}
           value={searchText}
         />

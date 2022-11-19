@@ -10,7 +10,7 @@ const initialState = {
   favorites: [],
   selectedSign: undefined,
   selectedLevel: undefined,
-  searchText: undefined,
+  searchText: "",
 };
 
 function signsReducer(state = initialState, action) {
@@ -51,7 +51,7 @@ function signsReducer(state = initialState, action) {
       return {
         ...state,
         selectedLevel: undefined,
-        searchText: undefined,
+        searchText: "",
       };
     default:
       return state;
