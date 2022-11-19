@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TouchableOpacity } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 import { Appbar, Menu, Text } from "react-native-paper";
 import { useDispatch, useSelector } from "react-redux";
 import SignsDB from "../data/SignDb";
@@ -59,12 +59,19 @@ export default function AppHeader(props) {
 
     dispatch(setSelectedSign(selectedLevel.signs[si]));
   };
+  const [titleHeight, setTitleHeight] = useState(45);
+  const titleLayout = (event) => {
+    var { x, y, width, height } = event.nativeEvent.layout;
+    setTitleHeight(height);
+  };
 
   return (
     <Appbar.Header
       style={{
         backgroundColor:
-          selectedLevel === undefined ? "#ffffff" : Theme.colors.background,
+          selectedLevel === undefined
+            ? Theme.colors.background
+            : Theme.colors.background,
       }}
     >
       {selectedLevel !== undefined && (
@@ -75,21 +82,33 @@ export default function AppHeader(props) {
           <Appbar.Action icon="less-than" onPress={signLeft} />
         </>
       )}
-      <Appbar.Content
-        onPress={titleListener}
-        titleStyle={{
-          textAlign: selectedLevel === undefined ? "right" : "left",
-        }}
-        title={
-          selectedLevel === undefined ? (
-            <TouchableOpacity onPress={titleListener}>
+      {selectedLevel === undefined && (
+        <>
+          <Image
+            source={require("../assets/header-logo.png")}
+            style={{ marginLeft: 5, width: 35 * 5.64, height: 35 }}
+          />
+          <Appbar.Content title={<></>} />
+        </>
+      )}
+      {selectedLevel !== undefined && (
+        <Appbar.Content
+          onLayout={titleLayout}
+          titleStyle={{
+            textAlign: "left",
+          }}
+          title={
+            selectedLevel === undefined ? (
+              <Image
+                source={require("../assets/header-logo.png")}
+                style={{ width: 250, height: titleHeight - 10 }}
+              />
+            ) : (
               <Text>{appBarTitle}</Text>
-            </TouchableOpacity>
-          ) : (
-            <Text>{appBarTitle}</Text>
-          )
-        }
-      />
+            )
+          }
+        />
+      )}
 
       {selectedSign !== undefined && (
         <>

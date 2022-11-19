@@ -1,9 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  Button,
-  Card,
-  Searchbar,
-} from "react-native-paper";
+import { Button, Card, Searchbar } from "react-native-paper";
 import { useEffect, useState } from "react";
 import {
   StyleSheet,
@@ -18,23 +14,22 @@ import SignsDB from "./data/SignDb";
 import SignDetail from "./components/SignDetail";
 import HandbookTextLink from "./components/HandbookTextLink";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  setSearchText,
-  setSelectedLevel,
-} from "./redux/actions";
+import { setSearchText, setSelectedLevel } from "./redux/actions";
 import AppHeader from "./components/AppHeader";
 export default function AppController() {
   const window = useWindowDimensions();
 
-  const { selectedLevel, searchText,  } = useSelector(
+  const { selectedLevel, searchText } = useSelector(
     (state) => state.signsReducer
   );
   const dispatch = useDispatch();
 
   const styles = StyleSheet.create({
-    searchbar: {},
+    searchbar: {
+      marginTop: 10,
+      marginBottom: 10,
+    },
     container: {
-      
       marginLeft: 10,
       marginRight: 10,
     },
@@ -47,6 +42,7 @@ export default function AppController() {
     disclaimerCard: {
       marginTop: 20,
       marginBottom: 20,
+      
     },
     disclaimerBold: {
       fontWeight: "bold",
@@ -80,83 +76,83 @@ export default function AppController() {
   useEffect(() => {
     setLevels(SignsDB.Categories);
   }, []);
-  
+
   return (
-    <View style={styles.container}>
-      <AppHeader/>
+    <View>
+      <AppHeader />
 
-      {selectedLevel === undefined && (
-        <Image
-          source={require("./assets/caro-logo-2.png")}
-          style={styles.caroLogo}
-        />
-      )}
+      <View style={styles.container}>
+        {/* {selectedLevel === undefined && (
+          <Image
+            source={require("./assets/caro-logo-2.png")}
+            style={styles.caroLogo}
+          />
+        )} */}
 
-      {selectedLevel === undefined && (
-        <Searchbar
-          style={styles.searchbar}
-          placeholder="Search Signs"
-          onChangeText={onChangeSearch}
-          value={searchText}
-        />
-      )}
+        {selectedLevel === undefined && (
+          <Searchbar
+            style={styles.searchbar}
+            placeholder="Search Signs"
+            onChangeText={onChangeSearch}
+            value={searchText}
+          />
+        )}
 
-      {selectedLevel === undefined && !searchActive && (
-        <>
-          <MainList levels={levels} levelListener={levelListener} />
-          <Card style={styles.disclaimerCard}>
-            <Card.Content>
-              <Text>
-                <Text style={styles.disclaimerBold}>Disclaimer:</Text> The
-                information contained here is not comprehensive. Refer to the{" "}
-                <HandbookTextLink /> for complete information. In the case of a
-                discrepancy, the handbook is final. If you spot an error here,
-                help us fix it by emailing:
-              </Text>
-            </Card.Content>
-          </Card>
-        </>
-      )}
-      {selectedLevel !== undefined && !searchActive && (
-        <Level
-          level={selectedLevel}
-          backListener={backToMainList}
-          signs={selectedLevel.signs}
-        />
-      )}
+        {selectedLevel === undefined && !searchActive && (
+          <>
+            <MainList levels={levels} levelListener={levelListener} />
+            <Card style={styles.disclaimerCard}>
+              <Card.Content>
+                <Text>
+                  <Text style={styles.disclaimerBold}>Disclaimer:</Text> See the{" "}
+                  <HandbookTextLink /> for complete information. In the case of
+                  a discrepancy, the handbook is final. If you find an error, email: 
+                </Text>
+              </Card.Content>
+            </Card>
+          </>
+        )}
+        {selectedLevel !== undefined && !searchActive && (
+          <Level
+            level={selectedLevel}
+            backListener={backToMainList}
+            signs={selectedLevel.signs}
+          />
+        )}
 
-      {searchActive && (
-        <>
-          {selectedSigns.length === 0 && <Text>No results found.</Text>}
-          {selectedSigns.length === 1 && (
-            <View style={{ marginTop: 15 }}>
-              <SignDetail sign={selectedSigns[0]} />
-            </View>
-          )}
-          {selectedSigns.length > 1 && (
-            <>
-              <Text>{selectedSigns.length} results found.</Text>
-              {selectedSigns.map((x) => (
-                <Button
-                  key={x.name}
-                  mode="contained"
-                  style={{ marginTop: 10 }}
-                  onPress={() =>
-                    dispatch(
-                      setSearchText(x.title === undefined ? x.name : x.title)
-                    )
-                  }
-                >
-                  {x.title === undefined && <>{x.name} </>}
-                  {x.title !== undefined && <>{x.title}</>}
-                </Button>
-              ))}
-            </>
-          )}
-        </>
-      )}
+        {searchActive && (
+          <>
+            {selectedSigns.length === 0 && <Text>No results found.</Text>}
+            {selectedSigns.length === 1 && (
+              <View style={{ marginTop: 15 }}>
+                <SignDetail sign={selectedSigns[0]} />
+              </View>
+            )}
+            {selectedSigns.length > 1 && (
+              <>
+                <Text>{selectedSigns.length} results found.</Text>
+                {selectedSigns.map((x) => (
+                  <Button
+                    key={x.name}
+                    mode="contained"
+                    style={{ marginTop: 10 }}
+                    onPress={() =>
+                      dispatch(
+                        setSearchText(x.title === undefined ? x.name : x.title)
+                      )
+                    }
+                  >
+                    {x.title === undefined && <>{x.name} </>}
+                    {x.title !== undefined && <>{x.title}</>}
+                  </Button>
+                ))}
+              </>
+            )}
+          </>
+        )}
 
-      <StatusBar style="auto" />
+        <StatusBar style="auto" />
+      </View>
     </View>
   );
 }
