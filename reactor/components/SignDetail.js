@@ -152,7 +152,7 @@ export default function SignDetail(props) {
         "</ul>";
     }
     if (d.nq !== undefined && d.nq.length > 0) {
-      r += "<b>Non Qualifying</b><ul>" + d.nq.map(toBullets).join("") + "</ul>";
+      r += "<b>Non-Qualifying</b><ul>" + d.nq.map(toBullets).join("") + "</ul>";
     }
     return r;
   };
