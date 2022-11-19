@@ -34,7 +34,7 @@ export default function AppController() {
   const styles = StyleSheet.create({
     searchbar: {},
     container: {
-      marginTop: 15,
+      
       marginLeft: 10,
       marginRight: 10,
     },
