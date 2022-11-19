@@ -1,4 +1,5 @@
 import AppController from "./AppController";
+
 import {
   MD3LightTheme as DefaultTheme,
   Provider as PaperProvider,
