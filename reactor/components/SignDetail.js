@@ -100,12 +100,6 @@ export default function SignDetail(props) {
                     alignItems: Platform.OS === "ios" ? "center" : "baseline",
                   }}
                 >
-                  <Avatar.Icon
-                    size={34}
-                    backgroundColor={theme.colors.backgroundColor}
-                    color="black"
-                    icon="lightbulb-on-outline"
-                  />
                   <View style={{ flex: 1 }}>
                     <Text
                       style={{
@@ -113,7 +107,7 @@ export default function SignDetail(props) {
                         fontWeight: "bold",
                         fontSize: 20,
                         marginBottom: 10,
-                        marginLeft: 10,
+                        marginLeft: 0,
                       }}
                     >
                       Helpful Hints
