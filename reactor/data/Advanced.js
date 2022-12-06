@@ -80,7 +80,7 @@ const Advanced = [
     reward: true,
     deductions: {
       minor: [
-        "Down more than 45-degrees out of heel position",
+        "Dog downs more than 45-degrees out of heel position",
         "Handler is further than arm's length during the walk around",
         "Dog still in the process of completing the down when the handler passes by their tail (2 points)",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
@@ -320,7 +320,7 @@ const Advanced = [
     category: "Advanced",
     title: "220. Send over Jump",
     description: "• <b>The team enters the send zone where the dog is sent to the jump</b>.<br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 3-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 3-foot line when proceeding past the jump</b>.<br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
-    tips: "• The jump may be either a solid or bar jump. The broad jump is not used at this station.<br/>• The jump sign must be used in all Advanced courses.<br/>• Handlers may give a second cue to the dog (without a deduction) as long as the dog is heading towards the jump. If the dog turns back to the handler or passes the plane of the jump, the handler must return to the send zone for a retry (when a retry is permitted).<br/>• No retry is permitted if the handler steps into the NQ Zone.",
+    tips: "• The jump may be either a solid or bar jump. The broad jump is not used at this station.<br/>• The jump sign must be used in all Advanced courses.<br/>• Handlers may give a second cue to the dog (without a deduction) as long as the dog is heading towards the jump. If the dog turns back to the handler or passes the plane of the jump, the handler must return to the send zone for a retry (when a retry is permitted).<br/>• No retry is permitted if the handler steps into the NQ Zone (training in the ring).",
     deductions: {
       substantial: ["Dog touches the jump (5 points)"],
       nq: ["Dog is sent to the jump before entering the send zone", "Handler steps inside the NQ Zone at any point", "Dog knocks the bar off or pushes off of the jump bar", "Dog fails to take the jump"],
