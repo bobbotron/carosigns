@@ -9,17 +9,15 @@ const Novice = [
     hideNameOnGrid: true,
     description:
       "• While heeling, the <b>team heels past the Start station.</b><br/> • Timing begins.<br/> • There are no other commands from the Judge throughout the course.<br/><br/>",
-    tips: "• The Judge will let you know when you may begin.<br>• Handlers may choose to either have the dog sit before the Start sign or use a moving start (heel past the Start sign without stopping).<br/> • If in a class that allows food reinforcement, food may be delivered before crossing the Start sign.",
+    tips: "• The Judge will let you know when you may begin.<br/>• Handlers may choose to either have the dog sit before the Start sign or use a moving start (heel past the Start sign without stopping).<br/> • If in a class that allows food reinforcement, food may be delivered before crossing the Start sign.",
 
       deductions: {
         minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
         "Tight leash (Novice)",
         "Out of heel position",
-        "Dog interfering with handler (bumping, crowding, jumping up on handler)",
-      ],
-        
-      },
+        "Dog interfering with handler (bumping, crowding, jumping up on handler)",],
+       },
   },
   {
     name: "Finish",
@@ -44,13 +42,13 @@ const Novice = [
     name: "100",
     icon: require("../assets/slides/100.jpg"),
     category: "Novice",
-    title: "100. HALT – Stand",
+    title: "100. HALT - Stand",
     description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>stand</b>.<br/> • The handler cues the dog to <b>heel forward from the stand position</b>.<br/><br/>",
     tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.<br/> • Do not heel forward or reach for reinforcement until the stand has been completed.",
     reward: true,
     deductions: {
       minor: [
-        "Dog sits or stands more than 45-degrees out of heel position or to the front or rear of handler (no deductions for less than a 45 degree angle)",
+        "Dog sits or stands more than 45-degrees out of heel position (no deductions for less than a 45 degree angle)",
         "Handler moves their feet during the stationary portion of the halt",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
       ],
@@ -68,13 +66,13 @@ const Novice = [
     name: "101",
     icon: require("../assets/slides/101.jpg"),
     category: "Novice",
-    title: "101. HALT – Down",
-    description: " • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
+    title: "101. HALT - Down",
+    description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
     tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.",
     reward: true,
     deductions: {
       minor: [
-        "Dog sits or downs more than 45-degrees out of heel position or to the front or rear of handler (no deductions for less than a 45-degree angle)",
+        "Dog sits or downs more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
         "Handler moves their feet during the stationary portion of the halt",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
       ],
@@ -92,13 +90,13 @@ const Novice = [
     name: "102",
     icon: require("../assets/slides/102.jpg"),
     category: "Novice",
-    title: "102. HALT – Down - Sit",
+    title: "102. HALT - Down - Sit",
     description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>sit</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
     tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.",
     reward: true,
     deductions: {
       minor: [
-        "Dog sits or downs more than 45-degrees out of heel position or to the front or rear of handler (no deductions for less than a 45-degree angle)",
+        "Dog sits or downs more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
         "Handler moves their feet during the stationary portion of the halt",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
       ],
@@ -115,13 +113,13 @@ const Novice = [
     name: "103",
     icon: require("../assets/slides/103.jpg"),
     category: "Novice",
-    title: "103. HALT – Walk Around",
+    title: "103. HALT - Walk Around",
     description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
     tips: "• There is no deduction for the handler's distance from the dog during the walk around. If the dog sits close to a station sign, making it difficult to walk between the dog and the sign, you may choose to walk around both the sign and the dog while returning to heel position.<br/> • Some paw movement during the stay is not a deduction, provided the dog remains in a sit and does not turn their body.",
     reward: true,
     deductions: {
       minor: [
-        "Dog sits more than 45-degrees out of heel position or to the front or rear of handler (no deductions for less than a 45-degree angle)",
+        "Dog sits more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
         "Handler moves their feet during the stationary portion of the halt",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
       ],
@@ -140,13 +138,13 @@ const Novice = [
     name: "104",
     icon: require("../assets/slides/104.jpg"),
     category: "Novice",
-    title: "104. HALT – Down - Walk Around",
+    title: "104. HALT - Down - Walk Around",
     description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to down</b>.<br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
     tips: "• There is no deduction for the handler's distance from the dog during the walk around. If the dog sits close to a station sign, making it difficult to walk between the dog and the sign, you may choose to walk around both the sign and the dog while returning to heel position.<br/> • Slight movement in the down is permitted without deductions as long as the dog holds the down and does not turn their body as the handler walks around them.",
     reward: true,
     deductions: {
       minor: [
-        "Dog sits or down more than 45-degrees out of heel position or to the front or rear of handler (no deductions for less than a 45-degree angle)",
+        "Dog sits or down more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
         "Handler moves their feet during the stationary portion of the halt",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
       ],
@@ -164,13 +162,13 @@ const Novice = [
     name: "105",
     icon: require("../assets/slides/105.jpg"),
     category: "Novice",
-    title: "105. HALT – 1,2,3 Steps Forward",
+    title: "105. HALT - 1,2,3 Steps Forward",
     description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to heel and takes one step forward, then halts; two steps and halts; then three steps and halts. <b>The team must meet the minimum required steps</b>.<br/> • Steps should be equal in length, in a natural stride for the team and finishing the exercise before the next station sign.<br/> • <b>The dog moves with the handler</b>, maintaining heel position, and <b>must sit each time the handler halts</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
     tips: "• During the walkthrough, practice the length of your steps to be sure that you can complete the exercise before reaching the next station sign.",
     reward: true,
     deductions: {
       minor: [
-        "Dog sits more than 45-degrees out of heel position or to the front or rear of handler (no deductions for less than a 45-degree angle)",
+        "Dog sits more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
         "Handler moves their feet during the stationary portion of the halt",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
       ],
@@ -192,13 +190,13 @@ const Novice = [
     name: "106",
     icon: require("../assets/slides/106.jpg"),
     category: "Novice",
-    title: "106. HALT – Sidestep Right - HALT",
+    title: "106. HALT - Sidestep Right - HALT",
     description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position</b>.<br/> • The handler takes <b>one side step directly to their right</b> while cueing the dog to heel.</br> • The dog <b>must move to the right simultaneously with the handler</b> remaining in heel position parallel to the handler and <b>sit</b> when the handler stops.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
     tips: "• The team will heel directly up to the station sign and perform the side step in front of the sign, then proceed along the new path beside the sign.<br/>• Ideally the dog's body position should remain completely parallel to the handler during the side step.",
     reward: true,
     deductions: {
       minor: [
-        "Dog sits more than 45-degrees out of heel position or to the front or rear of handler (no deductions for less than a 45-degree angle)",
+        "Dog sits more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
         "During the side step, the dog’s shoulder remains in heel position but their body is at 45-degree angle (2 points)",
         "Handler moves their feet during the stationary portion of the halt",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
@@ -219,13 +217,13 @@ const Novice = [
     name: "107",
     icon: require("../assets/slides/107.jpg"),
     category: "Novice",
-    title: "107. HALT – 90 Pivot Right - HALT",
+    title: "107. HALT - 90 Pivot Right - HALT",
     description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90-degrees to their right in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the right.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
     tips: "• You may pivot on either your left or right foot.<br/>• Ensure you are pivoting in as small a space as possible rather than a step: either the ball one foot or the heel of one foot should stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
     reward: true,
     deductions: {
       minor: [
-        "Dog sits more than 45-degrees out of heel position or to the front or rear of handler (no deductions for less than a 45-degree angle)",
+        "Dog sits more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
         "Handler moves their feet during the stationary portion of the halt",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
       ],
@@ -245,13 +243,13 @@ const Novice = [
     name: "108",
     icon: require("../assets/slides/108.jpg"),
     category: "Novice",
-    title: "108. HALT – 90 Pivot Left - HALT",
+    title: "108. HALT - 90 Pivot Left - HALT",
     description: "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90-degrees to their left in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the left.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
     tips: "• You may pivot on your left or right foot.<br/>• Ensure you are pivoting in as small a space possible rather than a step: either the ball one foot or the heel of one foot must stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
     reward: true,
     deductions: {
       minor: [
-        "Dog sits more than 45-degrees out of heel position or to the front or rear of handler (no deductions for less than a 45-degree angle)",
+        "Dog sits more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
         "Handler moves their feet during the stationary portion of the halt",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
       ],
@@ -271,13 +269,13 @@ const Novice = [
     name: "109",
     icon: require("../assets/slides/109.jpg"),
     category: "Novice",
-    title: "109. HALT – Turn Right 1 Step - HALT",
+    title: "109. HALT - Turn Right 1 Step - HALT",
     description: "• The team comes to a <b>halt</b> and the handler cues the <b>dog to sit in heel position.</b><br/>• The handler cues the dog to heel, <b>turns to the right, takes one step in that direction and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
     tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br>• A sit cue can be used each time the dog is required to sit.",
     reward: true,
     deductions: {
       minor: [
-        "Dog sits more than 45-degrees out of heel position or to the front or rear of handler (no deductions for less than a 45-degree angle)",
+        "Dog sits more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
         "Handler moves their feet during the stationary portion of the halt",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
       ],
@@ -472,8 +470,8 @@ const Novice = [
     icon: require("../assets/slides/119.jpg"),
     category: "Novice",
     title: "119. Fast Pace",
-    description: "• While heeling, the team increases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace</b>. The pace should be fast enough that the dog at least breaks into a trot.<br/>• <br>The slow pace is maintained continuously until the next station.</b><br/>• This station is followed by either Slow, Normal or the Finish station.</br><br/>",
-    tips: "• The Judge is looking for the <i>dog</i> to noticeably change their pace. Be sure to change your pace significantly (jogging speed) so that your dog's pace change is noticeable.<br/>• This sign must be followed by a Slow Pace, Normal Pace or Finish sign.",
+    description: "• While heeling, the team increases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace</b>. The pace should be fast enough that the dog at least breaks into a trot.<br/>• <br>The fast pace is maintained continuously until the next station.</b><br/>• This station is followed by either Slow, Normal or the Finish station.</br><br/>",
+    tips: "• The Judge is looking for the <i>dog</i> to noticeably change their pace. Be sure to speed up enough (jogging speed) that your dog's pace changes noticeably.<br/>• This sign must be followed by a Slow Pace, Normal Pace or Finish sign.",
     deductions: {
       minor: ["Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
       ],
@@ -606,7 +604,7 @@ const Novice = [
     name: "125",
     icon: require("../assets/slides/125.jpg"),
     category: "Novice",
-    title: "125. Call Front Handler Returns to Heel",
+    title: "125. Call Front - Handler Returns to Heel",
     description: "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The <b>dog must remain in a sit</b> while the <b>handler walks around behind the dog in a counterclockwise direction to return to heel position</b>.<br/>• The handler may pause upon return to heel position.<br/>• This station will result in a 180-degree change of direction.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
     tips: "• There is no deduction for the handler's distance from the dog during the walk around. If the dog is sitting too close to a sign, making it difficult to walk between the dog and the sign, you may wish to walk around both the dog and the sign while returning to heel position.<br/> • Some paw movement during the stay is not a deduction, provided the dog remains in a sit and does not turn their body.",  
     reward: true,  
