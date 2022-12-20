@@ -74,7 +74,7 @@ const Excellent = [
     category: "Excellent",
     title: "303. Moving Stand Call to Heel",
     description:
-      "• While heeling, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler calls the dog to heel and the team continues to the next station.<br/>• <b>The dog must be in heel position before the team arrives at the next station</b>",
+      "• While heeling, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler calls the dog to heel and the team continues to the next station.<br/>• <b>The dog must be in heel position before the team arrives at the next station.</b>",
     deductions: {
       minor: ["Dog stands more than 45-degrees out of heel position"],
 
@@ -100,7 +100,7 @@ const Excellent = [
     category: "Excellent",
     title: "304. Moving Down Call to Heel",
     description:
-      "• While heeling, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler calls the dog to heel and the team continues to the next station.<br/>• <b>The dog must be in heel position before the team arrives at the next station</b>",
+      "• While heeling, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler calls the dog to heel and the team continues to the next station.<br/>• <b>The dog must be in heel position before the team arrives at the next station.</b>",
     deductions: {
       minor: ["Dog downs more than 45-degrees out of heel position"],
 
@@ -174,10 +174,7 @@ const Excellent = [
       "• The handler cues the <b>dog to sit directly from the stand</b>.<br/>• The <b>handler returns to heel position by walking around the dog and back to heel.</b><br/>• The dog <b>must remain in a sit</b> until cued to heel.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
     tips: "• This is not a stand alone station. It will always follow station 306.",
     deductions: {
-      minor: ["Dog slow to respond (VERIFY - OR BELOW)"],
-      substantial: [
-        "Failure of the dog to assume the requested position promptly (NOT IN HANDBOOK, VERIFY)",
-      ],
+      minor: ["Dog slow to respond"],
       nq: [
         "Dog does not sit in place when cued",
         "Dog does not hold the sit until cued to heel forward",
@@ -195,9 +192,12 @@ const Excellent = [
       "• The handler cues the <b>dog to down directly from the stand</b>.<br/>• The <b>handler returns to heel position by walking around the dog and back to heel.</b><br/>• The dog <b>must remain in a down</b> until cued to heel.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
     tips: "• This is not a stand alone station. It will always follow station 306.",
     deductions: {
-      minor: [""],
-      substantial: [""],
-      nq: [""],
+      minor: ["Dog slow to respond"],
+      nq: [
+        "Dog does not down in place when cued",
+        "Dog does not hold the down until cued to heel forward",
+        "Dog assumes a position not required by the exercise",
+      ],
     },
     video: undefined,
   },
@@ -210,9 +210,12 @@ const Excellent = [
       "• The handler cues the <b>dog to sit directly from the stand</b>.<br/>• The handler calls the <b>dog to return to heel position</b>.<br/>• The dog may return to heel position either directly to heel position or by going around the handler.<br/>• The team <b>heels forward before the dog sits</b>.<br>• This station results in a 180-degree change of direction.<br/><br/>",
     tips: "• This is not a stand alone station. It will always follow station 306.",
     deductions: {
-      minor: [""],
-      substantial: [""],
-      nq: [""],
+      minor: ["Dog slow to respond"],
+      nq: [
+        "Dog does not sit in place when cued",
+        "Dog does not hold the sit until until cued to heel forward",
+        "Dog assumes a position not required by the exercise",
+      ],
     },
     video: undefined,
   },
@@ -225,9 +228,12 @@ const Excellent = [
       "• The handler cues the <b>dog to down directly from the stand</b>.<br/>• The handler calls the <b>dog to return to heel position</b>.<br/>• The dog may return to heel position either directly to heel position or by going around the handler.<br/>• The team <b>heels forward before the dog sits</b>.<br>• This station results in a 180-degree change of direction.<br/><br/>",
     tips: "• This is not a stand alone station. It will always follow station 306.",
     deductions: {
-      minor: [""],
-      substantial: [""],
-      nq: [""],
+      minor: ["Dog slow to respond"],
+      nq: [
+        "Dog does not down in place when cued",
+        "Dog does not hold the down until until cued to heel forward",
+        "Dog assumes a position not required by the exercise",
+      ],
     },
     video: undefined,
   },
