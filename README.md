@@ -6,6 +6,5 @@ This was written using node v14.20.1 and npm. To run, try the following:
 
 ```
 cd reactor
-npm i
 npm start
 ```
