@@ -28,13 +28,16 @@ export default function AppController() {
     searchbar: {
       marginTop: 10,
       marginBottom: 10,
+      width: "100%",
     },
     container: {
       marginLeft: 10,
       marginRight: 10,
+      flex: 1,
+      alignItems: "stretch",
+      alignSelf: "stretch",
     },
     caroLogo: {
-      // 800x138
       width: window.width * 0.9,
       height: (window.width / 1061) * 215 * 0.9,
       marginBottom: 10,
@@ -42,7 +45,6 @@ export default function AppController() {
     disclaimerCard: {
       marginTop: 20,
       marginBottom: 20,
-      
     },
     disclaimerBold: {
       fontWeight: "bold",
@@ -78,17 +80,10 @@ export default function AppController() {
   }, []);
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <AppHeader />
 
       <View style={styles.container}>
-        {/* {selectedLevel === undefined && (
-          <Image
-            source={require("./assets/caro-logo-2.png")}
-            style={styles.caroLogo}
-          />
-        )} */}
-
         {selectedLevel === undefined && (
           <Searchbar
             style={styles.searchbar}
@@ -106,7 +101,8 @@ export default function AppController() {
                 <Text>
                   <Text style={styles.disclaimerBold}>Disclaimer:</Text> See the{" "}
                   <HandbookTextLink /> for complete information. In the case of
-                  a discrepancy, the handbook is final. If you find an error, email: 
+                  a discrepancy, the handbook is final. If you find an error,
+                  email:
                 </Text>
               </Card.Content>
             </Card>

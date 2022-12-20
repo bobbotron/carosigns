@@ -8,3 +8,11 @@ This was written using node v14.20.1 and npm. To run, try the following:
 cd reactor
 npm start
 ```
+
+## Build Steps
+### Android
+``` 
+# Update build version
+npx eas build:version:set
+npx eas build -p android
+```

@@ -7,7 +7,7 @@ import {
   ScrollView,
   Platform,
 } from "react-native";
-import { Avatar, Card, Text } from "react-native-paper";
+import { Card, Text } from "react-native-paper";
 import RenderHtml from "react-native-render-html";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
@@ -228,6 +228,19 @@ export default function SignDetail(props) {
             />
             <Text style={styles.rewardText}>
               Reinforcement station in Novice &amp; Advanced A/B
+            </Text>
+          </View>
+        )}
+        {props.sign.changeSide && (
+          <View style={styles.rewardContainer}>
+            <MaterialIcons
+              name="swap-horizontal-bold"
+              size={32}
+              color="black"
+              style={styles.rewardText}
+            />
+            <Text style={styles.rewardText}>
+              This station results in a change of side.
             </Text>
           </View>
         )}
