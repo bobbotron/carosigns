@@ -213,10 +213,8 @@ export default function SignDetail(props) {
   );
 
   return (
-    <ScrollView>
-      <View
-      // style={styles.selectedSign}
-      >
+    <>
+      <View style={styles.selectedSign}>
         <Image source={props.sign.icon} style={styles.logo} />
         {props.sign.reward && (
           <View style={styles.rewardContainer}>
@@ -250,11 +248,11 @@ export default function SignDetail(props) {
             renderScene={s}
             onIndexChange={setIndex}
             renderTabBar={renderTabBar}
-            style={{ height: 200, width: window.width - 20 }}
+            style={{ height: 500, width: window.width - 20 }}
           />
         </View>
       </View>
-    </ScrollView>
+    </>
   );
 }
 const htmlStyle = StyleSheet.create({

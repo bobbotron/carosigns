@@ -15,4 +15,6 @@ npm start
 # Update build version
 npx eas build:version:set
 npx eas build -p android
+
+# Then go to https://play.google.com/console/u/0/developers
 ```
