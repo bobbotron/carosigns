@@ -1,21 +1,21 @@
 import { StatusBar } from "expo-status-bar";
-import { Button, Card, Searchbar } from "react-native-paper";
+import { Card, Searchbar } from "react-native-paper";
 import { useEffect, useState } from "react";
 import {
   StyleSheet,
   View,
   Text,
   useWindowDimensions,
-  Image,
+  ScrollView,
 } from "react-native";
 import MainList from "./components/MainList";
 import Level from "./components/Level";
 import SignsDB from "./data/SignDb";
-import SignDetail from "./components/SignDetail";
 import HandbookTextLink from "./components/HandbookTextLink";
 import { useSelector, useDispatch } from "react-redux";
 import { setSearchText, setSelectedLevel } from "./redux/actions";
 import AppHeader from "./components/AppHeader";
+import SearchResults from "./components/SearchResults";
 export default function AppController() {
   const window = useWindowDimensions();
 
@@ -58,14 +58,6 @@ export default function AppController() {
   const [levels, setLevels] = useState([]);
 
   const searchActive = !(searchText === undefined || searchText === "");
-  const queryLower = searchActive ? searchText.toLowerCase() : "";
-  const selectedSigns = !searchActive
-    ? undefined
-    : SignsDB.Signs.filter(
-        (x) =>
-          x.name.toLowerCase().includes(queryLower) ||
-          (x.title !== undefined && x.title.toLowerCase().includes(queryLower))
-      );
 
   const levelListener = (l) => {
     dispatch(setSelectedLevel(l));
@@ -115,36 +107,7 @@ export default function AppController() {
           />
         )}
 
-        {searchActive && (
-          <>
-            {selectedSigns.length === 0 && <Text>No results found.</Text>}
-            {selectedSigns.length === 1 && (
-              <View style={{ marginTop: 15 }}>
-                <SignDetail sign={selectedSigns[0]} />
-              </View>
-            )}
-            {selectedSigns.length > 1 && (
-              <>
-                <Text>{selectedSigns.length} results found.</Text>
-                {selectedSigns.map((x) => (
-                  <Button
-                    key={x.name}
-                    mode="contained"
-                    style={{ marginTop: 10 }}
-                    onPress={() =>
-                      dispatch(
-                        setSearchText(x.title === undefined ? x.name : x.title)
-                      )
-                    }
-                  >
-                    {x.title === undefined && <>{x.name} </>}
-                    {x.title !== undefined && <>{x.title}</>}
-                  </Button>
-                ))}
-              </>
-            )}
-          </>
-        )}
+        {searchActive && <SearchResults />}
 
         <StatusBar style="auto" />
       </View>

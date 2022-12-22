@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   ImageBackground,
   StyleSheet,
+  ScrollView,
 } from "react-native";
 import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
@@ -64,7 +65,11 @@ export default function Level(props) {
             />
           </>
         ))}
-      {selectedSign !== undefined && <SignDetail sign={selectedSign} />}
+      {selectedSign !== undefined && (
+        <ScrollView>
+          <SignDetail sign={selectedSign} />
+        </ScrollView>
+      )}
     </>
   );
 }
