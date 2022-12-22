@@ -240,7 +240,7 @@ export default function SignDetail(props) {
               style={styles.rewardText}
             />
             <Text style={styles.rewardText}>
-              This station results in a change of side.
+              Station results in a change of heeling side
             </Text>
           </View>
         )}

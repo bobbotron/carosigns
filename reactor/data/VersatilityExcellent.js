@@ -6,7 +6,6 @@ const VersatilityExcellent = [
     title: "500. Moving Sit - Cross Behind",
     description:
       "• While heeling, the handler cues the <b>dog to sit and without pausing continues forward.<br/>• The dog must hold the sit until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
-    tips: ".",
     deductions: {
       minor: ["Crooked sit (45 to 90 degrees)"],
       substantial: [
@@ -30,7 +29,6 @@ const VersatilityExcellent = [
     title: "501. Moving Stand - Cross Behind",
     description:
       "• While heeling, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
-    tips: ".",
     deductions: {
       minor: ["Crooked stand (45 to 90 degrees)"],
       substantial: [
@@ -54,7 +52,6 @@ const VersatilityExcellent = [
     title: "501. Moving Down - Cross Behind",
     description:
       "• While heeling, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
-    tips: ".",
     deductions: {
       minor: ["Crooked down (45 to 90 degrees)"],
       substantial: [
@@ -199,7 +196,7 @@ const VersatilityExcellent = [
     category: "Versatility Excellent",
     title: "508. Off-set Figure 8",
     description:
-      "• Two cones (pylons) and two food bowls are arranged in a diamond pattern:<br/> o The cones are placed 10 feet apart,<br/> o The food bowls are securely covered and are placed 2.5 feet from the centre line.<br/>• With the <b>dog heeling on the right</b>, the team enters the pattern and <b>completes a continuous Figure 8 around the pylons, crossing through the middle at least three times</b>.<br/>• The team <b>exits the exercise as indicated by the placement of the next station.</b><br/>• Allowances can be made in the distance between the food bowls for large/giant breeds.<br/><br/>",
+      "• Two cones (pylons) and two food bowls are arranged in a diamond pattern: the cones are placed 10 feet apart; the food bowls are securely covered and are placed 2.5 feet from the centre line.<br/>• With the <b>dog heeling on the right</b>, the team enters the pattern and <b>completes a continuous Figure 8 around the pylons, crossing through the middle at least three times</b>.<br/>• The team <b>exits the exercise as indicated by the placement of the next station.</b><br/>• Allowances can be made in the distance between the food bowls for large/giant breeds.<br/><br/>",
     tips: "• Unlike other cone exercises, you will not always enter with the first cone on the dog's left. The course map should indicate the intended entry and exit points by arrows.<br/>• A cue such as 'leave it' can be used without deductions if it is given before the dog leaves heel position. Cues must never be given in a corrective tone.<br/>• In the Brace class, dogs will have one extra foot between the cones and between the bowls.<br/>",
     deductions: {
       minor: [
@@ -379,7 +376,6 @@ const VersatilityExcellent = [
       "• The handler <b>returns to heel position by moving around the dog in a clockwise direction into heel position, on the right</b>.<br/>• The handler may choose to pause in heel position before moving forward.<br/>• The handler cues the dog to <b>heel forward from the stand position</b>.<br/><br/>",
     tips: "• There will be no communication from the Judge about when you may return to your dog. Instead, wait for the Judge to have completed their Walk Around, returned to you, and moved away.<br/>• This sign always follows sign 515 and is not used elsewhere.<br/>• This station is not used in virtual trials.<br/>",
     deductions: {
-      minor: [""],
       nq: [
         "The dog does not hold the stand for the duration of the exercise (eg. circles to watch the handler was they walk around, takes steps forward or sits)",
         "Dog stands more than 90-degrees out of heel position",
@@ -416,7 +412,7 @@ const VersatilityExcellent = [
     name: "518",
     icon: require("../assets/slides/518.jpg"),
     category: "Versatility Excellent",
-    title: "518. Call Front - 1,2,3 Steps Backwards",
+    title: "518. Call Front - 1, 2, 3 Steps Backwards",
     description:
       "• With the <b>dog heeling on the right</b>, the handler stops forward motion and calls the dog directly to the front position.<br/>• The handler may take up to four steps backward as the <b>dog turns and sits in front position.<br/>• From the sit</b> the handler takes 1 step backward and <b>halts</b>, the <b>dog moves with the handler sits in front position.<br/>• From the sit</b> the handler takes 2 steps backward and <b>halts</b>, the <b>dog moves with the handler and sits in front position.<br/>• From the sit</b> the handler takes 3 steps backward and <b>halts</b>, the <b>dog moves with the handler and sits in front position</b>.<br/>• This station is followed by one of 519, 520, 521 or 522.<br/><br/>",
     tips: "• This sign will always be followed by a finish or forward sign.<br/>• The dog must move with the handler as the handler steps backwards.<br/>• Depending on your stride length, you may not end up at the correct location for the next sign (front or finish) - this is ok, but do make a point of remembering what the next sign is, so that you can perform it correctly",
@@ -424,10 +420,9 @@ const VersatilityExcellent = [
       minor: [
         "Dog sits more than 45-degrees out of front position",
         "Handler moves their feet during the stationary portion of the front",
-        "",
       ],
       substantial: [
-        "Handler takes more than the required number of steps in the 1,2,3 Exercises (3 points for each part of the exercise where extra steps are taken)",
+        "Handler takes more than the required number of steps in the 1, 2, 3 Exercises (3 points for each part of the exercise where extra steps are taken)",
         "handler moves left or right to position themselves in front of the dog to create a straight front",
       ],
       nq: [
@@ -587,7 +582,6 @@ const VersatilityExcellent = [
     title: "526. Moving Sit Walk Around",
     description:
       "• With the <b>dog heeling on the right</b>, the handler cues the <b>dog to sit and without pausing walks around the dog from head to tail </b>returning to heel position.<br/>• The handler remains within arm’s length of the dog throughout the exercise.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the sit position</b><br/><br/>.",
-    tips: ".",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of heel position",

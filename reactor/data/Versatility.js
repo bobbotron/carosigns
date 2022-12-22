@@ -188,7 +188,7 @@ const Versatility = [
     name: "407",
     icon: require("../assets/slides/407.jpg"),
     category: "Versatility",
-    title: "407. Spin Left – Right Turn - Cross Behind",
+    title: "407. Spin Left - Right Turn - Cross Behind",
     description:
       "• While heeling with the dog on the left, the <b>dog spins in a circle in place to the left</b><br/>• The <b>handler turns right</b> and cues the <b>dog to cross behind</b> and <b>resume heeling with the dog on the right side of the handler.</b><br/>• The handler may pause while the dog completes the spin.<br/>• This station results in a 90-degree change of direction to the right and a change of side from left to right.<br/><br/>",
     tips: "• The handler may come to a complete stop (briefly) while the dog spins.",
@@ -211,7 +211,7 @@ const Versatility = [
     name: "408",
     icon: require("../assets/slides/408.jpg"),
     category: "Versatility",
-    title: "408. Spin Right – Left Turn – Cross Behind",
+    title: "408. Spin Right - Left Turn - Cross Behind",
     description:
       "• While heeling with the dog on the right</b>, the <b>dog spins in a circle in place to the right</b><br/>• The <b>handler turns left</b> and cues the <b>dog to cross behind</b> and <b>resume heeling with the dog on the left side of the handler.</b><br/>• The handler may pause while the dog completes the spin.<br/>• This station results in a 90-degree change of direction to the right and a change of side from left to left.<br/><br/>",
     tips: "• The handler may come to a complete stop (briefly) while the dog spins.",
@@ -259,7 +259,6 @@ const Versatility = [
     title: "410. HALT - Down",
     description:
       "• While <b>heeling with the dog on the right</b>, the team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits or downs more than 45-degrees out of heel position",
@@ -282,7 +281,6 @@ const Versatility = [
     title: "411. HALT - Down - Sit",
     description:
       "• While <b>heeling with the dog on the right</b>, the team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>sit</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits or downs more than 45-degrees out of heel position",
@@ -305,7 +303,6 @@ const Versatility = [
     title: "412. HALT - Walk Around",
     description:
       "• While <b>heeling with the dog on the right</b>, the team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of heel position",
@@ -329,7 +326,6 @@ const Versatility = [
     title: "413. HALT - Down - Walk Around",
     description:
       "• While <b>heeling with the dog on the right</b>, the team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to down</b>.<br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits or down more than 45-degrees out of heel position",
@@ -349,10 +345,9 @@ const Versatility = [
     name: "414",
     icon: require("../assets/slides/414.jpg"),
     category: "Versatility",
-    title: "414. HALT - 1,2,3 Steps Forward",
+    title: "414. HALT - 1, 2, 3 Steps Forward",
     description:
       "• While <b>heeling with the dog on the right</b>, the team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to heel and takes one step forward, then halts; two steps and halts; then three steps and halts. <b>The team must meet the minimum required steps</b>.<br/> • Steps should be equal in length, in a natural stride for the team and finishing the exercise before the next station sign.<br/> • <b>The dog moves with the handler</b>, maintaining heel position, and <b>must sit each time the handler halts</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of heel position",
@@ -378,10 +373,9 @@ const Versatility = [
     name: "415",
     icon: require("../assets/slides/415.jpg"),
     category: "Versatility",
-    title: "415. HALT - Side Step Left – HALT",
+    title: "415. HALT - Side Step Left - HALT",
     description:
       "• While <b>heeling with the dog on the right</b>, the team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position</b>.<br/> • The handler takes <b>one side step directly to their left</b> while cueing the dog to heel.</br> • The dog <b>must move to the left simultaneously with the handler</b> remaining in heel position parallel to the handler and <b>sit</b> when the handler stops.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of heel position",
@@ -407,7 +401,6 @@ const Versatility = [
     title: "416. HALT - 90 Pivot Right - HALT",
     description:
       "• While <b>heeling with the dog on the right</b>, • The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90-degrees to their right in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the right.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of heel position",
@@ -432,7 +425,6 @@ const Versatility = [
     title: "417. HALT - 90 Pivot Left - HALT",
     description:
       "• While <b>heeling with the dog on the right</b>, the team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90-degrees to their left in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the left.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of heel position",
@@ -454,10 +446,9 @@ const Versatility = [
     name: "418",
     icon: require("../assets/slides/418.jpg"),
     category: "Versatility",
-    title: "418. HALT - Turn Left - 1 Step – HALT",
+    title: "418. HALT - Turn Left - 1 Step - HALT",
     description:
       "• While <b>heeling with the dog on the right</b>, the team comes to a <b>halt</b> and the handler cues the <b>dog to sit in heel position.</b><br/>• The handler cues the dog to heel, <b>turns to the left, takes one step in that direction and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of heel position",
@@ -482,7 +473,6 @@ const Versatility = [
     title: "419. Right Turn",
     description:
       "• While <b>heeling with the dog on the right</b>, the team <b>makes a 90-degree turn to the right.</b><br/>• This station results in a 90-degree change of direction to the right.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
@@ -500,7 +490,6 @@ const Versatility = [
     title: "420. Left Turn",
     description:
       "• While <b>heeling with the dog on the right</b>, the team <b>makes a 90-degree turn to the left.</b><br/>• This station results in a 90-degree change of direction to the left.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
@@ -518,7 +507,6 @@ const Versatility = [
     title: "421. 180 Right",
     description:
       "• While <b>heeling with the dog on the right</b>, the team <b>makes a 180-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet and should be in a straight line to and from the station sign for a minimum of one stride before and after turning.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Handler's path while turning more than a 2-foot radius",
@@ -541,7 +529,6 @@ const Versatility = [
     title: "422. 180 Left",
     description:
       "• While <b>heeling with the dog on the right</b>, the team <b>makes a 180-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet and should be in a straight line to and from the station sign for a minimum of one stride before and after turning.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Handler's path while turning more than a 2-foot radius",
@@ -564,7 +551,6 @@ const Versatility = [
     title: "423. 270 Right",
     description:
       "• While <b>heeling with the dog on the right</b>, the team <b>makes a 270-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>• This station results in a 90-degree change of direction to the left.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Handler's path while turing more than a 2-foot radius",
@@ -586,7 +572,6 @@ const Versatility = [
     title: "424. 270 Left",
     description:
       "• While <b>heeling with the dog on the right</b>, the team <b>makes a 270-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/>• This station results in a 90-degree change of direction to the right.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Handler's path while turing more than a 2-foot radius",
@@ -608,7 +593,6 @@ const Versatility = [
     title: "425. 360 Right",
     description:
       "• While <b>heeling with the dog on the right</b>, the team <b>makes a 360-degree turn to the right.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/><br/>,",
-    tips: "",
     deductions: {
       minor: [
         "Handler's path while turning more than a 2-foot radius",
@@ -630,7 +614,6 @@ const Versatility = [
     title: "426. 360 Left",
     description:
       "• While <b>heeling with the dog on the right</b>, the team <b>makes a 360-degree turn to the left.</b><br/>• The handlers’ path while turning should be on or within a diameter of 2 feet.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Handler's path while turning more than a 2-foot radius",
@@ -652,7 +635,6 @@ const Versatility = [
     title: "427. Slow",
     description:
       "• While <b>heeling with the dog on the right</b>, the team decreases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace.<br/>• The slow pace is maintained continuously until the next station.</b><br/>• This station is followed by either Fast, Normal or the Finish station.</br><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
@@ -671,8 +653,7 @@ const Versatility = [
     category: "Versatility",
     title: "428. Fast",
     description:
-      "• While <b>heeling with the dog on the right</b>, the team increases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace</b>. The pace should be fast enough that the dog at least breaks into a trot.<br/>• <br>The fast pace is maintained continuously until the next station.</b><br/>• This station is followed by either Slow, Normal or the Finish station.</br><br/>",
-    tips: "",
+      "• While <b>heeling with the dog on the right</b>, the team increases its pace so that there is a <b>noticeable difference in the dogs’ speed from the normal pace</b>. The pace should be fast enough that the dog at least breaks into a trot.<br/>• The fast pace is maintained continuously until the next station.</b><br/>• This station is followed by either Slow, Normal or the Finish station.</br><br/>",
     deductions: {
       minor: [
         "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
@@ -691,7 +672,6 @@ const Versatility = [
     title: "429. Normal",
     description:
       "• While <b>heeling with the dog on the right</b>, the team moves forward at a <b>normal pace</b> that is comfortable for the dog and handler.<br/>• There must be a <b>noticeable difference in the dogs’ speed from the slow or fast to normal pace.</b><br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
@@ -709,7 +689,6 @@ const Versatility = [
     title: "430. Call Front - Finish Right",
     description:
       "• While <b>heeling with the dog on the right</b>,the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s right directly to sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of front position",
@@ -739,7 +718,6 @@ const Versatility = [
     title: "431. Call Front - Finish Left",
     description:
       "• While <b>heeling with the dog on the right</b>,the handler stops forward motion and calls the dog directly to the front position.<br/>• The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b> move to the handler’s left and around their body to sit in heel position on the right side</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of front position",
@@ -769,7 +747,6 @@ const Versatility = [
     title: "432. Call Front - Forward Right",
     description:
       "• While <b>heeling with the dog on the right</b>, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s right directly toward heel position</b>.<br/>• As the dog is returning to heel position, the handler cues the dog to heel and moves forward. <b>The dog does not sit in heel position.</b><br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of front position",
@@ -798,7 +775,6 @@ const Versatility = [
     title: "433. Call Front - Forward Left",
     description:
       "• While <b>heeling with the dog on the right</b>, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s left, around and behind them moving toward heel position on the right</b>.<br/>• As the dog is returning to heel position, the handler cues the dog to heel and moves forward. <b>The dog does not sit in heel position.</b><br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of front position",
@@ -827,7 +803,6 @@ const Versatility = [
     title: "434. Call Front - Handler Returns to Heel",
     description:
       "• While <b>heeling with the dog on the right</b>, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The <b>dog must remain in a sit</b> while the <b>handler walks around behind the dog in a clockwise direction to return to heel position</b>.<br/>• The handler may pause upon return to heel position.<br/>• This station will result in a 180-degree change of direction.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
-    tips: "",
     deductions: {
       minor: ["Dog sits more than 45-degrees out of front position"],
 
@@ -899,7 +874,6 @@ const Versatility = [
     title: "437. Weave Once",
     description:
       "• While <b>heeling with the dog on the right, the team enters the pattern with the first cone on the team’s left</b>.<br/>• The team <b>weaves through the cones</b> and exits the station.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Handler or dog stop forward motion",
@@ -923,7 +897,6 @@ const Versatility = [
     title: "428. Weave Twice",
     description:
       "• While <b>heeling with the dog on the right, the team enters the pattern with the first cone on the team’s left</b>.<br/>• The team <b>weaves continuously through the cones, loops around the end cone and weaves back to the beginning of the pattern</b>.<br/><br/>",
-    tips: "",
     deductions: {
       minor: [
         "Handler or dog stop forward motion",
@@ -946,10 +919,10 @@ const Versatility = [
     category: "Versatility",
     title: "439. Jump",
     description:
-      "• The jump may be either a solid or bar jump.<br/>• <b>While heeling on the right side, the team enters the send zone where the dog is sent to the jump.</b><br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 6-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 6-foot line when proceeding past the jump.</b><br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
+      "• Versatility level courses use the Excellent level jump (ie. 6 feet of lateral distance).<br/>• The jump may be either a solid or bar jump.<br/>• <b>While heeling on the right side, the team enters the send zone where the dog is sent to the jump.</b><br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 6-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 6-foot line when proceeding past the jump.</b><br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
     tips: "• Be careful not to step in the NQ zone! No retry is permitted if the handler steps into the NQ Zone.<br/>• Once the dog has taken the jump, it may be called back to heel position by the handler.<br/>• Once the dog has been sent to the jump, the handler may stay in the send zone or proceed along the outside of the 6-foot line. Handler may give a second cue to the dog as long as the dog is heading towards the obstacle. If the dog turns back to the handler or passes the plane of the jump the handler must return to the send zone for a retry.<br/>• The Handler is not required to run. Handlers may move at whatever speed they wish.",
     deductions: {
-      minor: ["Out of Heel position"],
+      minor: ["Out of heel position approaching the jump"],
       substantial: ["Touching the jump or broad jump (5 points)"],
       nq: [
         "Initiating the send to the obstacle outside of the send zone",
@@ -970,7 +943,7 @@ const Versatility = [
       "• While <b>heeling with the dog on the right, the team enters the send zone where the dog is sent to the jump.</b><br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 3-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 3-foot line when proceeding past the jump.</b><br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
     tips: "• The broad jump is not used in virtual trials<br/>• Be careful not to step in the NQ zone! No retry is permitted if the handler steps into the NQ Zone.<br/>• Once the dog has taken the jump, it may be called back to heel position by the handler.<br/>• Once the dog has been sent to the jump, the handler may stay in the send zone or proceed along the outside of the 3-foot line. Handler may give a second cue to the dog as long as the dog is heading towards the obstacle. If the dog turns back to the handler or passes the plane of the jump the handler must return to the send zone for a retry.<br/>• The Handler is not required to run. Handlers may move at whatever speed they wish.",
     deductions: {
-      minor: ["Out of Heel position"],
+      minor: ["Out of heel position approaching the jump"],
       substantial: ["Touching the jump or broad jump (5 points)"],
       nq: [
         "Initiating the send to the obstacle outside of the send zone",
@@ -991,7 +964,7 @@ const Versatility = [
       "• While <b>heeling with the dog on the right</b>, the team enters the send zone where the dog is sent to the tunnel</b>.<br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 6-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 6-foot line when proceeding past the tunnel</b>.<br/>• Upon completion of the tunnel the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
     tips: "• The tunnel will always be straight (not curved)",
     deductions: {
-      minor: ["Out of heel position"],
+      minor: ["Out of heel position approaching the tunnel"],
       nq: [
         "Initiating the send to the obstacle outside of the send zone",
         "The handler steps inside the NQ Zone at any time",
@@ -1008,10 +981,10 @@ const Versatility = [
     title: "442. Weave Poles",
     description:
       "• While <b>heeling with the dog on the right</b>, the team <b>enters the weave poles with the first pole on the team’s left</b>.<br/>• The dog <b>weaves through the poles</b> and exits the station.<br/>• For this station to be considered complete, <b>the dog must weave through all the poles in the correct pattern</b>.<br/><br/>",
-    tips: "• The handler may provide ongoing verbal and/or physical cues to the dog to continue the weave pattern without deductions if the dog continues to weave.",
+    tips: "• The handler may provide ongoing verbal and/or physical cues to the dog to continue the weave pattern without deductions if the dog continues to weave.<br/>• If the dog has left the weave poles and is sent back in at the point of exit, it will be considered an additional cue.",
     deductions: {
       minor: [
-        "If the dog leaves the weave pattern and is cued to return to the point of exit to continue the pattern a deduction for additional cues will be applied",
+        "Out of heel position approaching the weaves","If the dog leaves the weave pattern and is cued to return to the point of exit to continue the pattern a deduction for additional cues will be applied",
       ],
       nq: [
         "The dog fails to enter the weave poles correctly",
