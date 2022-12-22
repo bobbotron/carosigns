@@ -91,10 +91,9 @@ export default function AppController() {
             <Card style={styles.disclaimerCard}>
               <Card.Content>
                 <Text>
-                  <Text style={styles.disclaimerBold}>Disclaimer:</Text> See the{" "}
-                  <HandbookTextLink /> for complete information. In the case of
-                  a discrepancy, the handbook is final. If you find an error,
-                  email:
+                  <Text style={styles.disclaimerBold}>Note:</Text> See the{" "}
+                  <HandbookTextLink /> for complete information and rules. In the case of
+                  a discrepancy, the handbook is final.
                 </Text>
               </Card.Content>
             </Card>
