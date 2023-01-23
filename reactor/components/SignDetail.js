@@ -242,7 +242,7 @@ export default function SignDetail(props) {
             </Text>
           </View>
         )}
-        <View style={{ height: 700 }}>
+        <View style={{ height: 800 }}>
           <TabView
             navigationState={state}
             renderScene={s}
