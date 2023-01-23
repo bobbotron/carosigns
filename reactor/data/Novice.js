@@ -28,7 +28,7 @@ const Novice = [
     hideNameOnGrid: true,
     description:
       "• While heeling, the <b>team heels past the Finish station.</b><br/> • Timing ends.<br/><br/>",
-    tips: "• There is no penalty for crossing the Finish station with the sign on the handler's left side.<br/> • If in a class that allows food reinforcement, food may be delivered after crossing the Finish sign.",
+    tips: "• If in a class that allows food reinforcement, food may be delivered after crossing the Finish sign.",
     deductions: {
       minor: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
@@ -46,7 +46,7 @@ const Novice = [
     title: "100. HALT - Stand",
     description:
       "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>stand</b>.<br/> • The handler cues the dog to <b>heel forward from the stand position</b>.<br/><br/>",
-    tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.<br/> • Do not heel forward or reach for reinforcement until the stand has been completed.",
+    tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.<br/> • Do not reach for reinforcement until the stand has been completed. The dog must hold the stand while eating the reward.",
     reward: true,
     deductions: {
       minor: [
@@ -71,7 +71,7 @@ const Novice = [
     title: "101. HALT - Down",
     description:
       "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
-    tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.<br/>• Do not heel forward or reach for reinforcement until the down has been fully completed.",
+    tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.<br/>• If rewarding, pause first with the dog in the down then reach for reinforcement so that it is clear the station was completed before initiating the reward. The dog must hold the down while taking the reward.",
     reward: true,
     deductions: {
       minor: [
@@ -96,7 +96,7 @@ const Novice = [
     title: "102. HALT - Down - Sit",
     description:
       "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the dog to <b>down</b>.<br/> • The handler cues the dog to <b>sit</b>.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
-    tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.<br/> • Do not heel forward or reach for reinforcement until the final sit has been fully completed.",
+    tips: "• Pause briefly after each position change so that the Judge can clearly see all required positions.<br/>• If rewarding, pause first in heel position then reach for reinforcement so that it is clear the station was completed before initiating the reward.",
     reward: true,
     deductions: {
       minor: [
@@ -121,7 +121,7 @@ const Novice = [
     title: "103. HALT - Walk Around",
     description:
       "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
-    tips: "• There is no deduction for the handler's distance from the dog during the walk around. If the dog sits close to a station sign, making it difficult to walk between the dog and the sign, you may choose to walk around both the sign and the dog while returning to heel position.<br/> • Some paw movement during the stay is not a deduction, provided the dog remains in a sit and does not turn their body.<br/>• If rewarding, pause first in heel position then reach for reinforcement so that it is clear the station was completed before initiating the reward.",
+    tips: "• If the dog sits close to a station sign, making it difficult to walk between the dog and the sign, you may choose to walk around both the sign and the dog while returning to heel position.<br/> • Some movement during the stay is not a deduction, provided the dog remains in a sit and does not turn their body.<br/>• If rewarding, pause first in heel position then reach for reinforcement so that it is clear the station was completed before initiating the reward.",
     reward: true,
     deductions: {
       minor: [
@@ -146,7 +146,7 @@ const Novice = [
     title: "104. HALT - Down - Walk Around",
     description:
       "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.</b><br/> • The handler cues the <b> dog to down</b>.<br/> • The handler cues the <b> dog to stay, walks around the dog from nose to tail and back to heel position</b>.<br/> • The handler may pause upon return to heel position.<br/> • The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
-    tips: "• There is no deduction for the handler's distance from the dog during the walk around. If the dog sits close to a station sign, making it difficult to walk between the dog and the sign, you may choose to walk around both the sign and the dog while returning to heel position.<br/> • Slight movement in the down is permitted without deductions as long as the dog holds the down and does not turn their body as the handler walks around them.<br/>• If rewarding, pause first in heel position then reach for reinforcement so that it is clear the station was completed before initiating the reward.",
+    tips: "• If the dog sits close to a station sign, making it difficult to walk between the dog and the sign, you may choose to walk around both the sign and the dog while returning to heel position.<br/> • Slight movement in the down is permitted without deductions as long as the dog holds the down and does not turn their body as the handler walks around them.<br/>• If rewarding, pause after returning to heel position then reach for reinforcement so that it is clear the station was completed before initiating the reward. The dog must eat the reward in a down.",
     reward: true,
     deductions: {
       minor: [
@@ -202,7 +202,7 @@ const Novice = [
     title: "106. HALT - Sidestep Right - HALT",
     description:
       "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position</b>.<br/> • The handler takes <b>one side step directly to their right</b> while cueing the dog to heel.</br> • The dog <b>must move to the right simultaneously with the handler</b> remaining in heel position parallel to the handler and <b>sit</b> when the handler stops.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
-    tips: "• The team will heel directly up to the station sign and perform the side step in front of the sign, then proceed along the new path beside the sign.<br/>• Ideally the dog's body position should remain completely parallel to the handler during the side step.",
+    tips: "• The team will heel directly up to the station sign and perform the side step in front of the sign, then proceed along the new path to the right of the station sign.<br/>• Ideally the dog's body position should remain completely parallel to the handler during the side step.",
     reward: true,
     deductions: {
       minor: [
@@ -230,7 +230,7 @@ const Novice = [
     title: "107. HALT - 90 Pivot Right - HALT",
     description:
       "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90-degrees to their right in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the right.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
-    tips: "• You may pivot on either your left or right foot.<br/>• Ensure you are pivoting in as small a space as possible rather than a step: either the ball one foot or the heel of one foot should stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
+    tips: "• Ensure you are pivoting in as small a space as possible rather than taking a step: either the ball one foot or the heel of one foot should stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
     reward: true,
     deductions: {
       minor: [
@@ -257,7 +257,7 @@ const Novice = [
     title: "108. HALT - 90 Pivot Left - HALT",
     description:
       "• The team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position.<br/>• The handler pivots in place 90-degrees to their left in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler then cues the dog to heel and moves forward.<br/>• This station results in a 90-degree change of direction to the left.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
-    tips: "• You may pivot on your left or right foot.<br/>• Ensure you are pivoting in as small a space possible rather than a step: either the ball one foot or the heel of one foot must stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
+    tips: "• Ensure you are pivoting in as small a space possible rather than taking a step: either the ball one foot or the heel of one foot must stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
     reward: true,
     deductions: {
       minor: [
@@ -284,7 +284,7 @@ const Novice = [
     title: "109. HALT - Turn Right 1 Step - HALT",
     description:
       "• The team comes to a <b>halt</b> and the handler cues the <b>dog to sit in heel position.</b><br/>• The handler cues the dog to heel, <b>turns to the right, takes one step in that direction and halts.</br>• The dog must move simultaneously with the handler and sit when the handler stops.</b><br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
-    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br>• Be sure to take a step, rather than pivoting. The step can be big or small, but must not be a pivot.",
+    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br>• Be sure to take a step, rather than pivoting. The step must be a distinct step, not be a pivot.",
     reward: true,
     deductions: {
       minor: [
@@ -345,7 +345,7 @@ const Novice = [
     title: "112. 180 Right",
     description:
       "• While heeling, the team <b>makes a 180-degree turn to the right.</b><br/>• The handler's path while turning should be on or within a diameter of 2 feet and should be in a straight line to and from the station sign for a minimum of one stride before and after turning.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
-    tips: "• The natural path of the course may result in the team approaching the turn from an angle; be sure that the final steps towards the sign are in a straight line, perform the exercise in front of the sign then heel away from the sign in a straight line for several steps. Then, you may proceed at an angle if required for the course.<br/>• 180-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.<br/>• Previously referred to as an About Turn.<br/>",
+    tips: "• The natural path of the course may result in the team approaching the turn from an angle; be sure that the final steps towards the sign are in a straight line, perform the exercise in front of the sign then heel away from the sign in a straight line for several steps. Then, you may proceed at an angle if required for the course.<br/>• 180-degree turns are tight turns (they can even be pivots!). If you measure two feet on the ground, you will get a feel for how tight the turns are.<br/>• Previously referred to as an About Turn.<br/>",
     deductions: {
       minor: [
         "Handler's path while turning more than a 2-foot radius",
@@ -367,7 +367,7 @@ const Novice = [
     title: "113. 180 Left",
     description:
       "• While heeling, the team <b>makes a 180-degree turn to the left.</b><br/>• The handler's path while turning should be on or within a diameter of 2 feet and should be in a straight line to and from the station sign for a minimum of one stride before and after turning.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
-    tips: "• The natural path of the course may result in the team approaching the turn from an angle; be sure that the final steps towards the sign are in a straight line, perform the turn in front of the sign, then heel away from the sign in a straight line for several steps. Then, you may proceed at an angle if required for the course.<br/>• 180-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.<br/>• Previously referred to as an About U Turn.",
+    tips: "• The natural path of the course may result in the team approaching the turn from an angle; be sure that the final steps towards the sign are in a straight line, perform the turn in front of the sign, then heel away from the sign in a straight line for several steps. Then, you may proceed at an angle if required for the course.<br/>• 180-degree turns are tight turns (they can even be pivots!). If you measure two feet on the ground, you will get a feel for how tight the turns are.<br/>• Previously referred to as an About U Turn.",
     deductions: {
       minor: [
         "Handler's path while turning more than a 2-foot radius",
@@ -389,7 +389,7 @@ const Novice = [
     title: "114. 270 Right",
     description:
       "• While heeling, the team <b>makes a 270-degree turn to the right.</b><br/>• The handler's path while turning should be on or within a diameter of 2 feet.<br/>• This station results in a 90-degree change of direction to the left.<br/><br/>",
-    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br/>• 270-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.<br/>• A 270-degree right turn results in a turn to the left.",
+    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br/>• 270-degree turns are tight turns, but not pivots. If you measure two feet on the ground, you will get a feel for how tight the turns are.<br/>• A 270-degree right turn results in a turn to the left.",
     deductions: {
       minor: [
         "Handler's path while turing more than a 2-foot radius",
@@ -410,7 +410,7 @@ const Novice = [
     title: "115. 270 Left",
     description:
       "• While heeling, the team <b>makes a 270-degree turn to the left.</b><br/>• The handler's path while turning should be on or within a diameter of 2 feet.<br/>• This station results in a 90-degree change of direction to the right.<br/><br/>",
-    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br/>• 270-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.• A 270-degree left turn results in a turn to the right.",
+    tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.<br/>• 270-degree turns are tight turns, but not pivots. If you measure two feet on the ground, you will get a feel for how tight the turns are.<br/>• A 270-degree left turn results in a turn to the right.",
     deductions: {
       minor: [
         "Handler's path while turning more than a 2-foot radius",
@@ -431,7 +431,7 @@ const Novice = [
     title: "116. 360 Right",
     description:
       "• While heeling, the team <b>makes a 360-degree turn to the right.</b><br/>• The handler's path while turning should be on or within a diameter of 2 feet.<br/><br/>",
-    tips: "• 360-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.<br/>• Perform the turn beside the sign, then continue in the same direction and on the same path of travel",
+    tips: "• 360-degree turns are tight turns, but not pivots. If you measure two feet on the ground, you will get a feel for how tight the turns are.<br/>• Perform the turn beside the sign, then continue in the same direction and on the same path of travel",
     deductions: {
       minor: [
         "Handler's path while turning more than a 2-foot radius",
@@ -452,7 +452,7 @@ const Novice = [
     title: "117. 360 Left",
     description:
       "• While heeling, the team <b>makes a 360-degree turn to the left.</b><br/>• The handler's path while turning should be on or within a diameter of 2 feet.<br/><br/>",
-    tips: "• 360-degree turns are tight turns, but not pivots. Note the 2 foot maximum diameter of the turn.<br/>• Perform the turn beside the sign, then continue in the same direction and on the same path of travel",
+    tips: "• 360-degree turns are tight turns, but not pivots. If you measure two feet on the ground, you will get a feel for how tight the turns are.<br/>• Perform the turn beside the sign, then continue in the same direction and on the same path of travel",
     deductions: {
       minor: [
         "Handler's path while turning more than a 2-foot radius",
@@ -473,7 +473,7 @@ const Novice = [
     title: "118. Slow Pace",
     description:
       "• While heeling, the team decreases its pace so that there is a <b>noticeable difference in the dog's speed from the normal pace.<br/>• The slow pace is maintained continuously until the next station.</b><br/>• This station is followed by either Fast, Normal or the Finish station.</br><br/>",
-    tips: "• The Judge is looking for the <i>dog</i> to noticeably change their pace. Be sure to slow your pace significantly (not just your stride length) so that your dog's pace change is noticeable.<br/>• This sign must be followed by a Fast Pace, Normal Pace or Finish sign.<br/>• One pace change station (slow or fast) is required in every Novice course.",
+    tips: "• The Judge is looking for the <i>dog</i> to noticeably change their pace. Be sure you are focused on your dog's pace, not your own.<br/>• This sign must be followed by a Fast Pace, Normal Pace or Finish sign.<br/>• One pace change station (slow or fast) is required in every Novice course.",
     deductions: {
       minor: [
         "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
@@ -591,7 +591,7 @@ const Novice = [
     title: "123. Call Front - Forward Right",
     description:
       "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The handler then cues the dog to <b>move to the handler’s right, around and behind them, moving towards heel position</b>.<br/>• As the dog is returning to heel position, the handler cues the dog to heel and moves forward. <b>The dog does not sit in heel position.</b><br/><br/>",
-    tips: "• You may begin to walk forward as soon as the dog has started to circle behind you and is on their way to heel position.",
+    tips: "• You may begin to walk forward as soon as the dog is no longer on your path, on their way to heel position.",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of front position (no deductions for less than a 45-degree angle)",
@@ -647,7 +647,7 @@ const Novice = [
     title: "125. Call Front - Handler Returns to Heel",
     description:
       "• While heeling, the handler stops forward motion and calls the dog directly to the front position.<br/> • The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>• The <b>dog must remain in a sit</b> while the <b>handler walks around behind the dog in a counterclockwise direction to return to heel position</b>.<br/>• The handler may pause upon return to heel position.<br/>• This station will result in a 180-degree change of direction.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
-    tips: "• There is no deduction for the handler's distance from the dog during the walk around. If the dog is sitting too close to a sign, making it difficult to walk between the dog and the sign, you may wish to walk around both the dog and the sign while returning to heel position.<br/> • Some paw movement during the stay is not a deduction, provided the dog remains in a sit and does not turn their body.",
+    tips: "• If the dog is sitting too close to a sign, making it difficult to walk between the dog and the sign, you may wish to walk around both the dog and the sign while returning to heel position.<br/> • Some movement during the stay is not a deduction, provided the dog remains in a sit and does not turn their body.",
     reward: true,
     deductions: {
       minor: [

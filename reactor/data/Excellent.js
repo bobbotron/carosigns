@@ -152,7 +152,7 @@ const Excellent = [
     title: "306. HALT - Stand - Leave",
     description:
       "• The team comes to a <b>halt</b> and the <b>dog sits in heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the dog to <b>stay, walks forward 5 feet</b> to one of station signs 307, 308, 309 or 310 and <b>turns to face the dog</b>.<br/><br/>",
-    tips: "• There is no deduction for slight pay movement.<br/>• This is not a stand alone sign.",
+    tips: "• There is no deduction for slight paw movement.<br/>• This is not a stand alone sign.",
     deductions: {
       minor: [
         "Dog sits or stands more than 45-degrees out of heel position (per occurrence)",
