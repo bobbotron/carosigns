@@ -6,7 +6,7 @@ const Working = [
     title: "1. Drop on recall",
     levels: {
       rookie: {
-        procedure: "Woah",
+        procedure: "Woah woah",
         procedureImages: [require("../assets/slides/200.jpg")],
         layout: "",
         layoutImages: [],
