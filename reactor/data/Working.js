@@ -1,7 +1,10 @@
-const Working = [
+const Working = { name: "Working",
+type: "working",
+buttonColor: "blue",
+signs: [
   {
     name: "1",
-    icon: undefined, // the sign
+    icon: require("../assets/slides/start.jpg"), // Todo update this!
     category: "Working",
     title: "1. Drop on recall",
     levels: {
@@ -28,6 +31,6 @@ const Working = [
       },
     },
   },
-];
+]};
 
 export default Working;

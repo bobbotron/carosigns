@@ -1,4 +1,7 @@
-const Excellent = [
+const Excellent = {
+  name: "Excellent",
+  type: "normal",
+  signs: [
   {
     name: "300",
     icon: require("../assets/slides/300.jpg"),
@@ -321,6 +324,6 @@ const Excellent = [
     },
     video: undefined,
   },
-];
+]};
 
 export default Excellent;

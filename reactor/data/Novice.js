@@ -1,6 +1,7 @@
-import { Text } from "react-native";
-
-const Novice = [
+const Novice = {
+  name: "Novice",
+  type: "normal",
+  signs: [
   {
     name: "Start",
     icon: require("../assets/slides/start.jpg"),
@@ -759,6 +760,6 @@ const Novice = [
       ],
     },
   },
-];
+]};
 
 export default Novice;

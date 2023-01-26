@@ -1,4 +1,7 @@
-const Advanced = [
+const Advanced = {
+  name: "Advanced",
+  type: "normal",
+  signs:[
   {
     name: "200",
     icon: require("../assets/slides/200.jpg"),
@@ -326,6 +329,6 @@ const Advanced = [
       nq: ["Dog is sent to the jump before entering the send zone", "Handler steps inside the NQ Zone at any point", "Dog knocks the bar off or pushes off of the jump bar", "Dog fails to take the jump"],
     },
   },
-];
+]};
 
 export default Advanced;

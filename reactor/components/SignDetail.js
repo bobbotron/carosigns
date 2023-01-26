@@ -4,7 +4,6 @@ import {
   StyleSheet,
   useWindowDimensions,
   View,
-  ScrollView,
   Platform,
 } from "react-native";
 import { Card, Text } from "react-native-paper";
@@ -13,10 +12,12 @@ import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import HandbookTextLink from "./HandbookTextLink";
 import theme from "../Theme";
+import DropDownPicker from "react-native-dropdown-picker";
 
 export default function SignDetail(props) {
   const window = useWindowDimensions();
-
+  const isNormalSign = props.signType === "normal";
+  const isWorkingSign = props.signType === "working";
   const [index, setIndex] = useState(0);
   const styles = StyleSheet.create({
     logo: {
@@ -73,56 +74,63 @@ export default function SignDetail(props) {
     <View style={styles.routes}>
       <Text style={styles.descriptionName}>{props.sign.title}</Text>
 
-      {props.sign.description !== undefined &&
-        typeof props.sign.description === "function" &&
-        props.sign.description()}
-      {props.sign.description !== undefined &&
-        typeof props.sign.description !== "function" && (
-          <RenderHtml
-            key="desc"
-            contentWidth={window.width}
-            source={{ html: props.sign.description }}
-          />
-        )}
-      {props.sign.description === undefined && (
+      {isWorkingSign && <Text>Working TBD!</Text>}
+      {isNormalSign && (
         <>
-          <Text>Description not set.</Text>
-        </>
-      )}
-      {props.sign.tips !== undefined && (
-        <>
-          <Card>
-            <Card.Content>
-              <>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    alignItems: Platform.OS === "ios" ? "center" : "baseline",
-                  }}
-                >
-                  <View style={{ flex: 1 }}>
-                    <Text
+          {" "}
+          {props.sign.description !== undefined &&
+            typeof props.sign.description === "function" &&
+            props.sign.description()}
+          {props.sign.description !== undefined &&
+            typeof props.sign.description !== "function" && (
+              <RenderHtml
+                key="desc"
+                contentWidth={window.width}
+                source={{ html: props.sign.description }}
+              />
+            )}
+          {props.sign.description === undefined && (
+            <>
+              <Text>Description not set.</Text>
+            </>
+          )}
+          {props.sign.tips !== undefined && (
+            <>
+              <Card>
+                <Card.Content>
+                  <>
+                    <View
                       style={{
-                        color: theme.colors.primary,
-                        fontWeight: "bold",
-                        fontSize: 20,
-                        marginBottom: 10,
-                        marginLeft: 0,
+                        flexDirection: "row",
+                        alignItems:
+                          Platform.OS === "ios" ? "center" : "baseline",
                       }}
                     >
-                      Helpful Hints
-                    </Text>
-                  </View>
-                </View>
+                      <View style={{ flex: 1 }}>
+                        <Text
+                          style={{
+                            color: theme.colors.primary,
+                            fontWeight: "bold",
+                            fontSize: 20,
+                            marginBottom: 10,
+                            marginLeft: 0,
+                          }}
+                        >
+                          Helpful Hints
+                        </Text>
+                      </View>
+                    </View>
 
-                <RenderHtml
-                  key="tips"
-                  contentWidth={window.width}
-                  source={{ html: props.sign.tips }}
-                />
-              </>
-            </Card.Content>
-          </Card>
+                    <RenderHtml
+                      key="tips"
+                      contentWidth={window.width}
+                      source={{ html: props.sign.tips }}
+                    />
+                  </>
+                </Card.Content>
+              </Card>
+            </>
+          )}
         </>
       )}
     </View>
@@ -178,8 +186,16 @@ export default function SignDetail(props) {
   const state = {
     index: index,
     routes: [
-      { key: "first", title: "Description", icon: "text-box-check-outline" },
-      { key: "deductions", title: "Deductions", icon: "alert-minus-outline" },
+      {
+        key: "first",
+        title: isNormalSign ? "Description" : "Procedure",
+        icon: "text-box-check-outline",
+      },
+      {
+        key: "deductions",
+        title: isNormalSign ? "Deductions" : "Layout",
+        icon: "alert-minus-outline",
+      },
       { key: "video", title: "Video", icon: "play-circle-outline" },
     ],
   };
@@ -211,7 +227,8 @@ export default function SignDetail(props) {
       style={{ marginTop: 25, backgroundColor: "#ffffff" }}
     />
   );
-
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("rookie");
   return (
     <>
       <View style={styles.selectedSign}>
@@ -241,6 +258,22 @@ export default function SignDetail(props) {
               Station results in a change of heeling side
             </Text>
           </View>
+        )}
+        {isWorkingSign && (
+          <>
+            <DropDownPicker
+              multiple={false}
+              items={[
+                { label: "Rookie", value: "rookie" },
+                { label: "Elite", value: "elite" },
+                { label: "Expert", value: "expert" },
+              ]}
+              open={open}
+              value={value}
+              setOpen={setOpen}
+              setValue={setValue}
+            />
+          </>
         )}
         <View style={{ height: 800 }}>
           <TabView
