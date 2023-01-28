@@ -13,6 +13,7 @@ import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import HandbookTextLink from "./HandbookTextLink";
 import theme from "../Theme";
 import DropDownPicker from "react-native-dropdown-picker";
+import _ from "lodash";
 
 export default function SignDetail(props) {
   const window = useWindowDimensions();
@@ -176,22 +177,44 @@ export default function SignDetail(props) {
   };
   const FaultRoute = () => (
     <View style={styles.routes}>
-      <Text style={styles.deductionHeader}>
-        Common deductions for this sign include:
-      </Text>
-      {props.sign.deductions && (
+      {isNormalSign && (
         <>
-          <RenderHtml
-            contentWidth={window.width}
-            source={{
-              html: generateDeductions(props.sign.deductions),
-            }}
-          />
+          <Text style={styles.deductionHeader}>
+            Common deductions for this sign include:
+          </Text>
+          {props.sign.deductions && (
+            <>
+              <RenderHtml
+                contentWidth={window.width}
+                source={{
+                  html: generateDeductions(props.sign.deductions),
+                }}
+              />
+            </>
+          )}
+          <Text style={styles.deductionNotice}>
+            See the <HandbookTextLink /> for a complete list of deductions.
+          </Text>
         </>
       )}
-      <Text style={styles.deductionNotice}>
-        See the <HandbookTextLink /> for a complete list of deductions.
-      </Text>
+      {isWorkingSign && (
+        <>
+          {!_.isEmpty(props.sign.levels[workingLevelState].layoutImages) && (
+            <>
+              <Image
+                source={props.sign.levels[workingLevelState].layoutImages[0]}
+                style={styles.logo}
+              />
+            </>
+          )}
+
+          {_.isEmpty(props.sign.levels[workingLevelState].layoutImages) && (
+            <>
+              <Text>Not set.</Text>
+            </>
+          )}
+        </>
+      )}
     </View>
   );
   const VideoRoute = () => (
