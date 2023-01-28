@@ -13,7 +13,7 @@ export default function MainList(props) {
       marginTop: 10,
       marginBottom: 0,
       fontSize: 20,
-      backgroundColor: "blue",
+      backgroundColor: "rgb(80, 140, 200)",
     },
     buttonLabel: {
       fontSize: 18,
