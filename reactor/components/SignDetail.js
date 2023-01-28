@@ -84,7 +84,7 @@ export default function SignDetail(props) {
   });
 
   const passRequirementsToHTML = (requirements) =>
-    "<ul>" + requirements.map((x) => "<li>" + x + "</li>").join("") + "</ul>";
+     requirements.map((x) => " ✓ " + x + "<br/>").join("");
 
   const FirstRoute = () => (
     <View style={styles.routes}>
