@@ -19,6 +19,17 @@ export default function SignDetail(props) {
   const isNormalSign = props.signType === "normal";
   const isWorkingSign = props.signType === "working";
   const [index, setIndex] = useState(0);
+
+  const [open, setOpen] = useState(false);
+  const [workingLevelState, setWorkingLevelState] = useState("rookie");
+  const description = isNormalSign
+    ? props.sign.description
+    : props.sign.levels[workingLevelState].procedure;
+
+  const hasDescriptionDetail = isNormalSign
+    ? props.sign.tips !== undefined
+    : props.sign.levels[workingLevelState].passRequirements !== undefined;
+
   const styles = StyleSheet.create({
     logo: {
       width: window.width * 0.7 * 1.3,
@@ -70,67 +81,72 @@ export default function SignDetail(props) {
       textDecorationLine: "underline",
     },
   });
+
+  const passRequirementsToHTML = (requirements) =>
+    "<ul>" + requirements.map((x) => "<li>" + x + "</li>").join("") + "</ul>";
+
   const FirstRoute = () => (
     <View style={styles.routes}>
-      <Text style={styles.descriptionName}>{props.sign.title}</Text>
-
-      {isWorkingSign && <Text>Working TBD!</Text>}
-      {isNormalSign && (
+      <Text style={styles.descriptionName}>{props.sign.title}</Text>{" "}
+      {description !== undefined &&
+        typeof description === "function" &&
+        description()}
+      {description !== undefined && typeof description !== "function" && (
+        <RenderHtml
+          key="desc"
+          contentWidth={window.width}
+          source={{ html: description }}
+        />
+      )}
+      {description === undefined && (
         <>
-          {" "}
-          {props.sign.description !== undefined &&
-            typeof props.sign.description === "function" &&
-            props.sign.description()}
-          {props.sign.description !== undefined &&
-            typeof props.sign.description !== "function" && (
-              <RenderHtml
-                key="desc"
-                contentWidth={window.width}
-                source={{ html: props.sign.description }}
-              />
-            )}
-          {props.sign.description === undefined && (
-            <>
-              <Text>Description not set.</Text>
-            </>
-          )}
-          {props.sign.tips !== undefined && (
-            <>
-              <Card>
-                <Card.Content>
-                  <>
-                    <View
+          <Text>Not set.</Text>
+        </>
+      )}
+      {hasDescriptionDetail && (
+        <>
+          <Card>
+            <Card.Content>
+              <>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: Platform.OS === "ios" ? "center" : "baseline",
+                  }}
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text
                       style={{
-                        flexDirection: "row",
-                        alignItems:
-                          Platform.OS === "ios" ? "center" : "baseline",
+                        color: theme.colors.primary,
+                        fontWeight: "bold",
+                        fontSize: 20,
+                        marginBottom: 10,
+                        marginLeft: 0,
                       }}
                     >
-                      <View style={{ flex: 1 }}>
-                        <Text
-                          style={{
-                            color: theme.colors.primary,
-                            fontWeight: "bold",
-                            fontSize: 20,
-                            marginBottom: 10,
-                            marginLeft: 0,
-                          }}
-                        >
-                          Helpful Hints
-                        </Text>
-                      </View>
-                    </View>
+                      {isNormalSign && <>Helpful Hints</>}
+                      {isWorkingSign && <>Pass Requirements</>}
+                    </Text>
+                  </View>
+                </View>
 
-                    <RenderHtml
-                      key="tips"
-                      contentWidth={window.width}
-                      source={{ html: props.sign.tips }}
-                    />
-                  </>
-                </Card.Content>
-              </Card>
-            </>
-          )}
+                <RenderHtml
+                  key="tips"
+                  contentWidth={window.width}
+                  source={{
+                    html: isNormalSign
+                      ? props.sign.tips
+                      : passRequirementsToHTML(
+                          props.sign.levels[workingLevelState].passRequirements
+                        ),
+                  }}
+                />
+                {/* {passRequirementsToHTML(
+                          props.sign.levels[workingLevelState].passRequirements
+                        )} */}
+              </>
+            </Card.Content>
+          </Card>
         </>
       )}
     </View>
@@ -227,8 +243,6 @@ export default function SignDetail(props) {
       style={{ marginTop: 25, backgroundColor: "#ffffff" }}
     />
   );
-  const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("rookie");
   return (
     <>
       <View style={styles.selectedSign}>
@@ -269,9 +283,9 @@ export default function SignDetail(props) {
                 { label: "Expert", value: "expert" },
               ]}
               open={open}
-              value={value}
+              value={workingLevelState}
               setOpen={setOpen}
-              setValue={setValue}
+              setValue={setWorkingLevelState}
             />
           </>
         )}
