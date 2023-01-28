@@ -88,7 +88,8 @@ export default function SignDetail(props) {
 
   const FirstRoute = () => (
     <View style={styles.routes}>
-      <Text style={styles.descriptionName}>{props.sign.title}</Text>{" "}
+      <Text style={styles.descriptionName}>{props.sign.title}</Text>
+      <Text> </Text>
       {description !== undefined &&
         typeof description === "function" &&
         description()}
@@ -142,9 +143,6 @@ export default function SignDetail(props) {
                         ),
                   }}
                 />
-                {/* {passRequirementsToHTML(
-                          props.sign.levels[workingLevelState].passRequirements
-                        )} */}
               </>
             </Card.Content>
           </Card>
