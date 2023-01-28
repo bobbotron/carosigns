@@ -1,4 +1,4 @@
-const Working = { name: "Working Stream",
+const Working = { name: "Working Exercises",
 type: "working",
 buttonColor: "blue",
 signs: [
@@ -10,7 +10,7 @@ signs: [
     
     levels: {
       rookie: {
-        procedure: "The exercise begins when the handler steps into the dog box.<br/>• The handler cues the dog to sit in heel position,<br/>• Cues the dog to stay, proceeds to the handler box and turns to face the dog,<br/>• Calls the dog and then cues the following sequence:<br/>▪	Down between the 10-foot and 15-foot lines,<br/>▪ Call to front position.<br/><br/>The exercise ends when the dog assumes front position",
+        procedure: "The exercise begins when the handler steps into the dog box.<br/>• The handler cues the dog to sit in heel position,<br/>• Cues the dog to stay, proceeds to the handler box and turns to face the dog,<br/>• Calls the dog and then cues the following sequence:<br/>▪	Down between the 10-foot and 15-foot lines,<br/>▪ Call to front position.<br/>The exercise ends when the dog assumes front position.<br/><br/>",
         procedureImages: [],
         layout: "",
         layoutImages: [require("../assets/slides/200.jpg")],
