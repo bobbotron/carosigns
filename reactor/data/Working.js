@@ -13,14 +13,14 @@ signs: [
         procedure: "The exercise begins when the handler steps into the dog box.<br/>• The handler cues the dog to sit in heel position,<br/>• Cues the dog to stay, proceeds to the handler box and turns to face the dog,<br/>• Calls the dog and then cues the following sequence:<br/>▪	Down between the 10-foot and 15-foot lines,<br/>▪ Call to front position.<br/>The exercise ends when the dog assumes front position.<br/><br/>",
         procedureImages: [],
         layout: "",
-        layoutImages: [require("../assets/LayoutDiag/w1_Rookie.png")],
+        layoutImages: [],
         passRequirements: ["The dog starts in heel position,", "Stays in position(s) until cued to move,","Moves directly towards the handler until cued to perform another behaviour,","Has front paws within the designated zone when assuming a position,","Comes to front position."],
       },
       elite: {
         procedure: "The exercise begins when the handler steps into the dog box.<br/>• The handler cues the dog to sit in heel position,<br/>• Cues the dog to stay, proceeds to the handler box and turns to face the dog,<br/>• Calls the dog and then cues the following sequence:<br/>▪	Down between the 10-foot and 15-foot lines,<br/>▪ Call to front position.<br/>The exercise ends when the dog assumes front position.<br/><br/>",
         procedureImages: [],
         layout: "",
-        layoutImages: [require("../assets/LayoutDiag/w1_Elite.png")],
+        layoutImages: [],
         passRequirements: ["The dog starts in heel position,", "Stays in position(s) until cued to move,","Moves directly towards the handler until cued to perform another behaviour,","Has front paws within the designated zone when assuming a position,","Comes to front position."],
       },
       expert: {

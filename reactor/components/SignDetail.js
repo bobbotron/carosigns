@@ -17,8 +17,8 @@ import _ from "lodash";
 
 export default function SignDetail(props) {
   const window = useWindowDimensions();
-  const isNormalSign = props.signType === "normal";
-  const isWorkingSign = props.signType === "working";
+  const isNormalSign = props.sign.signType === "normal";
+  const isWorkingSign = props.sign.signType === "working";
   const [index, setIndex] = useState(0);
 
   const [open, setOpen] = useState(false);
@@ -231,7 +231,7 @@ export default function SignDetail(props) {
       {
         key: "deductions",
         title: isNormalSign ? "Deductions" : "Layout",
-        icon: "alert-minus-outline",
+        icon: isNormalSign? "alert-minus-outline" : "map-marker-path",
       },
       { key: "video", title: "Video", icon: "play-circle-outline" },
     ],

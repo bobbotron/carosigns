@@ -18,6 +18,15 @@ const Levels = [
   Working,
 ];
 
+Levels.forEach((x) => {
+  if (x.signs !== undefined) {
+    x.signs.forEach((y) => {
+      y.category = x.name;
+      y.signType = x.type;
+    });
+  }
+});
+
 // Todo redo with levels array
 const Signs = [
   ...Novice.signs,

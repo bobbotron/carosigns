@@ -5,7 +5,6 @@ const Excellent = {
   {
     name: "300",
     icon: require("../assets/slides/300.jpg"),
-    category: "Excellent",
     title: "300. HALT - Stand - Down",
     description:
       "• While heeling, the team comes to a <b>halt</b> and the dog <b>sits in the heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the <b>dog to down</b>.<br/>• The handler cues the dog to <b>heel forward from the down position</b>.",
@@ -26,7 +25,6 @@ const Excellent = {
   {
     name: "301",
     icon: require("../assets/slides/301.jpg"),
-    category: "Excellent",
     title: "301. HALT - Stand - Sit",
     description:
       "• While heeling, the team comes to a <b>halt</b> and the dog <b>sits in the heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the <b>dog to sit</b>.<br/>• The handler cues the dog to <b>heel forward from the down position</b>.",
@@ -47,7 +45,6 @@ const Excellent = {
   {
     name: "302",
     icon: require("../assets/slides/302.jpg"),
-    category: "Excellent",
     title: "302. Moving Stand, Walk Around",
     description:
       "• While heeling, the handler cues the <b>dog to stand and without pausing walks around the dog from head to tail</b> returning to heel position.<br/>• The handler remains within arm's length of the dog throughout the exercise.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the stand position</b>.<br/><br/>",
@@ -75,7 +72,6 @@ const Excellent = {
   {
     name: "303",
     icon: require("../assets/slides/303.jpg"),
-    category: "Excellent",
     title: "303. Moving Stand Call to Heel",
         description:
       "• While heeling, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler calls the dog to heel and the team continues to the next station.<br/>• <b>The dog must be in heel position before the team arrives at the next station.</b><br/><br/>",
@@ -102,7 +98,6 @@ const Excellent = {
   {
     name: "304",
     icon: require("../assets/slides/304.jpg"),
-    category: "Excellent",
     title: "304. Moving Down Call to Heel",
     description:
       "• While heeling, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler calls the dog to heel and the team continues to the next station.<br/>• <b>The dog must be in heel position before the team arrives at the next station.</b><br/><br/>",
@@ -129,7 +124,6 @@ const Excellent = {
   {
     name: "305",
     icon: require("../assets/slides/305.jpg"),
-    category: "Excellent",
     title: "305. Back Up 3 Steps",
     description:
       "• While heeling, the handler will cue the dog to heel backwards.<br/>• The handler will <b>walk backwards continuously a minimum of 3 complete steps with the dog moving simultaneously and remaining in heel position parallel to the handler</b>.<br/><br/>",
@@ -151,7 +145,6 @@ const Excellent = {
   {
     name: "306",
     icon: require("../assets/slides/306.jpg"),
-    category: "Excellent",
     title: "306. HALT - Stand - Leave",
     description:
       "• The team comes to a <b>halt</b> and the <b>dog sits in heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the dog to <b>stay, walks forward 5 feet</b> to one of station signs 307, 308, 309 or 310 and <b>turns to face the dog</b>.<br/><br/>",
@@ -175,7 +168,6 @@ const Excellent = {
   {
     name: "307",
     icon: require("../assets/slides/307.jpg"),
-    category: "Excellent",
     title: "307. Sit - Return to Heel",
     description:
       "• The handler cues the <b>dog to sit directly from the stand</b>.<br/>• The <b>handler returns to heel position by walking around the dog and back to heel.</b><br/>• The dog <b>must remain in a sit</b> until cued to heel.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
@@ -193,7 +185,6 @@ const Excellent = {
   {
     name: "308",
     icon: require("../assets/slides/308.jpg"),
-    category: "Excellent",
     title: "308. Down - Return to Heel",
     description:
       "• The handler cues the <b>dog to down directly from the stand</b>.<br/>• The <b>handler returns to heel position by walking around the dog and back to heel.</b><br/>• The dog <b>must remain in a down</b> until cued to heel.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
@@ -211,7 +202,6 @@ const Excellent = {
   {
     name: "309",
     icon: require("../assets/slides/309.jpg"),
-    category: "Excellent",
     title: "309. Sit - Call to Heel",
     description:
       "• The handler cues the <b>dog to sit directly from the stand</b>.<br/>• The handler calls the <b>dog to return to heel position</b>.<br/>• The dog may return to heel position either directly to heel position or by going around the handler.<br/>• The team <b>heels forward before the dog sits</b>.<br>• This station results in a 180-degree change of direction.<br/><br/>",
@@ -229,7 +219,6 @@ const Excellent = {
   {
     name: "310",
     icon: require("../assets/slides/310.jpg"),
-    category: "Excellent",
     title: "310. Down - Call to Heel",
     description:
       "• The handler cues the <b>dog to down directly from the stand</b>.<br/>• The handler calls the <b>dog to return to heel position</b>.<br/>• The dog may return to heel position either directly to heel position or by going around the handler.<br/>• The team <b>heels forward before the dog sits</b>.<br>• This station results in a 180-degree change of direction.<br/><br/>",
@@ -247,7 +236,6 @@ const Excellent = {
   {
     name: "311",
     icon: require("../assets/slides/311.jpg"),
-    category: "Excellent",
     title: "311. Jump",
     description:
       "• The jump may be either a solid or bar jump.<br/>• <b>The team enters the send zone where the dog is sent to the jump.</b><br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 6-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 6-foot line when proceeding past the jump.</b><br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
@@ -268,7 +256,6 @@ const Excellent = {
   {
     name: "312",
     icon: require("../assets/slides/312.jpg"),
-    category: "Excellent",
     title: "312. Broad Jump",
     description:
       "• <b>The team enters the send zone where the dog is sent to the jump.</b><br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 3-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 3-foot line when proceeding past the jump.</b><br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
@@ -289,7 +276,6 @@ const Excellent = {
   {
     name: "313",
     icon: require("../assets/slides/313.jpg"),
-    category: "Excellent",
     title: "313. Tunnel",
     description:
       "• <b>The team enters the send zone where the dog is sent to the tunnel</b>.<br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 6-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 6-foot line when proceeding past the tunnel</b>.<br/>• Upon completion of the tunnel the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
@@ -308,7 +294,6 @@ const Excellent = {
   {
     name: "314",
     icon: require("../assets/slides/314.jpg"),
-    category: "Excellent",
     title: "314. Weave Poles",
     description:
       "• While heeling, the team <b>enters the weave poles with the first pole on the team’s left</b>.<br/>• The dog <b>weaves through the poles</b> and exits the station.<br/>• For this station to be considered complete, <b>the dog must weave through all the poles in the correct pattern</b>.<br/><br/>",
