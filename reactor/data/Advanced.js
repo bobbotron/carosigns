@@ -116,13 +116,14 @@ const Advanced = {
     tips: "• The team will heel directly up to the station sign and perform the side step in front of the sign, then proceed along the new path with the sign to their left.<br/>• Ideally the dog's body position should remain completely parallel to the handler throughout.<br/>",
     deductions: {
       minor: [
-        "During the side step, the dog’s shoulder remains in heel position but their body is at 45-degree angle (2 points)",
+        "During the side step, the dog's shoulder remains in heel position but their body is at 45-degree angle (2 points)",
         "Dog out of heel position",
         "Dog stops forward motion",
       ],
       nq: [
         "The dog does not move simultaneously with the handler",
-        "During the side step, the dog’s shoulders are in heel position but their body is more than 45-degrees out of position",
+        "The hanlder takes more than one step sideways",
+        "During the side step, the dog's shoulders are in heel position but their body is more than 45-degrees out of position",
         "Dog assumes a position not required by the exercise",
       ],
     },

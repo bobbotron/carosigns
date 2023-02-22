@@ -20,7 +20,11 @@ export default function SignDetail(props) {
   const isNormalSign = props.sign.signType === "normal";
   const isWorkingSign = props.sign.signType === "working";
   const [index, setIndex] = useState(0);
-
+  const workingStates = [
+    { label: "Rookie", value: "rookie" },
+    { label: "Elite", value: "elite" },
+    { label: "Expert", value: "expert" },
+  ];
   const [open, setOpen] = useState(false);
   const [workingLevelState, setWorkingLevelState] = useState("rookie");
   const description = isNormalSign
@@ -50,6 +54,12 @@ export default function SignDetail(props) {
       flex: 1,
       alignContent: "center",
       justifyContent: "center",
+    },
+    workingContainer: {
+      flex: 1,
+      alignContent: "center",
+      justifyContent: "center",
+      marginBottom: 20,
     },
     rewardText: {
       textAlign: "center",
@@ -84,11 +94,17 @@ export default function SignDetail(props) {
   });
 
   const passRequirementsToHTML = (requirements) =>
-     requirements.map((x) => " ✓ " + x + "<br/>").join("");
+    requirements.map((x) => " ✓ " + x + "<br/>").join("");
 
   const FirstRoute = () => (
     <View style={styles.routes}>
-      <Text style={styles.descriptionName}>{props.sign.title}</Text>
+      <Text style={styles.descriptionName}>
+        {props.sign.title}
+        {isWorkingSign
+          ? " - " +
+            workingStates.find((x) => x.value === workingLevelState).label
+          : ""}
+      </Text>
       <Text> </Text>
       {description !== undefined &&
         typeof description === "function" &&
@@ -231,7 +247,7 @@ export default function SignDetail(props) {
       {
         key: "deductions",
         title: isNormalSign ? "Deductions" : "Layout",
-        icon: isNormalSign? "alert-minus-outline" : "map-marker-path",
+        icon: isNormalSign ? "alert-minus-outline" : "map-marker-path",
       },
       { key: "video", title: "Video", icon: "play-circle-outline" },
     ],
@@ -294,15 +310,25 @@ export default function SignDetail(props) {
             </Text>
           </View>
         )}
+        {props.sign.limitedCues && (
+          <View style={styles.workingContainer}>
+            <MaterialIcons
+              name="account-voice-off"
+              size={32}
+              color="black"
+              style={styles.rewardText}
+            />
+            <Text style={styles.rewardText}>
+              Limited cues allowed
+            </Text>
+          </View>
+        )}
+
         {isWorkingSign && (
           <>
             <DropDownPicker
               multiple={false}
-              items={[
-                { label: "Rookie", value: "rookie" },
-                { label: "Elite", value: "elite" },
-                { label: "Expert", value: "expert" },
-              ]}
+              items={workingStates}
               open={open}
               value={workingLevelState}
               setOpen={setOpen}
