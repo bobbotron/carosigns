@@ -6,7 +6,6 @@ import {
   View,
   Text,
   useWindowDimensions,
-  ScrollView,
 } from "react-native";
 import MainList from "./components/MainList";
 import Level from "./components/Level";

@@ -19,7 +19,7 @@
     "react-dom": "18.0.0",
     "react-native": "0.69.6",
     "react-native-dropdown-picker": "^5.4.4",
-    "react-native-pager-view": "5.4.24",
+    "react-native-pager-view": "5.4.25",
     "react-native-paper": "^5.0.0-rc.8",
     "react-native-render-html": "^6.3.4",
     "react-native-super-grid": "^4.6.1",

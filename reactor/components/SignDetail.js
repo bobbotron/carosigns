@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import {
   Image,
   StyleSheet,
@@ -20,6 +20,11 @@ export default function SignDetail(props) {
   const isNormalSign = props.sign.signType === "normal";
   const isWorkingSign = props.sign.signType === "working";
   const [index, setIndex] = useState(0);
+  const updateIndex = (i) => {
+    if (i >= 0 && i < 3) {
+      setIndex(i % 3);
+    }
+  };
   const workingStates = [
     { label: "Rookie", value: "rookie" },
     { label: "Elite", value: "elite" },
@@ -35,13 +40,45 @@ export default function SignDetail(props) {
     ? props.sign.tips !== undefined
     : props.sign.levels[workingLevelState].passRequirements !== undefined;
 
+  // fix resolveAssetSource call for web :^(
+  if (Platform.OS === "web") {
+    Image.resolveAssetSource = (source) => {
+      uri: source;
+    };
+  }
+  const layoutImage =
+    isWorkingSign &&
+    props.sign.levels !== undefined &&
+    !_.isEmpty(props.sign.levels[workingLevelState].layoutImages)
+      ? Image.resolveAssetSource(
+          props.sign.levels[workingLevelState].layoutImages[0]
+        )
+      : undefined;
+  const layoutImageRatio =
+    layoutImage === undefined ? 1 : layoutImage.height / layoutImage.width;
+
+  const logoImage =
+    props.sign.icon === undefined
+      ? undefined
+      : Image.resolveAssetSource(props.sign.icon);
+  const logoImageRatio =
+    logoImage === undefined ? 1 : logoImage.height / logoImage.width;
+
   const styles = StyleSheet.create({
     logo: {
-      width: window.width * 0.7 * 1.3,
-      height: window.width * 0.7,
+      width: window.width * 0.9,
+      height: window.width * logoImageRatio,
+      textAlign: "center",
+    },
+    logoLayout: {
+      //flex: 1,
+      width: window.width * 0.9,
+      height: window.width * 0.9 * layoutImageRatio,
+      resizeMode: "contain",
       textAlign: "center",
     },
     selectedSign: {
+      flex: 1,
       justifyContent: "center",
       alignItems: "center",
       marginBottom: 20,
@@ -217,7 +254,7 @@ export default function SignDetail(props) {
             <>
               <Image
                 source={props.sign.levels[workingLevelState].layoutImages[0]}
-                style={styles.logo}
+                style={styles.logoLayout}
               />
             </>
           )}
@@ -318,9 +355,7 @@ export default function SignDetail(props) {
               color="black"
               style={styles.rewardText}
             />
-            <Text style={styles.rewardText}>
-              Limited cues allowed
-            </Text>
+            <Text style={styles.rewardText}>Limited cues allowed</Text>
           </View>
         )}
 
@@ -331,18 +366,29 @@ export default function SignDetail(props) {
               items={workingStates}
               open={open}
               value={workingLevelState}
+              listMode={"SCROLLVIEW"}
               setOpen={setOpen}
               setValue={setWorkingLevelState}
             />
           </>
         )}
-        <View style={{ height: 800 }}>
+        <View
+          style={{
+            //height: 800,
+            flex: 1,
+          }}
+        >
           <TabView
             navigationState={state}
             renderScene={s}
-            onIndexChange={setIndex}
+            onIndexChange={updateIndex}
+            key={window.width}
             renderTabBar={renderTabBar}
-            style={{ height: 500, width: window.width - 20 }}
+            style={{
+              height: 900,
+              //flex: 1,
+              width: window.width - 20,
+            }}
           />
         </View>
       </View>

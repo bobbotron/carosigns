@@ -66,7 +66,7 @@ export default function Level(props) {
           </>
         ))}
       {selectedSign !== undefined && (
-        <ScrollView>
+        <ScrollView nestedScrollEnabled={true}>
             <SignDetail signType={props.level.type} sign={selectedSign} />
         </ScrollView>
       )}
