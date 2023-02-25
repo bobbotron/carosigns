@@ -113,7 +113,7 @@ const Advanced = {
     title: "204. Moving Side Step Right",
     description:
       "• While heeling, the handler takes <b>one step sideways to their right</b> while cueing the dog to heel.<br/>• The dog <b>must move sideways to the right simultaneously with the handler</b>, remaining in heel position parallel to the handler.<br/>• The team heels forward along the newly established line.<br/><br/>",
-    tips: "• The team will heel directly up to the station sign and perform the side step in front of the sign, then proceed along the new path with the sign to their left.<br/>• Ideally the dog's body position should remain completely parallel to the handler throughout.<br/>",
+    tips: "• The team will heel directly up to the station sign and perform the side step in front of the sign, then proceed along the new path with the sign to their left.<br/>• You are only permitted to take one step to the side. To be sure that you have enough space to get around the sign with only one side step, try to line the dog up with the sign as you approach it, rather than the handler.<br/>• Ideally the dog's body position should remain completely parallel to the handler throughout.<br/>",
     deductions: {
       minor: [
         "During the side step, the dog's shoulder remains in heel position but their body is at 45-degree angle (2 points)",
