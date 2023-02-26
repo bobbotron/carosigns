@@ -250,6 +250,23 @@ export default function SignDetail(props) {
       )}
       {isWorkingSign && (
         <>
+          <Text style={styles.descriptionName}>
+            {props.sign.title}
+            {isWorkingSign
+              ? " - " +
+                workingStates.find((x) => x.value === workingLevelState).label
+              : ""}
+          </Text>
+          {!_.isEmpty(props.sign.levels[workingLevelState].layout) && (
+            <>
+              <RenderHtml
+                contentWidth={window.width}
+                source={{
+                  html: generateDeductions(props.sign.levels[workingLevelState].layout),
+                }}
+              />
+            </>
+          )}
           {!_.isEmpty(props.sign.levels[workingLevelState].layoutImages) && (
             <>
               <Image
