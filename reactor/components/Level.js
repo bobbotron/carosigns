@@ -30,7 +30,7 @@ export default function Level(props) {
     <>
       {selectedSign === undefined &&
         (props.signs.length === 0 ? (
-          <Text>There's no signs set up for "{props.level.name}" yet!</Text>
+          <Text>You have not saved any signs yet.</Text>
         ) : (
           <>
             <FlatGrid
