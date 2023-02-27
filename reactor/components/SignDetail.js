@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import {
   Image,
   StyleSheet,
   useWindowDimensions,
   View,
-  ScrollView,
   Platform,
 } from "react-native";
 import { Card, Text } from "react-native-paper";
@@ -13,18 +12,94 @@ import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import HandbookTextLink from "./HandbookTextLink";
 import theme from "../Theme";
+import DropDownPicker from "react-native-dropdown-picker";
+import _ from "lodash";
 
 export default function SignDetail(props) {
   const window = useWindowDimensions();
-
+  const isNormalSign = props.sign.signType === "normal";
+  const isWorkingSign = props.sign.signType === "working";
   const [index, setIndex] = useState(0);
+  const updateIndex = (i) => {
+    if (i >= 0 && i < 3) {
+      setIndex(i % 3);
+    }
+  };
+  const workingStates = [
+    { label: "Rookie", value: "rookie" },
+    { label: "Elite", value: "elite" },
+    { label: "Expert", value: "expert" },
+  ];
+  const [open, setOpen] = useState(false);
+  const [workingLevelState, setWorkingLevelState] = useState("rookie");
+  const description = isNormalSign
+    ? props.sign.description
+    : props.sign.levels[workingLevelState].procedure;
+
+  const hasDescriptionDetail = isNormalSign
+    ? props.sign.tips !== undefined
+    : props.sign.levels[workingLevelState].passRequirements !== undefined;
+
+  // fix resolveAssetSource call for web :^(
+  if (Platform.OS === "web") {
+    Image.resolveAssetSource = (source) => {
+      uri: source;
+    };
+  }
+  const layoutImage =
+    isWorkingSign &&
+    props.sign.levels !== undefined &&
+    !_.isEmpty(props.sign.levels[workingLevelState].layoutImages)
+      ? Image.resolveAssetSource(
+          props.sign.levels[workingLevelState].layoutImages[0]
+        )
+      : undefined;
+  const layoutImageRatio =
+    layoutImage === undefined ? 1 : layoutImage.height / layoutImage.width;
+
+  const logoImage =
+    props.sign.icon === undefined
+      ? undefined
+      : Image.resolveAssetSource(props.sign.icon);
+  const logoImageRatio =
+    logoImage === undefined ? 1 : logoImage.height / logoImage.width;
+
+  const procedureImage =
+    isWorkingSign &&
+    props.sign.levels !== undefined &&
+    !_.isEmpty(props.sign.levels[workingLevelState].procedureImages)
+      ? Image.resolveAssetSource(
+          props.sign.levels[workingLevelState].procedureImages[0]
+        )
+      : undefined;
+  const procedureImageRatio =
+    procedureImage === undefined
+      ? 1
+      : procedureImage.height / procedureImage.width;
+
   const styles = StyleSheet.create({
     logo: {
-      width: window.width * 0.7 * 1.3,
-      height: window.width * 0.7,
+      width: window.width * 0.9,
+      height: window.width * 0.9 * logoImageRatio,
       textAlign: "center",
     },
+    logoLayout: {
+      width: window.width * 0.9,
+      height: window.width * 0.9 * layoutImageRatio,
+      resizeMode: "contain",
+      textAlign: "center",
+      marginTop: 20,
+    },
+    procedureLayout: {
+      width: window.width * 0.9,
+      height: window.width * 0.9 * procedureImageRatio,
+      resizeMode: "contain",
+      textAlign: "center",
+      marginTop: 10,
+      marginBottom: 20,
+    },
     selectedSign: {
+      flex: 1,
       justifyContent: "center",
       alignItems: "center",
       marginBottom: 20,
@@ -37,6 +112,12 @@ export default function SignDetail(props) {
       flex: 1,
       alignContent: "center",
       justifyContent: "center",
+    },
+    workingContainer: {
+      //flex: 1,
+      alignContent: "center",
+      justifyContent: "center",
+      marginBottom: 20,
     },
     rewardText: {
       textAlign: "center",
@@ -69,27 +150,46 @@ export default function SignDetail(props) {
       textDecorationLine: "underline",
     },
   });
+
+  const passRequirementsToHTML = (requirements) =>
+    requirements.map((x) => " ✓ " + x + "<br/>").join("");
+
   const FirstRoute = () => (
     <View style={styles.routes}>
-      <Text style={styles.descriptionName}>{props.sign.title}</Text>
-
-      {props.sign.description !== undefined &&
-        typeof props.sign.description === "function" &&
-        props.sign.description()}
-      {props.sign.description !== undefined &&
-        typeof props.sign.description !== "function" && (
-          <RenderHtml
-            key="desc"
-            contentWidth={window.width}
-            source={{ html: props.sign.description }}
-          />
-        )}
-      {props.sign.description === undefined && (
+      <Text style={styles.descriptionName}>
+        {props.sign.title}
+        {isWorkingSign
+          ? " - " +
+            workingStates.find((x) => x.value === workingLevelState).label
+          : ""}
+      </Text>
+      <Text> </Text>
+      {description !== undefined &&
+        typeof description === "function" &&
+        description()}
+      {description !== undefined && typeof description !== "function" && (
+        <RenderHtml
+          key="desc"
+          contentWidth={window.width}
+          source={{ html: description }}
+        />
+      )}
+      {description === undefined && (
         <>
-          <Text>Description not set.</Text>
+          <Text>Not set.</Text>
         </>
       )}
-      {props.sign.tips !== undefined && (
+      {isWorkingSign &&
+        props.sign.levels !== undefined &&
+        !_.isEmpty(props.sign.levels[workingLevelState].procedureImages) && (
+          <>
+            <Image
+              source={props.sign.levels[workingLevelState].procedureImages[0]}
+              style={styles.procedureLayout}
+            />
+          </>
+        )}
+      {hasDescriptionDetail && (
         <>
           <Card>
             <Card.Content>
@@ -110,7 +210,8 @@ export default function SignDetail(props) {
                         marginLeft: 0,
                       }}
                     >
-                      Helpful Hints
+                      {isNormalSign && <>Helpful Hints</>}
+                      {isWorkingSign && <>Pass Requirements</>}
                     </Text>
                   </View>
                 </View>
@@ -118,7 +219,13 @@ export default function SignDetail(props) {
                 <RenderHtml
                   key="tips"
                   contentWidth={window.width}
-                  source={{ html: props.sign.tips }}
+                  source={{
+                    html: isNormalSign
+                      ? props.sign.tips
+                      : passRequirementsToHTML(
+                          props.sign.levels[workingLevelState].passRequirements
+                        ),
+                  }}
                 />
               </>
             </Card.Content>
@@ -152,22 +259,62 @@ export default function SignDetail(props) {
   };
   const FaultRoute = () => (
     <View style={styles.routes}>
-      <Text style={styles.deductionHeader}>
-        Common deductions for this sign include:
-      </Text>
-      {props.sign.deductions && (
+      {isNormalSign && (
         <>
-          <RenderHtml
-            contentWidth={window.width}
-            source={{
-              html: generateDeductions(props.sign.deductions),
-            }}
-          />
+          <Text style={styles.deductionHeader}>
+            Common deductions for this sign include:
+          </Text>
+          {props.sign.deductions && (
+            <>
+              <RenderHtml
+                contentWidth={window.width}
+                source={{
+                  html: generateDeductions(props.sign.deductions),
+                }}
+              />
+            </>
+          )}
+          <Text style={styles.deductionNotice}>
+            See the <HandbookTextLink /> for a complete list of deductions.
+          </Text>
         </>
       )}
-      <Text style={styles.deductionNotice}>
-        See the <HandbookTextLink /> for a complete list of deductions.
-      </Text>
+      {isWorkingSign && (
+        <>
+          <Text style={styles.descriptionName}>
+            {props.sign.title}
+            {isWorkingSign
+              ? " - " +
+                workingStates.find((x) => x.value === workingLevelState).label
+              : ""}
+          </Text>
+          {!_.isEmpty(props.sign.levels[workingLevelState].layout) && (
+            <>
+              <RenderHtml
+                key="layout"
+                contentWidth={window.width}
+                source={{
+                  html: props.sign.levels[workingLevelState].layout,
+                }}
+              />
+            </>
+          )}
+          {!_.isEmpty(props.sign.levels[workingLevelState].layoutImages) && (
+            <>
+              <Image
+                source={props.sign.levels[workingLevelState].layoutImages[0]}
+                style={styles.logoLayout}
+              />
+            </>
+          )}
+
+          {_.isEmpty(props.sign.levels[workingLevelState].layoutImages) && (
+            <>
+              <Text>Not set.</Text>
+            </>
+          )}
+        </>
+      )}
     </View>
   );
   const VideoRoute = () => (
@@ -178,8 +325,16 @@ export default function SignDetail(props) {
   const state = {
     index: index,
     routes: [
-      { key: "first", title: "Description", icon: "text-box-check-outline" },
-      { key: "deductions", title: "Deductions", icon: "alert-minus-outline" },
+      {
+        key: "first",
+        title: isNormalSign ? "Description" : "Procedure",
+        icon: "text-box-check-outline",
+      },
+      {
+        key: "deductions",
+        title: isNormalSign ? "Deductions" : "Layout",
+        icon: isNormalSign ? "alert-minus-outline" : "map-marker-path",
+      },
       { key: "video", title: "Video", icon: "play-circle-outline" },
     ],
   };
@@ -211,7 +366,6 @@ export default function SignDetail(props) {
       style={{ marginTop: 25, backgroundColor: "#ffffff" }}
     />
   );
-
   return (
     <>
       <View style={styles.selectedSign}>
@@ -242,13 +396,48 @@ export default function SignDetail(props) {
             </Text>
           </View>
         )}
-        <View style={{ height: 800 }}>
+        {props.sign.limitedCues && (
+          <View style={styles.workingContainer}>
+            <MaterialIcons
+              name="account-voice-off"
+              size={32}
+              color="black"
+              style={styles.rewardText}
+            />
+            <Text style={styles.rewardText}>Limited cues allowed</Text>
+          </View>
+        )}
+
+        {isWorkingSign && (
+          <>
+            <DropDownPicker
+              multiple={false}
+              items={workingStates}
+              open={open}
+              value={workingLevelState}
+              listMode={"SCROLLVIEW"}
+              setOpen={setOpen}
+              setValue={setWorkingLevelState}
+            />
+          </>
+        )}
+        <View
+          style={{
+            //height: 800,
+            flex: 1,
+          }}
+        >
           <TabView
             navigationState={state}
             renderScene={s}
-            onIndexChange={setIndex}
+            onIndexChange={updateIndex}
+            key={window.width}
             renderTabBar={renderTabBar}
-            style={{ height: 500, width: window.width - 20 }}
+            style={{
+              height: 900,
+              //flex: 1,
+              width: window.width - 20,
+            }}
           />
         </View>
       </View>

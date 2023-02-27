@@ -1,33 +1,51 @@
-import { Text } from "react-native";
+import MainStream from "./MainStream";
 import Novice from "./Novice";
 import Advanced from "./Advanced";
 import Excellent from "./Excellent";
 import Versatility from "./Versatility";
 import VersatilityExcellent from "./VersatilityExcellent";
+import WorkingStream from "./WorkingStream";
+import Working from "./Working";
 
-const Categories = [
-  "Novice",
-  "Advanced",
-  "Excellent",
-  "Versatility",
-  "Versatility Excellent",
+const Levels = [
+  MainStream,
+  Novice,
+  Advanced,
+  Excellent,
+  Versatility,
+  VersatilityExcellent,
+  WorkingStream,
+  Working,
 ];
+
+Levels.forEach((x) => {
+  if (x.signs !== undefined) {
+    x.signs.forEach((y) => {
+      y.category = x.name;
+      y.signType = x.type;
+    });
+  }
+});
+
+// Todo redo with levels array
 const Signs = [
-  ...Novice,
-  ...Advanced,
-  ...Excellent,
-  ...Versatility,
-  ...VersatilityExcellent,
+  ...Novice.signs,
+  ...Advanced.signs,
+  ...Excellent.signs,
+  ...Versatility.signs,
+  ...VersatilityExcellent.signs,
+  ...Working.signs,
 ];
 
-const createLevel = (lName) => {
-  return { name: lName, signs: Signs.filter((s) => s.category === lName) };
+const createLevel = (l) => {
+  return {
+    name: l.name,
+    type: l.type,
+    icon: l.icon,
+    signs: Signs.filter((s) => s.category === l.name),
+  };
 };
-const CategoryMap = Categories.reduce(function (map, obj) {
-  map[obj] = Signs.filter((y) => y.category === obj);
-  return map;
-}, {});
 
-const SignsDB = { Signs, Categories: Categories.map(createLevel), CategoryMap };
+const SignsDB = { Signs, Categories: Levels.map(createLevel) };
 
 export default SignsDB;

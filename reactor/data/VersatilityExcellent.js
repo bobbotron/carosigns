@@ -1,4 +1,6 @@
-const VersatilityExcellent = [
+const VersatilityExcellent = { name: "Versatility Excellent",
+type: "normal",
+signs: [
   {
     name: "500",
     icon: require("../assets/slides/500.jpg"),
@@ -770,6 +772,6 @@ const VersatilityExcellent = [
     },
     video: undefined,
   },
-];
+]};
 
 export default VersatilityExcellent;

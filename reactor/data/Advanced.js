@@ -1,4 +1,7 @@
-const Advanced = [
+const Advanced = {
+  name: "Advanced",
+  type: "normal",
+  signs:[
   {
     name: "200",
     icon: require("../assets/slides/200.jpg"),
@@ -110,16 +113,17 @@ const Advanced = [
     title: "204. Moving Side Step Right",
     description:
       "• While heeling, the handler takes <b>one step sideways to their right</b> while cueing the dog to heel.<br/>• The dog <b>must move sideways to the right simultaneously with the handler</b>, remaining in heel position parallel to the handler.<br/>• The team heels forward along the newly established line.<br/><br/>",
-    tips: "• The team will heel directly up to the station sign and perform the side step in front of the sign, then proceed along the new path with the sign to their left.<br/>• Ideally the dog's body position should remain completely parallel to the handler throughout.<br/>",
+    tips: "• The team will heel directly up to the station sign and perform the side step in front of the sign, then proceed along the new path with the sign to their left.<br/>• You are only permitted to take one step to the side. To be sure that you have enough space to get around the sign with only one side step, try to line the dog up with the sign as you approach it, rather than the handler.<br/>• Ideally the dog's body position should remain completely parallel to the handler throughout.<br/>",
     deductions: {
       minor: [
-        "During the side step, the dog’s shoulder remains in heel position but their body is at 45-degree angle (2 points)",
+        "During the side step, the dog's shoulder remains in heel position but their body is at 45-degree angle (2 points)",
         "Dog out of heel position",
         "Dog stops forward motion",
       ],
       nq: [
         "The dog does not move simultaneously with the handler",
-        "During the side step, the dog’s shoulders are in heel position but their body is more than 45-degrees out of position",
+        "The hanlder takes more than one step sideways",
+        "During the side step, the dog's shoulders are in heel position but their body is more than 45-degrees out of position",
         "Dog assumes a position not required by the exercise",
       ],
     },
@@ -326,6 +330,6 @@ const Advanced = [
       nq: ["Dog is sent to the jump before entering the send zone", "Handler steps inside the NQ Zone at any point", "Dog knocks the bar off or pushes off of the jump bar", "Dog fails to take the jump"],
     },
   },
-];
+]};
 
 export default Advanced;

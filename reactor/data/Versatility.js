@@ -1,4 +1,6 @@
-const Versatility = [
+const Versatility = {name: "Versatility",
+type: "normal",
+signs: [
   {
     name: "Start (Right)",
     icon: require("../assets/slides/StartonRight.jpg"),
@@ -993,6 +995,6 @@ const Versatility = [
     },
     video: undefined,
   },
-];
+]};
 
 export default Versatility;

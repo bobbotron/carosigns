@@ -11,6 +11,7 @@ npm start
 
 ## Build Steps
 ### Android
+
 ``` 
 # Update build version
 npx eas build:version:set
