@@ -64,18 +64,39 @@ export default function SignDetail(props) {
   const logoImageRatio =
     logoImage === undefined ? 1 : logoImage.height / logoImage.width;
 
+  const procedureImage =
+    isWorkingSign &&
+    props.sign.levels !== undefined &&
+    !_.isEmpty(props.sign.levels[workingLevelState].procedureImages)
+      ? Image.resolveAssetSource(
+          props.sign.levels[workingLevelState].procedureImages[0]
+        )
+      : undefined;
+  const procedureImageRatio =
+    procedureImage === undefined
+      ? 1
+      : procedureImage.height / procedureImage.width;
+
   const styles = StyleSheet.create({
     logo: {
       width: window.width * 0.9,
-      height: window.width * logoImageRatio,
+      height: window.width * 0.9 * logoImageRatio,
       textAlign: "center",
     },
     logoLayout: {
-      //flex: 1,
       width: window.width * 0.9,
       height: window.width * 0.9 * layoutImageRatio,
       resizeMode: "contain",
       textAlign: "center",
+      marginTop: 20,
+    },
+    procedureLayout: {
+      width: window.width * 0.9,
+      height: window.width * 0.9 * procedureImageRatio,
+      resizeMode: "contain",
+      textAlign: "center",
+      marginTop: 10,
+      marginBottom: 20,
     },
     selectedSign: {
       flex: 1,
@@ -93,7 +114,7 @@ export default function SignDetail(props) {
       justifyContent: "center",
     },
     workingContainer: {
-      flex: 1,
+      //flex: 1,
       alignContent: "center",
       justifyContent: "center",
       marginBottom: 20,
@@ -158,6 +179,16 @@ export default function SignDetail(props) {
           <Text>Not set.</Text>
         </>
       )}
+      {isWorkingSign &&
+        props.sign.levels !== undefined &&
+        !_.isEmpty(props.sign.levels[workingLevelState].procedureImages) && (
+          <>
+            <Image
+              source={props.sign.levels[workingLevelState].procedureImages[0]}
+              style={styles.procedureLayout}
+            />
+          </>
+        )}
       {hasDescriptionDetail && (
         <>
           <Card>
@@ -260,9 +291,10 @@ export default function SignDetail(props) {
           {!_.isEmpty(props.sign.levels[workingLevelState].layout) && (
             <>
               <RenderHtml
+                key="layout"
                 contentWidth={window.width}
                 source={{
-                  html: generateDeductions(props.sign.levels[workingLevelState].layout),
+                  html: props.sign.levels[workingLevelState].layout,
                 }}
               />
             </>
