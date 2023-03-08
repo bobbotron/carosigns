@@ -455,6 +455,7 @@ const Novice = {
       name: "118",
       icon: require("../assets/slides/118.jpg"),
       title: "118. Slow Pace",
+      practiceNextRestriction: ["119", "120"],
       description:
         "• While heeling, the team decreases its pace so that there is a <b>noticeable difference in the dog's speed from the normal pace.<br/>• The slow pace is maintained continuously until the next station.</b><br/>• This station is followed by either Fast, Normal or the Finish station.</br><br/>",
       tips: "• The Judge is looking for the <i>dog</i> to noticeably change their pace. Be sure you are focused on your dog's pace, not your own.<br/>• This sign must be followed by a Fast Pace, Normal Pace or Finish sign.<br/>• One pace change station (slow or fast) is required in every Novice course.",
@@ -473,6 +474,7 @@ const Novice = {
       name: "119",
       icon: require("../assets/slides/119.jpg"),
       title: "119. Fast Pace",
+      practiceNextRestriction: ["118", "120"],
       description:
         "• While heeling, the team increases its pace so that there is a <b>noticeable difference in the dog's speed from the normal pace</b>. The pace should be fast enough that the dog at least breaks into a trot.<br/>• <b>The fast pace is maintained continuously until the next station.</b><br/>• This station is followed by either Slow, Normal or the Finish station.</br><br/>",
       tips: "• The Judge is looking for the <i>dog</i> to noticeably change their pace. Be sure to speed up enough (jogging speed) that your dog's pace changes noticeably.<br/>• This sign must be followed by a Slow Pace, Normal Pace or Finish sign.<br/>• One pace change station (slow or fast) is required in every Novice course.",
@@ -490,6 +492,7 @@ const Novice = {
       name: "120",
       icon: require("../assets/slides/120.jpg"),
       title: "120. Normal Pace",
+      practiceOnlyAfter: ["118", "119", "200"],
       description:
         "• While heeling, the team moves forward at a <b>normal pace</b> that is comfortable for the dog and handler.<br/>• There must be a <b>noticeable difference in the dog's speed from the slow or fast to normal pace.</b><br/><br/>",
       tips: "• The Normal Pace sign will only ever follow the Fast Pace, Slow Pace or Halt - Fast from Sit signs.<br/>• Ensure the <i>dog's</i> pace changes noticeably from the previous sign.",
