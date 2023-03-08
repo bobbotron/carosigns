@@ -10,7 +10,7 @@ import { Card, Text } from "react-native-paper";
 import RenderHtml from "react-native-render-html";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import HandbookTextLink from "./HandbookTextLink";
+import MasterGeneralHandbookTextLink from "./MasterGeneralHandbookTextLink";
 import theme from "../Theme";
 import DropDownPicker from "react-native-dropdown-picker";
 import _ from "lodash";
@@ -275,7 +275,7 @@ export default function SignDetail(props) {
             </>
           )}
           <Text style={styles.deductionNotice}>
-            See the <HandbookTextLink /> for a complete list of deductions.
+            See the <MasterGeneralHandbookTextLink /> for a complete list of deductions.
           </Text>
         </>
       )}

@@ -323,7 +323,7 @@ const Working = {
             "The exercise begins when the handler steps into the handler box.<br/>• The handler cues the dog to sit in heel position,<br/>• The handler cues the dog to circle the 3 cones designated by the judge, in any order.<br/>• Dogs may circle a cone in either a clockwise or counter-clockwise direction,<br/>• No cone should be circled more than once.<br/>• After circling each required cone, the dog returns to within an arm's length of the handler.<br/>• The dog comes to sit in front position.<br/><br/>The exercise ends when the dog sits in front position.<br/><br/>",
           procedureImages: [],
           layout: "",
-          layoutImages: [require("../assets/Diagrams/RTC_Rookie.jpg")],
+          layoutImages: [require("../assets/Diagrams/RTC_Elite.jpg")],
           passRequirements: [
             "The dog sits in heel position until cued,",
             "Circles the required cones as directed by the handler,",
@@ -351,7 +351,7 @@ const Working = {
             "The exercise begins when the handler steps into the handler box.<br/>• The handler cues the dog to sit in heel position,<br/>• The handler cues the dog to circle all 6 cones, in any order, starting with cone #1.<br/>• Dogs may circle a cone in either a clockwise or counter-clockwise direction,<br/>• No cone should be circled more than once.<br/>• After circling each required cone, the dog returns to within an arm's length of the handler.<br/>• The dog comes to sit in front position.<br/>• The handler cues the dog to finish.<br/><br/>The exercise ends when the dog has finished and is sitting in heel position.<br/><br/>",
           procedureImages: [],
           layout: "",
-          layoutImages: [require("../assets/Diagrams/RTC_Expert.jpg")],
+          layoutImages: [require("../assets/Diagrams/RTC_Elite.jpg")],
           passRequirements: [
             "The dog sits in heel position until cued,",
             "Circles the required cones as directed by the handler,",
