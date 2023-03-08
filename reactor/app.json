@@ -19,7 +19,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": false,
+      "supportsTablet": true,
       "bundleIdentifier": "ca.canadianrallyo.carosigns"
     },
     "android": {
