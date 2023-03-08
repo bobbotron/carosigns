@@ -6,6 +6,7 @@ import {
   View,
   Text,
   useWindowDimensions,
+  ScrollView,
 } from "react-native";
 import MainList from "./components/MainList";
 import Level from "./components/Level";
@@ -86,16 +87,18 @@ export default function AppController() {
 
         {selectedLevel === undefined && !searchActive && (
           <>
+          <ScrollView>
             <MainList levels={levels} levelListener={levelListener} />
             <Card style={styles.disclaimerCard}>
               <Card.Content>
                 <Text>
                   <Text style={styles.disclaimerBold}>Note:</Text> See the{" "}
                   <HandbookTextLink /> for complete information and rules. In the case of
-                  a discrepancy, the handbook is final.
+                  a discrepancy, the handbooks are final.
                 </Text>
               </Card.Content>
             </Card>
+            </ScrollView>
           </>
         )}
         {selectedLevel !== undefined && !searchActive && (

@@ -220,10 +220,10 @@ signs: [
     name: "509",
     icon: require("../assets/slides/509.jpg"),
     category: "Versatility Excellent",
-    title: "509. Left Turn - Dog Circles Right",
+    title: "509. Right Turn - Dog Circles Left",
     description:
-      "• With the <b>dog heeling on the right</b>, the <b>handler turns left</b>.<br/>• Simultaneously the <b>dog circles around the handler to the right returning to heel position</b>.<br/>• The handler may briefly pause to allow the dog to cross their path.<br/>• The team will be back in heel position as they face the new direction.<br/>• This sign results in a 90-degree change of direction to the left.<br/><br/>",
-    tips: "• The dog will circle in front of the handler, before returning to heel position.<br/>•  You may come to a full stop (briefly) while the dog passes in front of you.<br/>•  Your left turn can be either a sharp 90-degree turn or a soft 90-degree turn.",
+      "• With the <b>dog heeling on the right</b>, the <b>handler turns right</b>.<br/>• Simultaneously the <b>dog circles around the handler to the left returning to heel position on the right</b>.<br/>• The handler may briefly pause to allow the dog to cross their path.<br/>• The team will be back in heel position as they face the new direction.<br/>• This sign results in a 90-degree change of direction to the right.<br/><br/>",
+    tips: "• The dog will circle in front of the handler, before returning to heel position.<br/>•  You may come to a full stop (briefly) while the dog passes in front of you.<br/>•  Your right turn can be either a sharp 90-degree turn or a soft 90-degree turn.",
     deductions: {
       minor: [
         "Dog stops forward motion",
@@ -231,7 +231,7 @@ signs: [
         "Initiation of the sign outside of a radius of two feet from the station sign",
       ],
       nq: [
-        "The team does not make a 90-degree turn to the left",
+        "The team does not make a 90-degree turn to the right",
         "The dog does not circle the handler and in the correct direction",
         "The dog does not return to the right side",
         "The dog assumes a position not required by the exercise (eg. a sit)",
