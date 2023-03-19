@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import {
   View,
   StyleSheet,
@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from "react-native";
 import theme from "../Theme";
-import { Button, Checkbox, HelperText, Switch, Text } from "react-native-paper";
+import { Button, HelperText, Switch, Text } from "react-native-paper";
 
 import { useSelector, useDispatch } from "react-redux";
 import NumericInput from "react-native-numeric-input";
@@ -80,6 +80,10 @@ export default function PracticeMode(props) {
     },
     selectedSignText: {
       fontSize: 20,
+      color: theme.colors.primary,
+      fontWeight: "bold",
+      paddingBottom: 20,
+      marginTop: 20,
     },
     configSwitch: {},
     configSwitchLabel: {},
@@ -116,50 +120,38 @@ export default function PracticeMode(props) {
   };
 
   const electNextSign = (signs, currentSign) => {
+    let winningSign = undefined;
     if (currentSign && !_.isEmpty(currentSign.practiceNextRestriction)) {
       const candidates = currentSign.practiceNextRestriction;
       const signID = getRandomElement(candidates);
-      const s = signs.find((x) => x.name === signID);
-      setRunningState({
-        signs,
-        selectedSign: s,
-      });
+      winningSign = signs.find((x) => x.name === signID);
     } else {
       let found = false;
       while (!found) {
         const candidateSign = getRandomElement(signs);
-        if (candidateSign.excludeFromPractice) {
-          //console.log("Exclude sign ", candidateSign.title, " from practice");
-        } else {
+        if (!candidateSign.excludeFromPractice) {
           if (currentSign) {
             if (
               _.isEmpty(candidateSign.practiceOnlyAfter) ||
               currentSign.name in candidateSign.practiceOnlyAfter
             ) {
-              setRunningState({
-                signs,
-                selectedSign: candidateSign,
-              });
+              winningSign = candidateSign;
               found = true;
             }
           } else {
             if (_.isEmpty(candidateSign.practiceOnlyAfter)) {
-              setRunningState({
-                signs,
-                selectedSign: candidateSign,
-              });
+              winningSign = candidateSign;
               found = true;
-            } else {
-              // console.log(
-              //   "Exclude sign ",
-              //   candidateSign.title,
-              //   " practice only after on"
-              // );
             }
           }
         }
       }
     }
+
+    setRunningState({
+      signs,
+      selectedSign: winningSign,
+    });
   };
 
   const electSign = () => {
@@ -220,190 +212,139 @@ export default function PracticeMode(props) {
     }
   };
 
+  const Setup = () => (
+    <>
+      <Text style={styles.practiceHeading}>Random Sign Generator</Text>
+      <Text style={styles.practiceTextIntro}>
+        Signs displayed on screen and (optionally) read out loud. Cone exercises
+        and agility obstacles are excluded.
+      </Text>
+      <Text variant="titleMedium">Options</Text>
+      <View style={styles.configSwitchView}>
+        <Text style={styles.configSwitchLabel}>Use audio? </Text>
+        <Switch
+          style={styles.configSwitch}
+          label="Audio"
+          value={isAudioOn}
+          onValueChange={() => {
+            setIsAudioOn(!isAudioOn);
+          }}
+        />
+      </View>
+      <View style={styles.configSwitchView}>
+        <Text style={styles.configSwitchLabel}>Auto flip to next sign </Text>
+        <Switch
+          style={styles.configSwitch}
+          value={autoAdvance}
+          onValueChange={() => {
+            setAutoAdvance(!autoAdvance);
+          }}
+        />
+      </View>
+      {autoAdvance && (
+        <View style={styles.configSwitchView}>
+          <Text style={styles.configSwitchLabel}>Seconds per sign </Text>
+
+          <NumericInput
+            valueType={"integer"}
+            step={1}
+            value={seconds}
+            onChange={setSeconds}
+            minValue={5}
+            maxValue={120}
+            rounded={true}
+            style={styles.seconds}
+          />
+        </View>
+      )}
+
+      <Text variant="titleMedium" style={{ marginTop: 10 }}>
+        Include Signs From
+      </Text>
+      <View style={styles.configSwitchView}>
+        <Text style={styles.configSwitchLabel}>Novice </Text>
+        <Switch
+          style={styles.configSwitch}
+          value={noviceChecked}
+          onValueChange={() => {
+            setNoviceChecked(!noviceChecked);
+          }}
+        />
+      </View>
+      <View style={styles.configSwitchView}>
+        <Text style={styles.configSwitchLabel}>Advanced </Text>
+        <Switch
+          style={styles.configSwitch}
+          value={advancedChecked}
+          onValueChange={() => {
+            setAdvancedChecked(!advancedChecked);
+          }}
+        />
+      </View>
+      <View style={styles.configSwitchView}>
+        <Text style={styles.configSwitchLabel}>Excellent </Text>
+        <Switch
+          style={styles.configSwitch}
+          value={excellentChecked}
+          onValueChange={() => {
+            setExcellentChecked(!excellentChecked);
+          }}
+        />
+      </View>
+
+      <Button
+        mode="contained"
+        onPress={startPractice}
+        style={{ marginTop: 20 }}
+        disabled={!canStartPractice()}
+      >
+        Start Practice
+      </Button>
+      <HelperText type="error" visible={!canStartPractice()}>
+        Select one or more levels
+      </HelperText>
+    </>
+  );
+
+  const RunningComponent = () => (
+    <>
+      <Text style={styles.selectedSignText}>
+        {runningState.selectedSign.title}
+      </Text>
+
+      <Image
+        key={"logo"}
+        source={runningState.selectedSign.icon}
+        style={styles.logo}
+      />
+
+      <Button
+        mode="contained"
+        onPress={() => {
+          setPracticeState(setupState);
+          setRunningState({});
+          Speech.stop();
+        }}
+        style={styles.buttonStyle}
+      >
+        Stop
+      </Button>
+      <Button mode="contained" onPress={toggleTimer} style={styles.buttonStyle}>
+        {timerId ? "Pause" : "Start"}
+      </Button>
+      <Button mode="contained" onPress={nextSign} style={styles.buttonStyle}>
+        Next
+      </Button>
+      <Button mode="contained" onPress={goToSign} style={styles.buttonStyle}>
+        Go to sign
+      </Button>
+    </>
+  );
   return (
     <>
       <ScrollView>
-        {practiceState === setupState && (
-          <>
-            <Text style={styles.practiceHeading}>Random Sign Generator</Text>
-            <Text style={styles.practiceTextIntro}>
-              Signs displayed on screen and (optionally) read out loud. Cone
-              exercises and agility obstacles are excluded.
-            </Text>
-            <Text variant="titleMedium">Options</Text>
-            <View style={styles.configSwitchView}>
-              <Text style={styles.configSwitchLabel}>Use audio? </Text>
-              <Switch
-                style={styles.configSwitch}
-                label="Audio"
-                value={isAudioOn}
-                onValueChange={() => {
-                  setIsAudioOn(!isAudioOn);
-                }}
-              />
-            </View>
-            <View style={styles.configSwitchView}>
-              <Text style={styles.configSwitchLabel}>
-                Auto flip to next sign{" "}
-              </Text>
-              <Switch
-                style={styles.configSwitch}
-                value={autoAdvance}
-                onValueChange={() => {
-                  setAutoAdvance(!autoAdvance);
-                }}
-              />
-            </View>
-            {autoAdvance && (
-              <View style={styles.configSwitchView}>
-                <Text style={styles.configSwitchLabel}>Seconds per sign </Text>
-
-                <NumericInput
-                  valueType={"integer"}
-                  step={1}
-                  value={seconds}
-                  onChange={setSeconds}
-                  minValue={5}
-                  maxValue={120}
-                  rounded={true}
-                  style={styles.seconds}
-                />
-              </View>
-            )}
-            {/* <Checkbox.Item
-              label="Auto advance?"
-              status={autoAdvance ? "checked" : "unchecked"}
-              onPress={() => {
-                setAutoAdvance(!autoAdvance);
-              }}
-            /> */}
-            {/* <Checkbox.Item
-              label="Audio"
-              status={isAudioOn ? "checked" : "unchecked"}
-              onPress={() => {
-                setIsAudioOn(!isAudioOn);
-              }}
-            ></Checkbox.Item> */}
-            <Text variant="titleMedium" style={{marginTop: 10}}>Include Signs From</Text>
-            <View style={styles.configSwitchView}>
-              <Text style={styles.configSwitchLabel}>Novice </Text>
-              <Switch
-                style={styles.configSwitch}
-                value={noviceChecked}
-                onValueChange={() => {
-                  setNoviceChecked(!noviceChecked);
-                }}
-              />
-            </View>
-            <View style={styles.configSwitchView}>
-              <Text style={styles.configSwitchLabel}>Advanced </Text>
-              <Switch
-                style={styles.configSwitch}
-                value={advancedChecked}
-                onValueChange={() => {
-                  setAdvancedChecked(!advancedChecked);
-                }}
-              />
-            </View>
-            <View style={styles.configSwitchView}>
-              <Text style={styles.configSwitchLabel}>Excellent </Text>
-              <Switch
-                style={styles.configSwitch}
-                value={excellentChecked}
-                onValueChange={() => {
-                  setExcellentChecked(!excellentChecked);
-                }}
-              />
-            </View>
-            {/* <Checkbox.Item
-              label="Advanced"
-              status={advancedChecked ? "checked" : "unchecked"}
-              onPress={() => {
-                setAdvancedChecked(!advancedChecked);
-              }}
-            />
-
-            <Checkbox.Item
-              label="Excellent"
-              status={excellentChecked ? "checked" : "unchecked"}
-              onPress={() => {
-                setExcellentChecked(!excellentChecked);
-              }}
-            /> */}
-            <Button
-              mode="contained"
-              onPress={startPractice}
-              style={{ marginTop: 20 }}
-              disabled={!canStartPractice()}
-            >
-              Start Practice
-            </Button>
-            <HelperText type="error" visible={!canStartPractice()}>
-              Select one or more levels
-            </HelperText>
-          </>
-        )}
-
-        {practiceState === running && (
-          <>
-            {/* <Text>
-            Running eh.{" "}
-            {runningState.signs && <>Signs {runningState.signs.length}.</>}
-            {runningState.signs === undefined && <>Not set!.</>} */}
-            {/* * Get a list of potential signs
-             * Pick at random
-             * Display sign
-             * If audio on, talk it
-             * Wait SECONDS
-             * Repeat
-             * Pause, Skip, Stop button */}
-            {/* </Text> */}
-
-            {runningState && runningState.selectedSign && (
-              <>
-                <Text style={styles.selectedSignText}>
-                  {runningState.selectedSign.title}
-                </Text>
-                <Image
-                  source={runningState.selectedSign.icon}
-                  style={styles.logo}
-                />
-              </>
-            )}
-            <Button
-              mode="contained"
-              onPress={() => {
-                setPracticeState(setupState);
-                setRunningState({});
-                Speech.stop();
-              }}
-              style={styles.buttonStyle}
-            >
-              Stop
-            </Button>
-            <Button
-              mode="contained"
-              onPress={toggleTimer}
-              style={styles.buttonStyle}
-            >
-              {timerId ? "Pause" : "Start"}
-            </Button>
-            <Button
-              mode="contained"
-              onPress={nextSign}
-              style={styles.buttonStyle}
-            >
-              Next
-            </Button>
-            <Button
-              mode="contained"
-              onPress={goToSign}
-              style={styles.buttonStyle}
-            >
-              Go to sign
-            </Button>
-          </>
-        )}
+        {practiceState === setupState && <Setup />}
+        {practiceState === running && <RunningComponent />}
       </ScrollView>
     </>
   );
