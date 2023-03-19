@@ -275,7 +275,8 @@ export default function SignDetail(props) {
             </>
           )}
           <Text style={styles.deductionNotice}>
-            See the <MasterGeneralHandbookTextLink /> for a complete list of deductions.
+            See the <MasterGeneralHandbookTextLink /> for a complete list of
+            deductions.
           </Text>
         </>
       )}

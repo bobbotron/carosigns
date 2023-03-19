@@ -6,6 +6,7 @@ const Novice = {
       name: "Start",
       icon: require("../assets/slides/start.jpg"),
       title: "Start",
+      excludeFromPractice: true,
       hideNameOnGrid: true,
       description:
         "• While heeling, the <b>team heels past the Start station.</b><br/> • Timing begins.<br/> • There are no other commands from the Judge throughout the course.<br/><br/>",
@@ -24,6 +25,7 @@ const Novice = {
       name: "Finish",
       icon: require("../assets/slides/finish.jpg"),
       title: "Finish",
+      excludeFromPractice: true,
       hideNameOnGrid: true,
       description:
         "• While heeling, the <b>team heels past the Finish station.</b><br/> • Timing ends.<br/><br/>",
@@ -653,6 +655,7 @@ const Novice = {
       name: "126",
       icon: require("../assets/slides/126.jpg"),
       title: "126. Spiral Right - Dog Outside",
+      excludeFromPractice: true,
       description:
         "• While heeling, <b>the team moves around the cones in a clockwise direction</b>, turning to their right when moving around each of the cones.<br/>• The team <b>pass the first and second cones and proceeds to and around the third one</b>, then <b>return to loop the first cone</b>.<br/>• The team then <b>proceeds to and around the second cone</b> and returns to <b>loop the first cone</b> a second time.<br/>• The team finally <b>circles the first cone by passing between the first and second cones</b> to exit the station.<br/><br/>",
       tips: "• There are no deductions for a cone that is moved by a wagging tail!<br/>• Think of the first cone as the anchor cone which you must circle each time around.<br/>• At least one cone exercise is required in every Novice course.",
@@ -674,6 +677,7 @@ const Novice = {
       name: "127",
       icon: require("../assets/slides/127.jpg"),
       title: "127. Spiral Left - Dog Inside",
+      excludeFromPractice: true,
       description:
         "• While heeling, <b>the team moves around the cones in a counterclockwise direction</b>, turning to their left when moving around each of the cones.<br/>• The team <b>pass the first and second cones and proceeds to and around the third one</b>, then <b>return to loop the first cone</b>.<br/>• The team then <b>proceeds to and around the second cone</b> and returns to <b>loop the first cone</b> a second time.<br/>• The team finally <b>circles the first cone by passing between the first and second cones</b> to exit the station.<br/><br/>",
       tips: "• Be sure to give your dog enough space from the cones that they are not knocked over. You do not have to do tight turns around them.<br/> • There are no deductions for a cone that is moved by a wagging tail!<br/>• Think of the first cone as the anchor cone which you must circle each time around<br/>• At least one cone exercise is required in every Novice course.",
@@ -695,6 +699,7 @@ const Novice = {
       name: "128",
       icon: require("../assets/slides/128.jpg"),
       title: "128. Weave Once",
+      excludeFromPractice: true,
       description:
         "• While heeling, <b>the team enters the pattern with the first cone on the team’s left</b>.<br/>• The team <b>weaves through the cones</b> and exits the station.<br/><br/>",
       tips: "• You do not need to make tight turns around the cones - instead, you can give your dog more space from the cone that is on their side, so that they are less likely to bump into it.<br/>• There are no deductions for a cone that is moved by a wagging tail!<br/>• At least one cone exercise is required in every Novice course.",
@@ -717,6 +722,7 @@ const Novice = {
       name: "129",
       icon: require("../assets/slides/129.jpg"),
       title: "129. Weave Twice",
+      excludeFromPractice: true,
       description:
         "• While heeling, <b>the team enters the pattern with the first cone on the team’s left</b>.<br/>• The team <b>weaves continuously through the cones, loops around the end cone and weaves back to the beginning of the pattern</b>.<br/><br/>",
       tips: "• This sign was previously referred to as 'Straight Figure 8' and is executed in the same manner.<br/>• You do not need to make tight turns around the cones - instead, you can give your dog more space from the cone that is on their side, so that they are less likely to bump into it.<br/>• There are no deductions for a cone that is moved by a wagging tail!<br/>• At least one cone exercise is required in every Novice course.",

@@ -3,20 +3,28 @@ import { Image, TouchableOpacity } from "react-native";
 import { Appbar, Menu, Text } from "react-native-paper";
 import { useDispatch, useSelector } from "react-redux";
 import SignsDB from "../data/SignDb";
-import { setSelectedLevel, setSelectedSign } from "../redux/actions";
+import {
+  setPracticeMode,
+  setSelectedLevel,
+  setSelectedSign,
+} from "../redux/actions";
 import Theme from "../Theme";
 import FavAction from "./FavAction";
 
 export default function AppHeader(props) {
-  const { selectedLevel, selectedSign, favorites } = useSelector(
+  const { selectedLevel, selectedSign, favorites, practiceMode } = useSelector(
     (state) => state.signsReducer
   );
   const dispatch = useDispatch();
   const backButtonListener = () => {
-    if (selectedSign !== undefined) {
-      dispatch(setSelectedSign(undefined));
-    } else if (selectedLevel !== undefined) {
-      dispatch(setSelectedLevel(undefined));
+    if (practiceMode.active) {
+      dispatch(setPracticeMode({ active: false }));
+    } else {
+      if (selectedSign !== undefined) {
+        dispatch(setSelectedSign(undefined));
+      } else if (selectedLevel !== undefined) {
+        dispatch(setSelectedLevel(undefined));
+      }
     }
   };
   const showFavSigns = () => {
@@ -27,6 +35,11 @@ export default function AppHeader(props) {
     };
     dispatch(setSelectedLevel(favLevel));
     dispatch(setSelectedSign(undefined));
+    setVisible(false);
+  };
+  const showPracticeMode = () => {
+    dispatch(setPracticeMode({ active: true }));
+    
     setVisible(false);
   };
   const titleListener = () => {
@@ -74,48 +87,69 @@ export default function AppHeader(props) {
             : Theme.colors.background,
       }}
     >
-      {selectedLevel !== undefined && (
-        <Appbar.BackAction onPress={backButtonListener} />
-      )}
-      {selectedSign !== undefined && (
+      {!practiceMode.active && (
         <>
-          <Appbar.Action icon="less-than" onPress={signLeft} />
-        </>
-      )}
-      {selectedLevel === undefined && (
-        <>
-          <Image
-            source={require("../assets/header-logo.png")}
-            style={{ marginLeft: 5, width: 35 * 5.64, height: 35 }}
-          />
-          <Appbar.Content title={<></>} />
-        </>
-      )}
-      {selectedLevel !== undefined && (
-        <Appbar.Content
-          onLayout={titleLayout}
-          titleStyle={{
-            textAlign: "center",
-          }}
-          title={
-            selectedLevel === undefined ? (
+          {selectedLevel !== undefined && (
+            <Appbar.BackAction onPress={backButtonListener} />
+          )}
+          {selectedSign !== undefined && (
+            <>
+              <Appbar.Action icon="less-than" onPress={signLeft} />
+            </>
+          )}
+          {selectedLevel === undefined && (
+            <>
               <Image
                 source={require("../assets/header-logo.png")}
-                style={{ width: 250, height: titleHeight - 10 }}
+                style={{ marginLeft: 5, width: 35 * 5.64, height: 35 }}
               />
-            ) : (
-              <Text>{appBarTitle}</Text>
-            )
-          }
-        />
-      )}
+              <Appbar.Content title={<></>} />
+            </>
+          )}
+          {selectedLevel !== undefined && (
+            <Appbar.Content
+              onLayout={titleLayout}
+              titleStyle={{
+                textAlign: "center",
+              }}
+              title={
+                selectedLevel === undefined ? (
+                  <Image
+                    source={require("../assets/header-logo.png")}
+                    style={{ width: 250, height: titleHeight - 10 }}
+                  />
+                ) : (
+                  <Text>{appBarTitle}</Text>
+                )
+              }
+            />
+          )}
 
-      {selectedSign !== undefined && (
-        <>
-          <Appbar.Action icon="greater-than" onPress={signRight} />
+          {selectedSign !== undefined && (
+            <>
+              <Appbar.Action icon="greater-than" onPress={signRight} />
+            </>
+          )}
+          {selectedSign !== undefined && <FavAction sign={selectedSign} />}
         </>
       )}
-      {selectedSign !== undefined && <FavAction sign={selectedSign} />}
+      {practiceMode.active && (
+        <>
+          <Appbar.BackAction onPress={backButtonListener} />
+          <Appbar.Content
+            onLayout={titleLayout}
+            titleStyle={{
+              textAlign: "center",
+            }}
+            title={
+              (
+                <Text>Practice Time</Text>
+              )
+            }
+          />
+        </>
+      )}
+
       <Menu
         visible={visible}
         onDismiss={closeMenu}
@@ -125,6 +159,11 @@ export default function AppHeader(props) {
           onPress={showFavSigns}
           title="My Saved Signs"
           leadingIcon="star"
+        />
+        <Menu.Item
+          onPress={showPracticeMode}
+          title="Practice Time"
+          leadingIcon="motion-play-outline"
         />
       </Menu>
     </Appbar.Header>

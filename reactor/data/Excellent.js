@@ -146,6 +146,7 @@ const Excellent = {
     name: "306",
     icon: require("../assets/slides/306.jpg"),
     title: "306. HALT - Stand - Leave",
+    practiceNextRestriction: ["307", "308", "309", "310"],
     description:
       "• The team comes to a <b>halt</b> and the <b>dog sits in heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the dog to <b>stay, walks forward 5 feet</b> to one of station signs 307, 308, 309 or 310 and <b>turns to face the dog</b>.<br/><br/>",
     tips: "• There is no deduction for slight paw movement.<br/>• This is not a stand alone sign.",
@@ -169,6 +170,7 @@ const Excellent = {
     name: "307",
     icon: require("../assets/slides/307.jpg"),
     title: "307. Sit - Return to Heel",
+    practiceOnlyAfter: ["306"],
     description:
       "• The handler cues the <b>dog to sit directly from the stand</b>.<br/>• The <b>handler returns to heel position by walking around the dog and back to heel.</b><br/>• The dog <b>must remain in a sit</b> until cued to heel.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
     tips: "• This is not a stand alone station. It will always follow station 306.",
@@ -186,6 +188,7 @@ const Excellent = {
     name: "308",
     icon: require("../assets/slides/308.jpg"),
     title: "308. Down - Return to Heel",
+    practiceOnlyAfter: ["306"],
     description:
       "• The handler cues the <b>dog to down directly from the stand</b>.<br/>• The <b>handler returns to heel position by walking around the dog and back to heel.</b><br/>• The dog <b>must remain in a down</b> until cued to heel.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
     tips: "• This is not a stand alone station. It will always follow station 306.",
@@ -203,6 +206,7 @@ const Excellent = {
     name: "309",
     icon: require("../assets/slides/309.jpg"),
     title: "309. Sit - Call to Heel",
+    practiceOnlyAfter: ["306"],
     description:
       "• The handler cues the <b>dog to sit directly from the stand</b>.<br/>• The handler calls the <b>dog to return to heel position</b>.<br/>• The dog may return to heel position either directly to heel position or by going around the handler.<br/>• The team <b>heels forward before the dog sits</b>.<br>• This station results in a 180-degree change of direction.<br/><br/>",
     tips: "• This is not a stand alone station. It will always follow station 306.",
@@ -220,6 +224,7 @@ const Excellent = {
     name: "310",
     icon: require("../assets/slides/310.jpg"),
     title: "310. Down - Call to Heel",
+    practiceOnlyAfter: ["306"],
     description:
       "• The handler cues the <b>dog to down directly from the stand</b>.<br/>• The handler calls the <b>dog to return to heel position</b>.<br/>• The dog may return to heel position either directly to heel position or by going around the handler.<br/>• The team <b>heels forward before the dog sits</b>.<br>• This station results in a 180-degree change of direction.<br/><br/>",
     tips: "• This is not a stand alone station. It will always follow station 306.",
@@ -237,6 +242,7 @@ const Excellent = {
     name: "311",
     icon: require("../assets/slides/311.jpg"),
     title: "311. Jump",
+    excludeFromPractice: true,
     description:
       "• The jump may be either a solid or bar jump.<br/>• <b>The team enters the send zone where the dog is sent to the jump.</b><br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 6-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 6-foot line when proceeding past the jump.</b><br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
     tips: "• Be careful not to step in the NQ zone! No retry is permitted if the handler steps into the NQ Zone.<br/>• Once the dog has taken the jump, they may be called back to heel position by the handler.<br/>• Once the dog has been sent to the jump, the handler may stay in the send zone or proceed along the outside of the 6-foot line. Handlers may give multiple jump cues to the dog as long as the dog is heading towards the jump. If the dog turns back to the handler or passes the plane of the jump the handler must return to the send zone for a retry.<br/>• The Handler is not required to run. Handlers may move at whatever speed they wish.<br/>• Note that the Excellent-level jump is identical to the Advanced-level jump except that the lateral distance is 6 feet instead of 3 feet.<br/>• At least two agility-type obstacles are used in every Excellent level course.",
@@ -257,6 +263,7 @@ const Excellent = {
     name: "312",
     icon: require("../assets/slides/312.jpg"),
     title: "312. Broad Jump",
+    excludeFromPractice: true,
     description:
       "• <b>The team enters the send zone where the dog is sent to the jump.</b><br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 3-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 3-foot line when proceeding past the jump.</b><br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
     tips: "• The broad jump is not used in virtual trials<br/>• Be careful not to step in the NQ zone! No retry is permitted if the handler steps into the NQ Zone.<br/>• Once the dog has taken the jump, they may be called back to heel position by the handler.<br/>• Once the dog has been sent to the jump, the handler may stay in the send zone or proceed along the outside of the 3-foot line. Handler may give a second cue to the dog as long as the dog is heading towards the obstacle. If the dog turns back to the handler or passes the plane of the jump the handler must return to the send zone for a retry.<br/>• The Handler is not required to run. Handlers may move at whatever speed they wish.<br/>• At least two agility-type obstacles are used in every Excellent level course.",
@@ -277,6 +284,7 @@ const Excellent = {
     name: "313",
     icon: require("../assets/slides/313.jpg"),
     title: "313. Tunnel",
+    excludeFromPractice: true,
     description:
       "• <b>The team enters the send zone where the dog is sent to the tunnel</b>.<br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 6-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 6-foot line when proceeding past the tunnel</b>.<br/>• Upon completion of the tunnel the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
     tips: "• The tunnel will always be straight (not curved).<br/>• At least two agility-type obstacles are used in every Excellent level course.",
@@ -295,6 +303,7 @@ const Excellent = {
     name: "314",
     icon: require("../assets/slides/314.jpg"),
     title: "314. Weave Poles",
+    excludeFromPractice: true,
     description:
       "• While heeling, the team <b>enters the weave poles with the first pole on the team’s left</b>.<br/>• The dog <b>weaves through the poles</b> and exits the station.<br/>• For this station to be considered complete, <b>the dog must weave through all the poles in the correct pattern</b>.<br/><br/>",
     tips: "• The handler may provide ongoing verbal and/or physical cues to the dog to continue the weave pattern without deductions if the dog continues to weave.<br/>• If the dog has left the weave poles and is sent back in at the point of exit, it will be considered an additional cue.<br/>• At least two agility-type obstacles are used in every Excellent level course.",

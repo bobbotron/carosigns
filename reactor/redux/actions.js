@@ -7,6 +7,7 @@ export const REMOVE_FAVORITE_ITEM = "REMOVE_FAVORITE_ITEM";
 export const SET_SEARCH_TEXT = "SET_SEARCH_TEXT";
 export const SET_SELECTED_LEVEL = "SET_SELECTED_LEVEL";
 export const SET_SELECTED_SIGN = "SET_SELECTED_SIGN";
+export const SET_PRACTICE_MODE = "SET_PRACTICE_MODE";
 
 export const addFavorite = (sign) => (dispatch) => {
   dispatch({
@@ -40,5 +41,13 @@ export const setSelectedSign = (sign) => (dispatch) => {
   dispatch({
     type: SET_SELECTED_SIGN,
     payload: sign,
+  });
+};
+
+
+export const setPracticeMode = (mode) => (dispatch) => {
+  dispatch({
+    type: SET_PRACTICE_MODE,
+    payload: mode,
   });
 };
