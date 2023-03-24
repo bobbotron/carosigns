@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Image, TouchableOpacity } from "react-native";
+import { useEffect, useState } from "react";
+import { BackHandler, Image, TouchableOpacity } from "react-native";
 import { Appbar, Menu, Text } from "react-native-paper";
 import { useDispatch, useSelector } from "react-redux";
 import SignsDB from "../data/SignDb";
@@ -10,6 +10,9 @@ import {
 } from "../redux/actions";
 import Theme from "../Theme";
 import FavAction from "./FavAction";
+import { running, setupState } from "./PracticeMode";
+
+import * as Speech from "expo-speech";
 
 export default function AppHeader(props) {
   const { selectedLevel, selectedSign, favorites, practiceMode } = useSelector(
@@ -18,7 +21,12 @@ export default function AppHeader(props) {
   const dispatch = useDispatch();
   const backButtonListener = () => {
     if (practiceMode.active) {
-      dispatch(setPracticeMode({ active: false }));
+      if (practiceMode.state === running) {
+        dispatch(setPracticeMode({ active: true, state: setupState }));
+        Speech.stop();
+      } else {
+        dispatch(setPracticeMode({ active: false, state: setupState }));
+      }
     } else {
       if (selectedSign !== undefined) {
         dispatch(setSelectedSign(undefined));
@@ -38,8 +46,8 @@ export default function AppHeader(props) {
     setVisible(false);
   };
   const showPracticeMode = () => {
-    dispatch(setPracticeMode({ active: true }));
-    
+    dispatch(setPracticeMode({ active: true, state: setupState }));
+
     setVisible(false);
   };
   const titleListener = () => {
@@ -77,6 +85,20 @@ export default function AppHeader(props) {
     var { x, y, width, height } = event.nativeEvent.layout;
     setTitleHeight(height);
   };
+
+  useEffect(() => {
+    const backAction = () => {
+      backButtonListener();
+      return true;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      backAction
+    );
+
+    return () => backHandler.remove();
+  }, [selectedLevel, selectedSign, practiceMode]);
 
   return (
     <Appbar.Header
@@ -141,11 +163,7 @@ export default function AppHeader(props) {
             titleStyle={{
               textAlign: "center",
             }}
-            title={
-              (
-                <Text>Practice Time</Text>
-              )
-            }
+            title={<Text>Practice Time</Text>}
           />
         </>
       )}

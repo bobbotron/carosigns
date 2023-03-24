@@ -20,9 +20,10 @@ import {
   setSelectedSign,
 } from "../redux/actions";
 import _ from "lodash";
+import PracticeProgressBar from "./PracticeProgressBar";
 
-const setupState = "setup";
-const running = "running";
+export const setupState = "setup";
+export const running = "running";
 
 const getRandomElement = (list) => {
   return list[Math.floor(Math.random() * list.length)];
@@ -36,7 +37,7 @@ export default function PracticeMode(props) {
   const [noviceChecked, setNoviceChecked] = useState(true);
   const [advancedChecked, setAdvancedChecked] = useState(true);
   const [excellentChecked, setExcellentChecked] = useState(true);
-  const [seconds, setSeconds] = useState(10);
+  const [seconds, setSeconds] = useState(8);
   const [runningState, setRunningState] = useState({});
   const [timerId, setTimerId] = useState(undefined);
   const [autoAdvance, setAutoAdvance] = useState(true);
@@ -53,7 +54,7 @@ export default function PracticeMode(props) {
     if (sign) {
       const cat = SignsDB.Categories.find((x) => x.name === sign.category);
       dispatch(setSelectedLevel(cat));
-      dispatch(setPracticeMode({ active: false }));
+      dispatch(setPracticeMode({ active: false, state: setupState }));
       dispatch(setSelectedSign(sign));
     }
   };
@@ -65,15 +66,24 @@ export default function PracticeMode(props) {
   const logoImageRatio =
     logoImage === undefined ? 1 : logoImage.height / logoImage.width;
 
-  const [practiceState, setPracticeState] = useState(setupState);
+  const portrait = window.width <= window.height;
+  const width = portrait
+    ? window.width * 0.8
+    : (window.height * 0.7) / logoImageRatio;
+  const height = portrait
+    ? window.width * 0.8 * logoImageRatio
+    : window.height * 0.7;
+  const leftOffset = portrait ? window.width * 0.1 : (window.width - width) / 2;
   const styles = StyleSheet.create({
     title: {
       fontSize: 20,
     },
     logo: {
-      width: window.width * 0.8,
-      height: window.width * 0.8 * logoImageRatio,
+      left: leftOffset,
+      width: width,
+      height: height,
       textAlign: "center",
+      marginBottom: 20,
     },
     buttonStyle: {
       marginBottom: 10,
@@ -91,7 +101,7 @@ export default function PracticeMode(props) {
       width: 250,
       flexDirection: "row",
       alignItems: "center",
-      margin: 10,
+      margin: 5,
       justifyContent: "space-between",
     },
 
@@ -160,18 +170,13 @@ export default function PracticeMode(props) {
 
   useEffect(() => {
     let timer = undefined;
-    if (practiceState === running && runningState) {
+    if (practiceMode.state === running && runningState) {
       if (runningState.selectedSign && isAudioOn) {
         const textToSay = runningState.selectedSign.title
           .replace(/^\d+./, "")
           .trim();
         Speech.stop();
         Speech.speak(textToSay);
-      }
-      if (autoAdvance) {
-        timer = setTimeout(electSign, seconds * 1000);
-
-        setTimerId(timer);
       }
     }
     return () => {
@@ -180,14 +185,7 @@ export default function PracticeMode(props) {
   }, [runningState]);
 
   const toggleTimer = () => {
-    if (timerId === undefined) {
-      setTimerId(setTimeout(electSign, seconds * 1000));
-      setAutoAdvance(true);
-    } else {
-      clearTimeout(timerId);
-      setTimerId(undefined);
-      setAutoAdvance(false);
-    }
+    setAutoAdvance(!autoAdvance);
   };
 
   const nextSign = () => {
@@ -195,7 +193,7 @@ export default function PracticeMode(props) {
       clearTimeout(timerId);
       setTimerId(undefined);
     }
-    if (practiceState === running) {
+    if (practiceMode.state === running) {
       electNextSign(runningState.signs, runningState.selectedSign);
     }
   };
@@ -207,7 +205,7 @@ export default function PracticeMode(props) {
   const startPractice = () => {
     if (canStartPractice()) {
       const signs = SignsDB.Signs.filter(filt);
-      setPracticeState(running);
+      dispatch(setPracticeMode({ ...practiceMode, state: running }));
       electNextSign(signs, undefined);
     }
   };
@@ -216,12 +214,12 @@ export default function PracticeMode(props) {
     <>
       <Text style={styles.practiceHeading}>Random Sign Generator</Text>
       <Text style={styles.practiceTextIntro}>
-        Signs displayed on screen and (optionally) read out loud. Cone exercises
-        and agility obstacles are excluded.
+        Welcome to rally practice time. Set your preferences and let's get
+        started!
       </Text>
       <Text variant="titleMedium">Options</Text>
       <View style={styles.configSwitchView}>
-        <Text style={styles.configSwitchLabel}>Use audio? </Text>
+        <Text style={styles.configSwitchLabel}>Audio </Text>
         <Switch
           style={styles.configSwitch}
           label="Audio"
@@ -250,7 +248,7 @@ export default function PracticeMode(props) {
             step={1}
             value={seconds}
             onChange={setSeconds}
-            minValue={5}
+            minValue={1}
             maxValue={120}
             rounded={true}
             style={styles.seconds}
@@ -259,7 +257,7 @@ export default function PracticeMode(props) {
       )}
 
       <Text variant="titleMedium" style={{ marginTop: 10 }}>
-        Include Signs From
+        Classes to Include
       </Text>
       <View style={styles.configSwitchView}>
         <Text style={styles.configSwitchLabel}>Novice </Text>
@@ -300,9 +298,15 @@ export default function PracticeMode(props) {
       >
         Start Practice
       </Button>
-      <HelperText type="error" visible={!canStartPractice()}>
+      <HelperText
+        type="error"
+        visible={!canStartPractice()}
+        style={{ paddingBottom: 5 }}
+      >
         Select one or more levels
       </HelperText>
+
+      <Text>Note: Stations with cones are not included in practice time.</Text>
     </>
   );
 
@@ -312,6 +316,9 @@ export default function PracticeMode(props) {
         {runningState.selectedSign.title}
       </Text>
 
+      {autoAdvance && (
+        <PracticeProgressBar seconds={seconds} onComplete={electSign} />
+      )}
       <Image
         key={"logo"}
         source={runningState.selectedSign.icon}
@@ -320,22 +327,26 @@ export default function PracticeMode(props) {
 
       <Button
         mode="contained"
-        onPress={() => {
-          setPracticeState(setupState);
-          setRunningState({});
-          Speech.stop();
-        }}
+        icon={autoAdvance ? "pause" : "play"}
+        onPress={toggleTimer}
         style={styles.buttonStyle}
       >
-        Stop
+        {autoAdvance ? "Pause" : "Start"}
       </Button>
-      <Button mode="contained" onPress={toggleTimer} style={styles.buttonStyle}>
-        {timerId ? "Pause" : "Start"}
-      </Button>
-      <Button mode="contained" onPress={nextSign} style={styles.buttonStyle}>
+      <Button
+        mode="contained"
+        icon="forward"
+        onPress={nextSign}
+        style={styles.buttonStyle}
+      >
         Next
       </Button>
-      <Button mode="contained" onPress={goToSign} style={styles.buttonStyle}>
+      <Button
+        mode="contained"
+        icon="text-box-search"
+        onPress={goToSign}
+        style={styles.buttonStyle}
+      >
         Go to sign
       </Button>
     </>
@@ -343,8 +354,8 @@ export default function PracticeMode(props) {
   return (
     <>
       <ScrollView>
-        {practiceState === setupState && <Setup />}
-        {practiceState === running && <RunningComponent />}
+        {practiceMode.state === setupState && <Setup />}
+        {practiceMode.state === running && <RunningComponent />}
       </ScrollView>
     </>
   );
