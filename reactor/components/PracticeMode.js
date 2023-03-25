@@ -53,6 +53,7 @@ export default function PracticeMode(props) {
     const sign = runningState?.selectedSign;
     if (sign) {
       const cat = SignsDB.Categories.find((x) => x.name === sign.category);
+      Speech.stop();
       dispatch(setSelectedLevel(cat));
       dispatch(setPracticeMode({ active: false, state: setupState }));
       dispatch(setSelectedSign(sign));
@@ -82,7 +83,7 @@ export default function PracticeMode(props) {
       left: leftOffset,
       width: width,
       height: height,
-      textAlign: "center",
+      //textAlign: "center",
       marginBottom: 20,
     },
     buttonStyle: {

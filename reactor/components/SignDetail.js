@@ -81,13 +81,13 @@ export default function SignDetail(props) {
     logo: {
       width: window.width * 0.9,
       height: window.width * 0.9 * logoImageRatio,
-      textAlign: "center",
+      //textAlign: "center",
     },
     logoLayout: {
       width: window.width * 0.9,
       height: window.width * 0.9 * layoutImageRatio,
       resizeMode: "contain",
-      textAlign: "center",
+      //textAlign: "center",
       marginTop: 20,
     },
     procedureLayout: {
