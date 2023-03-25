@@ -2,7 +2,7 @@
   "expo": {
     "name": "CARO Signs",
     "slug": "caro-signs",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "owner": "bobbotron",
     "orientation": "default",
     "icon": "./assets/icon.png",
