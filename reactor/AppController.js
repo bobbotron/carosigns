@@ -7,21 +7,25 @@ import {
   Text,
   useWindowDimensions,
   ScrollView,
+  Button,
 } from "react-native";
 import MainList from "./components/MainList";
 import Level from "./components/Level";
 import SignsDB from "./data/SignDb";
+import PracticeMode from "./components/PracticeMode";
 import HandbookTextLink from "./components/HandbookTextLink";
 import { useSelector, useDispatch } from "react-redux";
 import { setSearchText, setSelectedLevel } from "./redux/actions";
 import AppHeader from "./components/AppHeader";
 import SearchResults from "./components/SearchResults";
+import * as Speech from "expo-speech";
 export default function AppController() {
   const window = useWindowDimensions();
 
-  const { selectedLevel, searchText } = useSelector(
+  const { selectedLevel, searchText, practiceMode } = useSelector(
     (state) => state.signsReducer
   );
+
   const dispatch = useDispatch();
 
   const styles = StyleSheet.create({
@@ -66,7 +70,6 @@ export default function AppController() {
     dispatch(setSelectedLevel(undefined));
     dispatch(setSearchText(""));
   };
-
   useEffect(() => {
     setLevels(SignsDB.Categories);
   }, []);
@@ -76,40 +79,44 @@ export default function AppController() {
       <AppHeader />
 
       <View style={styles.container}>
-        {selectedLevel === undefined && (
-          <Searchbar
-            style={styles.searchbar}
-            placeholder="Search Signs"
-            onChangeText={onChangeSearch}
-            value={searchText}
-          />
-        )}
-
-        {selectedLevel === undefined && !searchActive && (
+        {practiceMode.active && <PracticeMode></PracticeMode>}
+        {!practiceMode.active && (
           <>
-          <ScrollView>
-            <MainList levels={levels} levelListener={levelListener} />
-            <Card style={styles.disclaimerCard}>
-              <Card.Content>
-                <Text>
-                  <Text style={styles.disclaimerBold}>Note:</Text> See the{" "}
-                  <HandbookTextLink /> for complete information and rules. In the case of
-                  a discrepancy, the handbooks are final.
-                </Text>
-              </Card.Content>
-            </Card>
-            </ScrollView>
+            {selectedLevel === undefined && (
+              <Searchbar
+                style={styles.searchbar}
+                placeholder="Search Signs"
+                onChangeText={onChangeSearch}
+                value={searchText}
+              />
+            )}
+            {selectedLevel === undefined && !searchActive && (
+              <>
+                <ScrollView>
+                  {/* <Button title="Press to hear some words" onPress={speak} /> */}
+                  <MainList levels={levels} levelListener={levelListener} />
+                  <Card style={styles.disclaimerCard}>
+                    <Card.Content>
+                      <Text>
+                        <Text style={styles.disclaimerBold}>Note:</Text> See the{" "}
+                        <HandbookTextLink /> for complete information and rules.
+                        In the case of a discrepancy, the handbooks are final.
+                      </Text>
+                    </Card.Content>
+                  </Card>
+                </ScrollView>
+              </>
+            )}
+            {selectedLevel !== undefined && !searchActive && (
+              <Level
+                level={selectedLevel}
+                backListener={backToMainList}
+                signs={selectedLevel.signs}
+              />
+            )}
+            {searchActive && <SearchResults />}
           </>
         )}
-        {selectedLevel !== undefined && !searchActive && (
-          <Level
-            level={selectedLevel}
-            backListener={backToMainList}
-            signs={selectedLevel.signs}
-          />
-        )}
-
-        {searchActive && <SearchResults />}
 
         <StatusBar style="auto" />
       </View>

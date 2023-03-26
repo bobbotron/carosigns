@@ -81,20 +81,17 @@ export default function SignDetail(props) {
     logo: {
       width: window.width * 0.9,
       height: window.width * 0.9 * logoImageRatio,
-      textAlign: "center",
     },
     logoLayout: {
       width: window.width * 0.9,
       height: window.width * 0.9 * layoutImageRatio,
       resizeMode: "contain",
-      textAlign: "center",
       marginTop: 20,
     },
     procedureLayout: {
       width: window.width * 0.9,
       height: window.width * 0.9 * procedureImageRatio,
       resizeMode: "contain",
-      textAlign: "center",
       marginTop: 10,
       marginBottom: 20,
     },
@@ -275,7 +272,8 @@ export default function SignDetail(props) {
             </>
           )}
           <Text style={styles.deductionNotice}>
-            See the <MasterGeneralHandbookTextLink /> for a complete list of deductions.
+            See the <MasterGeneralHandbookTextLink /> for a complete list of
+            deductions.
           </Text>
         </>
       )}
@@ -409,7 +407,11 @@ export default function SignDetail(props) {
         )}
 
         {isWorkingSign && (
-          <>
+          <View
+            style={{
+              zIndex: 200,
+            }}
+          >
             <DropDownPicker
               multiple={false}
               items={workingStates}
@@ -419,7 +421,7 @@ export default function SignDetail(props) {
               setOpen={setOpen}
               setValue={setWorkingLevelState}
             />
-          </>
+          </View>
         )}
         <View
           style={{

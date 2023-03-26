@@ -4,6 +4,7 @@ import {
   SET_SEARCH_TEXT,
   SET_SELECTED_LEVEL,
   SET_SELECTED_SIGN,
+  SET_PRACTICE_MODE,
 } from "./actions";
 
 const initialState = {
@@ -11,6 +12,7 @@ const initialState = {
   selectedSign: undefined,
   selectedLevel: undefined,
   searchText: "",
+  practiceMode: {active: false},
 };
 
 function signsReducer(state = initialState, action) {
@@ -47,11 +49,27 @@ function signsReducer(state = initialState, action) {
         ...state,
         selectedSign: action.payload,
       };
+    case SET_PRACTICE_MODE:
+      if (action.payload.active) {
+        return {
+          ...state,
+          searchText: "",
+          selectedLevel: undefined,
+          selectedSign: undefined,
+          practiceMode: action.payload,
+        };
+      } else {
+        return {
+          ...state,
+          practiceMode: action.payload,
+        };
+      }
     case "persist/REHYDRATE":
       return {
         ...state,
         selectedLevel: undefined,
         searchText: "",
+        practiceMode: false,
       };
     default:
       return state;
