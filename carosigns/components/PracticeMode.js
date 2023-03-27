@@ -307,7 +307,10 @@ export default function PracticeMode(props) {
         Select one or more levels
       </HelperText>
 
-      <Text>Note: Stations with cones are not included in practice time.</Text>
+      <Text>
+        Note: Stations with cones or agility equipment are not included in
+        practice time.
+      </Text>
     </>
   );
 

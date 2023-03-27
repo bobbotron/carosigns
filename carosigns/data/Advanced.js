@@ -4,10 +4,10 @@ const Advanced = {
   signs:[
   {
     name: "200",
-    icon: require("../assets/slides/200.jpg"),
+    icon: require("../../assets/slides/200.jpg"),
     category: "Advanced",
     title: "200. HALT - Fast From Sit",
-    practiceNextRestriction: ["118", "120"],
+    practiceNextRestriction: ["120"],
     description:
       "• The team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the dog to heel and moves <b> immediately into a fast pace from the halt</b>.<br/>• This station is followed by either Slow, Normal or the Finish station.<br/><br/>",
     tips: "• The Judge is looking for the <i>dog</i> to move at a fast pace. A jogging or running pace from the handler is recommended.<br/>• The fast pace must begin immediately from the sit.<br/>",
@@ -29,7 +29,7 @@ const Advanced = {
   },
   {
     name: "201",
-    icon: require("../assets/slides/201.jpg"),
+    icon: require("../../assets/slides/201.jpg"),
     category: "Advanced",
     title: "201. HALT - Leave Dog - Call to Heel while Running",
     description:
@@ -54,7 +54,7 @@ const Advanced = {
   },
   {
     name: "202",
-    icon: require("../assets/slides/202.jpg"),
+    icon: require("../../assets/slides/202.jpg"),
     category: "Advanced",
     title: "202. Dog Circles Left",
     description:
@@ -75,7 +75,7 @@ const Advanced = {
   },
   {
     name: "203",
-    icon: require("../assets/slides/203.jpg"),
+    icon: require("../../assets/slides/203.jpg"),
     category: "Advanced",
     title: "203. Moving Down, Walk Around",
     description:
@@ -109,7 +109,7 @@ const Advanced = {
   },
   {
     name: "204",
-    icon: require("../assets/slides/204.jpg"),
+    icon: require("../../assets/slides/204.jpg"),
     category: "Advanced",
     title: "204. Moving Side Step Right",
     description:
@@ -132,7 +132,7 @@ const Advanced = {
   },
   {
     name: "205",
-    icon: require("../assets/slides/205.jpg"),
+    icon: require("../../assets/slides/205.jpg"),
     category: "Advanced",
     title: "205. Off-set Figure 8",
     excludeFromPractice: true,
@@ -147,7 +147,7 @@ const Advanced = {
   },
   {
     name: "206",
-    icon: require("../assets/slides/206.jpg"),
+    icon: require("../../assets/slides/206.jpg"),
     category: "Advanced",
     title: "206. Left Turn - Dog Circles Right",
     description: "• While heeling, the <b>handler turns left</b>.<br/>• Simultaneously the <b>dog circles around the handler to the right returning to heel position</b>.<br/>• The handler may briefly pause to allow the dog to cross their path.<br/>• The team will be back in heel position as they face the new direction.<br/>• This sign results in a 90-degree change of direction to the left.<br/><br/>",
@@ -159,7 +159,7 @@ const Advanced = {
   },
   {
     name: "207",
-    icon: require("../assets/slides/207.jpg"),
+    icon: require("../../assets/slides/207.jpg"),
     category: "Advanced",
     title: "207. Left About Turn",
     description: "• While heeling, the <b>handler performs a 180-degree left turn</b>, while the <b>dog simultaneously performance a 180-degree right turn moving around the handler</b>.<br/>• The team will be back in heel position as they face the new direction.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
@@ -171,7 +171,7 @@ const Advanced = {
   },
   {
     name: "208",
-    icon: require("../assets/slides/208.jpg"),
+    icon: require("../../assets/slides/208.jpg"),
     category: "Advanced",
     title: "208. HALT - 180 Degree Pivot Right - HALT",
     description: "• The team comes to a <b>halt</b> and the <b>dog sits in heel position.<br/>• The handler cues the dog to heel and pivots in place 180 degrees to their right then halts.<br/>• The dog must move simultaneously with the handler and sit when the handler stops</b>.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
@@ -184,7 +184,7 @@ const Advanced = {
   },
   {
     name: "209",
-    icon: require("../assets/slides/209.jpg"),
+    icon: require("../../assets/slides/209.jpg"),
     category: "Advanced",
     title: "209. HALT - 180-Degree Pivot Left - HALT",
     description: "• The team comes to a <b>halt</b> and the <b>dog sits in heel position.<br/>• The handler cues the dog to heel and pivots in place 180 degrees to their left then halts.<br/>• The dog must move simultaneously with the handler and sit when the handler stops</b>.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
@@ -197,7 +197,7 @@ const Advanced = {
   },
   {
     name: "210",
-    icon: require("../assets/slides/210.jpg"),
+    icon: require("../../assets/slides/210.jpg"),
     category: "Advanced",
     title: "210. HALT - From Sit - 180 right",
     description: "• The team comes to a <b>halt</b> and the dog <b>sits in heel position</b>.<br/>• The handler cues the dog to heel, <b>turns 180 degrees to their right</b> and heels forward.<br/>• This station results in a 180-degree change of direction..<br/><br/>",
@@ -209,7 +209,7 @@ const Advanced = {
   },
   {
     name: "211",
-    icon: require("../assets/slides/211.jpg"),
+    icon: require("../../assets/slides/211.jpg"),
     category: "Advanced",
     title: "211. HALT - From Sit - 180 left",
     description: "• The team comes to a <b>halt</b> and the dog <b>sits in heel position</b>.<br/>• The handler cues the dog to heel, <b>turns 180 degrees to their left</b> and heels forward.<br/>• This station results in a 180-degree change of direction..<br/><br/>",
@@ -221,7 +221,7 @@ const Advanced = {
   },
   {
     name: "212",
-    icon: require("../assets/slides/212.jpg"),
+    icon: require("../../assets/slides/212.jpg"),
     category: "Advanced",
     title: "212. HALT - Stand - Leave for Walk Around",
     excludeFromPractice: true,
@@ -234,7 +234,7 @@ const Advanced = {
   },
   {
     name: "213",
-    icon: require("../assets/slides/213.jpg"),
+    icon: require("../../assets/slides/213.jpg"),
     category: "Advanced",
     title: "213. Return & Forward from Stand",
     excludeFromPractice: true,
@@ -248,7 +248,7 @@ const Advanced = {
   },
   {
     name: "214",
-    icon: require("../assets/slides/214.jpg"),
+    icon: require("../../assets/slides/214.jpg"),
     category: "Advanced",
     title: "214. HALT - Leave Dog - Turn and Call Front",
     practiceNextRestriction: ["216", "217", "218", "219"],
@@ -262,7 +262,7 @@ const Advanced = {
   },
   {
     name: "215",
-    icon: require("../assets/slides/215.jpg"),
+    icon: require("../../assets/slides/215.jpg"),
     category: "Advanced",
     title: "215. Call Front - 1, 2, 3 Steps Backward",
     practiceNextRestriction: ["216", "217", "218", "219"],
@@ -276,7 +276,7 @@ const Advanced = {
   },
   {
     name: "216",
-    icon: require("../assets/slides/216.jpg"),
+    icon: require("../../assets/slides/216.jpg"),
     category: "Advanced",
     title: "216. Finish Right",
     practiceOnlyAfter: ["214", "215"],
@@ -290,7 +290,7 @@ const Advanced = {
   },
   {
     name: "217",
-    icon: require("../assets/slides/217.jpg"),
+    icon: require("../../assets/slides/217.jpg"),
     category: "Advanced",
     title: "217. Finish Left",
     practiceOnlyAfter: ["214", "215"],
@@ -304,7 +304,7 @@ const Advanced = {
   },
   {
     name: "218",
-    icon: require("../assets/slides/218.jpg"),
+    icon: require("../../assets/slides/218.jpg"),
     category: "Advanced",
     title: "218. Forward Right",
     practiceOnlyAfter: ["214", "215"],
@@ -317,7 +317,7 @@ const Advanced = {
   },
   {
     name: "219",
-    icon: require("../assets/slides/219.jpg"),
+    icon: require("../../assets/slides/219.jpg"),
     category: "Advanced",
     title: "219. Forward Left",
     practiceOnlyAfter: ["214", "215"],
@@ -330,7 +330,7 @@ const Advanced = {
   },
   {
     name: "220",
-    icon: require("../assets/slides/220.jpg"),
+    icon: require("../../assets/slides/220.jpg"),
     category: "Advanced",
     title: "220. Send over Jump",
     excludeFromPractice: true,

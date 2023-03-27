@@ -3,7 +3,7 @@ type: "normal",
 signs: [
   {
     name: "Start (Right)",
-    icon: require("../assets/slides/StartonRight.jpg"),
+    icon: require("../../assets/slides/StartonRight.jpg"),
     category: "Versatility",
     title: "Start",
     hideNameOnGrid: true,
@@ -21,7 +21,7 @@ signs: [
   },
   {
     name: "Finish (Right)",
-    icon: require("../assets/slides/FinishonRight.jpg"),
+    icon: require("../../assets/slides/FinishonRight.jpg"),
     hideNameOnGrid: true,
     category: "Versatility",
     title: "Finish",
@@ -39,7 +39,7 @@ signs: [
   },
   {
     name: "400",
-    icon: require("../assets/slides/400.jpg"),
+    icon: require("../../assets/slides/400.jpg"),
     category: "Versatility",
     title: "400. Turn In",
     description:
@@ -61,7 +61,7 @@ signs: [
   },
   {
     name: "401",
-    icon: require("../assets/slides/401.jpg"),
+    icon: require("../../assets/slides/401.jpg"),
     category: "Versatility",
     title: "401. Turn Away",
     description:
@@ -83,7 +83,7 @@ signs: [
   },
   {
     name: "402",
-    icon: require("../assets/slides/402.jpg"),
+    icon: require("../../assets/slides/402.jpg"),
     category: "Versatility",
     title: "402. Side-by-Side Right",
     description:
@@ -105,7 +105,7 @@ signs: [
   },
   {
     name: "403",
-    icon: require("../assets/slides/403.jpg"),
+    icon: require("../../assets/slides/403.jpg"),
     category: "Versatility",
     title: "403. Side-by-Side Left",
     description:
@@ -127,7 +127,7 @@ signs: [
   },
   {
     name: "404",
-    icon: require("../assets/slides/404.jpg"),
+    icon: require("../../assets/slides/404.jpg"),
     category: "Versatility",
     title: "404. Cross in Front",
     description:
@@ -148,7 +148,7 @@ signs: [
   },
   {
     name: "405",
-    icon: require("../assets/slides/405.jpg"),
+    icon: require("../../assets/slides/405.jpg"),
     category: "Versatility",
     title: "405. Cross Behind",
     description:
@@ -167,7 +167,7 @@ signs: [
   },
   {
     name: "406",
-    icon: require("../assets/slides/406.jpg"),
+    icon: require("../../assets/slides/406.jpg"),
     category: "Versatility",
     title: "406. Weave Through Legs",
     description:
@@ -188,7 +188,7 @@ signs: [
   },
   {
     name: "407",
-    icon: require("../assets/slides/407.jpg"),
+    icon: require("../../assets/slides/407.jpg"),
     category: "Versatility",
     title: "407. Spin Left - Right Turn - Cross Behind",
     description:
@@ -211,7 +211,7 @@ signs: [
   },
   {
     name: "408",
-    icon: require("../assets/slides/408.jpg"),
+    icon: require("../../assets/slides/408.jpg"),
     category: "Versatility",
     title: "408. Spin Right - Left Turn - Cross Behind",
     description:
@@ -234,7 +234,7 @@ signs: [
   },
   {
     name: "409",
-    icon: require("../assets/slides/409.jpg"),
+    icon: require("../../assets/slides/409.jpg"),
     category: "Versatility",
     title: "409. HALT - Stand",
     description:
@@ -256,7 +256,7 @@ signs: [
   },
   {
     name: "410",
-    icon: require("../assets/slides/410.jpg"),
+    icon: require("../../assets/slides/410.jpg"),
     category: "Versatility",
     title: "410. HALT - Down",
     description:
@@ -278,7 +278,7 @@ signs: [
   },
   {
     name: "411",
-    icon: require("../assets/slides/411.jpg"),
+    icon: require("../../assets/slides/411.jpg"),
     category: "Versatility",
     title: "411. HALT - Down - Sit",
     description:
@@ -300,7 +300,7 @@ signs: [
   },
   {
     name: "412",
-    icon: require("../assets/slides/412.jpg"),
+    icon: require("../../assets/slides/412.jpg"),
     category: "Versatility",
     title: "412. HALT - Walk Around",
     description:
@@ -323,7 +323,7 @@ signs: [
   },
   {
     name: "413",
-    icon: require("../assets/slides/413.jpg"),
+    icon: require("../../assets/slides/413.jpg"),
     category: "Versatility",
     title: "413. HALT - Down - Walk Around",
     description:
@@ -345,7 +345,7 @@ signs: [
   },
   {
     name: "414",
-    icon: require("../assets/slides/414.jpg"),
+    icon: require("../../assets/slides/414.jpg"),
     category: "Versatility",
     title: "414. HALT - 1, 2, 3 Steps Forward",
     description:
@@ -373,7 +373,7 @@ signs: [
   },
   {
     name: "415",
-    icon: require("../assets/slides/415.jpg"),
+    icon: require("../../assets/slides/415.jpg"),
     category: "Versatility",
     title: "415. HALT - Side Step Left - HALT",
     description:
@@ -398,7 +398,7 @@ signs: [
   },
   {
     name: "416",
-    icon: require("../assets/slides/416.jpg"),
+    icon: require("../../assets/slides/416.jpg"),
     category: "Versatility",
     title: "416. HALT - 90 Pivot Right - HALT",
     description:
@@ -422,7 +422,7 @@ signs: [
   },
   {
     name: "417",
-    icon: require("../assets/slides/417.jpg"),
+    icon: require("../../assets/slides/417.jpg"),
     category: "Versatility",
     title: "417. HALT - 90 Pivot Left - HALT",
     description:
@@ -446,7 +446,7 @@ signs: [
   },
   {
     name: "418",
-    icon: require("../assets/slides/418.jpg"),
+    icon: require("../../assets/slides/418.jpg"),
     category: "Versatility",
     title: "418. HALT - Turn Left - 1 Step - HALT",
     description:
@@ -470,7 +470,7 @@ signs: [
   },
   {
     name: "419",
-    icon: require("../assets/slides/419.jpg"),
+    icon: require("../../assets/slides/419.jpg"),
     category: "Versatility",
     title: "419. Right Turn",
     description:
@@ -487,7 +487,7 @@ signs: [
   },
   {
     name: "420",
-    icon: require("../assets/slides/420.jpg"),
+    icon: require("../../assets/slides/420.jpg"),
     category: "Versatility",
     title: "420. Left Turn",
     description:
@@ -504,7 +504,7 @@ signs: [
   },
   {
     name: "421",
-    icon: require("../assets/slides/421.jpg"),
+    icon: require("../../assets/slides/421.jpg"),
     category: "Versatility",
     title: "421. 180 Right",
     description:
@@ -526,7 +526,7 @@ signs: [
   },
   {
     name: "422",
-    icon: require("../assets/slides/422.jpg"),
+    icon: require("../../assets/slides/422.jpg"),
     category: "Versatility",
     title: "422. 180 Left",
     description:
@@ -548,7 +548,7 @@ signs: [
   },
   {
     name: "423",
-    icon: require("../assets/slides/423.jpg"),
+    icon: require("../../assets/slides/423.jpg"),
     category: "Versatility",
     title: "423. 270 Right",
     description:
@@ -569,7 +569,7 @@ signs: [
   },
   {
     name: "424",
-    icon: require("../assets/slides/424.jpg"),
+    icon: require("../../assets/slides/424.jpg"),
     category: "Versatility",
     title: "424. 270 Left",
     description:
@@ -590,7 +590,7 @@ signs: [
   },
   {
     name: "425",
-    icon: require("../assets/slides/425.jpg"),
+    icon: require("../../assets/slides/425.jpg"),
     category: "Versatility",
     title: "425. 360 Right",
     description:
@@ -611,7 +611,7 @@ signs: [
   },
   {
     name: "426",
-    icon: require("../assets/slides/426.jpg"),
+    icon: require("../../assets/slides/426.jpg"),
     category: "Versatility",
     title: "426. 360 Left",
     description:
@@ -632,7 +632,7 @@ signs: [
   },
   {
     name: "427",
-    icon: require("../assets/slides/427.jpg"),
+    icon: require("../../assets/slides/427.jpg"),
     category: "Versatility",
     title: "427. Slow",
     description:
@@ -651,7 +651,7 @@ signs: [
   },
   {
     name: "428",
-    icon: require("../assets/slides/428.jpg"),
+    icon: require("../../assets/slides/428.jpg"),
     category: "Versatility",
     title: "428. Fast",
     description:
@@ -669,7 +669,7 @@ signs: [
   },
   {
     name: "429",
-    icon: require("../assets/slides/429.jpg"),
+    icon: require("../../assets/slides/429.jpg"),
     category: "Versatility",
     title: "429. Normal",
     description:
@@ -686,7 +686,7 @@ signs: [
   },
   {
     name: "430",
-    icon: require("../assets/slides/430.jpg"),
+    icon: require("../../assets/slides/430.jpg"),
     category: "Versatility",
     title: "430. Call Front - Finish Right",
     description:
@@ -715,7 +715,7 @@ signs: [
   },
   {
     name: "431",
-    icon: require("../assets/slides/431.jpg"),
+    icon: require("../../assets/slides/431.jpg"),
     category: "Versatility",
     title: "431. Call Front - Finish Left",
     description:
@@ -744,7 +744,7 @@ signs: [
   },
   {
     name: "432",
-    icon: require("../assets/slides/432.jpg"),
+    icon: require("../../assets/slides/432.jpg"),
     category: "Versatility",
     title: "432. Call Front - Forward Right",
     description:
@@ -772,7 +772,7 @@ signs: [
   },
   {
     name: "433",
-    icon: require("../assets/slides/433.jpg"),
+    icon: require("../../assets/slides/433.jpg"),
     category: "Versatility",
     title: "433. Call Front - Forward Left",
     description:
@@ -800,7 +800,7 @@ signs: [
   },
   {
     name: "434",
-    icon: require("../assets/slides/434.jpg"),
+    icon: require("../../assets/slides/434.jpg"),
     category: "Versatility",
     title: "434. Call Front - Handler Returns to Heel",
     description:
@@ -825,7 +825,7 @@ signs: [
   },
   {
     name: "435",
-    icon: require("../assets/slides/435.jpg"),
+    icon: require("../../assets/slides/435.jpg"),
     category: "Versatility",
     title: "435. Spiral Right",
     description:
@@ -848,7 +848,7 @@ signs: [
   },
   {
     name: "436",
-    icon: require("../assets/slides/436.jpg"),
+    icon: require("../../assets/slides/436.jpg"),
     category: "Versatility",
     title: "436. Spiral Left",
     description:
@@ -871,7 +871,7 @@ signs: [
   },
   {
     name: "437",
-    icon: require("../assets/slides/437.jpg"),
+    icon: require("../../assets/slides/437.jpg"),
     category: "Versatility",
     title: "437. Weave Once",
     description:
@@ -894,7 +894,7 @@ signs: [
   },
   {
     name: "438",
-    icon: require("../assets/slides/438.jpg"),
+    icon: require("../../assets/slides/438.jpg"),
     category: "Versatility",
     title: "428. Weave Twice",
     description:
@@ -917,7 +917,7 @@ signs: [
   },
   {
     name: "439",
-    icon: require("../assets/slides/439.jpg"),
+    icon: require("../../assets/slides/439.jpg"),
     category: "Versatility",
     title: "439. Jump",
     description:
@@ -938,7 +938,7 @@ signs: [
   },
   {
     name: "440",
-    icon: require("../assets/slides/440.jpg"),
+    icon: require("../../assets/slides/440.jpg"),
     category: "Versatility",
     title: "440. Broad Jump",
     description:
@@ -959,7 +959,7 @@ signs: [
   },
   {
     name: "441",
-    icon: require("../assets/slides/441.jpg"),
+    icon: require("../../assets/slides/441.jpg"),
     category: "Versatility",
     title: "441. Tunnel",
     description:
@@ -978,7 +978,7 @@ signs: [
   },
   {
     name: "442",
-    icon: require("../assets/slides/442.jpg"),
+    icon: require("../../assets/slides/442.jpg"),
     category: "Versatility",
     title: "442. Weave Poles",
     description:

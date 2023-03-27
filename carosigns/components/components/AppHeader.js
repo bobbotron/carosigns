@@ -122,7 +122,7 @@ export default function AppHeader(props) {
           {selectedLevel === undefined && (
             <>
               <Image
-                source={require("../assets/header-logo.png")}
+                source={require("../../assets/header-logo.png")}
                 style={{ marginLeft: 5, width: 35 * 5.64, height: 35 }}
               />
               <Appbar.Content title={<></>} />
@@ -137,7 +137,7 @@ export default function AppHeader(props) {
               title={
                 selectedLevel === undefined ? (
                   <Image
-                    source={require("../assets/header-logo.png")}
+                    source={require("../../assets/header-logo.png")}
                     style={{ width: 250, height: titleHeight - 10 }}
                   />
                 ) : (
