@@ -4,7 +4,7 @@ const Excellent = {
   signs: [
   {
     name: "300",
-    icon: require("../assets/slides/300.jpg"),
+    icon: require("../../assets/slides/300.jpg"),
     title: "300. HALT - Stand - Down",
     description:
       "• While heeling, the team comes to a <b>halt</b> and the dog <b>sits in the heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the <b>dog to down</b>.<br/>• The handler cues the dog to <b>heel forward from the down position</b>.",
@@ -24,7 +24,7 @@ const Excellent = {
   },
   {
     name: "301",
-    icon: require("../assets/slides/301.jpg"),
+    icon: require("../../assets/slides/301.jpg"),
     title: "301. HALT - Stand - Sit",
     description:
       "• While heeling, the team comes to a <b>halt</b> and the dog <b>sits in the heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the <b>dog to sit</b>.<br/>• The handler cues the dog to <b>heel forward from the down position</b>.",
@@ -44,7 +44,7 @@ const Excellent = {
   },
   {
     name: "302",
-    icon: require("../assets/slides/302.jpg"),
+    icon: require("../../assets/slides/302.jpg"),
     title: "302. Moving Stand, Walk Around",
     description:
       "• While heeling, the handler cues the <b>dog to stand and without pausing walks around the dog from head to tail</b> returning to heel position.<br/>• The handler remains within arm's length of the dog throughout the exercise.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the stand position</b>.<br/><br/>",
@@ -71,7 +71,7 @@ const Excellent = {
   },
   {
     name: "303",
-    icon: require("../assets/slides/303.jpg"),
+    icon: require("../../assets/slides/303.jpg"),
     title: "303. Moving Stand Call to Heel",
         description:
       "• While heeling, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler calls the dog to heel and the team continues to the next station.<br/>• <b>The dog must be in heel position before the team arrives at the next station.</b><br/><br/>",
@@ -97,7 +97,7 @@ const Excellent = {
   },
   {
     name: "304",
-    icon: require("../assets/slides/304.jpg"),
+    icon: require("../../assets/slides/304.jpg"),
     title: "304. Moving Down Call to Heel",
     description:
       "• While heeling, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler calls the dog to heel and the team continues to the next station.<br/>• <b>The dog must be in heel position before the team arrives at the next station.</b><br/><br/>",
@@ -123,7 +123,7 @@ const Excellent = {
   },
   {
     name: "305",
-    icon: require("../assets/slides/305.jpg"),
+    icon: require("../../assets/slides/305.jpg"),
     title: "305. Back Up 3 Steps",
     description:
       "• While heeling, the handler will cue the dog to heel backwards.<br/>• The handler will <b>walk backwards continuously a minimum of 3 complete steps with the dog moving simultaneously and remaining in heel position parallel to the handler</b>.<br/><br/>",
@@ -144,7 +144,7 @@ const Excellent = {
   },
   {
     name: "306",
-    icon: require("../assets/slides/306.jpg"),
+    icon: require("../../assets/slides/306.jpg"),
     title: "306. HALT - Stand - Leave",
     practiceNextRestriction: ["307", "308", "309", "310"],
     description:
@@ -168,7 +168,7 @@ const Excellent = {
   },
   {
     name: "307",
-    icon: require("../assets/slides/307.jpg"),
+    icon: require("../../assets/slides/307.jpg"),
     title: "307. Sit - Return to Heel",
     practiceOnlyAfter: ["306"],
     description:
@@ -186,7 +186,7 @@ const Excellent = {
   },
   {
     name: "308",
-    icon: require("../assets/slides/308.jpg"),
+    icon: require("../../assets/slides/308.jpg"),
     title: "308. Down - Return to Heel",
     practiceOnlyAfter: ["306"],
     description:
@@ -204,7 +204,7 @@ const Excellent = {
   },
   {
     name: "309",
-    icon: require("../assets/slides/309.jpg"),
+    icon: require("../../assets/slides/309.jpg"),
     title: "309. Sit - Call to Heel",
     practiceOnlyAfter: ["306"],
     description:
@@ -222,7 +222,7 @@ const Excellent = {
   },
   {
     name: "310",
-    icon: require("../assets/slides/310.jpg"),
+    icon: require("../../assets/slides/310.jpg"),
     title: "310. Down - Call to Heel",
     practiceOnlyAfter: ["306"],
     description:
@@ -240,7 +240,7 @@ const Excellent = {
   },
   {
     name: "311",
-    icon: require("../assets/slides/311.jpg"),
+    icon: require("../../assets/slides/311.jpg"),
     title: "311. Jump",
     excludeFromPractice: true,
     description:
@@ -261,7 +261,7 @@ const Excellent = {
   },
   {
     name: "312",
-    icon: require("../assets/slides/312.jpg"),
+    icon: require("../../assets/slides/312.jpg"),
     title: "312. Broad Jump",
     excludeFromPractice: true,
     description:
@@ -282,7 +282,7 @@ const Excellent = {
   },
   {
     name: "313",
-    icon: require("../assets/slides/313.jpg"),
+    icon: require("../../assets/slides/313.jpg"),
     title: "313. Tunnel",
     excludeFromPractice: true,
     description:
@@ -301,7 +301,7 @@ const Excellent = {
   },
   {
     name: "314",
-    icon: require("../assets/slides/314.jpg"),
+    icon: require("../../assets/slides/314.jpg"),
     title: "314. Weave Poles",
     excludeFromPractice: true,
     description:

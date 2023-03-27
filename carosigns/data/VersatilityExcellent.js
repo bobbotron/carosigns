@@ -3,7 +3,7 @@ type: "normal",
 signs: [
   {
     name: "500",
-    icon: require("../assets/slides/500.jpg"),
+    icon: require("../../assets/slides/500.jpg"),
     category: "Versatility Excellent",
     title: "500. Moving Sit - Cross Behind",
     description:
@@ -26,7 +26,7 @@ signs: [
   },
   {
     name: "501",
-    icon: require("../assets/slides/501.jpg"),
+    icon: require("../../assets/slides/501.jpg"),
     category: "Versatility Excellent",
     title: "501. Moving Stand - Cross Behind",
     description:
@@ -49,7 +49,7 @@ signs: [
   },
   {
     name: "502",
-    icon: require("../assets/slides/502.jpg"),
+    icon: require("../../assets/slides/502.jpg"),
     category: "Versatility Excellent",
     title: "501. Moving Down - Cross Behind",
     description:
@@ -72,7 +72,7 @@ signs: [
   },
   {
     name: "503",
-    icon: require("../assets/slides/503.jpg"),
+    icon: require("../../assets/slides/503.jpg"),
     category: "Versatility Excellent",
     title: "503. HALT - Fast from Sit",
     description:
@@ -96,7 +96,7 @@ signs: [
   },
   {
     name: "504",
-    icon: require("../assets/slides/504.jpg"),
+    icon: require("../../assets/slides/504.jpg"),
     category: "Versatility Excellent",
     title: "504. HALT - Leave Dog - Call to Heel while Running",
     description:
@@ -121,7 +121,7 @@ signs: [
   },
   {
     name: "505",
-    icon: require("../assets/slides/505.jpg"),
+    icon: require("../../assets/slides/505.jpg"),
     category: "Versatility Excellent",
     title: "505. Dog Circles Right",
     description:
@@ -142,7 +142,7 @@ signs: [
   },
   {
     name: "506",
-    icon: require("../assets/slides/506.jpg"),
+    icon: require("../../assets/slides/506.jpg"),
     category: "Versatility Excellent",
     title: "506. Moving Down - Walk Around",
     description:
@@ -172,7 +172,7 @@ signs: [
   },
   {
     name: "507",
-    icon: require("../assets/slides/507.jpg"),
+    icon: require("../../assets/slides/507.jpg"),
     category: "Versatility Excellent",
     title: "507. Moving Sidestep Left",
     description:
@@ -194,7 +194,7 @@ signs: [
   },
   {
     name: "508",
-    icon: require("../assets/slides/508.jpg"),
+    icon: require("../../assets/slides/508.jpg"),
     category: "Versatility Excellent",
     title: "508. Off-set Figure 8",
     description:
@@ -218,7 +218,7 @@ signs: [
   },
   {
     name: "509",
-    icon: require("../assets/slides/509.jpg"),
+    icon: require("../../assets/slides/509.jpg"),
     category: "Versatility Excellent",
     title: "509. Right Turn - Dog Circles Left",
     description:
@@ -240,7 +240,7 @@ signs: [
   },
   {
     name: "510",
-    icon: require("../assets/slides/510.jpg"),
+    icon: require("../../assets/slides/510.jpg"),
     category: "Versatility Excellent",
     title: "510. Right About Turn",
     description:
@@ -261,7 +261,7 @@ signs: [
   },
   {
     name: "511",
-    icon: require("../assets/slides/511.jpg"),
+    icon: require("../../assets/slides/511.jpg"),
     category: "Versatility Excellent",
     title: "511. HALT - 180 Pivot Right - HALT",
     description:
@@ -283,7 +283,7 @@ signs: [
   },
   {
     name: "512",
-    icon: require("../assets/slides/512.jpg"),
+    icon: require("../../assets/slides/512.jpg"),
     category: "Versatility Excellent",
     title: "512. HALT - 180 Pivot Left - HALT",
     description:
@@ -305,7 +305,7 @@ signs: [
   },
   {
     name: "513",
-    icon: require("../assets/slides/513.jpg"),
+    icon: require("../../assets/slides/513.jpg"),
     category: "Versatility Excellent",
     title: "513. HALT - From Sit 180 Right",
     description:
@@ -327,7 +327,7 @@ signs: [
   },
   {
     name: "514",
-    icon: require("../assets/slides/514.jpg"),
+    icon: require("../../assets/slides/514.jpg"),
     category: "Versatility Excellent",
     title: "514. HALT - From Sit 180 Left",
     description:
@@ -349,7 +349,7 @@ signs: [
   },
   {
     name: "515",
-    icon: require("../assets/slides/515.jpg"),
+    icon: require("../../assets/slides/515.jpg"),
     category: "Versatility Excellent",
     title: "515. HALT - Stand Leave for Walk Around",
     description:
@@ -371,7 +371,7 @@ signs: [
   },
   {
     name: "516",
-    icon: require("../assets/slides/516.jpg"),
+    icon: require("../../assets/slides/516.jpg"),
     category: "Versatility Excellent",
     title: "516. Return to Heel",
     description:
@@ -387,7 +387,7 @@ signs: [
   },
   {
     name: "517",
-    icon: require("../assets/slides/517.jpg"),
+    icon: require("../../assets/slides/517.jpg"),
     category: "Versatility Excellent",
     title: "517. HALT - Leave Dog Turn Call Front",
     description:
@@ -412,7 +412,7 @@ signs: [
   },
   {
     name: "518",
-    icon: require("../assets/slides/518.jpg"),
+    icon: require("../../assets/slides/518.jpg"),
     category: "Versatility Excellent",
     title: "518. Call Front - 1, 2, 3 Steps Backwards",
     description:
@@ -436,7 +436,7 @@ signs: [
   },
   {
     name: "519",
-    icon: require("../assets/slides/519.jpg"),
+    icon: require("../../assets/slides/519.jpg"),
     category: "Versatility Excellent",
     title: "519. Finish Right",
     description:
@@ -456,7 +456,7 @@ signs: [
   },
   {
     name: "520",
-    icon: require("../assets/slides/520.jpg"),
+    icon: require("../../assets/slides/520.jpg"),
     category: "Versatility Excellent",
     title: "520. Finish Left",
     description:
@@ -476,7 +476,7 @@ signs: [
   },
   {
     name: "521",
-    icon: require("../assets/slides/521.jpg"),
+    icon: require("../../assets/slides/521.jpg"),
     category: "Versatility Excellent",
     title: "521. Forward Right",
     description:
@@ -493,7 +493,7 @@ signs: [
   },
   {
     name: "522",
-    icon: require("../assets/slides/522.jpg"),
+    icon: require("../../assets/slides/522.jpg"),
     category: "Versatility Excellent",
     title: "521. Forward Left",
     description:
@@ -510,7 +510,7 @@ signs: [
   },
   {
     name: "523",
-    icon: require("../assets/slides/523.jpg"),
+    icon: require("../../assets/slides/523.jpg"),
     category: "Versatility Excellent",
     title: "523. HALT - Stand - Down",
     description:
@@ -531,7 +531,7 @@ signs: [
   },
   {
     name: "524",
-    icon: require("../assets/slides/524.jpg"),
+    icon: require("../../assets/slides/524.jpg"),
     category: "Versatility Excellent",
     title: "524. HALT - Stand - Sit",
     description:
@@ -552,7 +552,7 @@ signs: [
   },
   {
     name: "525",
-    icon: require("../assets/slides/525.jpg"),
+    icon: require("../../assets/slides/525.jpg"),
     category: "Versatility Excellent",
     title: "525. Moving Stand - Walk Around",
     description:
@@ -579,7 +579,7 @@ signs: [
   },
   {
     name: "526",
-    icon: require("../assets/slides/526.jpg"),
+    icon: require("../../assets/slides/526.jpg"),
     category: "Versatility Excellent",
     title: "526. Moving Sit Walk Around",
     description:
@@ -605,7 +605,7 @@ signs: [
   },
   {
     name: "527",
-    icon: require("../assets/slides/527.jpg"),
+    icon: require("../../assets/slides/527.jpg"),
     category: "Versatility Excellent",
     title: "527. Moving Stand - Call to Heel",
     description:
@@ -631,7 +631,7 @@ signs: [
   },
   {
     name: "528",
-    icon: require("../assets/slides/528.jpg"),
+    icon: require("../../assets/slides/528.jpg"),
     category: "Versatility Excellent",
     title: "528. Moving Down - Call to Heel",
     description:
@@ -657,7 +657,7 @@ signs: [
   },
   {
     name: "529",
-    icon: require("../assets/slides/529.jpg"),
+    icon: require("../../assets/slides/529.jpg"),
     category: "Versatility Excellent",
     title: "529. Back Up 3 Steps",
     description:
@@ -679,7 +679,7 @@ signs: [
   },
   {
     name: "530",
-    icon: require("../assets/slides/530.jpg"),
+    icon: require("../../assets/slides/530.jpg"),
     category: "Versatility Excellent",
     title: "530. HALT - Stand - Leave",
     description:
@@ -702,7 +702,7 @@ signs: [
   },
   {
     name: "531",
-    icon: require("../assets/slides/531.jpg"),
+    icon: require("../../assets/slides/531.jpg"),
     category: "Versatility Excellent",
     title: "531. Sit Dog - Return to Heel",
     description:
@@ -720,7 +720,7 @@ signs: [
   },
   {
     name: "532",
-    icon: require("../assets/slides/532.jpg"),
+    icon: require("../../assets/slides/532.jpg"),
     category: "Versatility Excellent",
     title: "532. Down Dog - Return to Heel",
     description:
@@ -738,7 +738,7 @@ signs: [
   },
   {
     name: "533",
-    icon: require("../assets/slides/533.jpg"),
+    icon: require("../../assets/slides/533.jpg"),
     category: "Versatility Excellent",
     title: "533. Sit Dog - Call to Heel - Forward",
     description:
@@ -756,7 +756,7 @@ signs: [
   },
   {
     name: "534",
-    icon: require("../assets/slides/534.jpg"),
+    icon: require("../../assets/slides/534.jpg"),
     category: "Versatility Excellent",
     title: "534. Down Dog - Call to Heel - Forward",
     description:
