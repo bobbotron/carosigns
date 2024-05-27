@@ -348,7 +348,7 @@ const Working = {
         },
         expert: {
           procedure:
-            "The exercise begins when the handler steps into the handler box.<br/>• The handler cues the dog to sit in heel position,<br/>• The handler cues the dog to circle all 6 cones, in any order, starting with cone #1.<br/>• Dogs may circle a cone in either a clockwise or counter-clockwise direction,<br/>• No cone should be circled more than once.<br/>• After circling each required cone, the dog returns to within an arm's length of the handler.<br/>• The dog comes to sit in front position.<br/>• The handler cues the dog to finish.<br/><br/>The exercise ends when the dog has finished and is sitting in heel position.<br/><br/>",
+            "The exercise begins when the handler steps into the handler box.<br/>• The handler cues the dog to sit in heel position,<br/>• The handler cues the dog to circle all 6 cones, in numerical order, starting with cone #1.<br/>• Dogs may circle a cone in either a clockwise or counter-clockwise direction,<br/>• No cone should be circled more than once.<br/>• After circling each required cone, the dog returns to within an arm's length of the handler.<br/>• The dog comes to sit in front position.<br/>• The handler cues the dog to finish.<br/><br/>The exercise ends when the dog has finished and is sitting in heel position.<br/><br/>",
           procedureImages: [],
           layout: "",
           layoutImages: [require("../../assets/Diagrams/RTC_Elite.jpg")],
