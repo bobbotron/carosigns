@@ -10,11 +10,11 @@ import {
 } from "../redux/actions";
 import Theme from "../Theme";
 import FavAction from "./FavAction";
-import { running, setupState } from "./PracticeMode";
+import { running, setupState, viewSign } from "./PracticeMode";
 
 import * as Speech from "expo-speech";
 
-export default function AppHeader(props) {
+export default function AppHeader() {
   const { selectedLevel, selectedSign, favorites, practiceMode } = useSelector(
     (state) => state.signsReducer
   );
@@ -24,6 +24,8 @@ export default function AppHeader(props) {
       if (practiceMode.state === running) {
         dispatch(setPracticeMode({ active: true, state: setupState }));
         Speech.stop();
+      } else if (practiceMode.state === viewSign) {
+        dispatch(setPracticeMode({ active: true, state: running }));
       } else {
         dispatch(setPracticeMode({ active: false, state: setupState }));
       }
@@ -50,11 +52,6 @@ export default function AppHeader(props) {
     dispatch(setPracticeMode({ active: true, state: setupState }));
 
     setVisible(false);
-  };
-  const titleListener = () => {
-    if (selectedLevel === undefined) {
-      showFavSigns();
-    }
   };
   const appBarTitle =
     selectedLevel === undefined
@@ -83,7 +80,7 @@ export default function AppHeader(props) {
   };
   const [titleHeight, setTitleHeight] = useState(45);
   const titleLayout = (event) => {
-    var { x, y, width, height } = event.nativeEvent.layout;
+    var { height } = event.nativeEvent.layout;
     setTitleHeight(height);
   };
 
@@ -164,7 +161,13 @@ export default function AppHeader(props) {
             titleStyle={{
               textAlign: "center",
             }}
-            title={<Text>Practice Time</Text>}
+            title={
+              <Text>
+                {practiceMode.state === viewSign
+                  ? "Resume Practice"
+                  : "Practice Time"}
+              </Text>
+            }
           />
         </>
       )}

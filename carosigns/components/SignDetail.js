@@ -21,8 +21,8 @@ export default function SignDetail(props) {
   const isWorkingSign = props.sign.signType === "working";
   const [index, setIndex] = useState(0);
   const updateIndex = (i) => {
-    if (i >= 0 && i < 3) {
-      setIndex(i % 3);
+    if (i >= 0 && i < 2) {
+      setIndex(i % 2);
     }
   };
   const workingStates = [
@@ -315,11 +315,6 @@ export default function SignDetail(props) {
       )}
     </View>
   );
-  const VideoRoute = () => (
-    <View style={styles.routes}>
-      <Text>Coming soon.</Text>
-    </View>
-  );
   const state = {
     index: index,
     routes: [
@@ -333,13 +328,11 @@ export default function SignDetail(props) {
         title: isNormalSign ? "Deductions" : "Layout",
         icon: isNormalSign ? "alert-minus-outline" : "map-marker-path",
       },
-      { key: "video", title: "Video", icon: "play-circle-outline" },
     ],
   };
   const s = SceneMap({
     first: FirstRoute,
     deductions: FaultRoute,
-    video: VideoRoute,
   });
   const renderTabBar = (props) => (
     <TabBar

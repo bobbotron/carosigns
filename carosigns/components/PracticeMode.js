@@ -8,28 +8,31 @@ import {
   ScrollView,
 } from "react-native";
 import theme from "../Theme";
-import { Button, HelperText, Switch, Text } from "react-native-paper";
+import {
+  Button,
+  HelperText,
+  IconButton,
+  Switch,
+  Text,
+} from "react-native-paper";
 
 import { useSelector, useDispatch } from "react-redux";
-import NumericInput from "react-native-numeric-input";
 import SignsDB from "../data/SignDb";
 import * as Speech from "expo-speech";
-import {
-  setPracticeMode,
-  setSelectedLevel,
-  setSelectedSign,
-} from "../redux/actions";
+import { setPracticeMode } from "../redux/actions";
 import _ from "lodash";
 import PracticeProgressBar from "./PracticeProgressBar";
+import SignDetail from "./SignDetail";
 
 export const setupState = "setup";
+export const viewSign = "viewSign";
 export const running = "running";
 
 const getRandomElement = (list) => {
   return list[Math.floor(Math.random() * list.length)];
 };
 
-export default function PracticeMode(props) {
+export default function PracticeMode() {
   const window = useWindowDimensions();
   const dispatch = useDispatch();
   const { practiceMode } = useSelector((state) => state.signsReducer);
@@ -41,6 +44,7 @@ export default function PracticeMode(props) {
   const [runningState, setRunningState] = useState({});
   const [timerId, setTimerId] = useState(undefined);
   const [autoAdvance, setAutoAdvance] = useState(true);
+  const [viewSignDetail, setViewSignDetail] = useState(false);
 
   // fix resolveAssetSource call for web :^(
   if (Platform.OS === "web") {
@@ -52,11 +56,14 @@ export default function PracticeMode(props) {
   const goToSign = () => {
     const sign = runningState?.selectedSign;
     if (sign) {
-      const cat = SignsDB.Categories.find((x) => x.name === sign.category);
+      // const cat = SignsDB.Categories.find((x) => x.name === sign.category);
       Speech.stop();
-      dispatch(setSelectedLevel(cat));
-      dispatch(setPracticeMode({ active: false, state: setupState }));
-      dispatch(setSelectedSign(sign));
+      setAutoAdvance(false);
+      setViewSignDetail(true);
+      dispatch(setPracticeMode({ active: true, state: viewSign }));
+      // dispatch(setSelectedLevel(cat));
+      // dispatch(setPracticeMode({ active: false, state: pausedState }));
+      // dispatch(setSelectedSign(sign));
     }
   };
 
@@ -243,17 +250,36 @@ export default function PracticeMode(props) {
       {autoAdvance && (
         <View style={styles.configSwitchView}>
           <Text style={styles.configSwitchLabel}>Seconds per sign </Text>
-
-          <NumericInput
-            valueType={"integer"}
-            step={1}
-            value={seconds}
-            onChange={setSeconds}
-            minValue={1}
-            maxValue={120}
-            rounded={true}
-            style={styles.seconds}
-          />
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              alignContent: "flex-end",
+            }}
+          >
+            <IconButton
+              icon="less-than"
+              mode="contained-tonal"
+              size={20}
+              onPress={() => {
+                if (seconds > 2) {
+                  setSeconds(seconds - 2);
+                }
+              }}
+            />
+            <Text style={{ fontSize: 20 }}>{seconds}</Text>
+            <IconButton
+              icon="greater-than"
+              size={20}
+              mode="contained"
+              style={{ marginRight: -2 }}
+              onPress={() => {
+                if (seconds < 60) {
+                  setSeconds(seconds + 2);
+                }
+              }}
+            />
+          </View>
         </View>
       )}
 
@@ -360,6 +386,9 @@ export default function PracticeMode(props) {
       <ScrollView>
         {practiceMode.state === setupState && <Setup />}
         {practiceMode.state === running && <RunningComponent />}
+        {practiceMode.state === viewSign && (
+          <SignDetail sign={runningState.selectedSign} />
+        )}
       </ScrollView>
     </>
   );
