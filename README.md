@@ -19,3 +19,7 @@ npx eas build -p android
 
 # Then go to https://play.google.com/console/u/0/developers
 ```
+
+## Node version
+
+This project expects to be run with node `18.20.5`.
