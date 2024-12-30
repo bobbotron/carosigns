@@ -1,4 +1,4 @@
-import { useEffect, useState, memo } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   View,
   StyleSheet,
@@ -381,13 +381,14 @@ export default function PracticeMode() {
       </Button>
     </>
   );
+  const scrollRef = useRef();
   return (
     <>
-      <ScrollView>
+      <ScrollView ref={scrollRef} nestedScrollEnabled={true}>
         {practiceMode.state === setupState && <Setup />}
         {practiceMode.state === running && <RunningComponent />}
         {practiceMode.state === viewSign && (
-          <SignDetail sign={runningState.selectedSign} />
+          <SignDetail scrollRef={scrollRef} sign={runningState.selectedSign} />
         )}
       </ScrollView>
     </>

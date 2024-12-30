@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Image,
   StyleSheet,
@@ -14,6 +14,7 @@ import MasterGeneralHandbookTextLink from "./MasterGeneralHandbookTextLink";
 import theme from "../Theme";
 import DropDownPicker from "react-native-dropdown-picker";
 import _ from "lodash";
+import { ScrollView } from "react-native";
 
 export default function SignDetail(props) {
   const window = useWindowDimensions();
@@ -150,9 +151,9 @@ export default function SignDetail(props) {
 
   const passRequirementsToHTML = (requirements) =>
     requirements.map((x) => " ✓ " + x + "<br/>").join("");
-
+  const fRef = useRef();
   const FirstRoute = () => (
-    <View style={styles.routes}>
+    <ScrollView overScrollMode="never" style={styles.routes} ref={fRef}>
       <Text style={styles.descriptionName}>
         {props.sign.title}
         {isWorkingSign
@@ -229,8 +230,13 @@ export default function SignDetail(props) {
           </Card>
         </>
       )}
-    </View>
+    </ScrollView>
   );
+  useEffect(() => {
+    if (props.scrollRef) {
+      fRef.current.onScroll = props.scrollRef;
+    }
+  }, []);
   const generateDeductions = (d) => {
     if (d === undefined) {
       return "";
@@ -357,6 +363,7 @@ export default function SignDetail(props) {
       style={{ marginTop: 25, backgroundColor: "#ffffff" }}
     />
   );
+
   return (
     <>
       <View style={styles.selectedSign}>
