@@ -10,6 +10,7 @@ import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
 import { setSelectedSign } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 
 const styles = StyleSheet.create({
   gridImage: { width: 140, height: 100 },
@@ -67,7 +68,7 @@ export default function Level(props) {
         ))}
       {selectedSign !== undefined && (
         <ScrollView nestedScrollEnabled={true}>
-            <SignDetail signType={props.level.type} sign={selectedSign} />
+            <SignDetail key="sign" signType={props.level.type} sign={selectedSign} />
         </ScrollView>
       )}
     </>

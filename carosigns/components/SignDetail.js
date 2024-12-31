@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import React, { useState, useRef, useEffect } from "react";
 import {
   Image,
   StyleSheet,
@@ -44,6 +45,7 @@ export default function SignDetail(props) {
   // fix resolveAssetSource call for web :^(
   if (Platform.OS === "web") {
     Image.resolveAssetSource = (source) => {
+      // eslint-disable-next-line no-unused-labels
       uri: source;
     };
   }
@@ -342,11 +344,12 @@ export default function SignDetail(props) {
   });
   const renderTabBar = (props) => (
     <TabBar
+      key="tabbar"
       {...props}
       labelStyle={{ fontSize: 13 }}
       activeColor={"black"}
       inactiveColor={"grey"}
-      renderIcon={({ route, focused, color }) => (
+      renderIcon={({ route, focused }) => (
         <>
           {route.icon !== undefined && (
             <>
@@ -433,7 +436,7 @@ export default function SignDetail(props) {
             navigationState={state}
             renderScene={s}
             onIndexChange={updateIndex}
-            key={window.width}
+            key="tabs"
             renderTabBar={renderTabBar}
             style={{
               height: 900,
@@ -446,9 +449,3 @@ export default function SignDetail(props) {
     </>
   );
 }
-const htmlStyle = StyleSheet.create({
-  a: {
-    fontWeight: "300",
-    color: "#33ff33",
-  },
-});

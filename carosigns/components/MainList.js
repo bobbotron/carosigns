@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { View, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 import StreamHeading from "./StreamHeading";

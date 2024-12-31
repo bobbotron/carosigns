@@ -1,4 +1,5 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
+
 import {
   View,
   StyleSheet,
@@ -44,11 +45,12 @@ export default function PracticeMode() {
   const [runningState, setRunningState] = useState({});
   const [timerId, setTimerId] = useState(undefined);
   const [autoAdvance, setAutoAdvance] = useState(true);
-  const [viewSignDetail, setViewSignDetail] = useState(false);
+  //const [viewSignDetail, setViewSignDetail] = useState(false);
 
   // fix resolveAssetSource call for web :^(
   if (Platform.OS === "web") {
     Image.resolveAssetSource = (source) => {
+      // eslint-disable-next-line no-unused-labels
       uri: source;
     };
   }
@@ -59,7 +61,7 @@ export default function PracticeMode() {
       // const cat = SignsDB.Categories.find((x) => x.name === sign.category);
       Speech.stop();
       setAutoAdvance(false);
-      setViewSignDetail(true);
+      //setViewSignDetail(true);
       dispatch(setPracticeMode({ active: true, state: viewSign }));
       // dispatch(setSelectedLevel(cat));
       // dispatch(setPracticeMode({ active: false, state: pausedState }));
@@ -222,7 +224,7 @@ export default function PracticeMode() {
     <>
       <Text style={styles.practiceHeading}>Random Sign Generator</Text>
       <Text style={styles.practiceTextIntro}>
-        Welcome to rally practice time. Set your preferences and let's get
+        Welcome to rally practice time. Set your preferences and let@apos;s get
         started!
       </Text>
       <Text variant="titleMedium">Options</Text>
@@ -388,7 +390,7 @@ export default function PracticeMode() {
         {practiceMode.state === setupState && <Setup />}
         {practiceMode.state === running && <RunningComponent />}
         {practiceMode.state === viewSign && (
-          <SignDetail scrollRef={scrollRef} sign={runningState.selectedSign} />
+          <SignDetail key="practicedetail" scrollRef={scrollRef} sign={runningState.selectedSign} />
         )}
       </ScrollView>
     </>
