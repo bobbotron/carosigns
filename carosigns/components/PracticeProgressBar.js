@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ProgressBar, Text } from "react-native-paper";
+import { ProgressBar } from "react-native-paper";
 
 export default function PracticeProgressBar({ seconds, onComplete }) {
   const [counter, setCounter] = useState(0);
@@ -22,7 +22,7 @@ export default function PracticeProgressBar({ seconds, onComplete }) {
   return (
     <>
       <ProgressBar
-        progress={counter / seconds / 10}
+        animatedValue={counter / seconds / 10}
         style={{ marginBottom: 5 }}
       />
     </>

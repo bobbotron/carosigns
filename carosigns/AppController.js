@@ -1,13 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { Card, Searchbar } from "react-native-paper";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   StyleSheet,
   View,
   Text,
   useWindowDimensions,
   ScrollView,
-  Button,
 } from "react-native";
 import MainList from "./components/MainList";
 import Level from "./components/Level";
@@ -18,7 +17,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setSearchText, setSelectedLevel } from "./redux/actions";
 import AppHeader from "./components/AppHeader";
 import SearchResults from "./components/SearchResults";
-import * as Speech from "expo-speech";
+
 export default function AppController() {
   const window = useWindowDimensions();
 
