@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 export default function Level(props) {
   const { selectedSign } = useSelector((state) => state.signsReducer);
   const dispatch = useDispatch();
-
+  
   return (
     <>
       {selectedSign === undefined &&

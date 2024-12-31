@@ -155,7 +155,7 @@ export default function SignDetail(props) {
     requirements.map((x) => " ✓ " + x + "<br/>").join("");
   const fRef = useRef();
   const FirstRoute = () => (
-    <ScrollView overScrollMode="never" style={styles.routes} ref={fRef}>
+    <ScrollView bounces={false} style={styles.routes} ref={fRef}>
       <Text style={styles.descriptionName}>
         {props.sign.title}
         {isWorkingSign
@@ -236,7 +236,7 @@ export default function SignDetail(props) {
   );
   useEffect(() => {
     if (props.scrollRef) {
-      fRef.current.onScroll = props.scrollRef;
+      fRef.current.onScroll = props.scrollRef.onScroll;
     }
   }, []);
   const generateDeductions = (d) => {

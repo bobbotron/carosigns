@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ProgressBar } from "react-native-paper";
 
 export default function PracticeProgressBar({ seconds, onComplete }) {

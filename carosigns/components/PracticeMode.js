@@ -390,7 +390,11 @@ export default function PracticeMode() {
         {practiceMode.state === setupState && <Setup />}
         {practiceMode.state === running && <RunningComponent />}
         {practiceMode.state === viewSign && (
-          <SignDetail key="practicedetail" scrollRef={scrollRef} sign={runningState.selectedSign} />
+          <SignDetail
+            key="practicedetail"
+            scrollRef={scrollRef.current}
+            sign={runningState.selectedSign}
+          />
         )}
       </ScrollView>
     </>
