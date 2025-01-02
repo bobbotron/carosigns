@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Image,
   StyleSheet,
@@ -7,26 +7,19 @@ import {
   View,
   Platform,
 } from "react-native";
-import { Card, Text } from "react-native-paper";
+import { Card, SegmentedButtons, Text } from "react-native-paper";
 import RenderHtml from "react-native-render-html";
-import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import MasterGeneralHandbookTextLink from "./MasterGeneralHandbookTextLink";
 import theme from "../Theme";
 import DropDownPicker from "react-native-dropdown-picker";
 import _ from "lodash";
-import { ScrollView } from "react-native";
 
 export default function SignDetail(props) {
   const window = useWindowDimensions();
+  const [signDetailState, setSignDetailState] = useState("description");
   const isNormalSign = props.sign.signType === "normal";
   const isWorkingSign = props.sign.signType === "working";
-  const [index, setIndex] = useState(0);
-  const updateIndex = (i) => {
-    if (i >= 0 && i < 2) {
-      setIndex(i % 2);
-    }
-  };
   const workingStates = [
     { label: "Rookie", value: "rookie" },
     { label: "Elite", value: "elite" },
@@ -104,10 +97,6 @@ export default function SignDetail(props) {
       alignItems: "center",
       marginBottom: 20,
     },
-    container: {
-      marginTop: 30,
-      height: 200,
-    },
     rewardContainer: {
       flex: 1,
       alignContent: "center",
@@ -127,10 +116,11 @@ export default function SignDetail(props) {
     html: {},
     a: {},
     routes: {
-      backgroundColor: "#ffffff",
+      backgroundColor: "#ffffaa",
       paddingTop: 20,
       flex: 1,
       paddingLeft: 10,
+      paddingRight: 10,
     },
     descriptionName: {
       fontSize: 20,
@@ -153,9 +143,10 @@ export default function SignDetail(props) {
 
   const passRequirementsToHTML = (requirements) =>
     requirements.map((x) => " ✓ " + x + "<br/>").join("");
-  const fRef = useRef();
-  const FirstRoute = () => (
-    <ScrollView bounces={false} style={styles.routes} ref={fRef}>
+  const contentWidth = window.width;
+
+  const DescriptionComponent = () => (
+    <View style={styles.routes}>
       <Text style={styles.descriptionName}>
         {props.sign.title}
         {isWorkingSign
@@ -170,7 +161,8 @@ export default function SignDetail(props) {
       {description !== undefined && typeof description !== "function" && (
         <RenderHtml
           key="desc"
-          contentWidth={window.width}
+          style={styles.html}
+          contentWidth={contentWidth}
           source={{ html: description }}
         />
       )}
@@ -218,7 +210,7 @@ export default function SignDetail(props) {
 
                 <RenderHtml
                   key="tips"
-                  contentWidth={window.width}
+                  contentWidth={contentWidth}
                   source={{
                     html: isNormalSign
                       ? props.sign.tips
@@ -232,13 +224,9 @@ export default function SignDetail(props) {
           </Card>
         </>
       )}
-    </ScrollView>
+    </View>
   );
-  useEffect(() => {
-    if (props.scrollRef) {
-      fRef.current.onScroll = props.scrollRef.onScroll;
-    }
-  }, []);
+
   const generateDeductions = (d) => {
     if (d === undefined) {
       return "";
@@ -248,21 +236,22 @@ export default function SignDetail(props) {
     if (d.minor !== undefined && d.minor.length > 0) {
       r +=
         "<b>Minor (1 to 2 points)</b><ul>" +
-        d.minor.map(toBullets).join("") +
+        d.minor.map(toBullets).join(" ") +
         "</ul>";
     }
     if (d.substantial !== undefined && d.substantial.length > 0) {
       r +=
         "<b>Substantial (3 to 5 points)</b><ul>" +
-        d.substantial.map(toBullets).join("") +
+        d.substantial.map(toBullets).join(" ") +
         "</ul>";
     }
     if (d.nq !== undefined && d.nq.length > 0) {
-      r += "<b>Non-Qualifying</b><ul>" + d.nq.map(toBullets).join("") + "</ul>";
+      r +=
+        "<b>Non-Qualifying</b><ul>" + d.nq.map(toBullets).join(" ") + "</ul>";
     }
     return r;
   };
-  const FaultRoute = () => (
+  const FaultComponent = () => (
     <View style={styles.routes}>
       {isNormalSign && (
         <>
@@ -270,14 +259,15 @@ export default function SignDetail(props) {
             Common deductions for this sign include:
           </Text>
           {props.sign.deductions && (
-            <>
-              <RenderHtml
-                contentWidth={window.width}
-                source={{
-                  html: generateDeductions(props.sign.deductions),
-                }}
-              />
-            </>
+            <RenderHtml
+              key="faultHtml"
+              baseStyle={{}}
+              style={{ width: 100 }}
+              contentWidth={contentWidth}
+              source={{
+                html: generateDeductions(props.sign.deductions),
+              }}
+            />
           )}
           <Text style={styles.deductionNotice}>
             See the <MasterGeneralHandbookTextLink /> for a complete list of
@@ -323,129 +313,81 @@ export default function SignDetail(props) {
       )}
     </View>
   );
-  const state = {
-    index: index,
-    routes: [
-      {
-        key: "first",
-        title: isNormalSign ? "Description" : "Procedure",
-        icon: "text-box-check-outline",
-      },
-      {
-        key: "deductions",
-        title: isNormalSign ? "Deductions" : "Layout",
-        icon: isNormalSign ? "alert-minus-outline" : "map-marker-path",
-      },
-    ],
-  };
-  const s = SceneMap({
-    first: FirstRoute,
-    deductions: FaultRoute,
-  });
-  const renderTabBar = (props) => (
-    <TabBar
-      key="tabbar"
-      {...props}
-      labelStyle={{ fontSize: 13 }}
-      activeColor={"black"}
-      inactiveColor={"grey"}
-      renderIcon={({ route, focused }) => (
-        <>
-          {route.icon !== undefined && (
-            <>
-              <MaterialIcons
-                name={route.icon}
-                size={24}
-                color={focused ? "black" : "grey"}
-              />
-            </>
-          )}
-        </>
-      )}
-      indicatorStyle={{ backgroundColor: "#aaaaaa" }}
-      style={{ marginTop: 25, backgroundColor: "#ffffff" }}
-    />
-  );
 
   return (
-    <>
-      <View style={styles.selectedSign}>
-        <Image source={props.sign.icon} style={styles.logo} />
-        {props.sign.reward && (
-          <View style={styles.rewardContainer}>
-            <MaterialIcons
-              name="bone"
-              size={32}
-              color="black"
-              style={styles.rewardText}
-            />
-            <Text style={styles.rewardText}>
-              Reinforcement station in Novice &amp; Advanced A/B
-            </Text>
-          </View>
-        )}
-        {props.sign.changeSide && (
-          <View style={styles.rewardContainer}>
-            <MaterialIcons
-              name="swap-horizontal-bold"
-              size={32}
-              color="black"
-              style={styles.rewardText}
-            />
-            <Text style={styles.rewardText}>
-              Station results in a change of heeling side
-            </Text>
-          </View>
-        )}
-        {props.sign.limitedCues && (
-          <View style={styles.workingContainer}>
-            <MaterialIcons
-              name="account-voice-off"
-              size={32}
-              color="black"
-              style={styles.rewardText}
-            />
-            <Text style={styles.rewardText}>Limited cues allowed</Text>
-          </View>
-        )}
+    <View style={styles.selectedSign}>
+      <Image source={props.sign.icon} style={styles.logo} />
+      {props.sign.reward && (
+        <View style={styles.rewardContainer}>
+          <MaterialIcons
+            name="bone"
+            size={32}
+            color="black"
+            style={styles.rewardText}
+          />
+          <Text style={styles.rewardText}>
+            Reinforcement station in Novice &amp; Advanced A/B
+          </Text>
+        </View>
+      )}
+      {props.sign.changeSide && (
+        <View style={styles.rewardContainer}>
+          <MaterialIcons
+            name="swap-horizontal-bold"
+            size={32}
+            color="black"
+            style={styles.rewardText}
+          />
+          <Text style={styles.rewardText}>
+            Station results in a change of heeling side
+          </Text>
+        </View>
+      )}
+      {props.sign.limitedCues && (
+        <View style={styles.workingContainer}>
+          <MaterialIcons
+            name="account-voice-off"
+            size={32}
+            color="black"
+            style={styles.rewardText}
+          />
+          <Text style={styles.rewardText}>Limited cues allowed</Text>
+        </View>
+      )}
 
-        {isWorkingSign && (
-          <View
-            style={{
-              zIndex: 200,
-            }}
-          >
-            <DropDownPicker
-              multiple={false}
-              items={workingStates}
-              open={open}
-              value={workingLevelState}
-              listMode={"SCROLLVIEW"}
-              setOpen={setOpen}
-              setValue={setWorkingLevelState}
-            />
-          </View>
-        )}
+      {isWorkingSign && (
         <View
           style={{
-            //height: 800,
-            flex: 1,
+            zIndex: 200,
           }}
         >
-          <TabView
-            navigationState={state}
-            renderScene={s}
-            onIndexChange={updateIndex}
-            key="tabs"
-            renderTabBar={renderTabBar}
-            style={{
-              height: 900,
-              //flex: 1,
-              width: window.width - 20,
-            }}
+          <DropDownPicker
+            multiple={false}
+            items={workingStates}
+            open={open}
+            value={workingLevelState}
+            listMode={"SCROLLVIEW"}
+            setOpen={setOpen}
+            setValue={setWorkingLevelState}
           />
         </View>
-      </View>
-    </>
+      )}
+      <SegmentedButtons
+        value={signDetailState}
+        onValueChange={setSignDetailState}
+        buttons={[
+          {
+            value: "description",
+            label: "Description",
+          },
+          {
+            value: "deductions",
+            label: "Deductions",
+          },
+        ]}
+      />
+      {signDetailState === "description" && <DescriptionComponent />}
+      {signDetailState === "deductions" && <FaultComponent />}
+    </View>
   );
 }

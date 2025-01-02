@@ -6,10 +6,12 @@ import Versatility from "./Versatility";
 import VersatilityExcellent from "./VersatilityExcellent";
 import WorkingStream from "./WorkingStream";
 import Working from "./Working";
+import Intermediate from "./Intermediate";
 
 const Levels = [
   MainStream,
   Novice,
+  Intermediate,
   Advanced,
   Excellent,
   Versatility,
@@ -21,7 +23,7 @@ const Levels = [
 Levels.forEach((x) => {
   if (x.signs !== undefined) {
     x.signs.forEach((y) => {
-      y.category = x.name;
+      y.category = y.category ? y.category.concat([x.name]) : [x.name];
       y.signType = x.type;
     });
   }
@@ -42,10 +44,10 @@ const createLevel = (l) => {
     name: l.name,
     type: l.type,
     icon: l.icon,
-    signs: Signs.filter((s) => s.category === l.name),
+    signs: Signs.filter((s) => s.category.indexOf(l.name) !== -1),
   };
 };
-
+console.log("Levels", Levels);
 const SignsDB = { Signs, Categories: Levels.map(createLevel) };
 
 export default SignsDB;

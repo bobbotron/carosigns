@@ -1,5 +1,5 @@
 const MainStream = {
-  name: "CARO Main Stream",
+  name: "CARO Rally",
   type: "stream",
   icon: "arrow-u-down-left-bold",
   signs: [],

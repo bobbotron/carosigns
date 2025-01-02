@@ -4,7 +4,7 @@ signs: [
   {
     name: "500",
     icon: require("../../assets/slides/500.jpg"),
-    category: "Versatility Excellent",
+    
     title: "500. Moving Sit - Cross Behind",
     description:
       "• While heeling, the handler cues the <b>dog to sit and without pausing continues forward.<br/>• The dog must hold the sit until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
@@ -27,7 +27,7 @@ signs: [
   {
     name: "501",
     icon: require("../../assets/slides/501.jpg"),
-    category: "Versatility Excellent",
+    
     title: "501. Moving Stand - Cross Behind",
     description:
       "• While heeling, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
@@ -50,7 +50,7 @@ signs: [
   {
     name: "502",
     icon: require("../../assets/slides/502.jpg"),
-    category: "Versatility Excellent",
+    
     title: "501. Moving Down - Cross Behind",
     description:
       "• While heeling, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
@@ -73,7 +73,7 @@ signs: [
   {
     name: "503",
     icon: require("../../assets/slides/503.jpg"),
-    category: "Versatility Excellent",
+    
     title: "503. HALT - Fast from Sit",
     description:
       "• With the dog <b>heeling on the right</b>, the team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the dog to heel and moves <b> immediately into a fast pace from the halt</b>.<br/>• This station is followed by either Slow, Normal or the Finish station.<br/><br/>",
@@ -97,7 +97,7 @@ signs: [
   {
     name: "504",
     icon: require("../../assets/slides/504.jpg"),
-    category: "Versatility Excellent",
+    
     title: "504. HALT - Leave Dog - Call to Heel while Running",
     description:
       "• With the <b>dog heeling on the right</b>, the team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the <b>dog to stay</b> and moves forward at a <b>fast pace</b>.<br/> • <b>After the handler has completely passed the 5-foot line</b>, they call the dog to heel as they return to normal pace.<br/>• The handler may pause or stop once they have returned to normal pace and after passing the 5-foot line.<b/><br/>• The dog must hold the sit stay until called<b/>.<br/><br/>",
@@ -122,7 +122,7 @@ signs: [
   {
     name: "505",
     icon: require("../../assets/slides/505.jpg"),
-    category: "Versatility Excellent",
+    
     title: "505. Dog Circles Right",
     description:
       "• With the <b>dog heeling on the right</b>, the <b>dog spins in a circle in place to the right</b> beside the handler.<br/>• The handler may pause briefly as needed.<br/><br/>",
@@ -143,7 +143,7 @@ signs: [
   {
     name: "506",
     icon: require("../../assets/slides/506.jpg"),
-    category: "Versatility Excellent",
+    
     title: "506. Moving Down - Walk Around",
     description:
       "• With the <b>dog heeling on the right</b>, the handler cues the <b>dog to down and without pausing walks around the dog from head to tail</b> returning to heel position.<br>• The handler remains within arm’s length of the dog throughout the exercise.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the down position</b><br/><br/>",
@@ -173,7 +173,7 @@ signs: [
   {
     name: "507",
     icon: require("../../assets/slides/507.jpg"),
-    category: "Versatility Excellent",
+    
     title: "507. Moving Sidestep Left",
     description:
       "• With the <b>dog heeling on the right</b>, the handler takes <b>one step sideways to their left</b> while cueing the dog to heel.<br/>• The dog <b>must move sideways to the left simultaneously with the handler</b>, remaining in heel position parallel to the handler.<br/>• The team heels forward along the newly established line.<br/><br/>",
@@ -195,7 +195,7 @@ signs: [
   {
     name: "508",
     icon: require("../../assets/slides/508.jpg"),
-    category: "Versatility Excellent",
+    
     title: "508. Off-set Figure 8",
     description:
       "• Two cones (pylons) and two food bowls are arranged in a diamond pattern: the cones are placed 10 feet apart; the food bowls are securely covered and are placed 2.5 feet from the centre line.<br/>• With the <b>dog heeling on the right</b>, the team enters the pattern and <b>completes a continuous Figure 8 around the pylons, crossing through the middle at least three times</b>.<br/>• The team <b>exits the exercise as indicated by the placement of the next station.</b><br/>• Allowances can be made in the distance between the food bowls for large/giant breeds.<br/><br/>",
@@ -219,7 +219,7 @@ signs: [
   {
     name: "509",
     icon: require("../../assets/slides/509.jpg"),
-    category: "Versatility Excellent",
+    
     title: "509. Right Turn - Dog Circles Left",
     description:
       "• With the <b>dog heeling on the right</b>, the <b>handler turns right</b>.<br/>• Simultaneously the <b>dog circles around the handler to the left returning to heel position on the right</b>.<br/>• The handler may briefly pause to allow the dog to cross their path.<br/>• The team will be back in heel position as they face the new direction.<br/>• This sign results in a 90-degree change of direction to the right.<br/><br/>",
@@ -241,7 +241,7 @@ signs: [
   {
     name: "510",
     icon: require("../../assets/slides/510.jpg"),
-    category: "Versatility Excellent",
+    
     title: "510. Right About Turn",
     description:
       "• With the <b>dog heeling on the right</b>, the <b>handler performs a 180-degree right turn</b>, while the <b>dog simultaneously performance a 180-degree left turn moving around the handler</b>.<br/>• The team will be back in heel position as they face the new direction.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
@@ -262,7 +262,7 @@ signs: [
   {
     name: "511",
     icon: require("../../assets/slides/511.jpg"),
-    category: "Versatility Excellent",
+    
     title: "511. HALT - 180 Pivot Right - HALT",
     description:
       "• The team comes to a <b>halt</b> and the <b>dog sits in heel position, on the right.<br/>• The handler cues the dog to heel and pivots in place 180 degrees to their right then halts.<br/>• The dog must move simultaneously with the handler and sit when the handler stops</b>.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.• This station results in a 180-degree change of direction.<br/><br/>",
@@ -284,7 +284,7 @@ signs: [
   {
     name: "512",
     icon: require("../../assets/slides/512.jpg"),
-    category: "Versatility Excellent",
+    
     title: "512. HALT - 180 Pivot Left - HALT",
     description:
       "• With the <b>dog heeling on the right</b>, the team comes to a <b>halt</b> and the <b>dog sits in heel position.<br/>• The handler cues the dog to heel and pivots in place 180 degrees to their left then halts.<br/>• The dog must move simultaneously with the handler and sit when the handler stops</b>.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.• This station results in a 180-degree change of direction.<br/><br/>",
@@ -306,7 +306,7 @@ signs: [
   {
     name: "513",
     icon: require("../../assets/slides/513.jpg"),
-    category: "Versatility Excellent",
+    
     title: "513. HALT - From Sit 180 Right",
     description:
       "• With the <b>dog heeling on the right</b>, the team comes to a <b>halt</b> and the dog <b>sits in heel position</b>.<br/>• The handler cues the dog to heel, <b>turns 180 degrees to their right</b> and heels forward.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
@@ -328,7 +328,7 @@ signs: [
   {
     name: "514",
     icon: require("../../assets/slides/514.jpg"),
-    category: "Versatility Excellent",
+    
     title: "514. HALT - From Sit 180 Left",
     description:
       "• With the <b>dog heeling on the right</b>, the team comes to a <b>halt</b> and the dog <b>sits in heel position</b>.<br/>• The handler cues the dog to heel, <b>turns 180 degrees to their left</b> and heels forward.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
@@ -350,7 +350,7 @@ signs: [
   {
     name: "515",
     icon: require("../../assets/slides/515.jpg"),
-    category: "Versatility Excellent",
+    
     title: "515. HALT - Stand Leave for Walk Around",
     description:
       "• With the <b>dog heeling on the right</b>, the team comes to a <b>halt</b> and the dog <b>sits in heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the <b>dog to stay, walks forward 5 feet</b> to station sign 516 and <b>turns to face the dog</b>.<br/>• The judge, starting from the right side of the handler, and walking approximately an arm’s length away from the dog, circles the dog and returns to pause by the handler’s side before moving away.<br/><br/>",
@@ -372,7 +372,7 @@ signs: [
   {
     name: "516",
     icon: require("../../assets/slides/516.jpg"),
-    category: "Versatility Excellent",
+    
     title: "516. Return to Heel",
     description:
       "• The handler <b>returns to heel position by moving around the dog in a clockwise direction into heel position, on the right</b>.<br/>• The handler may choose to pause in heel position before moving forward.<br/>• The handler cues the dog to <b>heel forward from the stand position</b>.<br/><br/>",
@@ -388,7 +388,7 @@ signs: [
   {
     name: "517",
     icon: require("../../assets/slides/517.jpg"),
-    category: "Versatility Excellent",
+    
     title: "517. HALT - Leave Dog Turn Call Front",
     description:
       "• With the <b>dog heeling on the right</b>,the team comes to a <b>halt</b> and the <b>dog sits in heel position</b>.<br/>• The handler cues the <b>dog to stay, walks forward 5 feet</b> to one of station signs 519, 520, 521 or 522 and <b>turns to face the dog</b>.<br/>• The handler calls the <b>dog to front position</b>.<br/>• This exercise results in a 180-degree change of direction.<br/><br/>",
@@ -413,7 +413,7 @@ signs: [
   {
     name: "518",
     icon: require("../../assets/slides/518.jpg"),
-    category: "Versatility Excellent",
+    
     title: "518. Call Front - 1, 2, 3 Steps Backwards",
     description:
       "• With the <b>dog heeling on the right</b>, the handler stops forward motion and calls the dog directly to the front position.<br/>• The handler may take up to four steps backward as the <b>dog turns and sits in front position.<br/>• From the sit</b> the handler takes 1 step backward and <b>halts</b>, the <b>dog moves with the handler sits in front position.<br/>• From the sit</b> the handler takes 2 steps backward and <b>halts</b>, the <b>dog moves with the handler and sits in front position.<br/>• From the sit</b> the handler takes 3 steps backward and <b>halts</b>, the <b>dog moves with the handler and sits in front position</b>.<br/>• This station is followed by one of 519, 520, 521 or 522.<br/><br/>",
@@ -437,7 +437,7 @@ signs: [
   {
     name: "519",
     icon: require("../../assets/slides/519.jpg"),
-    category: "Versatility Excellent",
+    
     title: "519. Finish Right",
     description:
       "• With the <b>dog sitting in front position</b> the handler cues the <b>dog to move directly to their right</b> to <b>sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
@@ -457,7 +457,7 @@ signs: [
   {
     name: "520",
     icon: require("../../assets/slides/520.jpg"),
-    category: "Versatility Excellent",
+    
     title: "520. Finish Left",
     description:
       "• With the <b>dog sitting in front position</b> the handler cues the <b>dog to move to the handler's left</b> and <b>around their body</b> to <b>sit in right side heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
@@ -477,7 +477,7 @@ signs: [
   {
     name: "521",
     icon: require("../../assets/slides/521.jpg"),
-    category: "Versatility Excellent",
+    
     title: "521. Forward Right",
     description:
       "• With the <b>dog sitting in front position</b> the handler cues the <b>dog to move to the handler’s right</b> and <b> to heel position</b>.<br/>• As the dog is returning to heel position, the handler cues the dog to heel and moves forward. <b>The dog does not sit in heel position</b>.<br/><br/>",
@@ -494,7 +494,7 @@ signs: [
   {
     name: "522",
     icon: require("../../assets/slides/522.jpg"),
-    category: "Versatility Excellent",
+    
     title: "521. Forward Left",
     description:
       "• With the <b>dog sitting in front position</b> the handler cues the <b>dog to move to the handler’s left</b> and <b>around their body toward heel position</b>.<br/>• As the dog is returning to heel position, the handler cues the dog to heel and moves forward. <b>The dog does not sit in heel position</b>.<br/><br/>",
@@ -511,7 +511,7 @@ signs: [
   {
     name: "523",
     icon: require("../../assets/slides/523.jpg"),
-    category: "Versatility Excellent",
+    
     title: "523. HALT - Stand - Down",
     description:
       "• With the <b>dog heeling on the right</b>, the team comes to a <b>halt</b> and the dog <b>sits in the heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the <b>dog to down</b>.<br/>• The handler cues the dog to <b>heel forward from the down position</b>.",
@@ -532,7 +532,7 @@ signs: [
   {
     name: "524",
     icon: require("../../assets/slides/524.jpg"),
-    category: "Versatility Excellent",
+    
     title: "524. HALT - Stand - Sit",
     description:
       "• With the <b>dog heeling on the right</b>, the team comes to a <b>halt</b> and the dog <b>sits in the heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the <b>dog to sit</b>.<br/>• The handler cues the dog to <b>heel forward from the down position</b>.",
@@ -553,7 +553,7 @@ signs: [
   {
     name: "525",
     icon: require("../../assets/slides/525.jpg"),
-    category: "Versatility Excellent",
+    
     title: "525. Moving Stand - Walk Around",
     description:
       "• With the <b>dog heeling on the right</b>, the handler cues the <b>dog to stand and without pausing walks around the dog from head to tail</b> returning to heel position.<br/>• The handler remains within arm’s length of the dog throughout the exercise.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the stand position</b>.",
@@ -580,7 +580,7 @@ signs: [
   {
     name: "526",
     icon: require("../../assets/slides/526.jpg"),
-    category: "Versatility Excellent",
+    
     title: "526. Moving Sit Walk Around",
     description:
       "• With the <b>dog heeling on the right</b>, the handler cues the <b>dog to sit and without pausing walks around the dog from head to tail </b>returning to heel position.<br/>• The handler remains within arm’s length of the dog throughout the exercise.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the sit position</b><br/><br/>.",
@@ -606,7 +606,7 @@ signs: [
   {
     name: "527",
     icon: require("../../assets/slides/527.jpg"),
-    category: "Versatility Excellent",
+    
     title: "527. Moving Stand - Call to Heel",
     description:
       "• With the <b>dog heeling on the right</b>, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler calls the dog to heel and the team continues to the next station.<br/>• <b>The dog must be in heel position before the team arrives at the next station.</b>",
@@ -632,7 +632,7 @@ signs: [
   {
     name: "528",
     icon: require("../../assets/slides/528.jpg"),
-    category: "Versatility Excellent",
+    
     title: "528. Moving Down - Call to Heel",
     description:
       "• With the <b>dog heeling on the right</b>, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has completely passed over the 5-foot line and while continuing to walk</b>, the handler calls the dog to heel and the team continues to the next station.<br/>• <b>The dog must be in heel position before the team arrives at the next station.</b>",
@@ -658,7 +658,7 @@ signs: [
   {
     name: "529",
     icon: require("../../assets/slides/529.jpg"),
-    category: "Versatility Excellent",
+    
     title: "529. Back Up 3 Steps",
     description:
       "• With the <b>dog heeling on the right</b>, the handler will cue the dog to heel backwards.<br/>• The handler will <b>walk backwards continuously a minimum of 3 complete steps with the dog moving simultaneously and remaining in heel position parallel to the handler</b>.<br/><br/>",
@@ -680,7 +680,7 @@ signs: [
   {
     name: "530",
     icon: require("../../assets/slides/530.jpg"),
-    category: "Versatility Excellent",
+    
     title: "530. HALT - Stand - Leave",
     description:
       "• With the <b>dog heeling on the right</b>, the team comes to a <b>halt</b> and the <b>dog sits in heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the dog to <b>stay, walks forward 5 feet</b> to one of station signs 307,308,309 or 310 and <b>turns to face the dog</b>.",
@@ -703,7 +703,7 @@ signs: [
   {
     name: "531",
     icon: require("../../assets/slides/531.jpg"),
-    category: "Versatility Excellent",
+    
     title: "531. Sit Dog - Return to Heel",
     description:
       "• The handler cues the <b>dog to sit directly from the stand</b>.<br/>• The <b>handler returns to right-side heel position by walking around the dog and back to heel.</b><br/>• The dog <b>must remain in a sit</b> until cued to heel.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
@@ -721,7 +721,7 @@ signs: [
   {
     name: "532",
     icon: require("../../assets/slides/532.jpg"),
-    category: "Versatility Excellent",
+    
     title: "532. Down Dog - Return to Heel",
     description:
       "• The handler cues the <b>dog to down directly from the stand</b>.<br/>• The <b>handler returns to right-side heel position by walking around the dog and back to heel.</b><br/>• The dog <b>must remain in a down</b> until cued to heel.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the down position</b>.<br/><br/>",
@@ -739,7 +739,7 @@ signs: [
   {
     name: "533",
     icon: require("../../assets/slides/533.jpg"),
-    category: "Versatility Excellent",
+    
     title: "533. Sit Dog - Call to Heel - Forward",
     description:
       "• The handler cues the <b>dog to sit directly from the stand</b>.<br/>• The handler calls the <b>dog to return to right-sie heel position</b>.<br/>• The dog may return to heel position either directly to heel position or by going around the handler.<br/>• The team <b>heels forward before the dog sits</b>.<br>• This station results in a 180-degree change of direction.<br/><br/>",
@@ -757,7 +757,7 @@ signs: [
   {
     name: "534",
     icon: require("../../assets/slides/534.jpg"),
-    category: "Versatility Excellent",
+    
     title: "534. Down Dog - Call to Heel - Forward",
     description:
       "• The handler cues the <b>dog to down directly from the stand</b>.<br/>• The handler calls the <b>dog to return to right-side heel position</b>.<br/>• The dog may return to heel position either directly to heel position or by going around the handler.<br/>• The team <b>heels forward before the dog sits</b>.<br>• This station results in a 180-degree change of direction.<br/><br/>",
