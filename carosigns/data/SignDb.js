@@ -47,7 +47,7 @@ const createLevel = (l) => {
     signs: Signs.filter((s) => s.category.indexOf(l.name) !== -1),
   };
 };
-console.log("Levels", Levels);
+
 const SignsDB = { Signs, Categories: Levels.map(createLevel) };
 
 export default SignsDB;
