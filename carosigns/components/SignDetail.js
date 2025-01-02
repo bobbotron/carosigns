@@ -14,6 +14,7 @@ import MasterGeneralHandbookTextLink from "./MasterGeneralHandbookTextLink";
 import theme from "../Theme";
 import DropDownPicker from "react-native-dropdown-picker";
 import _ from "lodash";
+import ImageShim from "../utils/ImageShim";
 
 export default function SignDetail(props) {
   const window = useWindowDimensions();
@@ -35,13 +36,8 @@ export default function SignDetail(props) {
     ? props.sign.tips !== undefined
     : props.sign.levels[workingLevelState].passRequirements !== undefined;
 
-  // fix resolveAssetSource call for web :^(
-  if (Platform.OS === "web") {
-    Image.resolveAssetSource = (source) => {
-      // eslint-disable-next-line no-unused-labels
-      uri: source;
-    };
-  }
+  ImageShim();
+  
   const layoutImage =
     isWorkingSign &&
     props.sign.levels !== undefined &&
@@ -103,7 +99,6 @@ export default function SignDetail(props) {
       justifyContent: "center",
     },
     workingContainer: {
-      //flex: 1,
       alignContent: "center",
       justifyContent: "center",
       marginBottom: 20,
@@ -112,11 +107,12 @@ export default function SignDetail(props) {
       textAlign: "center",
       paddingLeft: 10,
       paddingRight: 10,
+      paddingBottom: 10,
     },
     html: {},
     a: {},
     routes: {
-      backgroundColor: "#ffffaa",
+      backgroundColor: "#ffffff",
       paddingTop: 20,
       flex: 1,
       paddingLeft: 10,
@@ -231,23 +227,25 @@ export default function SignDetail(props) {
     if (d === undefined) {
       return "";
     }
-    const toBullets = (x) => "<li>" + x + "</li>\n";
+    const toBullets = (x) => "• " + x + "<br/>\n";
     let r = "";
     if (d.minor !== undefined && d.minor.length > 0) {
       r +=
-        "<b>Minor (1 to 2 points)</b><ul>" +
-        d.minor.map(toBullets).join(" ") +
-        "</ul>";
+        "<b>Minor (1 to 2 points)</b><br/>" +
+        d.minor.map(toBullets).join("") +
+        "<br/>\n";
     }
     if (d.substantial !== undefined && d.substantial.length > 0) {
       r +=
-        "<b>Substantial (3 to 5 points)</b><ul>" +
-        d.substantial.map(toBullets).join(" ") +
-        "</ul>";
+        "<b>Substantial (3 to 5 points)</b><br/>" +
+        d.substantial.map(toBullets).join("") +
+        "<br/>\n";
     }
     if (d.nq !== undefined && d.nq.length > 0) {
       r +=
-        "<b>Non-Qualifying</b><ul>" + d.nq.map(toBullets).join(" ") + "</ul>";
+        "<b>Non-Qualifying</b><br/>\n" +
+        d.nq.map(toBullets).join("") +
+        "<br/>\n";
     }
     return r;
   };
@@ -261,8 +259,6 @@ export default function SignDetail(props) {
           {props.sign.deductions && (
             <RenderHtml
               key="faultHtml"
-              baseStyle={{}}
-              style={{ width: 100 }}
               contentWidth={contentWidth}
               source={{
                 html: generateDeductions(props.sign.deductions),
@@ -385,6 +381,11 @@ export default function SignDetail(props) {
             label: "Deductions",
           },
         ]}
+        theme={{
+          colors: {
+            secondaryContainer: "rgb(239, 246, 234)",
+          },
+        }}
       />
       {signDetailState === "description" && <DescriptionComponent />}
       {signDetailState === "deductions" && <FaultComponent />}

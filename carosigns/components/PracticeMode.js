@@ -5,7 +5,6 @@ import {
   StyleSheet,
   useWindowDimensions,
   Image,
-  Platform,
   ScrollView,
 } from "react-native";
 import theme from "../Theme";
@@ -24,7 +23,7 @@ import { setPracticeMode } from "../redux/actions";
 import _ from "lodash";
 import PracticeProgressBar from "./PracticeProgressBar";
 import SignDetail from "./SignDetail";
-
+import ImageShim from "../utils/ImageShim";
 export const setupState = "setup";
 export const viewSign = "viewSign";
 export const running = "running";
@@ -47,13 +46,7 @@ export default function PracticeMode() {
   const [autoAdvance, setAutoAdvance] = useState(true);
   //const [viewSignDetail, setViewSignDetail] = useState(false);
 
-  // fix resolveAssetSource call for web :^(
-  if (Platform.OS === "web") {
-    Image.resolveAssetSource = (source) => {
-      // eslint-disable-next-line no-unused-labels
-      uri: source;
-    };
-  }
+  ImageShim();
 
   const goToSign = () => {
     const sign = runningState?.selectedSign;
