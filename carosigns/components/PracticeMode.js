@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   View,
@@ -126,14 +126,15 @@ export default function PracticeMode() {
     },
   });
 
-  const filt = (x) => {
-    if (x.category === "Novice" && noviceChecked) {
+  // TODO update this to add Intermediate
+  const signFilter = (sign) => {
+    if (sign.category.indexOf("Novice") !== -1 && noviceChecked) {
       return true;
     }
-    if (x.category === "Advanced" && advancedChecked) {
+    if (sign.category.indexOf("Advanced") !== -1 && advancedChecked) {
       return true;
     }
-    if (x.category === "Excellent" && excellentChecked) {
+    if (sign.category.indexOf("Excellent") !== -1 && excellentChecked) {
       return true;
     }
     return false;
@@ -214,7 +215,7 @@ export default function PracticeMode() {
 
   const startPractice = () => {
     if (canStartPractice()) {
-      const signs = SignsDB.Signs.filter(filt);
+      const signs = SignsDB.Signs.filter(signFilter);
       dispatch(setPracticeMode({ ...practiceMode, state: running }));
       electNextSign(signs, undefined);
     }
@@ -383,18 +384,13 @@ export default function PracticeMode() {
       </Button>
     </>
   );
-  const scrollRef = useRef();
   return (
     <>
-      <ScrollView ref={scrollRef} nestedScrollEnabled={true}>
+      <ScrollView nestedScrollEnabled={true}>
         {practiceMode.state === setupState && <Setup />}
         {practiceMode.state === running && <RunningComponent />}
         {practiceMode.state === viewSign && (
-          <SignDetail
-            key="practicedetail"
-            scrollRef={scrollRef.current}
-            sign={runningState.selectedSign}
-          />
+          <SignDetail key="practicedetail" sign={runningState.selectedSign} />
         )}
       </ScrollView>
     </>

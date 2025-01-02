@@ -6,9 +6,7 @@ const Working = {
     {
       name: "DOR",
       icon: require("../../assets/working_signs/DOR.jpg"),
-      category: "Working Exercises",
       title: "1. Drop on Recall (DOR)",
-
       levels: {
         rookie: {
           procedure:
@@ -59,9 +57,7 @@ const Working = {
     {
       name: "ROF",
       icon: require("../../assets/working_signs/ROF.jpg"),
-      category: "Working Exercises",
       title: "2. Retrieve on Flat",
-
       levels: {
         rookie: {
           procedure:
@@ -113,9 +109,7 @@ const Working = {
     {
       name: "BR",
       icon: require("../../assets/working_signs/BR.jpg"),
-      category: "Working Exercises",
       title: "3. Barrel Racing (BR)",
-
       levels: {
         rookie: {
           procedure:
@@ -161,9 +155,7 @@ const Working = {
     {
       name: "DJ",
       icon: require("../../assets/working_signs/DJ.jpg"),
-      category: "Working Exercises",
       title: "4. Directed Jumping (DJ)",
-
       levels: {
         rookie: {
           procedure:
@@ -214,7 +206,6 @@ const Working = {
     {
       name: "DR",
       icon: require("../../assets/working_signs/DR.jpg"),
-      category: "Working Exercises",
       title: "5. Designated Retrieve (DR)",
       limitedCues: true,
       levels: {
@@ -267,9 +258,7 @@ const Working = {
     {
       name: "BA",
       icon: require("../../assets/working_signs/BA.jpg"),
-      category: "Working Exercises",
       title: "6. Back Away (BA)",
-
       levels: {
         rookie: {
           procedure:
@@ -299,7 +288,8 @@ const Working = {
           procedure:
             "The exercise begins when the handler steps into the handler box.<br/><br/>• The handler may choose to walk to the dog box to familiarize the dog with it.<br/>• The dog starts facing the handler, sitting or standing, in front position,<br/>• The handler cues the dog to back up to the dog box until the front paws have passed the 5ft line,<br/>• The handler cues the dog to perform either a sit, down, spin left or spin right,<br/>• The handler cues the dog to continue to back up to the dog box until the front paws of the dog are behind the front plane of the box.<br/><br/>The exercise ends when the front paws of the dog are behind the front line of the dog box.<br/><br/>",
           procedureImages: [],
-          layout: "• The dog box is 15 feet total away from the handler box or handler line.<br/>• A sit is performed at a 5ft line (two cones may be used in place of a line).",           
+          layout:
+            "• The dog box is 15 feet total away from the handler box or handler line.<br/>• A sit is performed at a 5ft line (two cones may be used in place of a line).",
           layoutImages: [require("../../assets/Diagrams/BA_Expert.jpg")],
           passRequirements: [
             "The dog sits or stands in front of the handler box facing the handler,",
@@ -314,9 +304,7 @@ const Working = {
     {
       name: "RTC",
       icon: require("../../assets/working_signs/RTC.jpg"),
-      category: "Working Exercises",
       title: "7. Round The Clock (RTC)",
-
       levels: {
         rookie: {
           procedure:
@@ -367,7 +355,6 @@ const Working = {
     {
       name: "DS",
       icon: require("../../assets/working_signs/DS.jpg"),
-      category: "Working Exercises",
       title: "8. Distance Signals (DS)",
       limitedCues: true,
       levels: {
@@ -418,9 +405,7 @@ const Working = {
     {
       name: "ROJ",
       icon: require("../../assets/working_signs/ROJ.jpg"),
-      category: "Working Exercises",
       title: "9. Retrieve Over Jump (ROJ)",
-
       levels: {
         rookie: {
           procedure:
@@ -474,10 +459,8 @@ const Working = {
     {
       name: "SD",
       icon: require("../../assets/working_signs/SD.jpg"),
-      category: "Working Exercises",
       title: "10. Scent Discrimination (SD)",
       limitedCues: true,
-
       levels: {
         rookie: {
           procedure:
