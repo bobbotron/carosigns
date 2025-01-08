@@ -3,7 +3,7 @@ type: "normal",
 signs: [
   {
     name: "Start (Right)",
-    icon: require("../../assets/slides/startonright.jpg"),
+    icon: require("../../assets/slides/StartonRight.jpg"),
     title: "Start",
     hideNameOnGrid: true,
     description:
@@ -20,7 +20,7 @@ signs: [
   },
   {
     name: "Finish (Right)",
-    icon: require("../../assets/slides/finishonright.jpg"),
+    icon: require("../../assets/slides/FinishonRight.jpg"),
     hideNameOnGrid: true,
     title: "Finish",
     description:
