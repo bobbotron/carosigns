@@ -668,11 +668,12 @@ signs: [
         "Dog backs up at an angle of up to 45-degrees out of alignment",
         "Dog’s shoulders in heel position but their body at a 45-degree angle (2 points)",
       ],
+      substantial: ["Dog's shoulders in heel position but their body at a greater than 45-degree angle but not more than 90 degrees (5 points)"],
+      
       nq: [
         "The handler does not take 3 complete steps backwards",
         "The dog does not move simultaneously with the handler",
-        "The dog does not remain in heel position",
-        "Dog’s shoulders in heel position but their body at a greater than 45-degree angle",
+        "The dog does not remain in heel position",        
       ],
     },
     video: undefined,

@@ -30,9 +30,10 @@ const Advanced = {
     name: "201",
     icon: require("../../assets/slides/201.jpg"),
     title: "201. HALT - Leave Dog - Call to Heel while Running",
+    practiceNextRestriction: ["223"],
     description:
-      "• The team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the <b>dog to stay</b> and moves forward at a <b>fast pace</b>.<br/> • <b>After the handler has completely passed the 5-foot line</b>, they call the dog to heel as they return to normal pace.<br/>• The handler may pause or stop once they have returned to normal pace and after passing the 5-foot line.<b/><br/>• The dog must hold the sit stay until called<b/>.<br/><br/>",
-    tips: "• The handler must move at a <i>fast (ie. jogging or running)</i> pace for <i>at least</i> 5 feet. You can run beyond the 5 foot line to be sure you do not slow down too soon. If so, be sure your dog has enough time to return to heel position before the next station sign.<br/> • If you are physically unable to run from a stand still, request an accommodation at the time of entry.<br/>",
+      "• The team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the <b>dog to stay</b> and <b>moves forward at a fast pace.<br/> • The dog must remain in a sit until called.<br/>• After the handler has passed the Call Dog sign</b> (#223), they call the dog to heel as they return to normal pace.<br/>• After passing the Call Dog sign the handler may pause or stop until the dog reaches heel position.<br/><br/>",
+    tips: "• The handler must move at a <i>fast (ie. jogging or running)</i> pace. You can run just beyond the Call Dog sign to be sure you do not slow down too soon. If so, be sure your dog has enough time to return to heel position before the next station sign.<br/> • If you are physically unable to run from a stand still, request an accommodation at the time of entry.<br/>",
     deductions: {
       minor: [
         "Dog sits more than 45-degrees out of heel position",
@@ -42,7 +43,7 @@ const Advanced = {
       nq: [
         "Dog sits 90-degrees or more out of heel position",
         "Handler does not move immediately into fast pace from the halt",
-        "Handler does not maintain the fast pace for at least 5 feet (until crossing the line)",
+        "Handler does not maintain the fast pace until passing the Call Dog sign",
         "Dog does not hold the sit stay while the handler runs (minor foot movement is ok)",
         "Failure of the dog to assume a cued position",
         "Dog assumes a position not required by the exercise",
@@ -73,32 +74,32 @@ const Advanced = {
   {
     name: "203",
     icon: require("../../assets/slides/203.jpg"),
-    title: "203. Moving Down, Walk Around",
+    title: "203. Moving Down - Walk Around",
     description:
-      "• While heeling, the handler cues the <b>dog to down and without pausing walks around the dog from head to tail</b> returning to heel position.<br>• The handler remains within arm’s length of the dog throughout the exercise.<br/>• The handler may choose to pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the down position</b><br/><br/>",
+      "• While heeling, the handler cues the <b>dog to down and without pausing walks around the dog from nose to tail</b> returning to heel position.<br>• The <b> dog must remain in a down</b> while the handler walks around the dog.<br/>• The handler remains within arm’s length of the dog throughout the exercise.<br/>• The handler may pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the down position</b><br/><br/>",
     tips: "• The handler's path should flow smoothly and without interruption from heel position while walking around the dog.<br/>• The judge is looking for the dog to have at least <i>begun</i> the down by the time you cross in front of their paws (no deductions).<br/>• If the dog does not <i>complete</i> the down until you have returned to heel position, you will incur a substantial deduction for promptness, but can still meet the requirements of the exercise.<br/>• You may <i>slightly</i> slow your pace as you circle the dog so that they have time to complete the down but significantly slowing your pace is a substantial deduction<br/>• Walk a tight circle around the dog.<br/>",
     reward: true,
     deductions: {
       minor: [
-        "Dog downs more than 45-degrees out of heel position",
+        "Dog performs the down more than 45-degrees out of heel position",
+        "Minor movement of the dog while remaining in the required position",
+        "Dog is still in the process of assuming the down as the handler passes in front of their paws",
         "Handler is further than arm's length during the walk around",
-        "Dog still in the process of completing the down when the handler passes by their tail (2 points)",
         "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
       ],
 
       substantial: [
         "Handler significantly slows their pace during the moving down",
-        "Failure of the dog to assume the down promptly",
+        "Dog has not begun to assume the down position as the handler passes their paws", "Dog is in the process assumming the sit as the handler passes their far shoulder."
       ],
 
       nq: [
         "Down 90-degrees or more out of heel position",
-        "Dog turns with the handler rather than performing a down",
+        "Dog has not begun to down by the time the handler passes their far shoulder", "Dog has not completed the down by the time the handler passes by their tail",
+        "Down is 90-degrees or more out of heel position",
+        "Dog turns with the handler rather than maintaining a sit",
         "Handler stops forward motion while performing the moving down",
-        "Dog has not <i>begun<i/>the down by the time the handler passes their far shoulder",
-        "Dog does not hold the down for the duration of the walk around and until cued to heel forward",
-        "Dog assumes a position not required by the exercise",
-        "Reinforcement: handler puts their hand into the pocket where the food is located before the dog has completed the station, uses the food as a lure, or stores the food in their left pocket",
+        "Dog assumes a position not required by the exercise", "Reinforcement: handler puts their hand into the pocket where the food is located before the dog has completed the station, uses the food as a lure, or stores the food in their left pocket",
       ],
     },
     video: undefined,
@@ -165,7 +166,7 @@ const Advanced = {
     name: "208",
     icon: require("../../assets/slides/208.jpg"),
     title: "208. HALT - 180 Degree Pivot Right - HALT",
-    description: "• The team comes to a <b>halt</b> and the <b>dog sits in heel position.<br/>• The handler cues the dog to heel and pivots in place 180 degrees to their right then halts.<br/>• The dog must move simultaneously with the handler and sit when the handler stops</b>.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
+    description: "• The team comes to a <b>halt</b> and the <b>dog sits in heel position.<br/>• The handler pivots in place 180 degrees to their right then halts.<br/>• The dog must move simultaneously with the handler and sit when the handler stops</b>.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
     tips: "• This sign is typically executed by using the heel of the <i>right</i> foot as a pivot point, pivoting 180-degrees to the right, and then bringing the left foot into alignment with the right.<br/>",
     reward: true,
     deductions: {
@@ -177,7 +178,7 @@ const Advanced = {
     name: "209",
     icon: require("../../assets/slides/209.jpg"),
     title: "209. HALT - 180-Degree Pivot Left - HALT",
-    description: "• The team comes to a <b>halt</b> and the <b>dog sits in heel position.<br/>• The handler cues the dog to heel and pivots in place 180 degrees to their left then halts.<br/>• The dog must move simultaneously with the handler and sit when the handler stops</b>.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
+    description: "• The team comes to a <b>halt</b> and the <b>dog sits in heel position.<br/>• The handler pivots in place 180 degrees to their left then halts.<br/>• The dog must move simultaneously with the handler and sit when the handler stops</b>.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
     tips: "• This sign is typically executed by using the heel of the <i>left</i> foot as a pivot point, pivoting 180-degrees to the left, and then bringing the right foot into alignment with the left.<br/>",
     reward: true,
     deductions: {
@@ -189,7 +190,7 @@ const Advanced = {
     name: "210",
     icon: require("../../assets/slides/210.jpg"),
     title: "210. HALT - From Sit - 180 right",
-    description: "• The team comes to a <b>halt</b> and the dog <b>sits in heel position</b>.<br/>• The handler cues the dog to heel, <b>turns 180 degrees to their right</b> and heels forward.<br/>• This station results in a 180-degree change of direction..<br/><br/>",
+    description: "• The team comes to a <b>halt</b> and the dog <b>sits in heel position</b>.<br/>• The handler cues the dog to heel, <b>turns 180 degrees to their right</b> and heels forward.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
     tips: "• This station does not call for a pivot - you should step forward to perform the 180-degree right turn. Perform the turn immediately from the sit.<br/>• Ensure you halt within two feet of the station sign.",
     deductions: {
       minor: ["Handler moves their feet during the stationary portion of the halt", "Dog sits more than 45 degrees out of heel position"],
@@ -200,7 +201,7 @@ const Advanced = {
     name: "211",
     icon: require("../../assets/slides/211.jpg"),
     title: "211. HALT - From Sit - 180 left",
-    description: "• The team comes to a <b>halt</b> and the dog <b>sits in heel position</b>.<br/>• The handler cues the dog to heel, <b>turns 180 degrees to their left</b> and heels forward.<br/>• This station results in a 180-degree change of direction..<br/><br/>",
+    description: "• The team comes to a <b>halt</b> and the dog <b>sits in heel position</b>.<br/>• The handler cues the dog to heel, <b>turns 180 degrees to their left</b> and heels forward.<br/>• This station results in a 180-degree change of direction.<br/><br/>",
     tips: "• This station does not call for a pivot - you should step forward to perform the 180-degree left turn (dog on the inside of the turn). Perform the turn immediately from the sit.<br/>• Ensure you halt within two feet of the station sign.",
     deductions: {
       minor: ["Handler moves their feet during the stationary portion of the halt", "Dog sits more than 45 degrees out of heel position"],
@@ -212,8 +213,8 @@ const Advanced = {
     icon: require("../../assets/slides/212.jpg"),
     title: "212. HALT - Stand - Leave for Walk Around",
     excludeFromPractice: true,
-    description: "• The team comes to a <b>halt</b> and the dog <b>sits in heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The handler cues the <b>dog to stay, walks forward 5 feet</b> to station sign 213 and <b>turns to face the dog</b>.<br/>• The judge, starting from the right side of the handler, and walking approximately an arm’s length away from the dog, circles the dog and returns to pause by the handler’s side before moving away.<br/><br/>",
-    tips: "• This station will always be followed by station 213 (Return and Forward from Stand).<br/>• While this station is not a reinforcement station, note that station 213 is. This means that you can reinforce your dog once you have returned to heel position after performing the stand-stay (in Advanced A/B).<br/>• During the walk through, the judge will be able to tell you where they will be standing for the walk around.<br/>• This station is not used in virtual trials.<br/>• Note that you may no longer touch the dog to stabalize or position them after the stand has been performed.",
+    description: "• The team comes to a <b>halt</b> and the <b>dog sits in heel position</b>.<br/>• The handler cues the <b>dog to stand</b>.<br/>• The <b>dog must remain in a stand while the handler walks forward 5 feet to the Return to Heel station sign</b>(#213) and <b>turns to face the dog</b>.<br/>• The judge, starting from the right side of the handler, and walking approximately an arm’s length away from the dog, circles the dog and returns to pause by the handler’s side before moving away.<br/>• <b>The dog remains in a stand while the judge circles the dog</b>.<br/><br/>",
+    tips: "• This station will always be followed by station 213 (Return To Heel).<br/>• While this station is not a reinforcement station, note that station 213 is. This means that you can reinforce your dog once you have returned to heel position after performing the stand-stay (in Intermediate and Advanced A/B).<br/>• During the walk through, the judge will be able to tell you where they will be standing for the walk around.<br/>• This station is not used in virtual trials.<br/>• Note that you may no longer touch the dog to stabalize or position them after the stand has been performed.",
     deductions: {
       minor: ["Dog sits or stands more than 45-degrees out of heel position", "Handler moves their feet during the stationary portion of the halt"],
       nq: ["The dog does not hold the stand for the duration of the exercise (eg. takes steps forward or sits)", "Dog sits or stands more than 90-degrees out of heel position", "Handler does not walk to station 213","Handler does not turn to face the dog", "Dog exhibits signs of aggression during the walk around, at the discretion of the Judge"],
@@ -222,9 +223,9 @@ const Advanced = {
   {
     name: "213",
     icon: require("../../assets/slides/213.jpg"),
-    title: "213. Return & Forward from Stand",
+    title: "213. Return To Heel",
     excludeFromPractice: true,
-    description: "• The handler <b>returns to heel position by moving around the dog in a counterclockwise direction into heel position</b>.<br/>• The handler may choose to pause in heel position before moving forward.<br/>• The handler cues the dog to <b>heel forward from the stand position</b>.<br/><br/>",
+    description: "• The handler <b>returns to heel position by moving around the dog in a counterclockwise direction into heel position</b>.<br/>• The <b>dog must remain in a stand whle the handler returns to heel</b>.<br/>• The handler may pause in heel position before moving forward.<br/>• The handler cues the dog to <b>heel forward from the stand position</b>.<br/>• Must follow station 212.<br/><br/>",
     tips: "• There will be no communication from the Judge about when you may return to your dog. Instead, wait for the Judge to have completed their Walk Around, returned to you, and moved away.<br/>• This sign always follows sign 212 and is not used elsewhere.<br/>• This station is not used in virtual trials.<br/>",
     reward: true,
     deductions: {
@@ -235,9 +236,9 @@ const Advanced = {
   {
     name: "214",
     icon: require("../../assets/slides/214.jpg"),
-    title: "214. HALT - Leave Dog - Turn and Call Front",
+    title: "214. HALT - Leave Dog - Turn Call Front",
     practiceNextRestriction: ["216", "217", "218", "219"],
-    description: "• The team comes to a <b>halt</b> and the <b>dog sits in heel position</b>.<br/>• The handler cues the <b>dog to stay, walks forward 5 feet</b> to one of station signs 216, 217, 218 or 219 and <b>turns to face the dog</b>.<br/>• The handler calls the <b>dog to front position</b>.<br/>• This exercise results in a 180-degree change of direction.<br/><br/>",
+    description: "• The team comes to a <b>halt</b> and the <b>dog sits in heel position.<br/>• The handler walks forward to one of the station signs 216, 217, 218 or 219 and turns to face the dog.<br/>• The dog must remain in a sit until called by the handler to assume a front position</b>.<br/>• This sign results in a 180-degree change of direction.<br/><br/>",
     tips: "• This sign will always be followed by a finish or forward sign.<br/>• Minor paw movement is permitted during the stay, provided the dog does not change positions.<br/>• Keep your feet still during the halt and the front.<br/><br/>",
     deductions: {
       minor: ["Handler moves their feet during the stationary portion of the or and front", "Dog sits more than 45 degrees out of heel position"],
@@ -250,7 +251,7 @@ const Advanced = {
     icon: require("../../assets/slides/215.jpg"),
     title: "215. Call Front - 1, 2, 3 Steps Backward",
     practiceNextRestriction: ["216", "217", "218", "219"],
-    description: "The handler stops forward motion and calls the dog directly to the front position.<br/>• The handler may take up to four steps backward as the <b>dog turns and sits in front position.<br/>• From the sit</b> the handler takes 1 step backward and <b>halts</b>, the <b>dog moves with the handler sits in front position.<br/>• From the sit</b> the handler takes 2 steps backward and <b>halts</b>, the <b>dog moves with the handler and sits in front position.<br/>• From the sit</b> the handler takes 3 steps backward and <b>halts</b>, the <b>dog moves with the handler and sits in front position</b>.<br/>• This station is followed by one of 216, 217, 218 or 219.<br/><br/>",
+    description: "• The handler stops forward motion and calls the dog directly to the front position.<br/>• The handler may take up to four steps backward as the <b>dog turns and moves to sit in the front position.<br/>• From the sit</b> the handler takes 1 step backward and <b>halts</b>, the <b>dog moves with the handler sits in front position.<br/>• From the sit</b> the handler takes 2 steps backward and <b>halts</b>, the <b>dog moves with the handler and sits in front position.<br/>• From the sit</b> the handler takes 3 steps backward and <b>halts</b>, the <b>dog moves with the handler and sits in front position.<br/>• The team must meet the minimum required steps</b>.<br/>• This station is followed by one of 216, 217, 218 or 219.<br/><br/>",
     tips: "• This sign will always be followed by a finish or forward sign.<br/>• The dog must move with the handler as the handler steps backwards.<br/>• Depending on your stride length, you may not end up at the correct location for the next sign (front or finish) - this is ok, but do make a point of remembering what the next sign is, so that you can perform it correctly even if you cannot see the sign.",
     deductions: {
       minor: ["Dog sits more than 45-degrees out of front position", "Handler moves their feet during the stationary portion of the front", ""],
@@ -263,7 +264,7 @@ const Advanced = {
     icon: require("../../assets/slides/216.jpg"),
     title: "216. Finish Right",
     practiceOnlyAfter: ["214", "215"],
-    description: "• With the <b>dog sitting in front position</b> the handler cues the <b>dog to move to their right</b> and <b>around their body</b> to <b>sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
+    description: "• With the <b>dog sitting in front position</b> the handler cues the <b>dog to move to the handler's right</b> and <b>around their body</b> to <b>sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
     tips: "• This is not a stand alone sign. It will always follow a sign that ends with the dog in front position, such as 214 (Halt- Leave Dog - Turn and Call front) or 215 (Call Front - 1,2,3 Steps Backwards).<br/>• Unlike other stations, this sign does <i>not</i> need to be performed within a 2-foot radius of the station sign. This is because the space required for the previous sign may vary.<br/>• If rewarding, do not reach for reinforcement before the halt is comeplete and the dog has stopped moving.",
     reward: true,
     deductions: {
@@ -276,7 +277,7 @@ const Advanced = {
     icon: require("../../assets/slides/217.jpg"),
     title: "217. Finish Left",
     practiceOnlyAfter: ["214", "215"],
-    description: "• With the <b>dog sitting in front position</b> the handler cues the <b>dog to move to their left</b> to <b>sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
+    description: "• With the <b>dog sitting in front position</b> the handler cues the <b>dog to move to the handler's left</b> to <b>sit in heel position</b>.<br/>• The handler’s feet should remain stationary while the dog moves around them.<br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/><br/>",
     tips: "• This is not a stand alone sign. It will always follow a sign that ends with the dog in front position, such as 214 (Halt- Leave Dog - Turn and Call front) or 215 (Call Front - 1,2,3 Steps Backwards).<br/>• Unlike other stations, this sign does <i>not</i> need to be performed within a 2-foot radius of the station sign. This is because the space required for the previous sign may vary.<br/>• If rewarding, do not reach for reinforcement before the halt is comeplete and the dog has stopped moving.",
     reward: true,
     deductions: {
@@ -311,13 +312,44 @@ const Advanced = {
   {
     name: "220",
     icon: require("../../assets/slides/220.jpg"),
-    title: "220. Send over Jump",
+    title: "220. Jump",
     excludeFromPractice: true,
-    description: "• <b>The team enters the send zone where the dog is sent to the jump</b>.<br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>outside of the 3-foot line</b>.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 3-foot line when proceeding past the jump</b>.<br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
+    description: "• The jump may be either a solid or bar jump.<br/>• <b>The team enters the send zone where the dog is sent to the jump</b>.<br/>• Once the dog has been sent, the handler may stay in the send zone or proceed <b>along the right of 3-foot line</b>.<br/>• The sign will be placed at the top of the send zone and the handler will not be required to be wtihin 2 feet of the sign for this station.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 3-foot line when proceeding past the jump</b>.<br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
     tips: "• The jump may be either a solid or bar jump. The broad jump is not used at this station.<br/>• The jump sign must be used in all Advanced courses.<br/>• Handlers may give multiple cues to the dog (without a deduction) as long as the dog is heading towards the jump. If the dog turns back to the handler or passes the plane of the jump, the handler must return to the send zone for a retry (when a retry is permitted).<br/>• No retry is permitted if the handler steps into the NQ Zone (training in the ring).",
     deductions: {
       substantial: ["Dog touches the jump (5 points)"],
       nq: ["Dog is sent to the jump before entering the send zone", "Handler steps inside the NQ Zone at any point", "Dog knocks the bar off or pushes off of the jump bar", "Dog fails to take the jump"],
+    },
+  },
+  {
+    name: "221",
+    icon: require("../../assets/slides/221.jpg"),
+    title: "221. Diagonal Loop Right",
+    description: "•	While heeling, the <b>team loops diagonally right crossing over their original path</b>.<br/>•	The handler’s path while turning must be within a diameter of 2 feet and should be in a straight line after turning.<br/>• The station results in a change of direction diagonally to the left. <br/><br/>",
+    deductions: {
+      substantial: ["TODO"],
+      nq: ["TODO"],
+    },
+  },
+  {
+    name: "222",
+    icon: require("../../assets/slides/222.jpg"),
+    title: "222. Diagonal Loop Left",
+    description: "•	While heeling, the <b>team loops diagonally left crossing over their original path</b>.<br/>•	The handler’s path while turning must be within a diameter of 2 feet and should be in a straight line after turning.<br/>• The station results in a change of direction diagonally to the right. <br/><br/>",
+    deductions: {
+      substantial: ["TODO"],
+      nq: ["TODO"],
+    },
+  },
+  {
+    name: "223",
+    icon: require("../../assets/slides/223.jpg"),
+    title: "223. Call Dog",
+    practiceOnlyAfter: ["201", "303", "304", "317"],
+    description: "•	Upon passing this sign, the handler calls the dog to heel <b>while continuing to move forward</b>.<br/><br/>",
+    deductions: {
+      substantial: ["TODO"],
+      nq: ["TODO"],
     },
   },
 ]};
