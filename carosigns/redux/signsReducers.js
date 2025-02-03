@@ -12,12 +12,12 @@ const initialState = {
   selectedSign: undefined,
   selectedLevel: undefined,
   searchText: "",
-  practiceMode: {active: false},
+  practiceMode: { active: false },
 };
 
 function signsReducer(state = initialState, action) {
   switch (action.type) {
-    case ADD_FAVORITE_ITEM:
+    case ADD_FAVORITE_ITEM: {
       const f = state.favorites.filter((sign) => sign === action.payload.name);
       if (f.length === 0) {
         return {
@@ -27,6 +27,7 @@ function signsReducer(state = initialState, action) {
       } else {
         return state;
       }
+    }
     case REMOVE_FAVORITE_ITEM:
       return {
         ...state,

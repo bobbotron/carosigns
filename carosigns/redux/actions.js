@@ -44,7 +44,6 @@ export const setSelectedSign = (sign) => (dispatch) => {
   });
 };
 
-
 export const setPracticeMode = (mode) => (dispatch) => {
   dispatch({
     type: SET_PRACTICE_MODE,

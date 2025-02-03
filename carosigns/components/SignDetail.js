@@ -37,7 +37,7 @@ export default function SignDetail(props) {
     : props.sign.levels[workingLevelState].passRequirements !== undefined;
 
   ImageShim();
-  
+
   const layoutImage =
     isWorkingSign &&
     props.sign.levels !== undefined &&

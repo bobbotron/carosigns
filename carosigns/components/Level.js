@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 export default function Level(props) {
   const { selectedSign } = useSelector((state) => state.signsReducer);
   const dispatch = useDispatch();
-  
+
   return (
     <>
       {selectedSign === undefined &&
@@ -68,7 +68,11 @@ export default function Level(props) {
         ))}
       {selectedSign !== undefined && (
         <ScrollView nestedScrollEnabled={true}>
-            <SignDetail key="sign" signType={props.level.type} sign={selectedSign} />
+          <SignDetail
+            key="sign"
+            signType={props.level.type}
+            sign={selectedSign}
+          />
         </ScrollView>
       )}
     </>
