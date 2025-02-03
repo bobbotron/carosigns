@@ -44,21 +44,16 @@ export default function PracticeMode() {
   const [runningState, setRunningState] = useState({});
   const [timerId, setTimerId] = useState(undefined);
   const [autoAdvance, setAutoAdvance] = useState(true);
-  //const [viewSignDetail, setViewSignDetail] = useState(false);
 
+  const state = practiceMode.state;
   ImageShim();
 
   const goToSign = () => {
     const sign = runningState?.selectedSign;
     if (sign) {
-      // const cat = SignsDB.Categories.find((x) => x.name === sign.category);
       Speech.stop();
       setAutoAdvance(false);
-      //setViewSignDetail(true);
       dispatch(setPracticeMode({ active: true, state: viewSign }));
-      // dispatch(setSelectedLevel(cat));
-      // dispatch(setPracticeMode({ active: false, state: pausedState }));
-      // dispatch(setSelectedSign(sign));
     }
   };
 
@@ -173,8 +168,7 @@ export default function PracticeMode() {
   };
 
   useEffect(() => {
-    let timer = undefined;
-    if (practiceMode.state === running && runningState) {
+    if (state === running && runningState) {
       if (runningState.selectedSign && isAudioOn) {
         const textToSay = runningState.selectedSign.title
           .replace(/^\d+./, "")
@@ -183,10 +177,7 @@ export default function PracticeMode() {
         Speech.speak(textToSay);
       }
     }
-    return () => {
-      if (timer) clearTimeout(timer);
-    };
-  }, [runningState]);
+  }, [state, isAudioOn, runningState]);
 
   const toggleTimer = () => {
     setAutoAdvance(!autoAdvance);
@@ -197,7 +188,7 @@ export default function PracticeMode() {
       clearTimeout(timerId);
       setTimerId(undefined);
     }
-    if (practiceMode.state === running) {
+    if (state === running) {
       electNextSign(runningState.signs, runningState.selectedSign);
     }
   };
@@ -218,7 +209,7 @@ export default function PracticeMode() {
     <>
       <Text style={styles.practiceHeading}>Random Sign Generator</Text>
       <Text style={styles.practiceTextIntro}>
-        Welcome to rally practice time. Set your preferences and let@apos;s get
+        Welcome to rally practice time. Set your preferences and let{"'"}s get
         started!
       </Text>
       <Text variant="titleMedium">Options</Text>
@@ -337,7 +328,7 @@ export default function PracticeMode() {
   );
 
   const RunningComponent = () => (
-    <>
+    <View style={{flex: 1}}>
       <Text style={styles.selectedSignText}>
         {runningState.selectedSign.title}
       </Text>
@@ -375,15 +366,15 @@ export default function PracticeMode() {
       >
         Go to sign
       </Button>
-    </>
+    </View>
   );
   return (
     <>
       <ScrollView nestedScrollEnabled={true}>
-        {practiceMode.state === setupState && <Setup />}
-        {practiceMode.state === running && <RunningComponent />}
-        {practiceMode.state === viewSign && (
-          <SignDetail key="practicedetail" sign={runningState.selectedSign} />
+        {state === setupState && <Setup />}
+        {state === running && <RunningComponent />}
+        {state === viewSign && (
+          <SignDetail sign={runningState.selectedSign} />
         )}
       </ScrollView>
     </>

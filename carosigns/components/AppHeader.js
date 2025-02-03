@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { BackHandler, Image, TouchableOpacity } from "react-native";
+import React, { useEffect, useState } from "react";
+import { BackHandler, Image } from "react-native";
 import { Appbar, Menu, Text } from "react-native-paper";
 import { useDispatch, useSelector } from "react-redux";
 import SignsDB from "../data/SignDb";

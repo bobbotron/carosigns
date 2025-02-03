@@ -355,6 +355,7 @@ export default function SignDetail(props) {
         <View
           style={{
             zIndex: 200,
+            paddingBottom: 20,
           }}
         >
           <DropDownPicker
