@@ -322,7 +322,7 @@ export default function SignDetail(props) {
             style={styles.rewardText}
           />
           <Text style={styles.rewardText}>
-            Reinforcement station in Novice, Intermdiate &amp; Advanced A/B
+            Reinforcement station in Novice &amp; Advanced A/B
           </Text>
         </View>
       )}
