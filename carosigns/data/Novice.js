@@ -248,7 +248,7 @@ const Novice = {
       icon: require("../../assets/slides/108.jpg"),
       title: "108. HALT - 90 Pivot Left - HALT",
       description:
-      "• The team comes to a <b>halt</b> and the handler cues the <b>dog to sit in heel position.<br/>• The handler pivots in place 90-degrees to their left in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler halts.</b><br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/>• This station results in a 90-degree change of direction to the left.<br/><br/>",
+        "• The team comes to a <b>halt</b> and the handler cues the <b>dog to sit in heel position.<br/>• The handler pivots in place 90-degrees to their left in place and halts.</br>• The dog must move simultaneously with the handler and sit when the handler halts.</b><br/>• The handler cues the dog to <b>heel forward from the sit position</b>.<br/>• This station results in a 90-degree change of direction to the left.<br/><br/>",
       tips: "• Ensure you are pivoting in as small a space possible rather than taking a step: either the ball one foot or the heel of one foot must stay in place (sometimes referred to as turning on a dinner plate!).<br/>• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
       reward: true,
       deductions: {
@@ -740,10 +740,11 @@ const Novice = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-    },{
+    },
+    {
       name: "130",
       icon: require("../../assets/slides/130.jpg"),
-      title: "130. Diagonal Right",      
+      title: "130. Diagonal Right",
       description:
         "• While heeling, the team makes a <b>diagonal turn to the right</b>.<br/><br/>",
       tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
@@ -753,14 +754,13 @@ const Novice = {
           "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
         ],
 
-        nq: [
-          "Dog assumes a position not requested (eg. sit)",
-        ],
+        nq: ["Dog assumes a position not requested (eg. sit)"],
       },
-    },{
+    },
+    {
       name: "131",
       icon: require("../../assets/slides/131.jpg"),
-      title: "131. Diagonal Left",      
+      title: "131. Diagonal Left",
       description:
         "• While heeling, the team makes a <b>diagonal turn to the left</b>.<br/><br/>",
       tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
@@ -770,12 +770,9 @@ const Novice = {
           "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
         ],
 
-        nq: [
-          "Dog assumes a position not requested (eg. sit)",
-        ],
+        nq: ["Dog assumes a position not requested (eg. sit)"],
       },
     },
-
   ],
 };
 

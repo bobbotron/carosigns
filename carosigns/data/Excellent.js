@@ -131,12 +131,14 @@ const Excellent = {
           "Dog backs up at an angle of up to 45-degrees out of alignment",
           "Dog's shoulders in heel position but their body at a 45-degree angle (2 points)",
         ],
-        substantial: ["Dog's shoulders in heel position but their body at a greater than 45-degree angle but not more than 90 degrees (5 points)"],
-        
+        substantial: [
+          "Dog's shoulders in heel position but their body at a greater than 45-degree angle but not more than 90 degrees (5 points)",
+        ],
+
         nq: [
           "Handler does not take 3 complete steps backwards",
           "Dog does not move simultaneously with the handler",
-          "Dog not in heel position",          
+          "Dog not in heel position",
         ],
       },
       video: undefined,
@@ -330,8 +332,10 @@ const Excellent = {
           "Handler or dog stop forward motion during the turn",
           "Dog is out of heel position",
         ],
-        substantial: ["Handler takes more than 2 steps after the step completing the turn (3 points)"],
-        
+        substantial: [
+          "Handler takes more than 2 steps after the step completing the turn (3 points)",
+        ],
+
         nq: [
           "The dog assumes another position (such as a sit) prior to, instead of, or after the down",
           "team does not make a 90-degree turn in the correct direction or does not take two additional steps after the turn",
@@ -350,7 +354,9 @@ const Excellent = {
           "Handler or dog stop forward motion during the turn",
           "Dog is out of heel position",
         ],
-        substantial: ["Handler takes more than 2 steps after the step completing the turn (3 points)"],
+        substantial: [
+          "Handler takes more than 2 steps after the step completing the turn (3 points)",
+        ],
 
         nq: [
           "The dog assumes another position (such as a sit) prior to, instead of, or after the down",
@@ -381,7 +387,9 @@ const Excellent = {
           "Dog backs up at an angle of up to 45-degrees out of alignment",
           "Dog's shoulders in heel position but their body at a 45-degree angle (2 points)",
         ],
-        substantial: ["Dog's shoulders in heel position but their body at a greater than 45-degree angle (5 points)"],
+        substantial: [
+          "Dog's shoulders in heel position but their body at a greater than 45-degree angle (5 points)",
+        ],
 
         nq: [
           "Handler does not take 2 complete steps backwards",
@@ -402,7 +410,9 @@ const Excellent = {
           "Dog backs up at an angle of up to 45-degrees out of alignment",
           "Dog's shoulders in heel position but their body at a 45-degree angle (2 points)",
         ],
-        substantial: ["Dog's shoulders in heel position but their body at a greater than 45-degree angle (5 points)"],
+        substantial: [
+          "Dog's shoulders in heel position but their body at a greater than 45-degree angle (5 points)",
+        ],
 
         nq: [
           "Handler does not take 2 complete steps backwards",
@@ -417,7 +427,7 @@ const Excellent = {
       title: "320. Moving Sit - Walk Around",
       description:
         "• While heeling, the handler cues the <b>dog to sit and without pausing walks around the dog from nose to tail returning to heel position</b>.<br>• The <b> dog must remain in a sit</b> while the handler walks around the dog.<br/>• The handler remains within arm’s length of the dog throughout the exercise.<br/>• The handler may pause upon returning to heel position before heeling away from the station.<br/>• The handler cues the dog to <b>heel forward from the sit position</b><br/><br/>",
-      tips: "• The handler's path should flow smoothly and without interruption from heel position while walking around the dog.<br/>• You may <i>slightly</i> slow your pace as you circle the dog but significantly slowing your pace is a substantial deduction.<br/>• Ideally, the dog should assume the sit before the handler leaves heel position.<br/>• Walk a tight circle around the dog.<br/>",      
+      tips: "• The handler's path should flow smoothly and without interruption from heel position while walking around the dog.<br/>• You may <i>slightly</i> slow your pace as you circle the dog but significantly slowing your pace is a substantial deduction.<br/>• Ideally, the dog should assume the sit before the handler leaves heel position.<br/>• Walk a tight circle around the dog.<br/>",
       deductions: {
         minor: [
           "Dog sits more than 45-degrees out of heel position",
@@ -428,11 +438,14 @@ const Excellent = {
 
         substantial: [
           "Handler significantly slows their pace during the moving sit",
-          "Dog has not begun to assume the sit position as the handler passes their paws", "Dog is in the process assumming the sit as the handler passes their far shoulder."
+          "Dog has not begun to assume the sit position as the handler passes their paws",
+          "Dog is in the process assumming the sit as the handler passes their far shoulder.",
         ],
 
         nq: [
-          "Sit 90-degrees or more out of heel position", "Dog has not begun to sit by the time the handler passes their far shoulder", "Dog has not completed the sit by the time the handler passes by their tail",
+          "Sit 90-degrees or more out of heel position",
+          "Dog has not begun to sit by the time the handler passes their far shoulder",
+          "Dog has not completed the sit by the time the handler passes by their tail",
           "Sit is 90-degrees or more out of heel position",
           "Dog turns with the handler rather than maintaining a sit",
           "Handler stops forward motion while performing the moving sit",

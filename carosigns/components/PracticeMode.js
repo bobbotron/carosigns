@@ -328,7 +328,7 @@ export default function PracticeMode() {
   );
 
   const RunningComponent = () => (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1 }}>
       <Text style={styles.selectedSignText}>
         {runningState.selectedSign.title}
       </Text>
@@ -373,9 +373,7 @@ export default function PracticeMode() {
       <ScrollView nestedScrollEnabled={true}>
         {state === setupState && <Setup />}
         {state === running && <RunningComponent />}
-        {state === viewSign && (
-          <SignDetail sign={runningState.selectedSign} />
-        )}
+        {state === viewSign && <SignDetail sign={runningState.selectedSign} />}
       </ScrollView>
     </>
   );
