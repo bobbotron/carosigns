@@ -1,6 +1,7 @@
 import { Appbar } from "react-native-paper";
 import { useSelector, useDispatch } from "react-redux";
 import { addFavorite, removeFavorite } from "../redux/actions";
+import React from "react";
 
 export default function FavAction(props) {
   const signDefined = props.sign !== undefined;

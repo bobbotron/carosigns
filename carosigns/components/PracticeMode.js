@@ -40,11 +40,13 @@ export default function PracticeMode() {
   const [noviceChecked, setNoviceChecked] = useState(true);
   const [advancedChecked, setAdvancedChecked] = useState(true);
   const [excellentChecked, setExcellentChecked] = useState(true);
+  const { favorites } = useSelector((state) => state.signsReducer);
+  const [favChecked, setFavChecked] = useState(favorites?.length !== 0);
   const [seconds, setSeconds] = useState(8);
   const [runningState, setRunningState] = useState({});
   const [timerId, setTimerId] = useState(undefined);
   const [autoAdvance, setAutoAdvance] = useState(true);
-
+  
   const state = practiceMode.state;
   ImageShim();
 
@@ -116,13 +118,18 @@ export default function PracticeMode() {
 
   // TODO update this to add Intermediate
   const signFilter = (sign) => {
-    if (sign.category.indexOf("Novice") !== -1 && noviceChecked) {
+    if (noviceChecked && sign.category.indexOf("Novice") !== -1 ) {
       return true;
     }
-    if (sign.category.indexOf("Advanced") !== -1 && advancedChecked) {
+    if (advancedChecked && sign.category.indexOf("Advanced") !== -1 ) {
       return true;
     }
-    if (sign.category.indexOf("Excellent") !== -1 && excellentChecked) {
+    if (excellentChecked && sign.category.indexOf("Excellent") !== -1 ) {
+      return true;
+    }
+    const f = (favSign) => sign.name === favSign;
+    if (favChecked && favorites.find(f) !== undefined)
+    {
       return true;
     }
     return false;
@@ -194,7 +201,7 @@ export default function PracticeMode() {
   };
 
   const canStartPractice = () => {
-    return noviceChecked || advancedChecked || excellentChecked;
+    return noviceChecked || advancedChecked || excellentChecked || favChecked;
   };
 
   const startPractice = () => {
@@ -300,6 +307,17 @@ export default function PracticeMode() {
           value={excellentChecked}
           onValueChange={() => {
             setExcellentChecked(!excellentChecked);
+          }}
+        />
+      </View>
+      <View style={styles.configSwitchView}>
+        <Text style={styles.configSwitchLabel}>Favourites </Text>
+        <Switch
+        disabled={favorites?.length === 0}
+          style={styles.configSwitch}
+          value={favChecked}
+          onValueChange={() => {
+            setFavChecked(!favChecked);
           }}
         />
       </View>
