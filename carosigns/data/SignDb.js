@@ -6,12 +6,12 @@ import Versatility from "./Versatility";
 import VersatilityExcellent from "./VersatilityExcellent";
 import WorkingStream from "./WorkingStream";
 import Working from "./Working";
-//import Intermediate from "./Intermediate";
+import Intermediate from "./Intermediate";
 
 const Levels = [
   MainStream,
   Novice,
-  // Intermediate,
+  Intermediate,
   Advanced,
   Excellent,
   Versatility,
