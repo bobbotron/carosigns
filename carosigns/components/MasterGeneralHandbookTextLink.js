@@ -1,4 +1,5 @@
 import { StyleSheet, Text, Linking } from "react-native";
+import React from "react";
 
 const styles = StyleSheet.create({
   deductionLink: {

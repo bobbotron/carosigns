@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const Novice = {
   name: "Novice",
   type: "normal",

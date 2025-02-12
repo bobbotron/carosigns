@@ -1,11 +1,11 @@
 import { View, Text, ScrollView } from "react-native";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useDispatch, useSelector } from "react-redux";
 import SignsDB from "../data/SignDb";
 import SignDetail from "./SignDetail";
 import { Button } from "react-native-paper";
 import { setSearchText } from "../redux/actions";
 
-export default function SearchResults(props) {
+export default function SearchResults() {
   const { searchText } = useSelector((state) => state.signsReducer);
   const searchActive = !(searchText === undefined || searchText === "");
   const queryLower = searchActive ? searchText.toLowerCase() : "";

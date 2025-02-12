@@ -1,6 +1,6 @@
 import { Image, TouchableOpacity } from "react-native";
-
 import { StyleSheet } from "react-native";
+import React from "react";
 
 const styles = StyleSheet.create({
   tinyLogo: {

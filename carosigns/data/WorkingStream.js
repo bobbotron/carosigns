@@ -1,5 +1,5 @@
 const WorkingStream = {
-  name: "CARO Working Stream",
+  name: "CARO Working",
   type: "stream",
   icon: "vlc",
   signs: [],

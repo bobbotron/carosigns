@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const Working = {
   name: "Working Exercises",
   type: "working",

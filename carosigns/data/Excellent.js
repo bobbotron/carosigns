@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const Excellent = {
   name: "Excellent",
   type: "normal",

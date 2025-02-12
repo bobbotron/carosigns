@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const Advanced = {
   name: "Advanced",
   type: "normal",
