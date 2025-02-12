@@ -8,9 +8,8 @@ import {
 } from "react-native";
 import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
-import { setSelectedSign } from "../redux/actions";
-import { useDispatch, useSelector } from "react-redux";
 import React from "react";
+import useLevelHooks from "../hooks/LevelHooks";
 
 const styles = StyleSheet.create({
   gridImage: { width: 140, height: 100 },
@@ -23,30 +22,27 @@ const styles = StyleSheet.create({
   overlayText: { fontWeight: "bold", fontSize: 14 },
 });
 
-export default function Level(props) {
-  const { selectedSign } = useSelector((state) => state.signsReducer);
-  const dispatch = useDispatch();
+export default function Level({ level, signs }) {
+  const { selectedSign, showSigns, levelSelectFn } = useLevelHooks({
+    signs,
+  });
 
   return (
     <>
       {selectedSign === undefined &&
-        (props.signs.length === 0 ? (
+        (showSigns ? (
           <Text>You have not saved any signs yet.</Text>
         ) : (
           <>
             <FlatGrid
               itemDimension={135}
-              data={props.signs}
-              // style={styles.gridView}
-              // staticDimension={300}
-              // fixed
-              // horizontal
+              data={signs}
               spacing={10}
               renderItem={({ item }) => (
                 <View key={item.name}>
                   <TouchableOpacity
                     onPress={() => {
-                      dispatch(setSelectedSign(item));
+                      levelSelectFn(item);
                     }}
                   >
                     <ImageBackground
@@ -68,11 +64,7 @@ export default function Level(props) {
         ))}
       {selectedSign !== undefined && (
         <ScrollView nestedScrollEnabled={true}>
-          <SignDetail
-            key="sign"
-            signType={props.level.type}
-            sign={selectedSign}
-          />
+          <SignDetail key="sign" signType={level.type} sign={selectedSign} />
         </ScrollView>
       )}
     </>

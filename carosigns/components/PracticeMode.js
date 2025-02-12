@@ -46,7 +46,7 @@ export default function PracticeMode() {
   const [runningState, setRunningState] = useState({});
   const [timerId, setTimerId] = useState(undefined);
   const [autoAdvance, setAutoAdvance] = useState(true);
-  
+
   const state = practiceMode.state;
   ImageShim();
 
@@ -118,18 +118,17 @@ export default function PracticeMode() {
 
   // TODO update this to add Intermediate
   const signFilter = (sign) => {
-    if (noviceChecked && sign.category.indexOf("Novice") !== -1 ) {
+    if (noviceChecked && sign.category.indexOf("Novice") !== -1) {
       return true;
     }
-    if (advancedChecked && sign.category.indexOf("Advanced") !== -1 ) {
+    if (advancedChecked && sign.category.indexOf("Advanced") !== -1) {
       return true;
     }
-    if (excellentChecked && sign.category.indexOf("Excellent") !== -1 ) {
+    if (excellentChecked && sign.category.indexOf("Excellent") !== -1) {
       return true;
     }
     const f = (favSign) => sign.name === favSign;
-    if (favChecked && favorites.find(f) !== undefined)
-    {
+    if (favChecked && favorites.find(f) !== undefined) {
       return true;
     }
     return false;
@@ -313,7 +312,7 @@ export default function PracticeMode() {
       <View style={styles.configSwitchView}>
         <Text style={styles.configSwitchLabel}>Favourites </Text>
         <Switch
-        disabled={favorites?.length === 0}
+          disabled={favorites?.length === 0}
           style={styles.configSwitch}
           value={favChecked}
           onValueChange={() => {

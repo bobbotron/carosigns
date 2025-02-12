@@ -21,11 +21,6 @@ export default function MainList(props) {
       fontSize: 18,
     },
     paragraph: {
-      // margin: 24,
-      // marginTop: 0,
-      // fontSize: 14,
-      // fontWeight: "normal",
-      // textAlign: "center",
     },
     logo: {
       marginTop: 20,
