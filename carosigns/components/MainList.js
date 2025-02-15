@@ -20,8 +20,7 @@ export default function MainList(props) {
     buttonLabel: {
       fontSize: 18,
     },
-    paragraph: {
-    },
+    paragraph: {},
     logo: {
       marginTop: 20,
       height: 128,

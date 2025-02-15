@@ -1,5 +1,6 @@
-/* eslint-disable no-undef */
-const Novice = {
+import { Level } from "../types/Sign";
+
+const Novice: Level = {
   name: "Novice",
   type: "normal",
   signs: [
@@ -63,7 +64,6 @@ const Novice = {
           "Reinforcement: handler puts their hand into the pocket where the food is located before the dog has completed the station, uses the food as a lure, or stores the food in their left pocket",
         ],
       },
-      video: undefined,
     },
     {
       name: "101",

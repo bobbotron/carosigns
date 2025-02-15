@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { ProgressBar } from "react-native-paper";
 
-export default function PracticeProgressBar({ seconds, onComplete }) {
-  const [counter, setCounter] = useState(0);
+export type ProgressBarProps = {
+  seconds: number;
+  onComplete: () => void;
+};
+
+export default function PracticeProgressBar({
+  seconds,
+  onComplete,
+}: ProgressBarProps): React.JSX.Element {
+  const [counter, setCounter] = useState<number>(0);
 
   useEffect(() => {
     if (counter >= seconds * 10) {

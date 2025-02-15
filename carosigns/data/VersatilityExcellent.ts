@@ -1,5 +1,6 @@
-/* eslint-disable no-undef */
-const VersatilityExcellent = {
+import { Level } from "../types/Sign";
+
+const VersatilityExcellent: Level = {
   name: "Versatility Excellent",
   type: "normal",
   signs: [
@@ -94,7 +95,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "504",
@@ -119,7 +119,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "505",
@@ -140,7 +139,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "506",
@@ -170,7 +168,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "507",
@@ -192,7 +189,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "508",
@@ -529,7 +525,6 @@ const VersatilityExcellent = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "524",
@@ -550,7 +545,6 @@ const VersatilityExcellent = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "525",
@@ -577,7 +571,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise (eg. sits)",
         ],
       },
-      video: undefined,
     },
     {
       name: "526",
@@ -629,7 +622,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "528",
@@ -655,7 +647,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "529",
@@ -680,7 +671,6 @@ const VersatilityExcellent = {
           "The dog does not remain in heel position",
         ],
       },
-      video: undefined,
     },
     {
       name: "530",
@@ -703,7 +693,6 @@ const VersatilityExcellent = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "531",
@@ -721,7 +710,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "532",
@@ -739,7 +727,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "533",
@@ -757,7 +744,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "534",
@@ -775,7 +761,6 @@ const VersatilityExcellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
   ],
 };

@@ -7,6 +7,7 @@ import VersatilityExcellent from "./VersatilityExcellent";
 import WorkingStream from "./WorkingStream";
 import Working from "./Working";
 import Intermediate from "./Intermediate";
+import { Level } from "../types/Sign";
 
 const Levels = [
   MainStream,
@@ -39,7 +40,7 @@ const Signs = [
   ...Working.signs,
 ];
 
-const createLevel = (l) => {
+const createLevel = (l: Level) => {
   return {
     name: l.name,
     type: l.type,

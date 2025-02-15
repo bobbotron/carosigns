@@ -5,6 +5,7 @@ import {
   SET_SELECTED_LEVEL,
   SET_SELECTED_SIGN,
   SET_PRACTICE_MODE,
+  ActionTypes as ActionType,
 } from "./actions";
 
 const initialState = {
@@ -15,7 +16,12 @@ const initialState = {
   practiceMode: { active: false },
 };
 
-function signsReducer(state = initialState, action) {
+type Action = {
+  type: ActionType;
+  payload: any;
+};
+
+function signsReducer(state = initialState, action: Action) {
   switch (action.type) {
     case ADD_FAVORITE_ITEM: {
       const f = state.favorites.filter((sign) => sign === action.payload.name);

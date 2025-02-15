@@ -11,16 +11,16 @@
     "prettier:write": "npx prettier -w ."
   },
   "dependencies": {
-    "@expo/metro-runtime": "~4.0.0",
+    "@expo/metro-runtime": "~4.0.1",
     "@react-native-async-storage/async-storage": "1.23.1",
-    "expo": "^52.0.23",
-    "expo-speech": "~13.0.0",
-    "expo-status-bar": "~2.0.0",
+    "expo": "^52.0.35",
+    "expo-speech": "~13.0.1",
+    "expo-status-bar": "~2.0.1",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-native": "0.76.5",
+    "react-native": "0.76.7",
     "react-native-dropdown-picker": "^5.4.4",
     "react-native-pager-view": "6.5.1",
     "react-native-paper": "^5.13.1",
@@ -38,10 +38,15 @@
   "devDependencies": {
     "@babel/core": "^7.24.0",
     "@eslint/js": "^9.17.0",
+    "@tsconfig/react-native": "^3.0.5",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^18.3.18",
+    "@types/react-test-renderer": "^19.0.0",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.3",
     "globals": "^15.14.0",
-    "prettier": "2.8.7"
+    "prettier": "2.8.7",
+    "typescript": "^5.7.3"
   },
   "private": true,
   "engines": {
