@@ -17,6 +17,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setSearchText, setSelectedLevel } from "./redux/actions";
 import AppHeader from "./components/AppHeader";
 import SearchResults from "./components/SearchResults";
+import SwitchTest from "./components/SwitchTest";
 
 export default function AppController() {
   const window = useWindowDimensions();

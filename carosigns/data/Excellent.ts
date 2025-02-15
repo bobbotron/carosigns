@@ -1,5 +1,7 @@
+import { Level } from "../types/Sign";
+
 /* eslint-disable no-undef */
-const Excellent = {
+const Excellent: Level = {
   name: "Excellent",
   type: "normal",
   signs: [
@@ -21,7 +23,6 @@ const Excellent = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "301",
@@ -41,7 +42,6 @@ const Excellent = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "302",
@@ -68,7 +68,6 @@ const Excellent = {
           "Dog assumes a position not required by the exercise (eg. sits)",
         ],
       },
-      video: undefined,
     },
     {
       name: "303",
@@ -93,7 +92,6 @@ const Excellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "304",
@@ -118,7 +116,6 @@ const Excellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "305",
@@ -142,7 +139,6 @@ const Excellent = {
           "Dog not in heel position",
         ],
       },
-      video: undefined,
     },
     {
       name: "306",
@@ -166,7 +162,6 @@ const Excellent = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "307",
@@ -184,7 +179,6 @@ const Excellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "308",
@@ -202,7 +196,6 @@ const Excellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "309",
@@ -220,7 +213,6 @@ const Excellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "310",
@@ -238,7 +230,6 @@ const Excellent = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "311",
@@ -259,7 +250,6 @@ const Excellent = {
           "Dog goes past the plane of the obstacle",
         ],
       },
-      video: undefined,
     },
     {
       name: "312",
@@ -280,7 +270,6 @@ const Excellent = {
           "Dog goes past the plane of the obstacle",
         ],
       },
-      video: undefined,
     },
     {
       name: "313",
@@ -299,7 +288,6 @@ const Excellent = {
           "Dog goes past the plane of the obstacle",
         ],
       },
-      video: undefined,
     },
     {
       name: "314",
@@ -319,7 +307,6 @@ const Excellent = {
           "Dog fails to complete the weave pattern",
         ],
       },
-      video: undefined,
     },
     {
       name: "315",

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import {
   View,
@@ -6,13 +6,15 @@ import {
   useWindowDimensions,
   Image,
   ScrollView,
+  Platform,
+  UIManager,
 } from "react-native";
 import theme from "../Theme";
 import {
   Button,
   HelperText,
-  IconButton,
   Switch,
+  IconButton,
   Text,
 } from "react-native-paper";
 
@@ -82,7 +84,6 @@ export default function PracticeMode() {
       left: leftOffset,
       width: width,
       height: height,
-      //textAlign: "center",
       marginBottom: 20,
     },
     buttonStyle: {
@@ -185,9 +186,9 @@ export default function PracticeMode() {
     }
   }, [state, isAudioOn, runningState]);
 
-  const toggleTimer = () => {
+  const toggleTimer = useCallback(() => {
     setAutoAdvance(!autoAdvance);
-  };
+  }, [setAutoAdvance, autoAdvance]);
 
   const nextSign = () => {
     if (timerId) {
@@ -211,187 +212,182 @@ export default function PracticeMode() {
     }
   };
 
-  const Setup = () => (
-    <>
-      <Text style={styles.practiceHeading}>Random Sign Generator</Text>
-      <Text style={styles.practiceTextIntro}>
-        Welcome to rally practice time. Set your preferences and let{"'"}s get
-        started!
-      </Text>
-      <Text variant="titleMedium">Options</Text>
-      <View style={styles.configSwitchView}>
-        <Text style={styles.configSwitchLabel}>Audio </Text>
-        <Switch
-          style={styles.configSwitch}
-          label="Audio"
-          value={isAudioOn}
-          onValueChange={() => {
-            setIsAudioOn(!isAudioOn);
-          }}
-        />
-      </View>
-      <View style={styles.configSwitchView}>
-        <Text style={styles.configSwitchLabel}>Auto flip to next sign </Text>
-        <Switch
-          style={styles.configSwitch}
-          value={autoAdvance}
-          onValueChange={() => {
-            setAutoAdvance(!autoAdvance);
-          }}
-        />
-      </View>
-      {autoAdvance && (
-        <View style={styles.configSwitchView}>
-          <Text style={styles.configSwitchLabel}>Seconds per sign </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              alignContent: "flex-end",
-            }}
-          >
-            <IconButton
-              icon="less-than"
-              mode="contained-tonal"
-              size={20}
-              onPress={() => {
-                if (seconds > 2) {
-                  setSeconds(seconds - 2);
-                }
-              }}
-            />
-            <Text style={{ fontSize: 20 }}>{seconds}</Text>
-            <IconButton
-              icon="greater-than"
-              size={20}
-              mode="contained"
-              style={{ marginRight: -2 }}
-              onPress={() => {
-                if (seconds < 60) {
-                  setSeconds(seconds + 2);
-                }
-              }}
+  return (
+    <ScrollView key={"scrollView"} nestedScrollEnabled={true}>
+      {state === setupState && (
+        <>
+          <Text style={styles.practiceHeading}>Random Sign Generator</Text>
+          <Text style={styles.practiceTextIntro}>
+            Welcome to rally practice time. Set your preferences and let{"'"}s
+            get started!
+          </Text>
+          <Text variant="titleMedium">Options</Text>
+          <View style={styles.configSwitchView}>
+            <Text style={styles.configSwitchLabel}>Audio </Text>
+            <Switch
+              key={"audioSwitch"}
+              style={styles.configSwitch}
+              label="Audio"
+              value={isAudioOn}
+              onValueChange={setIsAudioOn}
             />
           </View>
+          <View style={styles.configSwitchView}>
+            <Text style={styles.configSwitchLabel}>
+              Auto flip to next sign{" "}
+            </Text>
+            <Switch
+              key={"autoAdvanceSwitch"}
+              style={styles.configSwitch}
+              value={autoAdvance}
+              onValueChange={setAutoAdvance}
+            />
+          </View>
+          {autoAdvance && (
+            <View style={styles.configSwitchView}>
+              <Text style={styles.configSwitchLabel}>Seconds per sign </Text>
+              <View
+                style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                  alignContent: "flex-end",
+                }}
+              >
+                <IconButton
+                  icon="less-than"
+                  mode="contained-tonal"
+                  size={20}
+                  onPress={() => {
+                    if (seconds > 2) {
+                      setSeconds(seconds - 2);
+                    }
+                  }}
+                />
+                <Text style={{ fontSize: 20 }}>{seconds}</Text>
+                <IconButton
+                  icon="greater-than"
+                  size={20}
+                  mode="contained"
+                  style={{ marginRight: -2 }}
+                  onPress={() => {
+                    if (seconds < 60) {
+                      setSeconds(seconds + 2);
+                    }
+                  }}
+                />
+              </View>
+            </View>
+          )}
+
+          <Text variant="titleMedium" style={{ marginTop: 10 }}>
+            Classes to Include
+          </Text>
+          <View style={styles.configSwitchView}>
+            <Text style={styles.configSwitchLabel}>Novice </Text>
+            <Switch
+              key={"noviceSwitch"}
+              style={styles.configSwitch}
+              value={noviceChecked}
+              onValueChange={setNoviceChecked}
+            />
+          </View>
+          <View style={styles.configSwitchView}>
+            <Text style={styles.configSwitchLabel}>Advanced </Text>
+            <Switch
+              key={"advancedSwitch"}
+              style={styles.configSwitch}
+              value={advancedChecked}
+              onValueChange={setAdvancedChecked}
+            />
+          </View>
+          <View style={styles.configSwitchView}>
+            <Text style={styles.configSwitchLabel}>Excellent </Text>
+            <Switch
+              key={"excellentSwitch"}
+              style={styles.configSwitch}
+              value={excellentChecked}
+              onValueChange={setExcellentChecked}
+            />
+          </View>
+          <View style={styles.configSwitchView}>
+            <Text style={styles.configSwitchLabel}>Saved Signs </Text>
+            <Switch
+              key={"favSwitch"}
+              disabled={favorites?.length === 0}
+              style={styles.configSwitch}
+              value={favChecked}
+              onValueChange={setFavChecked}
+            />
+          </View>
+
+          <Button
+            mode="contained"
+            onPress={startPractice}
+            style={{ marginTop: 20 }}
+            disabled={!canStartPractice()}
+          >
+            Start Practice
+          </Button>
+          <HelperText
+            type="error"
+            visible={!canStartPractice()}
+            style={{ paddingBottom: 5 }}
+          >
+            Select one or more levels
+          </HelperText>
+
+          <Text>
+            Note: Stations with cones or agility equipment are not included in
+            practice time.
+          </Text>
+        </>
+      )}
+      {state === running && (
+        <View style={{ flex: 1 }}>
+          <Text style={styles.selectedSignText}>
+            {runningState.selectedSign.title}
+          </Text>
+
+          {autoAdvance && (
+            <PracticeProgressBar
+              key={runningState?.selectedSign?.title ?? "default"}
+              seconds={seconds}
+              onComplete={electSign}
+            />
+          )}
+          <Image
+            key={"logo"}
+            source={runningState.selectedSign.icon}
+            style={styles.logo}
+          />
+
+          <Button
+            mode="contained"
+            icon={autoAdvance ? "pause" : "play"}
+            onPress={toggleTimer}
+            style={styles.buttonStyle}
+          >
+            {autoAdvance ? "Pause" : "Start"}
+          </Button>
+          <Button
+            mode="contained"
+            icon="forward"
+            onPress={nextSign}
+            style={styles.buttonStyle}
+          >
+            Next
+          </Button>
+          <Button
+            mode="contained"
+            icon="text-box-search"
+            onPress={goToSign}
+            style={styles.buttonStyle}
+          >
+            Go to sign
+          </Button>
         </View>
       )}
-
-      <Text variant="titleMedium" style={{ marginTop: 10 }}>
-        Classes to Include
-      </Text>
-      <View style={styles.configSwitchView}>
-        <Text style={styles.configSwitchLabel}>Novice </Text>
-        <Switch
-          style={styles.configSwitch}
-          value={noviceChecked}
-          onValueChange={() => {
-            setNoviceChecked(!noviceChecked);
-          }}
-        />
-      </View>
-      <View style={styles.configSwitchView}>
-        <Text style={styles.configSwitchLabel}>Advanced </Text>
-        <Switch
-          style={styles.configSwitch}
-          value={advancedChecked}
-          onValueChange={() => {
-            setAdvancedChecked(!advancedChecked);
-          }}
-        />
-      </View>
-      <View style={styles.configSwitchView}>
-        <Text style={styles.configSwitchLabel}>Excellent </Text>
-        <Switch
-          style={styles.configSwitch}
-          value={excellentChecked}
-          onValueChange={() => {
-            setExcellentChecked(!excellentChecked);
-          }}
-        />
-      </View>
-      <View style={styles.configSwitchView}>
-        <Text style={styles.configSwitchLabel}>Favourites </Text>
-        <Switch
-          disabled={favorites?.length === 0}
-          style={styles.configSwitch}
-          value={favChecked}
-          onValueChange={() => {
-            setFavChecked(!favChecked);
-          }}
-        />
-      </View>
-
-      <Button
-        mode="contained"
-        onPress={startPractice}
-        style={{ marginTop: 20 }}
-        disabled={!canStartPractice()}
-      >
-        Start Practice
-      </Button>
-      <HelperText
-        type="error"
-        visible={!canStartPractice()}
-        style={{ paddingBottom: 5 }}
-      >
-        Select one or more levels
-      </HelperText>
-
-      <Text>
-        Note: Stations with cones or agility equipment are not included in
-        practice time.
-      </Text>
-    </>
-  );
-
-  const RunningComponent = () => (
-    <View style={{ flex: 1 }}>
-      <Text style={styles.selectedSignText}>
-        {runningState.selectedSign.title}
-      </Text>
-
-      {autoAdvance && (
-        <PracticeProgressBar seconds={seconds} onComplete={electSign} />
-      )}
-      <Image
-        key={"logo"}
-        source={runningState.selectedSign.icon}
-        style={styles.logo}
-      />
-
-      <Button
-        mode="contained"
-        icon={autoAdvance ? "pause" : "play"}
-        onPress={toggleTimer}
-        style={styles.buttonStyle}
-      >
-        {autoAdvance ? "Pause" : "Start"}
-      </Button>
-      <Button
-        mode="contained"
-        icon="forward"
-        onPress={nextSign}
-        style={styles.buttonStyle}
-      >
-        Next
-      </Button>
-      <Button
-        mode="contained"
-        icon="text-box-search"
-        onPress={goToSign}
-        style={styles.buttonStyle}
-      >
-        Go to sign
-      </Button>
-    </View>
-  );
-  return (
-    <>
-      <ScrollView nestedScrollEnabled={true}>
-        {state === setupState && <Setup />}
-        {state === running && <RunningComponent />}
-        {state === viewSign && <SignDetail sign={runningState.selectedSign} />}
-      </ScrollView>
-    </>
+      {state === viewSign && <SignDetail sign={runningState.selectedSign} />}
+    </ScrollView>
   );
 }

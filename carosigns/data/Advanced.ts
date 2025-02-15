@@ -1,5 +1,7 @@
+import { Level } from "../types/Sign";
+
 /* eslint-disable no-undef */
-const Advanced = {
+const Advanced: Level = {
   name: "Advanced",
   type: "normal",
   signs: [
@@ -25,7 +27,6 @@ const Advanced = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "201",
@@ -50,7 +51,6 @@ const Advanced = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "202",
@@ -70,7 +70,6 @@ const Advanced = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "203",
@@ -106,7 +105,6 @@ const Advanced = {
           "Reinforcement: handler puts their hand into the pocket where the food is located before the dog has completed the station, uses the food as a lure, or stores the food in their left pocket",
         ],
       },
-      video: undefined,
     },
     {
       name: "204",
@@ -128,7 +126,6 @@ const Advanced = {
           "Dog assumes a position not required by the exercise",
         ],
       },
-      video: undefined,
     },
     {
       name: "205",

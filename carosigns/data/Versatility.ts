@@ -1,5 +1,6 @@
-/* eslint-disable no-undef */
-const Versatility = {
+import { Level } from "../types/Sign";
+
+const Versatility: Level = {
   name: "Versatility",
   type: "normal",
   signs: [
@@ -55,7 +56,7 @@ const Versatility = {
           "Change of heeling side does not occur",
         ],
       },
-      video: undefined,
+
       changeSide: true,
     },
     {
@@ -76,7 +77,7 @@ const Versatility = {
           "Change of heeling side does not occur",
         ],
       },
-      video: undefined,
+
       changeSide: true,
     },
     {
@@ -97,7 +98,7 @@ const Versatility = {
           "Change of heeling side does not occur",
         ],
       },
-      video: undefined,
+
       changeSide: true,
     },
     {
@@ -118,7 +119,7 @@ const Versatility = {
           "Change of heeling side does not occur",
         ],
       },
-      video: undefined,
+
       changeSide: true,
     },
     {
@@ -138,7 +139,7 @@ const Versatility = {
           "Dog does not change heeling sides by crossing in front of the handler",
         ],
       },
-      video: undefined,
+
       changeSide: true,
     },
     {
@@ -158,7 +159,7 @@ const Versatility = {
           "Dog does not change heeling sides by crossing behind the handler",
         ],
       },
-      video: undefined,
+
       changeSide: true,
     },
     {
@@ -178,7 +179,7 @@ const Versatility = {
           "Dog does not change heeling sides by crossing between the handler's legs",
         ],
       },
-      video: undefined,
+
       changeSide: true,
     },
     {
@@ -200,7 +201,7 @@ const Versatility = {
           "Dog does not cross behind the handler to heel on the right side",
         ],
       },
-      video: undefined,
+
       changeSide: true,
     },
     {
@@ -222,7 +223,7 @@ const Versatility = {
           "Dog does not cross behind the handler to heel on the left side",
         ],
       },
-      video: undefined,
+
       changeSide: true,
     },
     {
@@ -244,7 +245,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "410",
@@ -265,7 +265,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "411",
@@ -286,7 +285,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "412",
@@ -308,7 +306,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "413",
@@ -329,7 +326,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "414",
@@ -356,7 +352,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "415",
@@ -380,7 +375,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "416",
@@ -403,7 +397,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "417",
@@ -426,7 +419,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "418",
@@ -449,7 +441,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "419",
@@ -467,7 +458,6 @@ const Versatility = {
           "The team does not make a 90-degree turn in the correct direction",
         ],
       },
-      video: undefined,
     },
     {
       name: "420",
@@ -485,7 +475,6 @@ const Versatility = {
           "The team does not make a 90-degree turn in the correct direction",
         ],
       },
-      video: undefined,
     },
     {
       name: "421",
@@ -506,7 +495,6 @@ const Versatility = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-      video: undefined,
     },
     {
       name: "422",
@@ -527,7 +515,6 @@ const Versatility = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-      video: undefined,
     },
     {
       name: "423",
@@ -547,7 +534,6 @@ const Versatility = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-      video: undefined,
     },
     {
       name: "424",
@@ -567,7 +553,6 @@ const Versatility = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-      video: undefined,
     },
     {
       name: "425",
@@ -587,7 +572,6 @@ const Versatility = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-      video: undefined,
     },
     {
       name: "426",
@@ -607,7 +591,6 @@ const Versatility = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-      video: undefined,
     },
     {
       name: "427",
@@ -625,7 +608,6 @@ const Versatility = {
           "Slow pace not maintained continuously until the next sign",
         ],
       },
-      video: undefined,
     },
     {
       name: "428",
@@ -642,7 +624,6 @@ const Versatility = {
           "Fast pace not maintained continuously until the next sign",
         ],
       },
-      video: undefined,
     },
     {
       name: "429",
@@ -658,7 +639,6 @@ const Versatility = {
           "No noticeable change in the dog's pace from the slow or fast pace to normal pace",
         ],
       },
-      video: undefined,
     },
     {
       name: "430",
@@ -686,7 +666,6 @@ const Versatility = {
           "Handler walks into the dog to force the dog to move during a forward/finish (considered a physical correction)",
         ],
       },
-      video: undefined,
     },
     {
       name: "431",
@@ -714,7 +693,6 @@ const Versatility = {
           "Handler walks into the dog to force the dog to move during a forward/finish (considered a physical correction)",
         ],
       },
-      video: undefined,
     },
     {
       name: "432",
@@ -741,7 +719,6 @@ const Versatility = {
           "Handler walks into the dog to force the dog to move during a forward/finish (considered a physical correction)",
         ],
       },
-      video: undefined,
     },
     {
       name: "433",
@@ -768,7 +745,6 @@ const Versatility = {
           "Handler walks into the dog to force the dog to move during a forward/finish (considered a physical correction)",
         ],
       },
-      video: undefined,
     },
     {
       name: "434",
@@ -792,7 +768,6 @@ const Versatility = {
           "Handler touches the dog to put them into a position",
         ],
       },
-      video: undefined,
     },
     {
       name: "435",
@@ -814,7 +789,6 @@ const Versatility = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-      video: undefined,
     },
     {
       name: "436",
@@ -836,7 +810,6 @@ const Versatility = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-      video: undefined,
     },
     {
       name: "437",
@@ -858,7 +831,6 @@ const Versatility = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-      video: undefined,
     },
     {
       name: "438",
@@ -880,7 +852,6 @@ const Versatility = {
           "Dog assumes a position not requested (eg. sit)",
         ],
       },
-      video: undefined,
     },
     {
       name: "439",
@@ -900,7 +871,6 @@ const Versatility = {
           "Dog goes past the plane of the obstacle",
         ],
       },
-      video: undefined,
     },
     {
       name: "440",
@@ -920,7 +890,6 @@ const Versatility = {
           "Dog goes past the plane of the obstacle",
         ],
       },
-      video: undefined,
     },
     {
       name: "441",
@@ -938,7 +907,6 @@ const Versatility = {
           "Dog goes past the plane of the obstacle",
         ],
       },
-      video: undefined,
     },
     {
       name: "442",
@@ -957,7 +925,6 @@ const Versatility = {
           "The dog fails to complete the weave pattern",
         ],
       },
-      video: undefined,
     },
     {
       name: "443",
