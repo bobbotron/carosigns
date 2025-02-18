@@ -116,8 +116,10 @@ const Advanced: Level = {
       deductions: {
         minor: [
           "During the side step, the dog's shoulder remains in heel position but their body is at 45-degree angle (2 points)",
-          "Dog out of heel position",
           "Dog stops forward motion",
+        ],
+        substantial: [
+          "Dog's shoulder in heel position but body greater than 45 degrees but not more than 90 degrees out of alignment (5 points)",
         ],
         nq: [
           "The dog does not move simultaneously with the handler",
@@ -479,8 +481,16 @@ const Advanced: Level = {
       description:
         "•	While heeling, the <b>team loops diagonally right crossing over their original path</b>.<br/>•	The handler’s path while turning must be within a diameter of 2 feet and should be in a straight line after turning.<br/>• The station results in a change of direction diagonally to the left. <br/><br/>",
       deductions: {
-        substantial: ["TODO"],
-        nq: ["TODO"],
+        minor: [
+          "Handler’s path while turning is more than a 2-foot radius",
+          "Initiation of the sign outside of a radius of two feet from the station sign",
+          "Handler or dog stop forward motion",
+          "Dog is out of heel position. Forging, Wide, or Lagging",
+        ],
+        nq: [
+          "Team does not make a 225 degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
+        ],
       },
     },
     {
@@ -490,8 +500,16 @@ const Advanced: Level = {
       description:
         "•	While heeling, the <b>team loops diagonally left crossing over their original path</b>.<br/>•	The handler’s path while turning must be within a diameter of 2 feet and should be in a straight line after turning.<br/>• The station results in a change of direction diagonally to the right. <br/><br/>",
       deductions: {
-        substantial: ["TODO"],
-        nq: ["TODO"],
+        minor: [
+          "Handler’s path while turning is more than a 2-foot radius",
+          "Initiation of the sign outside of a radius of two feet from the station sign",
+          "Handler or dog stop forward motion",
+          "Dog is out of heel position. Forging, Wide, or Lagging",
+        ],
+        nq: [
+          "Team does not make a 225 degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
+        ],
       },
     },
     {
@@ -502,8 +520,10 @@ const Advanced: Level = {
       description:
         "•	Upon passing this sign, the handler calls the dog to heel <b>while continuing to move forward</b>.<br/><br/>",
       deductions: {
-        substantial: ["TODO"],
-        nq: ["TODO"],
+        nq: [
+          "Handler calls dog before fully passing Call Dog sign",
+          "Handler stops forward motion (except when following station 201)",
+        ],
       },
     },
   ],

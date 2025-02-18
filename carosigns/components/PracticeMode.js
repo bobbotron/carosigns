@@ -259,7 +259,7 @@ export default function PracticeMode() {
                   size={20}
                   onPress={() => {
                     if (seconds > 2) {
-                      setSeconds(seconds - 2);
+                      setSeconds(seconds - 1);
                     }
                   }}
                 />
@@ -271,7 +271,7 @@ export default function PracticeMode() {
                   style={{ marginRight: -2 }}
                   onPress={() => {
                     if (seconds < 60) {
-                      setSeconds(seconds + 2);
+                      setSeconds(seconds + 1);
                     }
                   }}
                 />
@@ -280,7 +280,7 @@ export default function PracticeMode() {
           )}
 
           <Text variant="titleMedium" style={{ marginTop: 10 }}>
-            Classes to Include
+            Signs to Include
           </Text>
           <View style={styles.configSwitchView}>
             <Text style={styles.configSwitchLabel}>Novice </Text>

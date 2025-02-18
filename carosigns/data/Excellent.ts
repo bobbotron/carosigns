@@ -317,16 +317,19 @@ const Excellent: Level = {
       deductions: {
         minor: [
           "Initiation of the sign outside of a radius of two feet from the station sign",
-          "Handler or dog stop forward motion during the turn",
-          "Dog is out of heel position",
+          "Handler or dog stop forward motion during the turn and steps",
+          "Dog is out of heel position. Forging, Wide, or Lagging",
+          "Dog is slow to respond to the down cue",
+          "Dog is over 45 degrees out of position",
+          "Minor movement of the dog while remaining in the required position",
         ],
-        substantial: [
-          "Handler takes more than 2 steps after the step completing the turn (3 points)",
-        ],
+        substantial: ["More than 2 steps forward are taken after the turn"],
 
         nq: [
-          "The dog assumes another position (such as a sit) prior to, instead of, or after the down",
-          "team does not make a 90-degree turn in the correct direction or does not take two additional steps after the turn",
+          "Team does not make a 90 degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
+          "Dog is 90 degrees or more out of alignment during the down",
+          "Dog does not leave the station from a down position",
         ],
       },
     },
@@ -339,16 +342,19 @@ const Excellent: Level = {
       deductions: {
         minor: [
           "Initiation of the sign outside of a radius of two feet from the station sign",
-          "Handler or dog stop forward motion during the turn",
-          "Dog is out of heel position",
+          "Handler or dog stop forward motion during the turn and steps",
+          "Dog is out of heel position. Forging, Wide, or Lagging",
+          "Dog is slow to respond to the down cue",
+          "Dog is over 45 degrees out of position",
+          "Minor movement of the dog while remaining in the required position",
         ],
-        substantial: [
-          "Handler takes more than 2 steps after the step completing the turn (3 points)",
-        ],
+        substantial: ["More than 2 steps forward are taken after the turn"],
 
         nq: [
-          "The dog assumes another position (such as a sit) prior to, instead of, or after the down",
-          "team does not make a 90-degree turn in the correct direction or does not take two additional steps after the turn",
+          "Team does not make a 90 degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
+          "Dog is 90 degrees or more out of alignment during the down",
+          "Dog does not leave the station from a down position",
         ],
       },
     },
@@ -359,8 +365,22 @@ const Excellent: Level = {
       description:
         "•	While heeling, the handler stops forward motion and calls the dog to front.<br/>•	The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position.<br/>•	The dog must remain in a sit while the handler walks around behind the dog in a counterclockwise direction and without stopping continues forward to the next sign</b>.<br/>•	This station results in a 180-degree change of direction.<br/>•	This sign must be followed by the Call Dog sign (#223)<br/><br/>",
       deductions: {
-        minor: ["TODO"],
-        nq: ["TODO"],
+        minor: [
+          "Initiation of the sign outside of a radius of two feet from the station sign",
+          "Dog is over 45 degrees out of front position",
+          "Handler is further than arm’s length during the walk around",
+          "Minor movement of the dog while remaining in the required position",
+        ],
+        substantial: [
+          "Handler moves left or right to position themselves in front of the dog to create a straight front",
+        ],
+        nq: [
+          "Handler stops forward motion at any point before they have passed the Call Dog sign",
+          "Dog does not remain in the required position until cued to return to the handler",
+          "Dog assumes a position not requested (eg. Down)",
+          "Dog is 90 degrees or more out of alignment during the front",
+          "Dog does not leave the station from a sit position",
+        ],
       },
     },
     {
@@ -372,17 +392,22 @@ const Excellent: Level = {
       tips: "• Two complete steps are required. This means that the second step can't consist of rocking back on one foot and heeling forward. Rather, both feet must move backwards for the final step.<br/>• If in doubt, take additional steps, as there are no deductions for additional steps or the dog being out of position once the two steps have been completed (only the first 2 steps are judged).",
       deductions: {
         minor: [
+          "Initiation of the sign outside of a radius of two feet from the station sign",
+          "Handler or dog stop forward motion during the turn",
+          "Dog is out of heel position. Forging, Wide, or Lagging",
+          "Dog backing up at an angle of up to 45 degrees out of alignment",
           "Dog backs up at an angle of up to 45-degrees out of alignment",
-          "Dog's shoulders in heel position but their body at a 45-degree angle (2 points)",
         ],
         substantial: [
-          "Dog's shoulders in heel position but their body at a greater than 45-degree angle (5 points)",
+          "Extra steps taken forward after the turn before backing up",
+          "Dog’s shoulders in heel position but body is greater than a 45 degree angle but not more than 90 degrees",
         ],
 
         nq: [
+          "Team does not make a 90 degree turn in the correct direction",
           "Handler does not take 2 complete steps backwards",
           "Dog not in heel position during back up",
-          "The dog assumes another position (such as a sit)",
+          "The dog assumes another position (Eg. a sit)",
         ],
       },
     },
@@ -395,17 +420,22 @@ const Excellent: Level = {
       tips: "• Two complete steps are required. This means that the second step can't consist of rocking back on one foot and heeling forward. Rather, both feet must move backwards for the final step.<br/>• If in doubt, take additional steps, as there are no deductions for additional steps or the dog being out of position once the two steps have been completed (only the first 2 steps are judged).",
       deductions: {
         minor: [
+          "Initiation of the sign outside of a radius of two feet from the station sign",
+          "Handler or dog stop forward motion during the turn",
+          "Dog is out of heel position. Forging, Wide, or Lagging",
+          "Dog backing up at an angle of up to 45 degrees out of alignment",
           "Dog backs up at an angle of up to 45-degrees out of alignment",
-          "Dog's shoulders in heel position but their body at a 45-degree angle (2 points)",
         ],
         substantial: [
-          "Dog's shoulders in heel position but their body at a greater than 45-degree angle (5 points)",
+          "Extra steps taken forward after the turn before backing up",
+          "Dog’s shoulders in heel position but body is greater than a 45 degree angle but not more than 90 degrees",
         ],
 
         nq: [
+          "Team does not make a 90 degree turn in the correct direction",
           "Handler does not take 2 complete steps backwards",
-          "Dog not in heel position during the back up",
-          "The dog assumes another position (such as a sit)",
+          "Dog not in heel position during back up",
+          "The dog assumes another position (Eg. a sit)",
         ],
       },
     },
@@ -418,6 +448,8 @@ const Excellent: Level = {
       tips: "• The handler's path should flow smoothly and without interruption from heel position while walking around the dog.<br/>• You may <i>slightly</i> slow your pace as you circle the dog but significantly slowing your pace is a substantial deduction.<br/>• Ideally, the dog should assume the sit before the handler leaves heel position.<br/>• Walk a tight circle around the dog.<br/>",
       deductions: {
         minor: [
+          "Initiation of the sign outside of a radius of two feet from the station sign",
+          "Dog is slow to respond",
           "Dog sits more than 45-degrees out of heel position",
           "Minor movement of the dog while remaining in the required position",
           "Dog is still in the process of assuming the sit as the handler passes in front of their paws",
@@ -425,7 +457,7 @@ const Excellent: Level = {
         ],
 
         substantial: [
-          "Handler significantly slows their pace during the moving sit",
+          "Failure of the dog to assume the requested position promptly",
           "Dog has not begun to assume the sit position as the handler passes their paws",
           "Dog is in the process assumming the sit as the handler passes their far shoulder.",
         ],
@@ -437,7 +469,9 @@ const Excellent: Level = {
           "Sit is 90-degrees or more out of heel position",
           "Dog turns with the handler rather than maintaining a sit",
           "Handler stops forward motion while performing the moving sit",
-          "Dog assumes a position not required by the exercise",
+          "Dog assumes a position not required by the exercise (eg. a down)",
+          "Dog does not remain in the required position",
+          "Dog does not leave the station from a sit position",
         ],
       },
     },

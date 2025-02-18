@@ -321,9 +321,7 @@ export default function SignDetail(props) {
             color="black"
             style={styles.rewardText}
           />
-          <Text style={styles.rewardText}>
-            Reinforcement station in Novice, Intermdiate &amp; Advanced A/B
-          </Text>
+          <Text style={styles.rewardText}>Reinforcement station</Text>
         </View>
       )}
       {props.sign.changeSide && (
