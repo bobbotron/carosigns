@@ -5,9 +5,9 @@ const Versatility: Level = {
   type: "normal",
   signs: [
     {
-      name: "Start (Right)",
+      name: "Start Right",
       icon: require("../../assets/slides/StartonRight.jpg"),
-      title: "Start (Right)",
+      title: "Start Right",
       hideNameOnGrid: true,
       description:
         "• With the dog on the right, the <b>team heels past the Start station</b> and timing begins.<br/>• There is no other communication from the Judge throughout the course.<br/><br/>",
@@ -22,10 +22,10 @@ const Versatility: Level = {
       },
     },
     {
-      name: "Finish (Right)",
+      name: "Finish Right",
       icon: require("../../assets/slides/FinishonRight.jpg"),
       hideNameOnGrid: true,
-      title: "Finish (Right)",
+      title: "Finish Right",
       description:
         "• With the dog on the right, the <b>team heels past the Ftart station</b> and timing begins.<br/><br/>",
       tips: "• There is no penalty for crossing the Finish station with the sign on the handler's left side.<br/>",
