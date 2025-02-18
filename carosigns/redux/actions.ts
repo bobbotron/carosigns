@@ -5,6 +5,7 @@ import { Dispatch } from "redux";
 export const ADD_FAVORITE_ITEM = "ADD_FAVORITE_ITEM";
 export const REMOVE_FAVORITE_ITEM = "REMOVE_FAVORITE_ITEM";
 export const SET_SEARCH_TEXT = "SET_SEARCH_TEXT";
+export const SET_SEARCH_SELECTED_SIGN = "SET_SEARCH_SELECTED_SIGN";
 export const SET_SELECTED_LEVEL = "SET_SELECTED_LEVEL";
 export const SET_SELECTED_SIGN = "SET_SELECTED_SIGN";
 export const SET_PRACTICE_MODE = "SET_PRACTICE_MODE";
@@ -13,6 +14,7 @@ export type ActionTypes =
   | "ADD_FAVORITE_ITEM"
   | "REMOVE_FAVORITE_ITEM"
   | "SET_SEARCH_TEXT"
+  | "SET_SEARCH_SELECTED_SIGN"
   | "SET_SELECTED_LEVEL"
   | "SET_SELECTED_SIGN"
   | "SET_PRACTICE_MODE"
@@ -26,6 +28,11 @@ type SignAction = {
 type SearchAction = {
   type: string;
   payload: string;
+};
+
+type SearchSignSelection = {
+  type: typeof SET_SEARCH_SELECTED_SIGN;
+  payload: Sign;
 };
 
 export const addFavorite = (sign: Sign) => (dispatch: Dispatch<SignAction>) => {
@@ -48,6 +55,13 @@ export const setSearchText =
     dispatch({
       type: SET_SEARCH_TEXT,
       payload: text,
+    });
+  };
+export const setSearchSelectedSign =
+  (sign: Sign) => (dispatch: Dispatch<SearchSignSelection>) => {
+    dispatch({
+      type: SET_SEARCH_SELECTED_SIGN,
+      payload: sign,
     });
   };
 

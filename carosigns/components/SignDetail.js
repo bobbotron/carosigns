@@ -373,11 +373,11 @@ export default function SignDetail(props) {
         buttons={[
           {
             value: "description",
-            label: "Description",
+            label: isNormalSign ? "Description" : "Procedure",
           },
           {
             value: "deductions",
-            label: "Deductions",
+            label: isNormalSign ? "Deductions" : "Layout",
           },
         ]}
         theme={{

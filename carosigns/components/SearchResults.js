@@ -3,10 +3,12 @@ import React, { useDispatch, useSelector } from "react-redux";
 import SignsDB from "../data/SignDb";
 import SignDetail from "./SignDetail";
 import { Button } from "react-native-paper";
-import { setSearchText } from "../redux/actions";
+import { setSearchSelectedSign } from "../redux/actions";
 
 export default function SearchResults() {
-  const { searchText } = useSelector((state) => state.signsReducer);
+  const { searchText, searchSelectedSign } = useSelector(
+    (state) => state.signsReducer
+  );
   const searchActive = !(searchText === undefined || searchText === "");
   const queryLower = searchActive ? searchText.toLowerCase() : "";
   const selectedSigns = !searchActive
@@ -16,17 +18,19 @@ export default function SearchResults() {
           x.name.toLowerCase().includes(queryLower) ||
           (x.title !== undefined && x.title.toLowerCase().includes(queryLower))
       );
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
   return (
     <ScrollView>
       {selectedSigns.length === 0 && <Text>No results found.</Text>}
-      {selectedSigns.length === 1 && (
+      {(searchSelectedSign || selectedSigns.length === 1) && (
         <View style={{ marginTop: 15 }}>
-          <SignDetail sign={selectedSigns[0]} />
+          <SignDetail
+            sign={searchSelectedSign ? searchSelectedSign : selectedSigns[0]}
+          />
         </View>
       )}
-      {selectedSigns.length > 1 && (
+      {!searchSelectedSign && selectedSigns.length > 1 && (
         <>
           <Text>{selectedSigns.length} results found.</Text>
           {selectedSigns.map((x) => (
@@ -34,11 +38,7 @@ export default function SearchResults() {
               key={x.name}
               mode="contained"
               style={{ marginTop: 10 }}
-              onPress={() =>
-                dispatch(
-                  setSearchText(x.title === undefined ? x.name : x.title)
-                )
-              }
+              onPress={() => dispatch(setSearchSelectedSign(x))}
             >
               {x.title === undefined && <>{x.name} </>}
               {x.title !== undefined && <>{x.title}</>}

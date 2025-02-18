@@ -6,6 +6,7 @@ import {
   SET_SELECTED_SIGN,
   SET_PRACTICE_MODE,
   ActionTypes as ActionType,
+  SET_SEARCH_SELECTED_SIGN,
 } from "./actions";
 
 const initialState = {
@@ -45,6 +46,12 @@ function signsReducer(state = initialState, action: Action) {
       return {
         ...state,
         searchText: action.payload,
+        searchSelectedSign: undefined,
+      };
+    case SET_SEARCH_SELECTED_SIGN:
+      return {
+        ...state,
+        searchSelectedSign: action.payload,
       };
     case SET_SELECTED_LEVEL:
       return {
