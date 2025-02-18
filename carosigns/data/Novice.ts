@@ -202,7 +202,6 @@ const Novice: Level = {
       deductions: {
         minor: [
           "Dog sits more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
-          "During the side step, the dog’s shoulder remains in heel position but their body is at 45-degree angle (2 points)",
           "Handler moves their feet during the stationary portion of the halt",
           "Reinforcement (dropped): dog leaves position to go to food that has been dropped (2 points)",
         ],
@@ -311,6 +310,7 @@ const Novice: Level = {
         ],
         nq: [
           "The team does not make a 90-degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
         ],
       },
     },
@@ -329,6 +329,7 @@ const Novice: Level = {
         ],
         nq: [
           "The team does not make a 90-degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
         ],
       },
     },
@@ -751,11 +752,14 @@ const Novice: Level = {
       tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
       deductions: {
         minor: [
+          "Initiation of the sign outside of a radius of two feet from the station sign",
           "Handler or dog stop forward motion",
-          "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
+          "Dog is out of heel position. Forging, Wide, or Lagging",
         ],
-
-        nq: ["Dog assumes a position not requested (eg. sit)"],
+        nq: [
+          "Team does not make a 45 degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
+        ],
       },
     },
     {
@@ -767,11 +771,14 @@ const Novice: Level = {
       tips: "• As a change of direction station, the sign is placed directly on the team's path of travel. The team performs the exercise in front of the sign, then proceeds along the new path.",
       deductions: {
         minor: [
+          "Initiation of the sign outside of a radius of two feet from the station sign",
           "Handler or dog stop forward motion",
-          "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
+          "Dog is out of heel position. Forging, Wide, or Lagging",
         ],
-
-        nq: ["Dog assumes a position not requested (eg. sit)"],
+        nq: [
+          "Team does not make a 45 degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
+        ],
       },
     },
   ],

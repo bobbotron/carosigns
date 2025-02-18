@@ -7,7 +7,7 @@ const Versatility: Level = {
     {
       name: "Start (Right)",
       icon: require("../../assets/slides/StartonRight.jpg"),
-      title: "Start",
+      title: "Start (Right)",
       hideNameOnGrid: true,
       description:
         "• With the dog on the right, the <b>team heels past the Start station</b> and timing begins.<br/>• There is no other communication from the Judge throughout the course.<br/><br/>",
@@ -25,7 +25,7 @@ const Versatility: Level = {
       name: "Finish (Right)",
       icon: require("../../assets/slides/FinishonRight.jpg"),
       hideNameOnGrid: true,
-      title: "Finish",
+      title: "Finish (Right)",
       description:
         "• With the dog on the right, the <b>team heels past the Ftart station</b> and timing begins.<br/><br/>",
       tips: "• There is no penalty for crossing the Finish station with the sign on the handler's left side.<br/>",
@@ -361,9 +361,11 @@ const Versatility: Level = {
         "• While <b>heeling with the dog on the right</b>, the team comes to a <b>halt</b> and the handler cues the dog to <b>sit in heel position</b>.<br/> • The handler takes <b>one side step directly to their left</b> while cueing the dog to heel.</br> • The dog <b>must move to the left simultaneously with the handler</b> remaining in heel position parallel to the handler and <b>sit</b> when the handler stops.<br/>• The handler cues the dog to <b>heel forward from the sit position.</b><br/><br/>",
       deductions: {
         minor: [
-          "Dog sits more than 45-degrees out of heel position",
-          "During the side step, the dog’s shoulder remains in heel position but their body is at 45-degree angle (2 points)",
+          "Dog sits more than 45-degrees out of heel position (no deductions for less than a 45-degree angle)",
           "Handler moves their feet during the stationary portion of the halt",
+        ],
+        substantial: [
+          "Dog's shoulder in heel position but body greater than 45 degrees but not more than 90 degrees out of alignment(5 points)",
         ],
         nq: [
           "Dog sits 90-degrees or more out of heel position",
@@ -456,6 +458,7 @@ const Versatility: Level = {
         ],
         nq: [
           "The team does not make a 90-degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
         ],
       },
     },
@@ -473,6 +476,7 @@ const Versatility: Level = {
         ],
         nq: [
           "The team does not make a 90-degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
         ],
       },
     },
@@ -604,7 +608,7 @@ const Versatility: Level = {
         ],
         nq: [
           "No noticeable change in the dog's pace",
-          "Dog assumes an incorrect position (eg. sits)",
+          "Dog assumes an incorrect position (eg. a sit)",
           "Slow pace not maintained continuously until the next sign",
         ],
       },
@@ -782,8 +786,9 @@ const Versatility: Level = {
           "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
           "Minor movement (bump) of a cone",
         ],
-        substantial: ["Knocking over or substantial movement of a cone"],
-
+        substantial: [
+          "Knocking over or substantial movement of a cone (3 points)",
+        ],
         nq: [
           "The team does not heel in a clockwise direction around the cones and in the correct pattern",
           "Dog assumes a position not requested (eg. sit)",
@@ -803,8 +808,9 @@ const Versatility: Level = {
           "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
           "Minor movement (bump) of a cone",
         ],
-        substantial: ["Knocking over or substantial movement of a cone"],
-
+        substantial: [
+          "Knocking over or substantial movement of a cone (3 points)",
+        ],
         nq: [
           "The team does not heel in a counterclockwise direction around the cones and in the correct pattern",
           "Dog assumes a position not requested (eg. sit)",
@@ -823,7 +829,9 @@ const Versatility: Level = {
           "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
           "Minor movement (bump) of a cone",
         ],
-        substantial: ["Knocking over or substantial movement of a cone"],
+        substantial: [
+          "Knocking over or substantial movement of a cone (3 points)",
+        ],
 
         nq: [
           "The team does not enter the pattern with the first cone on the team's left",
@@ -844,7 +852,9 @@ const Versatility: Level = {
           "Dog is out of heel position. Forging (mid-point of the dog’s body is past the handler's side), Wide (dog is more than an arm’s length away from the handler's side) or Lagging (dog’s nose drops behind the handler’s side)",
           "Minor movement (bump) of a cone",
         ],
-        substantial: ["Knocking over or substantial movement of a cone"],
+        substantial: [
+          "Knocking over or substantial movement of a cone (3 points)",
+        ],
 
         nq: [
           "The team does not enter the pattern with the first cone on the team's left",
@@ -934,11 +944,14 @@ const Versatility: Level = {
         "• While heeling with the dog on the right, the team makes a <b>diagonal turn to the right</b>.<br/><br/>",
       deductions: {
         minor: [
+          "Initiation of the sign outside of a radius of two feet from the station sign",
           "Handler or dog stop forward motion",
-          "Dog is out of heel position",
+          "Dog is out of heel position. Forging, Wide, or Lagging",
         ],
-
-        nq: ["Dog assumes a position not requested (eg. sit)"],
+        nq: [
+          "Team does not make a 45 degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
+        ],
       },
     },
     {
@@ -949,11 +962,14 @@ const Versatility: Level = {
         "• While heeling with the dog on the right, the team makes a <b>diagonal turn to the left</b>.<br/><br/>",
       deductions: {
         minor: [
+          "Initiation of the sign outside of a radius of two feet from the station sign",
           "Handler or dog stop forward motion",
-          "Dog is out of heel position",
+          "Dog is out of heel position. Forging, Wide, or Lagging",
         ],
-
-        nq: ["Dog assumes a position not requested (eg. sit)"],
+        nq: [
+          "Team does not make a 45 degree turn in the correct direction",
+          "Dog assumes a position not requested (eg. Sit)",
+        ],
       },
     },
   ],
