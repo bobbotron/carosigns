@@ -463,7 +463,7 @@ const Advanced: Level = {
       excludeFromPractice: true,
       description:
         "• The jump may be either a solid or bar jump.<br/>• <b>The team enters the send zone where the dog is sent to the jump</b>.<br/>• Once the dog has been sent, the handler may stay in the send zone or proceed <b>along the right of 3-foot line</b>.<br/>• The sign will be placed at the top of the send zone and the handler will not be required to be wtihin 2 feet of the sign for this station.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 3-foot line when proceeding past the jump</b>.<br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
-      tips: "• The jump may be either a solid or bar jump. The broad jump is not used at this station.<br/>• The jump sign must be used in all Advanced courses.<br/>• Handlers may give multiple cues to the dog (without a deduction) as long as the dog is heading towards the jump. If the dog turns back to the handler or passes the plane of the jump, the handler must return to the send zone for a retry (when a retry is permitted).<br/>• No retry is permitted if the handler steps into the NQ Zone (training in the ring).",
+      tips: "• The jump may be either a solid or bar jump. The broad jump is not used at this station.<br/>• The jump sign must be used in all Advanced courses.<br/>• Handlers may give multiple cues to the dog (without a deduction) as long as the dog is heading towards the jump. If the dog turns back to the handler or passes the plane of the jump, the handler must return to the send zone for a retry (when a retry is permitted).<br/>• No retry is permitted if the handler steps into the NQ Zone (training in the ring).<br/>• If the dog knocks the bar a retry is permitted (in advanced only.",
       deductions: {
         substantial: ["Dog touches the jump (5 points)"],
         nq: [
@@ -519,9 +519,10 @@ const Advanced: Level = {
       practiceOnlyAfter: ["201", "303", "304", "317"],
       description:
         "•	Upon passing this sign, the handler calls the dog to heel <b>while continuing to move forward</b>.<br/><br/>",
+      tips: "• This is not a standalone sign, it follows signs 201, 303, 304 or 317",
       deductions: {
+        substantial: ["Handler calls dog before crossing Call Dog sign"],
         nq: [
-          "Handler calls dog before fully passing Call Dog sign",
           "Handler stops forward motion (except when following station 201)",
         ],
       },

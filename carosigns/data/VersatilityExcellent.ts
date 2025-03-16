@@ -870,10 +870,10 @@ const VersatilityExcellent: Level = {
       title: "539. Call Dog",
       description:
         "•	Upon passing this sign, the handler calls the dog to heel <b>while continuing to move  forward.</b><br/><br/>",
-      tips: "•	This is not a stand alone sign. It is used with signs 500, 501, 502, 504, 527, 528  or 540",
+      tips: "•	This is not a standalone sign. It is used with signs 500, 501, 502, 504, 527, 528 or 540",
       deductions: {
+        substantial: ["Handler calls dog before crossing Call Dog sign"],
         nq: [
-          "Handler calls dog before fully passing Call Dog sign",
           "Handler stops forward motion (except when following station 201)",
         ],
       },
@@ -935,7 +935,7 @@ const VersatilityExcellent: Level = {
     },
     {
       name: "542",
-      icon: require("../../assets/slides/534.jpg"),
+      icon: require("../../assets/slides/542.jpg"),
 
       title: "542.  Left Turn – Back Up 2 Steps",
       description:

@@ -92,7 +92,7 @@ const Working: Level = {
         },
         expert: {
           procedure:
-            "The exercise begins when the handler steps into the handler box.<br/><br/>• The handler cues the dog to sit in heel position,<br/>• Throws the object at least 10ft,<br/>• After the object has stopped moving, cues the dog to down in heel position,<br/>• Cues the dog to sit in front position holding the object,<br/>•	The dog remains sitting in front position while the handler takes the object directly from the dog.<br/>•	The handler cues the dog to finish and sit in heel position.<br/><br/>The exercise ends when the dog has finished and is sitting in heel position.<br/><br/>",
+            "The exercise begins when the handler steps into the handler box.<br/><br/>• The handler cues the dog to sit in heel position,<br/>• Throws the object at least 10ft,<br/>• After the object has stopped moving, cues the dog to down in heel position,<br/>• Cues the dog to retrieve the object,<br/>• Cues the dog to sit in front position holding the object,<br/>•	The dog remains sitting in front position while the handler takes the object directly from the dog.<br/>•	The handler cues the dog to finish and sit in heel position.<br/><br/>The exercise ends when the dog has finished and is sitting in heel position.<br/><br/>",
           procedureImages: [],
           layout: "",
           layoutImages: [require("../../assets/Diagrams/ROF_allLevels.jpg")],

@@ -238,7 +238,7 @@ const Excellent: Level = {
       excludeFromPractice: true,
       description:
         "• The jump may be either a solid or bar jump.<br/>• <b>The team enters the send zone where the dog is sent to the jump.</b><br/>• Once the dog has been sent, the handler may stay in the send zone or proceed along the <b>right of the 6-foot line</b>.<br/>• The sign will be placed at the top of the send zone and the handler will not be required to be within 2 feet of the sign for this station.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the right of the 6-foot line when proceeding past the jump.</b><br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
-      tips: "• Be careful not to step in the NQ zone! No retry is permitted if the handler steps into the NQ Zone.<br/>• Once the dog has taken the jump, they may be called back to heel position by the handler.<br/>• Once the dog has been sent to the jump, the handler may stay in the send zone or proceed along the outside of the 6-foot line. Handlers may give multiple jump cues to the dog as long as the dog is heading towards the jump. If the dog turns back to the handler or passes the plane of the jump the handler must return to the send zone for a retry.<br/>• The Handler is not required to run. Handlers may move at whatever speed they wish.<br/>• Note that the Excellent-level jump is identical to the Advanced-level jump except that the lateral distance is 6 feet instead of 3 feet.<br/>• At least two agility-type obstacles are used in every Excellent level course.",
+      tips: "• Be careful not to step in the NQ zone!<br/>• Once the dog has taken the jump, they may be called back to heel position by the handler.<br/>• Once the dog has been sent to the jump, the handler may stay in the send zone or proceed along the left of the 6-foot line. Handlers may give multiple jump cues to the dog as long as the dog is heading towards the jump. If the dog turns back to the handler or passes the plane of the jump the handler must return to the send zone for a retry.<br/>• The Handler is not required to run. Handlers may move at whatever speed they wish.<br/>• 1 to 2 obstacles are used in every Excellent level course.",
       deductions: {
         minor: ["Out of Heel position approaching the jump"],
         substantial: ["Dog touches the jump (5 points)"],
@@ -258,7 +258,7 @@ const Excellent: Level = {
       excludeFromPractice: true,
       description:
         "• <b>The team enters the send zone where the dog is sent to the jump.</b><br/>• The dog is expected to clear the full span of the jump.<br/>• Once the dog has been sent, the handler may stay in the send zone or proceed <b>along the right of the 3-foot line</b>.<br/>• The sign will be placed at the top of the send zone and the handler will not be required to be within 2 feet of the sign for this station.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the right of the 3-foot line when proceeding past the jump.</b><br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
-      tips: "• The broad jump is not used in virtual trials<br/>• Be careful not to step in the NQ zone! No retry is permitted if the handler steps into the NQ Zone.<br/>• Once the dog has taken the jump, they may be called back to heel position by the handler.<br/>• Once the dog has been sent to the jump, the handler may stay in the send zone or proceed along the outside of the 3-foot line. Handler may give a second cue to the dog as long as the dog is heading towards the obstacle. If the dog turns back to the handler or passes the plane of the jump the handler must return to the send zone for a retry.<br/>• The Handler is not required to run. Handlers may move at whatever speed they wish.<br/>• At least two agility-type obstacles are used in every Excellent level course.",
+      tips: "• The broad jump is not used in virtual trials<br/>• Be careful not to step in the NQ zone!<br/>• Once the dog has taken the jump, they may be called back to heel position by the handler.<br/>• Once the dog has been sent to the jump, the handler may stay in the send zone or proceed along the left of the 3-foot line. Handler may give a second cue to the dog as long as the dog is heading towards the obstacle. If the dog turns back to the handler or passes the plane of the jump the handler must return to the send zone for a retry.<br/>• The Handler is not required to run. Handlers may move at whatever speed they wish.<br/>• 1 to 2 obstacles are used in every Excellent level course.",
       deductions: {
         minor: ["Out of heel position approaching the broad jump"],
         substantial: ["Dog touches the broad jump (5 points)"],
@@ -278,7 +278,7 @@ const Excellent: Level = {
       excludeFromPractice: true,
       description:
         "• <b>The team enters the send zone where the dog is sent to the tunnel</b>.<br/>• Once the dog has been sent, the handler may stay in the send zone or proceed <b>along the right of the 6-foot line</b>.<br/>• The sign will be placed at the top of the send zone and the handler will not be required to be within 2 feet of the sign for this station.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the right of the 6-foot line when proceeding past the tunnel</b>.<br/>• Upon completion of the tunnel the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
-      tips: "• The tunnel will always be straight (not curved).<br/>• At least two agility-type obstacles are used in every Excellent level course.",
+      tips: "• The tunnel can be straight or curved.<br/>• 1 to 2 obstacles are used in every Excellent level course.",
       deductions: {
         minor: ["Out of heel position approaching the tunnel"],
         nq: [
@@ -296,7 +296,7 @@ const Excellent: Level = {
       excludeFromPractice: true,
       description:
         "• While heeling, the dog <b>enters the weave poles with the first pole on the dog’s left</b>.<br/>• The dog <b>weaves through the poles</b> and exits the station.<br/>• The dog must <b>weave through all the poles in the correct pattern</b>.<br/>•	Upon completion of the weaves the dog returns to heel position.<br/><br/>",
-      tips: "• The handler may provide ongoing verbal and/or physical cues to the dog to continue the weave pattern without deductions if the dog continues to weave.<br/>• If the dog has left the weave poles and is sent back in at the point of exit, it will be considered an additional cue.<br/>• At least two agility-type obstacles are used in every Excellent level course.",
+      tips: "• The handler may provide ongoing verbal and/or physical cues to the dog to continue the weave pattern without deductions if the dog continues to weave.<br/>• If the dog has left the weave poles and is sent back in at the point of exit, it will be considered an additional cue.<br/>• 1 to 2 obstacles are used in every Excellent level course.",
       deductions: {
         minor: [
           "Out of heel position approaching the weaves",
@@ -363,7 +363,7 @@ const Excellent: Level = {
       icon: require("../../assets/slides/317.jpg"),
       title: "317. Call Front - Walk Around - Leave Dog",
       description:
-        "•	While heeling, the handler stops forward motion and calls the dog to front.<br/>•	The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position.<br/>•	The dog must remain in a sit while the handler walks around behind the dog in a counterclockwise direction and without stopping continues forward to the next sign</b>.<br/>•	This station results in a 180-degree change of direction.<br/>•	This sign must be followed by the Call Dog sign (#223)<br/><br/>",
+        "•	While heeling, the handler stops forward motion and calls the dog to front.<br/>•	The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>•	<b>The dog must remain in a sit while the handler walks around behind the dog in a counterclockwise direction and without stopping continues forward</b>.<br/>• <b>After the handler has passed the Call Dog sign (#223) and while continuing forward</b>, the handler calls the dog to heal and the team continues to the next station.<br/>•	This station results in a 180-degree change of direction.<br/>",
       deductions: {
         minor: [
           "Initiation of the sign outside of a radius of two feet from the station sign",
