@@ -3,21 +3,18 @@ import { BackHandler, Image } from "react-native";
 import { Appbar, Menu, Text } from "react-native-paper";
 import { useDispatch, useSelector } from "react-redux";
 import SignsDB from "../data/SignDb";
-import {
-  setPracticeMode,
-  setSelectedLevel,
-  setSelectedSign,
-} from "../redux/actions";
 import Theme from "../Theme";
 import FavAction from "./FavAction";
 import { running, setupState, viewSign } from "./PracticeMode";
 
 import * as Speech from "expo-speech";
+import { setPracticeMode, setSelectedLevel, setSelectedSign } from "../redux/appSlice";
 
 export default function AppHeader() {
-  const { selectedLevel, selectedSign, favorites, practiceMode } = useSelector(
-    (state) => state.signsReducer
+  const { selectedLevel, selectedSign, practiceMode } = useSelector(
+    (state) => state.app
   );
+  const { favourites } = useSelector((state) => state.favourites);
   const dispatch = useDispatch();
   const backButtonListener = () => {
     if (practiceMode.active) {
@@ -40,8 +37,8 @@ export default function AppHeader() {
   const showFavSigns = () => {
     const favLevel = {
       name: "My Saved Signs",
-      isFavorites: true,
-      signs: SignsDB.Signs.filter((s) => favorites.includes(s.name)),
+      isfavourites: true,
+      signs: SignsDB.Signs.filter((s) => favourites.includes(s.name)),
     };
     dispatch(setSelectedLevel(favLevel));
     dispatch(setSelectedSign(undefined));

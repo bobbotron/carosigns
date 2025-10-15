@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { Card, Searchbar } from "react-native-paper";
 import React, { useEffect, useState } from "react";
 import {
@@ -14,15 +13,15 @@ import SignsDB from "./data/SignDb";
 import PracticeMode from "./components/PracticeMode";
 import HandbookTextLink from "./components/HandbookTextLink";
 import { useSelector, useDispatch } from "react-redux";
-import { setSearchText, setSelectedLevel } from "./redux/actions";
 import AppHeader from "./components/AppHeader";
 import SearchResults from "./components/SearchResults";
+import { setSearchText, setSelectedLevel } from "./redux/appSlice";
 
 export default function AppController() {
   const window = useWindowDimensions();
 
   const { selectedLevel, searchText, practiceMode } = useSelector(
-    (state) => state.signsReducer
+    (state) => state.app
   );
 
   const dispatch = useDispatch();
@@ -116,8 +115,6 @@ export default function AppController() {
             {searchActive && <SearchResults />}
           </>
         )}
-
-        <StatusBar style="auto" />
       </View>
     </View>
   );

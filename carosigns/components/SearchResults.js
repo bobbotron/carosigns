@@ -3,11 +3,11 @@ import React, { useDispatch, useSelector } from "react-redux";
 import SignsDB from "../data/SignDb";
 import SignDetail from "./SignDetail";
 import { Button } from "react-native-paper";
-import { setSearchSelectedSign } from "../redux/actions";
+import { setSearchSelectedSign } from "../redux/appSlice";
 
 export default function SearchResults() {
   const { searchText, searchSelectedSign } = useSelector(
-    (state) => state.signsReducer
+    (state) => state.app
   );
   const searchActive = !(searchText === undefined || searchText === "");
   const queryLower = searchActive ? searchText.toLowerCase() : "";
