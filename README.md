@@ -8,6 +8,12 @@ This was written using node v18.20.5 and npm. To run, try the following:
 npm start
 ```
 
+## Setup
+
+```
+npm i
+```
+
 ## Build Steps
 
 ### Android
@@ -22,4 +28,4 @@ npx eas build -p android
 
 ## Node version
 
-This project expects to be run with node `18.20.5`.
+This project expects to be run with node `20.19.4`.

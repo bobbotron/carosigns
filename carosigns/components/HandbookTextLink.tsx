@@ -1,3 +1,4 @@
+import React from "react";
 import { StyleSheet, Text, Linking } from "react-native";
 
 const styles = StyleSheet.create({

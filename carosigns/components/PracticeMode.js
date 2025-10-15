@@ -6,8 +6,6 @@ import {
   useWindowDimensions,
   Image,
   ScrollView,
-  Platform,
-  UIManager,
 } from "react-native";
 import theme from "../Theme";
 import {
@@ -21,11 +19,11 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import SignsDB from "../data/SignDb";
 import * as Speech from "expo-speech";
-import { setPracticeMode } from "../redux/actions";
 import _ from "lodash";
 import PracticeProgressBar from "./PracticeProgressBar";
 import SignDetail from "./SignDetail";
 import ImageShim from "../utils/ImageShim";
+import { setPracticeMode } from "../redux/appSlice";
 export const setupState = "setup";
 export const viewSign = "viewSign";
 export const running = "running";
@@ -37,13 +35,13 @@ const getRandomElement = (list) => {
 export default function PracticeMode() {
   const window = useWindowDimensions();
   const dispatch = useDispatch();
-  const { practiceMode } = useSelector((state) => state.signsReducer);
+  const { practiceMode } = useSelector((state) => state.app);
   const [isAudioOn, setIsAudioOn] = useState(true);
   const [noviceChecked, setNoviceChecked] = useState(true);
   const [advancedChecked, setAdvancedChecked] = useState(true);
   const [excellentChecked, setExcellentChecked] = useState(true);
-  const { favorites } = useSelector((state) => state.signsReducer);
-  const [favChecked, setFavChecked] = useState(favorites?.length !== 0);
+  const { favourites } = useSelector((state) => state.favourites);
+  const [favChecked, setFavChecked] = useState(favourites?.length !== 0);
   const [seconds, setSeconds] = useState(8);
   const [runningState, setRunningState] = useState({});
   const [timerId, setTimerId] = useState(undefined);
@@ -129,7 +127,7 @@ export default function PracticeMode() {
       return true;
     }
     const f = (favSign) => sign.name === favSign;
-    if (favChecked && favorites.find(f) !== undefined) {
+    if (favChecked && favourites.find(f) !== undefined) {
       return true;
     }
     return false;
@@ -143,21 +141,28 @@ export default function PracticeMode() {
       winningSign = signs.find((x) => x.name === signID);
     } else {
       let found = false;
+      let attempts = 0;
       while (!found) {
-        const candidateSign = getRandomElement(signs);
-        if (!candidateSign.excludeFromPractice) {
-          if (currentSign) {
-            if (
-              _.isEmpty(candidateSign.practiceOnlyAfter) ||
-              currentSign.name in candidateSign.practiceOnlyAfter
-            ) {
-              winningSign = candidateSign;
-              found = true;
-            }
-          } else {
-            if (_.isEmpty(candidateSign.practiceOnlyAfter)) {
-              winningSign = candidateSign;
-              found = true;
+        attempts += 1;
+        if (attempts > 20) {
+          winningSign = getRandomElement(signs);
+          break;
+        } else {
+          const candidateSign = getRandomElement(signs);
+          if (!candidateSign.excludeFromPractice) {
+            if (currentSign) {
+              if (
+                _.isEmpty(candidateSign.practiceOnlyAfter) ||
+                currentSign.name in candidateSign.practiceOnlyAfter
+              ) {
+                winningSign = candidateSign;
+                found = true;
+              }
+            } else {
+              if (_.isEmpty(candidateSign.practiceOnlyAfter)) {
+                winningSign = candidateSign;
+                found = true;
+              }
             }
           }
         }
@@ -313,7 +318,7 @@ export default function PracticeMode() {
             <Text style={styles.configSwitchLabel}>Saved Signs </Text>
             <Switch
               key={"favSwitch"}
-              disabled={favorites?.length === 0}
+              disabled={favourites?.length === 0}
               style={styles.configSwitch}
               value={favChecked}
               onValueChange={setFavChecked}
