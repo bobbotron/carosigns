@@ -16,6 +16,12 @@ npm i
 
 ## Build Steps
 
+### Initialization
+
+```
+npm install -g eas-cli
+```
+
 ### Android
 
 ```
