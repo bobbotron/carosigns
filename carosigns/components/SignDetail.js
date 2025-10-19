@@ -85,13 +85,13 @@ export default function SignDetail(props) {
       height: window.width * 0.9 * procedureImageRatio,
       resizeMode: "contain",
       marginTop: 10,
-      marginBottom: 20,
+      marginBottom: 40,
     },
     selectedSign: {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
-      marginBottom: 20,
+      marginBottom: 40,
     },
     rewardContainer: {
       flex: 1,
@@ -101,7 +101,7 @@ export default function SignDetail(props) {
     workingContainer: {
       alignContent: "center",
       justifyContent: "center",
-      marginBottom: 20,
+      marginBottom: 40,
     },
     rewardText: {
       textAlign: "center",

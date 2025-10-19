@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { BackHandler, Image } from "react-native";
-import { Appbar, Menu, Text } from "react-native-paper";
+import { Appbar, Text } from "react-native-paper";
 import { useDispatch, useSelector } from "react-redux";
-import SignsDB from "../data/SignDb";
+
 import Theme from "../Theme";
 import FavAction from "./FavAction";
 import { running, setupState, viewSign } from "./PracticeMode";
 
 import * as Speech from "expo-speech";
-import { setPracticeMode, setSelectedLevel, setSelectedSign } from "../redux/appSlice";
+import {
+  setPracticeMode,
+  setSelectedLevel,
+  setSelectedSign,
+} from "../redux/appSlice";
+import AppHeaderMenu from "./AppHeaderMenu";
 
 export default function AppHeader() {
   const { selectedLevel, selectedSign, practiceMode } = useSelector(
     (state) => state.app
   );
-  const { favourites } = useSelector((state) => state.favourites);
+
   const dispatch = useDispatch();
   const backButtonListener = () => {
     if (practiceMode.active) {
@@ -34,32 +39,12 @@ export default function AppHeader() {
       }
     }
   };
-  const showFavSigns = () => {
-    const favLevel = {
-      name: "My Saved Signs",
-      isfavourites: true,
-      signs: SignsDB.Signs.filter((s) => favourites.includes(s.name)),
-    };
-    dispatch(setSelectedLevel(favLevel));
-    dispatch(setSelectedSign(undefined));
-    dispatch(setPracticeMode({ active: false, state: setupState }));
-    setVisible(false);
-  };
-  const showPracticeMode = () => {
-    dispatch(setPracticeMode({ active: true, state: setupState }));
-
-    setVisible(false);
-  };
   const appBarTitle =
     selectedLevel === undefined
       ? ""
       : selectedSign === undefined || selectedSign.name === undefined
       ? selectedLevel.name
       : selectedSign.name;
-  const [visible, setVisible] = useState(false);
-
-  const openMenu = () => setVisible(true);
-  const closeMenu = () => setVisible(false);
   const signLeft = () => {
     const fc = (f) => f.name === selectedSign.name;
     const i = selectedLevel.signs.findIndex(fc);
@@ -169,22 +154,7 @@ export default function AppHeader() {
         </>
       )}
 
-      <Menu
-        visible={visible}
-        onDismiss={closeMenu}
-        anchor={<Appbar.Action icon="dots-vertical" onPress={openMenu} />}
-      >
-        <Menu.Item
-          onPress={showFavSigns}
-          title="My Saved Signs"
-          leadingIcon="star"
-        />
-        <Menu.Item
-          onPress={showPracticeMode}
-          title="Practice Time"
-          leadingIcon="motion-play-outline"
-        />
-      </Menu>
+      <AppHeaderMenu />
     </Appbar.Header>
   );
 }

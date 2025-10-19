@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Sign } from "../types/Sign";
 
 interface AppState {
-  selectedSign: any;
+  selectedSign?: Sign;
   searchSelectedSign: any;
   selectedLevel: any;
   searchText: string;
@@ -30,7 +30,7 @@ const appSlice = createSlice({
     setSelectedLevel: (state, action: PayloadAction<any>) => {
       state.selectedLevel = action.payload;
     },
-    setSelectedSign: (state, action: PayloadAction<Sign>) => {
+    setSelectedSign: (state, action: PayloadAction<Sign | undefined>) => {
       state.selectedSign = action.payload;
     },
     setPracticeMode: (state, action: PayloadAction<any>) => {
