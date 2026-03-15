@@ -34,7 +34,7 @@ const Advanced: Level = {
       title: "201. HALT - Leave Dog - Call to Heel while Running",
       practiceNextRestriction: ["223"],
       description:
-        "• The team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the <b>dog to stay</b> and <b>moves forward at a fast pace.<br/> • The dog must remain in a sit until called.<br/>• After the handler has passed the Call Dog sign</b> (#223), they call the dog to heel as they return to normal pace.<br/>• After passing the Call Dog sign the handler may pause or stop until the dog reaches heel position.<br/><br/>",
+        "• The team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the <b>dog to stay</b> and <b>moves forward at a fast pace.<br/> • The dog must remain in a sit until called.<br/>• After the handler has <b>completely</b> passed the Call Dog sign</b> (#223), they call the dog to heel as they return to normal pace.<br/>• After passing the Call Dog sign the handler may pause or stop until the dog reaches heel position.<br/><br/>",
       tips: "• The handler must move at a <i>fast (ie. jogging or running)</i> pace. You can run just beyond the Call Dog sign to be sure you do not slow down too soon. If so, be sure your dog has enough time to return to heel position before the next station sign.<br/> • If you are physically unable to run from a stand still, request an accommodation at the time of entry.<br/>",
       deductions: {
         minor: [
@@ -519,7 +519,7 @@ const Advanced: Level = {
       practiceOnlyAfter: ["201", "303", "304", "317"],
       description:
         "•	<b>After completely passing this sign</b>, the handler calls the dog to heel <b>while continuing to move forward</b>. After calling the dog, the handler may adjust their pace <b>(but not stop)</b> to allow the dog to reach heel position before attempting the next station.<br/><br/>",
-      tips: "• This is not a standalone sign, it follows signs 201, 303, 304 or 317",
+      tips: "• This is not a standalone sign, it follows signs 201, 303, 304 or 317<br/>• “Completely passed” is defined as the whole body of the handler has fully passed the plane of the sign<br/>• When following sign 201, handlers may pause or stop after passing the Call Dog sign until the dog reaches heel position",
       deductions: {
         substantial: ["Handler calls dog before crossing Call Dog sign"],
         nq: [
