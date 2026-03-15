@@ -8,7 +8,7 @@ import {
   Platform,
 } from "react-native";
 import { Card, SegmentedButtons, Text } from "react-native-paper";
-import RenderHtml from "react-native-render-html";
+import HtmlRenderer from "./HtmlRenderer";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import MasterGeneralHandbookTextLink from "./MasterGeneralHandbookTextLink";
 import theme from "../Theme";
@@ -154,8 +154,8 @@ export default function SignDetail(props) {
       {description !== undefined &&
         typeof description === "function" &&
         description()}
-      {description !== undefined && typeof description !== "function" && (
-        <RenderHtml
+        {description !== undefined && typeof description !== "function" && (
+        <HtmlRenderer
           key="desc"
           style={styles.html}
           contentWidth={contentWidth}
@@ -204,7 +204,7 @@ export default function SignDetail(props) {
                   </View>
                 </View>
 
-                <RenderHtml
+                <HtmlRenderer
                   key="tips"
                   contentWidth={contentWidth}
                   source={{
@@ -257,9 +257,10 @@ export default function SignDetail(props) {
             Common deductions for this sign include:
           </Text>
           {props.sign.deductions && (
-            <RenderHtml
+            <HtmlRenderer
               key="faultHtml"
               contentWidth={contentWidth}
+              style={styles.html}
               source={{
                 html: generateDeductions(props.sign.deductions),
               }}
@@ -282,7 +283,7 @@ export default function SignDetail(props) {
           </Text>
           {!_.isEmpty(props.sign.levels[workingLevelState].layout) && (
             <>
-              <RenderHtml
+              <HtmlRenderer
                 key="layout"
                 contentWidth={window.width}
                 source={{

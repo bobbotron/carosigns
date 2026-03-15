@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
 export default function MasterGeneralHandbookTextLink() {
   const openLink = () =>
     Linking.openURL(
-      "https://www.canadianrallyo.ca/kcfinder/upload/files/Rally%20Handbook%202025%20(v1.0)%20(2).pdf"
+      "https://canadianrallyo.ca/handbook-signs/"
     );
 
   return (
