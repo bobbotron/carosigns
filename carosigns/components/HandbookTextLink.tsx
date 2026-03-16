@@ -9,9 +9,7 @@ const styles = StyleSheet.create({
 
 export default function HandbookTextLink() {
   const openLink = () =>
-    Linking.openURL(
-      "https://canadianrallyo.ca/handbook-signs/"
-    );
+    Linking.openURL("https://canadianrallyo.ca/handbook-signs/");
 
   return (
     <Text style={styles.deductionLink} onPress={openLink}>

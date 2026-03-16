@@ -154,7 +154,7 @@ export default function SignDetail(props) {
       {description !== undefined &&
         typeof description === "function" &&
         description()}
-        {description !== undefined && typeof description !== "function" && (
+      {description !== undefined && typeof description !== "function" && (
         <HtmlRenderer
           key="desc"
           style={styles.html}

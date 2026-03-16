@@ -8,7 +8,7 @@ export type Sign = {
   signType?: string;
   category?: any;
   name: string;
-  icon: NodeRequire;
+  icon: any;
   title: string;
   levels?: any;
   excludeFromPractice?: boolean;

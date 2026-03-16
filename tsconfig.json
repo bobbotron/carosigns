@@ -3,4 +3,4 @@
     "jsx": "react"
   },
   "extends": "@tsconfig/react-native/tsconfig.json"
-} 
+}

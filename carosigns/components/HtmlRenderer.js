@@ -10,7 +10,12 @@ const defaultTagStyles = {
   a: { color: theme.colors.primary, textDecorationLine: "underline" },
 };
 
-export default function HtmlRenderer({ source, contentWidth, style, ...props }) {
+export default function HtmlRenderer({
+  source,
+  contentWidth,
+  style,
+  ...props
+}) {
   const window = useWindowDimensions();
   const width = contentWidth || window.width;
   return (

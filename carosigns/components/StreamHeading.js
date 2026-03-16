@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Text } from "react-native-paper";
 import MaterialIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { StyleSheet } from "react-native";
@@ -20,3 +21,10 @@ export default function StreamHeading(props) {
     </>
   );
 }
+
+StreamHeading.propTypes = {
+  stream: PropTypes.shape({
+    icon: PropTypes.string,
+    name: PropTypes.string,
+  }).isRequired,
+};

@@ -10,7 +10,7 @@ const VersatilityExcellent: Level = {
 
       title: "500. Moving Sit - Cross Behind",
       description:
-        "• While heeling, the handler cues the <b>dog to sit and without pausing continues forward.<br/>• The dog must hold the sit until called.<br/>• After the handler has passed the Call Dog sign (#539)</b> and <b>while continuing to move forward</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
+        "• While heeling, the handler cues the <b>dog to sit and without pausing continues forward.<br/>• The dog must hold the sit until called.</b><br/>• After the <b>handler has completely passed the Call Dog sign</b> (#539) and <b>while continuing to move forward</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
       deductions: {
         minor: ["Crooked sit (45 to 90 degrees)"],
         substantial: [
@@ -19,7 +19,7 @@ const VersatilityExcellent: Level = {
         ],
         nq: [
           "Handler stops forward motion to perform moving position exercises",
-          "Handler calls the dog before passing the Call Dog sign",
+          "Handler calls dog before completely passing the Call Dog sign",
           "Dog does not sit or does not hold the sit until called",
           "Dog does not cross sides",
           "Sit crooked by more than 90 degrees",
@@ -33,7 +33,7 @@ const VersatilityExcellent: Level = {
 
       title: "501. Moving Stand - Cross Behind",
       description:
-        "• While heeling, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has passed the Call Dog sign (#539)</b> and <b>while continuing to move forward</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
+        "• While heeling, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has completely passed the Call Dog sign</b> (#539) and <b>while continuing to move forward</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
       deductions: {
         minor: ["Crooked stand (45 to 90 degrees)"],
         substantial: [
@@ -42,7 +42,7 @@ const VersatilityExcellent: Level = {
         ],
         nq: [
           "Handler stops forward motion to perform moving position exercises",
-          "Handler calls the dog before passing the Call Dog sign",
+          "Handler calls dog before completely passing the Call Dog sign",
           "Dog does not stand or does not hold the stand until called",
           "Dog does not cross sides",
           "Stand crooked by more than 90 degrees",
@@ -54,9 +54,9 @@ const VersatilityExcellent: Level = {
       name: "502",
       icon: require("../../assets/slides/502.jpg"),
 
-      title: "501. Moving Down - Cross Behind",
+      title: "502. Moving Down - Cross Behind",
       description:
-        "• While heeling, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has passed the Call Dog sign (#539)</b> and <b>while continuing to move forward</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
+        "• While heeling, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has completely passed the Call Dog sign</b> (#539) and <b>while continuing to move forward</b>, the handler <b>calls the dog to heel on the opposite side</b> and the team continues to the next station.<br/><br/>",
       deductions: {
         minor: ["Crooked down (45 to 90 degrees)"],
         substantial: [
@@ -65,7 +65,7 @@ const VersatilityExcellent: Level = {
         ],
         nq: [
           "Handler stops forward motion to perform moving position exercises",
-          "Handler calls the dog before passing the Call Dog sign",
+          "Handler calls dog before completely passing the Call Dog sign",
           "Dog does not down or does not hold the down until called",
           "Dog does not cross sides",
           "Down crooked by more than 90 degrees",
@@ -102,7 +102,7 @@ const VersatilityExcellent: Level = {
 
       title: "504. HALT - Leave Dog - Call to Heel while Running",
       description:
-        "•	While heeling with the dog on the right, the team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the <b>dog to stay</b> and <b>moves forward at a fast pace.<br/>•	The dog must remain in a sit until called.<br/>• After the handler has passed the Call Dog sign</b> (#539), they call the dog to heel as they return to normal pace.<br/>•	After passing the Call Dog sign, the handler may pause or stop until the dog reaches heel position.<br/><br/>",
+        "•	While heeling with the dog on the right, the team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the <b>dog to stay</b> and <b>moves forward at a fast pace.<br/>•	The dog must remain in a sit until called.<br/>• After the handler has completely passed the Call Dog sign</b> (#539), they call the dog to heel as they return to normal pace.<br/>•	<b>After completely passing</b> the Call Dog sign, the handler may pause or stop until the dog reaches heel position.<br/><br/>",
       tips: "• The handler must move at a <i>fast (ie. jogging or running)</i> pace for <i>at least</i> until they reach the Call Dog sign. You can run beyond the Call Dog sign to be sure you do not slow down too soon. If so, be sure your dog has enough time to return to heel position before the next station sign.<br/> • If you are physically unable to run from a stand still, request an accommodation at the time of entry.<br/>",
       deductions: {
         minor: [
@@ -414,7 +414,7 @@ const VersatilityExcellent: Level = {
 
       title: "518. Call Front - 1, 2, 3 Steps Backwards",
       description:
-        "•	While heeling with the dog on the right, the handler stops forward motion and calls the dog directly to the front position.<br/>• The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position.<br/>• From the sit</b> the handler takes 1 step backward and <b>halts</b>, the <b>dog moves with the handler sits in front position.<br/>• From the sit</b> the handler takes 2 steps backward and <b>halts</b>, the <b>dog moves with the handler and sits in front position.<br/>• From the sit</b> the handler takes 3 steps backward and <b>halts</b>, the <b>dog moves with the handler and sits in front position.<br/>•	The team must meet the minimum required steps.</b><br>• This station is followed by one of 519, 520, 521 or 522.<br/><br/>",
+        "•	While heeling with the dog on the right, the handler stops forward motion and calls the dog directly to the front position.<br/>• The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position.<br/>• From the sit</b> the handler takes 1 step backward and <b>stop</b>, the <b>dog moves with the handler sits in front position.<br/>• From the sit</b> the handler takes 2 steps backward and <b>stop</b>, the <b>dog moves with the handler and sits in front position.<br/>• From the sit</b> the handler takes 3 steps backward and <b>stop</b>, the <b>dog moves with the handler and sits in front position.<br/>•	The team must meet the minimum required steps.</b><br>• This station is followed by one of 519, 520, 521 or 522.<br/><br/>",
       tips: "• This sign will always be followed by a finish or forward sign.<br/>• The dog must move with the handler as the handler steps backwards.<br/>• Depending on your stride length, you may not end up at the correct location for the next sign (front or finish) - this is ok, but do make a point of remembering what the next sign is, so that you can perform it correctly",
       deductions: {
         minor: [
@@ -427,7 +427,7 @@ const VersatilityExcellent: Level = {
         ],
         nq: [
           "Dog does not move with handler during the steps backwards",
-          "Dog does not come to front at each halt",
+          "Dog does not come to front at each stop",
           "Dog sits more than 90-degrees out of front position",
         ],
       },
@@ -614,7 +614,7 @@ const VersatilityExcellent: Level = {
 
       title: "527. Moving Stand - Call to Heel",
       description:
-        "• While heeling with the dog on the right, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has passed the Call Dog sign </b> (#539) and while continuing to move forward</b>, the handler calls the dog to heel and the team continues to the next station.<br/>",
+        "• While heeling with the dog on the right, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must hold the stand until called.<br/>• After the handler has completely passed the Call Dog sign</b> (#539) and while continuing to move forward</b>, the handler calls the dog to heel and the team continues to the next station.<br/>",
       deductions: {
         minor: ["Dog stands more than 45-degrees out of heel position"],
 
@@ -626,7 +626,7 @@ const VersatilityExcellent: Level = {
         nq: [
           "Dog stands 90-degrees or more out of heel position",
           "Handler stops forward motion",
-          "Handler calls the dog to heel before passing the Call Dog sign",
+          "Handler calls dog before completely passing the Call Dog sign",
           "Dog does not hold the stand",
           "Dog not in heel position before reaching the next station sign",
           "Dog assumes a position not required by the exercise",
@@ -639,7 +639,7 @@ const VersatilityExcellent: Level = {
 
       title: "528. Moving Down - Call to Heel",
       description:
-        "• While heeling with the dog on the right, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has passed the Call Dog sign </b> (#539) and while continuing to move forward</b>, the handler calls the dog to heel and the team continues to the next station.<br/>",
+        "• While heeling with the dog on the right, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must hold the down until called.<br/>• After the handler has completely passed the Call Dog sign</b> (#539) and while continuing to move forward</b>, the handler calls the dog to heel and the team continues to the next station.<br/>",
       deductions: {
         minor: ["Dog downs more than 45-degrees out of heel position"],
 
@@ -869,10 +869,12 @@ const VersatilityExcellent: Level = {
 
       title: "539. Call Dog",
       description:
-        "•	Upon passing this sign, the handler calls the dog to heel <b>while continuing to move  forward.</b><br/><br/>",
-      tips: "•	This is not a standalone sign. It is used with signs 500, 501, 502, 504, 527, 528 or 540",
+        "•	<b>After completely passing this sign</b>, the handler calls the dog to heel <b>while continuing to move forward</b>. After calling the dog, the handler may adjust their pace <b>(but not stop)</b> to allow the dog to reach heel position before attempting the next station.<br/><br/>",
+      tips: "•	This is not a standalone sign. It is used with signs 500, 501, 502, 504, 527, 528 or 540<br/>•	\"Completely passed\" is defined as the whole body of the handler has fully passed the plane of the sign<br/>•	When following sign 504, handlers may pause or stop after passing the Call Dog sign until the dog reaches heel position",
       deductions: {
-        substantial: ["Handler calls dog before crossing Call Dog sign"],
+        substantial: [
+          "Handler calls dog before completely passing the Call Dog sign",
+        ],
         nq: [
           "Handler stops forward motion (except when following station 201)",
         ],
@@ -884,7 +886,7 @@ const VersatilityExcellent: Level = {
 
       title: "540.  Call Front – Walk Around – Leave Dog",
       description:
-        "•	While heeling with the dog on the right, the handler stops forward motion and calls the dog to front.<br/>•	The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position.<br/>•	The dog must remain in a sit while the handler walks around behind the dog in a clockwise direction and without stopping continues forward.<br/>•	After the handler has passed the Call Dog sign</b> (#539) and <b>while continuing to move forward</b>, the handler calls the dog to heel, and the team continues to the next station.<br/>•	This station results in a 180-degree change of direction.<br/><br/>",
+        "•	While heeling with the dog on the right, the handler stops forward motion and calls the dog to front.<br/>•	The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position.<br/>•	The dog must remain in a sit while the handler walks around behind the dog in a clockwise direction and without stopping continues forward.<br/>•	After the handler has completely passed the Call Dog sign</b> (#539) and <b>while continuing to move forward</b>, the handler calls the dog to heel, and the team continues to the next station.<br/>•	This station results in a 180-degree change of direction.<br/><br/>",
       deductions: {
         minor: [
           "Initiation of the sign outside of a radius of two feet from the station sign",
@@ -896,7 +898,7 @@ const VersatilityExcellent: Level = {
           "Handler moves left or right to position themselves in front of the dog to create a straight front",
         ],
         nq: [
-          "Handler stops forward motion at any point before they have passed the Call Dog sign",
+          "Handler stops forward motion at any point before they have completely passed the Call Dog sign",
           "Dog does not remain in the required position until cued to return to the handler",
           "Dog assumes a position not requested (eg. Down)",
           "Dog is 90 degrees or more out of alignment during the front",

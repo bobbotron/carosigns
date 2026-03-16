@@ -1,4 +1,3 @@
-import Novice from "./Novice";
 import Advanced from "./Advanced";
 import { Level } from "../types/Sign";
 

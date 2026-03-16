@@ -1,6 +1,5 @@
 import { Level } from "../types/Sign";
 
-/* eslint-disable no-undef */
 const Excellent: Level = {
   name: "Excellent",
   type: "normal",
@@ -74,7 +73,7 @@ const Excellent: Level = {
       icon: require("../../assets/slides/303.jpg"),
       title: "303. Moving Stand - Call to Heel",
       description:
-        "• While heeling, the handler cues the <b>dog to stand and without pausing continues forward.<br/>• The dog must remain in a stand until called.<br/>• After the handler has passed the Call Dog sign</b> (#223) and while <b>continuing to move forward</b>, the handler calls the dog to heel, and the team continues to the next station.<br/><br/>",
+        "• While heeling, the handler cues the <b>dog to stand</b> and <b>without pausing continues forward</b>.<br/>• <b>The dog must remain in a stand until called.<br/>• After the handler has completely passed the Call Dog sign</b> (#223) and while <b>continuing to move forward</b>, the handler calls the dog to heel, and the team continues to the next station.<br/><br/>",
       tips: "• The handler's path should flow smoothly and without stopping from heel position, past Call Dog sign and until the dog is called back to heel position.<br/>• While you may take additional steps past the Call Dog sign before calling the dog back to heel position, ensure you have left enough space for them to be back in heel before reaching the next station sign.",
       deductions: {
         minor: ["Dog stands more than 45-degrees out of heel position"],
@@ -87,7 +86,7 @@ const Excellent: Level = {
         nq: [
           "Dog stands 90-degrees or more out of heel position",
           "Handler stops forward motion",
-          "Handler calls the dog to heel before crossing the Call Dog sign",
+          "Handler calls dog before completely passing the Call Dog sign",
           "Dog does not hold the stand",
           "Dog assumes a position not required by the exercise",
         ],
@@ -98,7 +97,7 @@ const Excellent: Level = {
       icon: require("../../assets/slides/304.jpg"),
       title: "304. Moving Down - Call to Heel",
       description:
-        "• While heeling, the handler cues the <b>dog to down and without pausing continues forward.<br/>• The dog must remain in a down until called.<br/>• After the handler has passed the Call Dog sign</b> (#223) and while <b>continuing to move forward</b>, the handler calls the dog to heel and the team continues to the next station.<br/><br/>",
+        "• While heeling, the handler cues the <b>dog to down</b> and <b>without pausing continues forward.<br/>• The dog must remain in a down until called.<br/>• After the handler has completely passed the Call Dog sign</b> (#223) and while <b>continuing to move forward</b>, the handler calls the dog to heel and the team continues to the next station.<br/><br/>",
       tips: "• The handler's path should flow smoothly and without stopping from heel position, past the Call Dog sign and until the dog is called back to heel position.<br/>• While you may take additional steps past the Call Dog sign before calling the dog back to heel position, ensure you have left enough space for them to be back in heel before reach the next station sign.",
       deductions: {
         minor: ["Dog downs more than 45-degrees out of heel position"],
@@ -112,6 +111,7 @@ const Excellent: Level = {
           "Dog downs 90-degrees or more out of heel position",
           "Dog does not complete the down before being called to heel position",
           "Dog does not hold the down until called to heel position",
+          "Handler calls dog before completely passing the Call Dog sign",
           "Handler stops forward motion at any point",
           "Dog assumes a position not required by the exercise",
         ],
@@ -363,7 +363,7 @@ const Excellent: Level = {
       icon: require("../../assets/slides/317.jpg"),
       title: "317. Call Front - Walk Around - Leave Dog",
       description:
-        "•	While heeling, the handler stops forward motion and calls the dog to front.<br/>•	The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>•	<b>The dog must remain in a sit while the handler walks around behind the dog in a counterclockwise direction and without stopping continues forward</b>.<br/>• <b>After the handler has passed the Call Dog sign (#223) and while continuing forward</b>, the handler calls the dog to heal and the team continues to the next station.<br/>•	This station results in a 180-degree change of direction.<br/>",
+        "•	While heeling, the handler stops forward motion and calls the dog to front.<br/>•	The handler may take up to four steps backward as the <b>dog turns and moves to sit in front position</b>.<br/>•	<b>The dog must remain in a sit while the handler walks around behind the dog in a counterclockwise direction and without stopping continues forward</b>.<br/>• <b>After the handler has <b>completely passed the Call Dog sign</b> (#223) and while continuing forward</b>, the handler calls the dog to heal and the team continues to the next station.<br/>•	This station results in a 180-degree change of direction.<br/>",
       deductions: {
         minor: [
           "Initiation of the sign outside of a radius of two feet from the station sign",
@@ -375,7 +375,7 @@ const Excellent: Level = {
           "Handler moves left or right to position themselves in front of the dog to create a straight front",
         ],
         nq: [
-          "Handler stops forward motion at any point before they have passed the Call Dog sign",
+          "Handler stops forward motion at any point before they have completely passed the Call Dog sign",
           "Dog does not remain in the required position until cued to return to the handler",
           "Dog assumes a position not requested (eg. Down)",
           "Dog is 90 degrees or more out of alignment during the front",
