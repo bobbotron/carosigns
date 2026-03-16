@@ -1,6 +1,5 @@
 import { Level } from "../types/Sign";
 
-/* eslint-disable no-undef */
 const Working: Level = {
   name: "Working Exercises",
   type: "working",

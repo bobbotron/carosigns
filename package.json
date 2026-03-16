@@ -9,7 +9,8 @@
     "web": "expo start --web",
     "eslint": "npx eslint",
     "eslint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "prettier:write": "npx prettier -w ."
+    "prettier:write": "npx prettier -w .",
+    "format": "npx prettier --write \"**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",
@@ -38,6 +39,8 @@
     "@types/jest": "^29.5.14",
     "@types/react": "~19.1.10",
     "@types/react-test-renderer": "^19.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.0",
+    "@typescript-eslint/parser": "^8.57.0",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.3",
     "globals": "^15.14.0",

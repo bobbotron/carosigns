@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Appbar, Menu } from "react-native-paper";
 import SignsDB from "../data/SignDb";
 import { useDispatch, useSelector } from "react-redux";

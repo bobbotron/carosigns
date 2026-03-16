@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 import { View, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 import StreamHeading from "./StreamHeading";
@@ -51,3 +52,8 @@ export default function MainList(props) {
     </View>
   );
 }
+
+MainList.propTypes = {
+  levels: PropTypes.array.isRequired,
+  levelListener: PropTypes.func.isRequired,
+};

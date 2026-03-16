@@ -1,6 +1,5 @@
 import { Level } from "../types/Sign";
 
-/* eslint-disable no-undef */
 const Advanced: Level = {
   name: "Advanced",
   type: "normal",
@@ -34,7 +33,7 @@ const Advanced: Level = {
       title: "201. HALT - Leave Dog - Call to Heel while Running",
       practiceNextRestriction: ["223"],
       description:
-        "• The team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the <b>dog to stay</b> and <b>moves forward at a fast pace.<br/> • The dog must remain in a sit until called.<br/>• After the handler has passed the Call Dog sign</b> (#223), they call the dog to heel as they return to normal pace.<br/>• After passing the Call Dog sign the handler may pause or stop until the dog reaches heel position.<br/><br/>",
+        "• The team comes to a <b>halt</b> and <b>the dog sits in heel position.</b><br/>• The handler cues the <b>dog to stay</b> and <b>moves forward at a fast pace.<br/> • The dog must remain in a sit until called.<br/>• After the handler has <b>completely</b> passed the Call Dog sign</b> (#223), they call the dog to heel as they return to normal pace.<br/>• After passing the Call Dog sign the handler may pause or stop until the dog reaches heel position.<br/><br/>",
       tips: "• The handler must move at a <i>fast (ie. jogging or running)</i> pace. You can run just beyond the Call Dog sign to be sure you do not slow down too soon. If so, be sure your dog has enough time to return to heel position before the next station sign.<br/> • If you are physically unable to run from a stand still, request an accommodation at the time of entry.<br/>",
       deductions: {
         minor: [
@@ -123,8 +122,8 @@ const Advanced: Level = {
         ],
         nq: [
           "The dog does not move simultaneously with the handler",
-          "The hanlder takes more than one step sideways",
-          "During the side step, the dog's shoulders are in heel position but their body is more than 45-degrees out of position",
+          "The handler takes more than one step sideways",
+          "Dog greater than 90-degrees out of heel position",
           "Dog assumes a position not required by the exercise",
         ],
       },
@@ -463,13 +462,15 @@ const Advanced: Level = {
       excludeFromPractice: true,
       description:
         "• The jump may be either a solid or bar jump.<br/>• <b>The team enters the send zone where the dog is sent to the jump</b>.<br/>• Once the dog has been sent, the handler may stay in the send zone or proceed <b>along the right of 3-foot line</b>.<br/>• The sign will be placed at the top of the send zone and the handler will not be required to be wtihin 2 feet of the sign for this station.<br/>• Handlers may move at whatever speed they wish.<br/>• <b>The handler must remain on the outside of the 3-foot line when proceeding past the jump</b>.<br/>• Upon completion of the jump the dog returns to heel position.<br/>• The dog may be cued to return to heel regardless of where the handler is along the line of travel.<br/><br/>",
-      tips: "• The jump may be either a solid or bar jump. The broad jump is not used at this station.<br/>• The jump sign must be used in all Advanced courses.<br/>• Handlers may give multiple cues to the dog (without a deduction) as long as the dog is heading towards the jump. If the dog turns back to the handler or passes the plane of the jump, the handler must return to the send zone for a retry (when a retry is permitted).<br/>• No retry is permitted if the handler steps into the NQ Zone (training in the ring).<br/>• If the dog knocks the bar a retry is permitted (in advanced only.",
+      tips: "• The jump may be either a solid or bar jump. The broad jump is not used at this station.<br/>• The jump sign must be used in all Advanced courses.<br/>• Handlers may give multiple cues to the dog (without a deduction) as long as the dog is heading towards the jump. If the dog turns back to the handler or passes the plane of the jump, the handler must return to the send zone for a retry (when a retry is permitted).<br/>• No retry is permitted if the handler steps into the NQ Zone (training in the ring).<br/>• If the dog knocks the bar a retry is permitted (in advanced only.)",
       deductions: {
-        substantial: ["Dog touches the jump (5 points)"],
+        substantial: [
+          "Dog touches the jump",
+          "Dog knocks the bar off (5 points)",
+        ],
         nq: [
           "Dog is sent to the jump before entering the send zone",
           "Handler steps inside the NQ Zone at any point",
-          "Dog knocks the bar off or pushes off of the jump bar",
           "Dog fails to take the jump",
         ],
       },
@@ -518,10 +519,12 @@ const Advanced: Level = {
       title: "223. Call Dog",
       practiceOnlyAfter: ["201", "303", "304", "317"],
       description:
-        "•	Upon passing this sign, the handler calls the dog to heel <b>while continuing to move forward</b>.<br/><br/>",
-      tips: "• This is not a standalone sign, it follows signs 201, 303, 304 or 317",
+        "•	<b>After completely passing this sign</b>, the handler calls the dog to heel <b>while continuing to move forward</b>. After calling the dog, the handler may adjust their pace <b>(but not stop)</b> to allow the dog to reach heel position before attempting the next station.<br/><br/>",
+      tips: "• This is not a standalone sign, it follows signs 201, 303, 304 or 317<br/>• “Completely passed” is defined as the whole body of the handler has fully passed the plane of the sign<br/>• When following sign 201, handlers may pause or stop after passing the Call Dog sign until the dog reaches heel position",
       deductions: {
-        substantial: ["Handler calls dog before crossing Call Dog sign"],
+        substantial: [
+          "Handler calls dog before completely passing the Call Dog sign",
+        ],
         nq: [
           "Handler stops forward motion (except when following station 201)",
         ],

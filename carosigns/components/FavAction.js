@@ -1,6 +1,7 @@
 import { Appbar } from "react-native-paper";
 import { useSelector, useDispatch } from "react-redux";
 import React from "react";
+import PropTypes from "prop-types";
 import { addFavourite, removeFavourite } from "../redux/favouritesSlice";
 
 export default function FavAction(props) {
@@ -50,3 +51,9 @@ export default function FavAction(props) {
     </>
   );
 }
+
+FavAction.propTypes = {
+  sign: PropTypes.shape({
+    name: PropTypes.string,
+  }),
+};

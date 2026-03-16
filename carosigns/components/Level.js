@@ -9,6 +9,7 @@ import {
 import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
 import React from "react";
+import PropTypes from "prop-types";
 import useLevelHooks from "../hooks/LevelHooks";
 
 const styles = StyleSheet.create({
@@ -70,3 +71,11 @@ export default function Level({ level, signs }) {
     </>
   );
 }
+
+Level.propTypes = {
+  level: PropTypes.shape({
+    name: PropTypes.string,
+    type: PropTypes.string,
+  }),
+  signs: PropTypes.array,
+};

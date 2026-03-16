@@ -6,9 +6,7 @@ import { Button } from "react-native-paper";
 import { setSearchSelectedSign } from "../redux/appSlice";
 
 export default function SearchResults() {
-  const { searchText, searchSelectedSign } = useSelector(
-    (state) => state.app
-  );
+  const { searchText, searchSelectedSign } = useSelector((state) => state.app);
   const searchActive = !(searchText === undefined || searchText === "");
   const queryLower = searchActive ? searchText.toLowerCase() : "";
   const selectedSigns = !searchActive
