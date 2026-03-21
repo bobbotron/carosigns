@@ -16,12 +16,13 @@ import { useSelector, useDispatch } from "react-redux";
 import AppHeader from "./components/AppHeader";
 import SearchResults from "./components/SearchResults";
 import { setSearchText, setSelectedLevel } from "./redux/appSlice";
+import { Level as LevelType } from "./types/Sign";
 
-export default function AppController() {
+export default function AppController(): React.JSX.Element {
   const window = useWindowDimensions();
 
   const { selectedLevel, searchText, practiceMode } = useSelector(
-    (state) => state.app
+    (state: any) => state.app
   );
 
   const dispatch = useDispatch();
@@ -53,20 +54,16 @@ export default function AppController() {
     },
   });
 
-  const onChangeSearch = (query) => {
+  const onChangeSearch = (query: string) => {
     dispatch(setSearchText(query));
   };
 
-  const [levels, setLevels] = useState([]);
+  const [levels, setLevels] = useState<LevelType[]>([]);
 
   const searchActive = !(searchText === undefined || searchText === "");
 
-  const levelListener = (l) => {
+  const levelListener = (l: LevelType) => {
     dispatch(setSelectedLevel(l));
-  };
-  const backToMainList = () => {
-    dispatch(setSelectedLevel(undefined));
-    dispatch(setSearchText(""));
   };
   useEffect(() => {
     setLevels(SignsDB.Categories);
@@ -106,11 +103,7 @@ export default function AppController() {
               </>
             )}
             {selectedLevel !== undefined && !searchActive && (
-              <Level
-                level={selectedLevel}
-                backListener={backToMainList}
-                signs={selectedLevel.signs}
-              />
+              <Level level={selectedLevel} signs={selectedLevel.signs} />
             )}
             {searchActive && <SearchResults />}
           </>

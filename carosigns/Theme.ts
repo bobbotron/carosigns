@@ -48,4 +48,5 @@ const theme = {
     backdrop: "rgba(44, 50, 41, 0.4)",
   },
 };
+
 export default theme;

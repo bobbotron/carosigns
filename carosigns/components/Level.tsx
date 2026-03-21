@@ -9,8 +9,13 @@ import {
 import { FlatGrid } from "react-native-super-grid";
 import SignDetail from "./SignDetail";
 import React from "react";
-import PropTypes from "prop-types";
 import useLevelHooks from "../hooks/LevelHooks";
+import { Level as LevelType, Sign } from "../types/Sign";
+
+interface LevelProps {
+  level: LevelType;
+  signs: Sign[];
+}
 
 const styles = StyleSheet.create({
   gridImage: { width: 140, height: 100 },
@@ -23,7 +28,7 @@ const styles = StyleSheet.create({
   overlayText: { fontWeight: "bold", fontSize: 14 },
 });
 
-export default function Level({ level, signs }) {
+export default function Level({ level, signs }: LevelProps): React.JSX.Element {
   const { selectedSign, showSigns, levelSelectFn } = useLevelHooks({
     signs,
   });
@@ -71,11 +76,3 @@ export default function Level({ level, signs }) {
     </>
   );
 }
-
-Level.propTypes = {
-  level: PropTypes.shape({
-    name: PropTypes.string,
-    type: PropTypes.string,
-  }),
-  signs: PropTypes.array,
-};

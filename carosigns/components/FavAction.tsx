@@ -1,30 +1,35 @@
 import { Appbar } from "react-native-paper";
 import { useSelector, useDispatch } from "react-redux";
 import React from "react";
-import PropTypes from "prop-types";
 import { addFavourite, removeFavourite } from "../redux/favouritesSlice";
+import { Sign } from "../types/Sign";
 
-export default function FavAction(props) {
-  const signDefined = props.sign !== undefined;
+interface FavActionProps {
+  sign?: Sign;
+}
 
-  const { favourites } = useSelector((state) => state.favourites);
+export default function FavAction({ sign }: FavActionProps): React.JSX.Element {
+  const signDefined = sign !== undefined;
+
+  const { favourites } = useSelector((state: any) => state.favourites);
   const dispatch = useDispatch();
 
-  const addToFavList = (sign) => dispatch(addFavourite(sign));
-  const removeFromFavList = (sign) => dispatch(removeFavourite(sign));
+  const addToFavList = (sign: Sign) => dispatch(addFavourite(sign));
+  const removeFromFavList = (sign: Sign) => dispatch(removeFavourite(sign));
 
-  const handleAddFav = (sign) => {
+  const handleAddFav = (sign: Sign) => {
     addToFavList(sign);
   };
 
-  const handleRemoveFav = (sign) => {
+  const handleRemoveFav = (sign: Sign) => {
     removeFromFavList(sign);
   };
-  const favAddListener = () => handleAddFav(props.sign);
-  const favRemoveListener = () => handleRemoveFav(props.sign);
+  const favAddListener = () => handleAddFav(sign!);
+  const favRemoveListener = () => handleRemoveFav(sign!);
   const size = 36;
   const isStared =
-    signDefined && favourites.filter((s) => s === props.sign.name).length !== 0;
+    signDefined &&
+    favourites.filter((s: Sign) => s.name === sign!.name).length !== 0;
   return (
     <>
       {signDefined ? (
@@ -51,9 +56,3 @@ export default function FavAction(props) {
     </>
   );
 }
-
-FavAction.propTypes = {
-  sign: PropTypes.shape({
-    name: PropTypes.string,
-  }),
-};

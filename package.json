@@ -10,7 +10,7 @@
     "eslint": "npx eslint",
     "eslint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prettier:write": "npx prettier -w .",
-    "format": "npx prettier --write \"**/*.{js,jsx,ts,tsx}\""
+    "prettier:check": "npx prettier -c ."
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",
