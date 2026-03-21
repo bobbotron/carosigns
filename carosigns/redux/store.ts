@@ -12,6 +12,9 @@ const store = configureStore({
   },
 });
 
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
 const initializeStore = async () => {
   const favValue = await loadFromAsyncStorage();
   store.dispatch(setFavourites(favValue));
@@ -20,6 +23,3 @@ const initializeStore = async () => {
 initializeStore();
 
 export default store;
-
-export type AppDispatch = typeof store.dispatch;
-export type RootState = ReturnType<typeof store.getState>;

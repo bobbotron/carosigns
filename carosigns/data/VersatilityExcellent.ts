@@ -870,7 +870,7 @@ const VersatilityExcellent: Level = {
       title: "539. Call Dog",
       description:
         "•	<b>After completely passing this sign</b>, the handler calls the dog to heel <b>while continuing to move forward</b>. After calling the dog, the handler may adjust their pace <b>(but not stop)</b> to allow the dog to reach heel position before attempting the next station.<br/><br/>",
-      tips: "•	This is not a standalone sign. It is used with signs 500, 501, 502, 504, 527, 528 or 540<br/>•	\"Completely passed\" is defined as the whole body of the handler has fully passed the plane of the sign<br/>•	When following sign 504, handlers may pause or stop after passing the Call Dog sign until the dog reaches heel position",
+      tips: '•	This is not a standalone sign. It is used with signs 500, 501, 502, 504, 527, 528 or 540<br/>•	"Completely passed" is defined as the whole body of the handler has fully passed the plane of the sign<br/>•	When following sign 504, handlers may pause or stop after passing the Call Dog sign until the dog reaches heel position',
       deductions: {
         substantial: [
           "Handler calls dog before completely passing the Call Dog sign",

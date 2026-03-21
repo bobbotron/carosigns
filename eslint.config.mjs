@@ -23,6 +23,20 @@ export default [
     },
   },
 
+  // Test files - add Jest globals
+  {
+    files: [
+      "**/__tests__/**/*.{js,ts,tsx}",
+      "**/*.test.{js,ts,tsx}",
+      "**/*.spec.{js,ts,tsx}",
+      "jest.setup.js",
+      "__mocks__/**/*.{js,ts}",
+    ],
+    languageOptions: {
+      globals: { ...globals.jest },
+    },
+  },
+
   // Shared globals for browser environment
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
 

@@ -8,7 +8,7 @@ import React from "react";
 
 useShims();
 
-export default function App() {
+export default function App(): React.JSX.Element {
   return (
     <Provider store={store}>
       <PaperProvider theme={Theme}>
