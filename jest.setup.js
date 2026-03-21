@@ -1,16 +1,6 @@
 // jest.setup.js
 // Setup file for Jest
 
-// Mock Expo
-jest.mock("expo", () => ({
-  // Mock any expo modules if needed
-}));
-
-// Mock @expo/vector-icons
-jest.mock("@expo/vector-icons", () => ({
-  // Mock the icon component
-}));
-
 // Mock react-native-paper
 jest.mock("react-native-paper", () => ({
   Appbar: {

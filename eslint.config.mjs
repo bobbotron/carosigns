@@ -30,6 +30,7 @@ export default [
       "**/*.test.{js,ts,tsx}",
       "**/*.spec.{js,ts,tsx}",
       "jest.setup.js",
+      "__mocks__/**/*.{js,ts}",
     ],
     languageOptions: {
       globals: { ...globals.jest },
