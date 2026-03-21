@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import React from "react";
 import { addFavourite, removeFavourite } from "../redux/favouritesSlice";
 import { Sign } from "../types/Sign";
+import { RootState } from "../redux/store";
 
 interface FavActionProps {
   sign?: Sign;
@@ -11,7 +12,7 @@ interface FavActionProps {
 export default function FavAction({ sign }: FavActionProps): React.JSX.Element {
   const signDefined = sign !== undefined;
 
-  const { favourites } = useSelector((state: any) => state.favourites);
+  const { favourites } = useSelector((state: RootState) => state.favourites);
   const dispatch = useDispatch();
 
   const addToFavList = (sign: Sign) => dispatch(addFavourite(sign));
@@ -27,9 +28,7 @@ export default function FavAction({ sign }: FavActionProps): React.JSX.Element {
   const favAddListener = () => handleAddFav(sign!);
   const favRemoveListener = () => handleRemoveFav(sign!);
   const size = 36;
-  const isStared =
-    signDefined &&
-    favourites.filter((s: Sign) => s.name === sign!.name).length !== 0;
+  const isStared = signDefined && favourites.includes(sign!.name);
   return (
     <>
       {signDefined ? (
@@ -39,6 +38,7 @@ export default function FavAction({ sign }: FavActionProps): React.JSX.Element {
               icon="star"
               size={size}
               onPress={favRemoveListener}
+              testID="remove-fav-button"
             />
           </>
         ) : (
@@ -47,6 +47,7 @@ export default function FavAction({ sign }: FavActionProps): React.JSX.Element {
               icon="star-outline"
               size={size}
               onPress={favAddListener}
+              testID="add-fav-button"
             />
           </>
         )

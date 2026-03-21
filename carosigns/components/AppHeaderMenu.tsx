@@ -8,9 +8,10 @@ import {
   setSelectedSign,
 } from "../redux/appSlice";
 import { setupState } from "./PracticeMode";
+import { RootState } from "../redux/store";
 
 export default function AppHeaderMenu() {
-  const { favourites } = useSelector((state: any) => state.favourites);
+  const { favourites } = useSelector((state: RootState) => state.favourites);
   const dispatch = useDispatch();
 
   const [visible, setVisible] = useState(false);
